@@ -44,10 +44,10 @@ public class EvaluacionBean {
 
 		// 0. Se crea el objeto evaluacion
 		Evaluacion evaluacion = new Evaluacion();
-		evaluacion.setEvaCreado(new Date());
-		evaluacion.setEvaCreadoPor(usuario);
-		evaluacion.setEvaEstablecimientoSalud(establecimiento);
-		evaluacion.setEvaFechaInicio(new Date());
+		evaluacion.setCreado(new Date());
+		evaluacion.setCreadoPor(usuario);
+		evaluacion.setEstablecimientoSalud(establecimiento);
+		evaluacion.setFechaInicio(new Date());
 
 		// TODO: Obtener el codigo de alguna manera
 

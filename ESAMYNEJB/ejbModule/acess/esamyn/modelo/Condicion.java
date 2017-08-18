@@ -16,7 +16,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -31,55 +30,39 @@ public class Condicion implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "con_id")
-    private Long conId;
+    private Long codigo;
     @Column(name = "con_texto")
-    private String conTexto;
+    private String texto;
     @OneToMany(mappedBy = "parCondicion")
-    private List<Parametro> parametroList;
+    private List<Parametro> parametroLista;
 
     public Condicion() {
     }
 
-    public Condicion(Long conId) {
-        this.conId = conId;
-    }
+	public Long getCodigo() {
+		return codigo;
+	}
 
-    public Long getConId() {
-        return conId;
-    }
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
 
-    public void setConId(Long conId) {
-        this.conId = conId;
-    }
+	public String getTexto() {
+		return texto;
+	}
 
-    public String getConTexto() {
-        return conTexto;
-    }
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
 
-    public void setConTexto(String conTexto) {
-        this.conTexto = conTexto;
-    }
+	public List<Parametro> getParametroLista() {
+		return parametroLista;
+	}
 
-    @XmlTransient
-    public List<Parametro> getParametroList() {
-        return parametroList;
-    }
+	public void setParametroLista(List<Parametro> parametroLista) {
+		this.parametroLista = parametroLista;
+	}
 
-    public void setParametroList(List<Parametro> parametroList) {
-        this.parametroList = parametroList;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (conId != null ? conId.hashCode() : 0);
-        return hash;
-    }
-
-
-    @Override
-    public String toString() {
-        return "org.ops.modelo.Condicion[ conId=" + conId + " ]";
-    }
+   
     
 }

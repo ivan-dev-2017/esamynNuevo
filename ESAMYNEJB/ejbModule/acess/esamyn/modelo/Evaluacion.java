@@ -22,7 +22,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -32,189 +31,162 @@ import javax.xml.bind.annotation.XmlTransient;
 @Table(name = "esa_evaluacion")
 public class Evaluacion implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "eva_id")
-    private Long evaId;
-    @Basic(optional = false)
-    @Column(name = "eva_creado")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date evaCreado;
-    @Basic(optional = false)
-    @Column(name = "eva_modificado")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date evaModificado;
-    @Column(name = "eva_creado_por")
-    private String evaCreadoPor;
-    @Column(name = "eva_modificado_por")
-    private String evaModificadoPor;
-    @Column(name = "eva_numero")
-    private Integer evaNumero;
-    @Column(name = "eva_calificacion")
-    private BigInteger evaCalificacion;
-    @Basic(optional = false)
-    @Column(name = "eva_fecha_inicio")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date evaFechaInicio;
-    @Column(name = "eva_fecha_calificacion")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date evaFechaCalificacion;
-    @Basic(optional = false)
-    @Column(name = "eva_cantidad_encuestas")
-    private int evaCantidadEncuestas;
-    @OneToMany(mappedBy = "verEvaluacion")
-    private List<Verificador> verificadorList;
-    @JoinColumn(name = "eva_establecimiento_salud", referencedColumnName = "ess_id")
-    @ManyToOne
-    private EstablecimientoSalud evaEstablecimientoSalud;
-    @JoinColumn(name = "eva_usuario", referencedColumnName = "usu_id")
-    @ManyToOne
-    private Usuario evaUsuario;
-    @OneToMany(mappedBy = "encEvaluacion")
-    private List<Encuesta> encuestaList;
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Basic(optional = false)
+	@Column(name = "eva_id")
+	private Long codigo;
+	@Basic(optional = false)
+	@Column(name = "eva_creado")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date creado;
+	@Basic(optional = false)
+	@Column(name = "eva_modificado")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date modificado;
+	@Column(name = "eva_creado_por")
+	private String creadoPor;
+	@Column(name = "eva_modificado_por")
+	private String modificadoPor;
+	@Column(name = "eva_numero")
+	private Integer numero;
+	@Column(name = "eva_calificacion")
+	private BigInteger calificacion;
+	@Basic(optional = false)
+	@Column(name = "eva_fecha_inicio")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date fechaInicio;
+	@Column(name = "eva_fecha_calificacion")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date fechaCalificacion;
+	@Basic(optional = false)
+	@Column(name = "eva_cantidad_encuestas")
+	private int cantidadEncuestas;
+	@OneToMany(mappedBy = "verEvaluacion")
+	private List<Verificador> verificadorList;
+	@JoinColumn(name = "eva_establecimiento_salud", referencedColumnName = "ess_id")
+	@ManyToOne
+	private EstablecimientoSalud establecimientoSalud;
+	@JoinColumn(name = "eva_usuario", referencedColumnName = "usu_id")
+	@ManyToOne
+	private Usuario usuario;
+	@OneToMany(mappedBy = "encEvaluacion")
+	private List<Encuesta> encuestaLista;
 
-    public Evaluacion() {
-    }
+	public Evaluacion() {
+	}
 
-    public Evaluacion(Long evaId) {
-        this.evaId = evaId;
-    }
+	public Long getCodigo() {
+		return codigo;
+	}
 
-    public Evaluacion(Long evaId, Date evaCreado, Date evaModificado, Date evaFechaInicio, int evaCantidadEncuestas) {
-        this.evaId = evaId;
-        this.evaCreado = evaCreado;
-        this.evaModificado = evaModificado;
-        this.evaFechaInicio = evaFechaInicio;
-        this.evaCantidadEncuestas = evaCantidadEncuestas;
-    }
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
 
-    public Long getEvaId() {
-        return evaId;
-    }
+	public Date getCreado() {
+		return creado;
+	}
 
-    public void setEvaId(Long evaId) {
-        this.evaId = evaId;
-    }
+	public void setCreado(Date creado) {
+		this.creado = creado;
+	}
 
-    public Date getEvaCreado() {
-        return evaCreado;
-    }
+	public Date getModificado() {
+		return modificado;
+	}
 
-    public void setEvaCreado(Date evaCreado) {
-        this.evaCreado = evaCreado;
-    }
+	public void setModificado(Date modificado) {
+		this.modificado = modificado;
+	}
 
-    public Date getEvaModificado() {
-        return evaModificado;
-    }
+	public String getCreadoPor() {
+		return creadoPor;
+	}
 
-    public void setEvaModificado(Date evaModificado) {
-        this.evaModificado = evaModificado;
-    }
+	public void setCreadoPor(String creadoPor) {
+		this.creadoPor = creadoPor;
+	}
 
-    public String getEvaCreadoPor() {
-        return evaCreadoPor;
-    }
+	public String getModificadoPor() {
+		return modificadoPor;
+	}
 
-    public void setEvaCreadoPor(String evaCreadoPor) {
-        this.evaCreadoPor = evaCreadoPor;
-    }
+	public void setModificadoPor(String modificadoPor) {
+		this.modificadoPor = modificadoPor;
+	}
 
-    public String getEvaModificadoPor() {
-        return evaModificadoPor;
-    }
+	public Integer getNumero() {
+		return numero;
+	}
 
-    public void setEvaModificadoPor(String evaModificadoPor) {
-        this.evaModificadoPor = evaModificadoPor;
-    }
+	public void setNumero(Integer numero) {
+		this.numero = numero;
+	}
 
-    public Integer getEvaNumero() {
-        return evaNumero;
-    }
+	public BigInteger getCalificacion() {
+		return calificacion;
+	}
 
-    public void setEvaNumero(Integer evaNumero) {
-        this.evaNumero = evaNumero;
-    }
+	public void setCalificacion(BigInteger calificacion) {
+		this.calificacion = calificacion;
+	}
 
-    public BigInteger getEvaCalificacion() {
-        return evaCalificacion;
-    }
+	public Date getFechaInicio() {
+		return fechaInicio;
+	}
 
-    public void setEvaCalificacion(BigInteger evaCalificacion) {
-        this.evaCalificacion = evaCalificacion;
-    }
+	public void setFechaInicio(Date fechaInicio) {
+		this.fechaInicio = fechaInicio;
+	}
 
-    public Date getEvaFechaInicio() {
-        return evaFechaInicio;
-    }
+	public Date getFechaCalificacion() {
+		return fechaCalificacion;
+	}
 
-    public void setEvaFechaInicio(Date evaFechaInicio) {
-        this.evaFechaInicio = evaFechaInicio;
-    }
+	public void setFechaCalificacion(Date fechaCalificacion) {
+		this.fechaCalificacion = fechaCalificacion;
+	}
 
-    public Date getEvaFechaCalificacion() {
-        return evaFechaCalificacion;
-    }
+	public int getCantidadEncuestas() {
+		return cantidadEncuestas;
+	}
 
-    public void setEvaFechaCalificacion(Date evaFechaCalificacion) {
-        this.evaFechaCalificacion = evaFechaCalificacion;
-    }
+	public void setCantidadEncuestas(int cantidadEncuestas) {
+		this.cantidadEncuestas = cantidadEncuestas;
+	}
 
-    public int getEvaCantidadEncuestas() {
-        return evaCantidadEncuestas;
-    }
+	public List<Verificador> getVerificadorList() {
+		return verificadorList;
+	}
 
-    public void setEvaCantidadEncuestas(int evaCantidadEncuestas) {
-        this.evaCantidadEncuestas = evaCantidadEncuestas;
-    }
+	public void setVerificadorList(List<Verificador> verificadorList) {
+		this.verificadorList = verificadorList;
+	}
 
-    @XmlTransient
-    public List<Verificador> getVerificadorList() {
-        return verificadorList;
-    }
+	public EstablecimientoSalud getEstablecimientoSalud() {
+		return establecimientoSalud;
+	}
 
-    public void setVerificadorList(List<Verificador> verificadorList) {
-        this.verificadorList = verificadorList;
-    }
+	public void setEstablecimientoSalud(EstablecimientoSalud establecimientoSalud) {
+		this.establecimientoSalud = establecimientoSalud;
+	}
 
-    public EstablecimientoSalud getEvaEstablecimientoSalud() {
-        return evaEstablecimientoSalud;
-    }
+	public Usuario getUsuario() {
+		return usuario;
+	}
 
-    public void setEvaEstablecimientoSalud(EstablecimientoSalud evaEstablecimientoSalud) {
-        this.evaEstablecimientoSalud = evaEstablecimientoSalud;
-    }
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 
-    public Usuario getEvaUsuario() {
-        return evaUsuario;
-    }
+	public List<Encuesta> getEncuestaLista() {
+		return encuestaLista;
+	}
 
-    public void setEvaUsuario(Usuario evaUsuario) {
-        this.evaUsuario = evaUsuario;
-    }
+	public void setEncuestaLista(List<Encuesta> encuestaLista) {
+		this.encuestaLista = encuestaLista;
+	}
 
-    @XmlTransient
-    public List<Encuesta> getEncuestaList() {
-        return encuestaList;
-    }
-
-    public void setEncuestaList(List<Encuesta> encuestaList) {
-        this.encuestaList = encuestaList;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (evaId != null ? evaId.hashCode() : 0);
-        return hash;
-    }
-
-
-    @Override
-    public String toString() {
-        return "org.ops.modelo.Evaluacion[ evaId=" + evaId + " ]";
-    }
-    
 }

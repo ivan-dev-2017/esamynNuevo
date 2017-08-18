@@ -6,7 +6,6 @@
 package acess.esamyn.modelo;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -16,9 +15,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -33,76 +30,51 @@ public class Canton implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "can_id")
-    private Long canId;
+    private Long codigo;
     @Column(name = "can_nombre")
-    private String canNombre;
+    private String nombre;
     @Column(name = "can_codigo")
-    private String canCodigo;
-    @OneToMany(mappedBy = "essCanton")
-    private List<EstablecimientoSalud> establecimientoSaludList;
+    private String codigoINEN;
+ 
     @JoinColumn(name = "can_provincia", referencedColumnName = "pro_id")
     @ManyToOne
-    private Provincia canProvincia;
+    private Provincia provincia;
 
     public Canton() {
     }
 
-    public Canton(Long canId) {
-        this.canId = canId;
-    }
+	public Long getCodigo() {
+		return codigo;
+	}
 
-    public Long getCanId() {
-        return canId;
-    }
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
 
-    public void setCanId(Long canId) {
-        this.canId = canId;
-    }
+	public String getNombre() {
+		return nombre;
+	}
 
-    public String getCanNombre() {
-        return canNombre;
-    }
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 
-    public void setCanNombre(String canNombre) {
-        this.canNombre = canNombre;
-    }
+	public String getCodigoINEN() {
+		return codigoINEN;
+	}
 
-    public String getCanCodigo() {
-        return canCodigo;
-    }
+	public void setCodigoINEN(String codigoINEN) {
+		this.codigoINEN = codigoINEN;
+	}
 
-    public void setCanCodigo(String canCodigo) {
-        this.canCodigo = canCodigo;
-    }
+	public Provincia getProvincia() {
+		return provincia;
+	}
 
-    @XmlTransient
-    public List<EstablecimientoSalud> getEstablecimientoSaludList() {
-        return establecimientoSaludList;
-    }
+	public void setProvincia(Provincia provincia) {
+		this.provincia = provincia;
+	}
 
-    public void setEstablecimientoSaludList(List<EstablecimientoSalud> establecimientoSaludList) {
-        this.establecimientoSaludList = establecimientoSaludList;
-    }
-
-    public Provincia getCanProvincia() {
-        return canProvincia;
-    }
-
-    public void setCanProvincia(Provincia canProvincia) {
-        this.canProvincia = canProvincia;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (canId != null ? canId.hashCode() : 0);
-        return hash;
-    }
-
-
-    @Override
-    public String toString() {
-        return "org.ops.modelo.Canton[ canId=" + canId + " ]";
-    }
+  
     
 }

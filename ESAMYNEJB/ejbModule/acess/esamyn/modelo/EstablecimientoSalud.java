@@ -21,7 +21,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -31,202 +30,185 @@ import javax.xml.bind.annotation.XmlTransient;
 @Table(name = "esa_establecimiento_salud")
 public class EstablecimientoSalud implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "ess_id")
-    private Long essId;
-    @Basic(optional = false)
-    @Column(name = "ess_creado")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date essCreado;
-    @Basic(optional = false)
-    @Column(name = "ess_modificado")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date essModificado;
-    @Column(name = "ess_nombre")
-    private String essNombre;
-    @Column(name = "ess_unicodigo")
-    private String essUnicodigo;
-    @Column(name = "ess_direccion")
-    private String essDireccion;
-    @Column(name = "ess_latitud")
-    private String essLatitud;
-    @Column(name = "ess_longitud")
-    private String essLongitud;
-    @Column(name = "ess_telefono")
-    private String essTelefono;
-    @Column(name = "ess_correo_electronico")
-    private String essCorreoElectronico;
-    @Column(name = "ess_nombre_responsable")
-    private String essNombreResponsable;
-    @Column(name = "ess_zona")
-    private String essZona;
-    @Column(name = "ess_distrito")
-    private String essDistrito;
-    @JoinColumn(name = "ess_canton", referencedColumnName = "can_id")
-    @ManyToOne
-    private Canton essCanton;
-    @JoinColumn(name = "ess_persona_juridica", referencedColumnName = "pju_id")
-    @ManyToOne
-    private PersonaJuridica essPersonaJuridica;
-    @OneToMany(mappedBy = "evaEstablecimientoSalud")
-    private List<Evaluacion> evaluacionList;
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Basic(optional = false)
+	@Column(name = "ess_id")
+	private Long codigo;
+	@Basic(optional = false)
+	@Column(name = "ess_creado")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date creado;
+	@Basic(optional = false)
+	@Column(name = "ess_modificado")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date modificado;
+	@Column(name = "ess_nombre")
+	private String nombre;
+	@Column(name = "ess_unicodigo")
+	private String unicodigo;
+	@Column(name = "ess_direccion")
+	private String direccion;
+	@Column(name = "ess_latitud")
+	private String latitud;
+	@Column(name = "ess_longitud")
+	private String longitud;
+	@Column(name = "ess_telefono")
+	private String telefono;
+	@Column(name = "ess_correo_electronico")
+	private String correoElectronico;
+	@Column(name = "ess_nombre_responsable")
+	private String nombreResponsable;
+	@Column(name = "ess_zona")
+	private String zona;
+	public EstablecimientoSalud(Long codigo) {
+		super();
+		this.codigo = codigo;
+	}
 
-    public EstablecimientoSalud() {
-    }
+	@Column(name = "ess_distrito")
+	private String distrito;
+	@JoinColumn(name = "ess_canton", referencedColumnName = "can_id")
+	@ManyToOne
+	private Canton canton;
+	@JoinColumn(name = "ess_persona_juridica", referencedColumnName = "pju_id")
+	@ManyToOne
+	private PersonaJuridica personaJuridica;
+	@OneToMany(mappedBy = "evaEstablecimientoSalud")
+	private List<Evaluacion> evaluacionList;
 
-    public EstablecimientoSalud(Long essId) {
-        this.essId = essId;
-    }
+	public EstablecimientoSalud() {
+	}
 
-    public EstablecimientoSalud(Long essId, Date essCreado, Date essModificado) {
-        this.essId = essId;
-        this.essCreado = essCreado;
-        this.essModificado = essModificado;
-    }
+	
+	
+	public Long getCodigo() {
+		return codigo;
+	}
 
-    public Long getEssId() {
-        return essId;
-    }
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
 
-    public void setEssId(Long essId) {
-        this.essId = essId;
-    }
+	public Date getCreado() {
+		return creado;
+	}
 
-    public Date getEssCreado() {
-        return essCreado;
-    }
+	public void setCreado(Date creado) {
+		this.creado = creado;
+	}
 
-    public void setEssCreado(Date essCreado) {
-        this.essCreado = essCreado;
-    }
+	public Date getModificado() {
+		return modificado;
+	}
 
-    public Date getEssModificado() {
-        return essModificado;
-    }
+	public void setModificado(Date modificado) {
+		this.modificado = modificado;
+	}
 
-    public void setEssModificado(Date essModificado) {
-        this.essModificado = essModificado;
-    }
+	public String getNombre() {
+		return nombre;
+	}
 
-    public String getEssNombre() {
-        return essNombre;
-    }
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 
-    public void setEssNombre(String essNombre) {
-        this.essNombre = essNombre;
-    }
+	public String getUnicodigo() {
+		return unicodigo;
+	}
 
-    public String getEssUnicodigo() {
-        return essUnicodigo;
-    }
+	public void setUnicodigo(String unicodigo) {
+		this.unicodigo = unicodigo;
+	}
 
-    public void setEssUnicodigo(String essUnicodigo) {
-        this.essUnicodigo = essUnicodigo;
-    }
+	public String getDireccion() {
+		return direccion;
+	}
 
-    public String getEssDireccion() {
-        return essDireccion;
-    }
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
 
-    public void setEssDireccion(String essDireccion) {
-        this.essDireccion = essDireccion;
-    }
+	public String getLatitud() {
+		return latitud;
+	}
 
-    public String getEssLatitud() {
-        return essLatitud;
-    }
+	public void setLatitud(String latitud) {
+		this.latitud = latitud;
+	}
 
-    public void setEssLatitud(String essLatitud) {
-        this.essLatitud = essLatitud;
-    }
+	public String getLongitud() {
+		return longitud;
+	}
 
-    public String getEssLongitud() {
-        return essLongitud;
-    }
+	public void setLongitud(String longitud) {
+		this.longitud = longitud;
+	}
 
-    public void setEssLongitud(String essLongitud) {
-        this.essLongitud = essLongitud;
-    }
+	public String getTelefono() {
+		return telefono;
+	}
 
-    public String getEssTelefono() {
-        return essTelefono;
-    }
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
 
-    public void setEssTelefono(String essTelefono) {
-        this.essTelefono = essTelefono;
-    }
+	public String getCorreoElectronico() {
+		return correoElectronico;
+	}
 
-    public String getEssCorreoElectronico() {
-        return essCorreoElectronico;
-    }
+	public void setCorreoElectronico(String correoElectronico) {
+		this.correoElectronico = correoElectronico;
+	}
 
-    public void setEssCorreoElectronico(String essCorreoElectronico) {
-        this.essCorreoElectronico = essCorreoElectronico;
-    }
+	public String getNombreResponsable() {
+		return nombreResponsable;
+	}
 
-    public String getEssNombreResponsable() {
-        return essNombreResponsable;
-    }
+	public void setNombreResponsable(String nombreResponsable) {
+		this.nombreResponsable = nombreResponsable;
+	}
 
-    public void setEssNombreResponsable(String essNombreResponsable) {
-        this.essNombreResponsable = essNombreResponsable;
-    }
+	public String getZona() {
+		return zona;
+	}
 
-    public String getEssZona() {
-        return essZona;
-    }
+	public void setZona(String zona) {
+		this.zona = zona;
+	}
 
-    public void setEssZona(String essZona) {
-        this.essZona = essZona;
-    }
+	public String getDistrito() {
+		return distrito;
+	}
 
-    public String getEssDistrito() {
-        return essDistrito;
-    }
+	public void setDistrito(String distrito) {
+		this.distrito = distrito;
+	}
 
-    public void setEssDistrito(String essDistrito) {
-        this.essDistrito = essDistrito;
-    }
+	public Canton getCanton() {
+		return canton;
+	}
 
-    public Canton getEssCanton() {
-        return essCanton;
-    }
+	public void setCanton(Canton canton) {
+		this.canton = canton;
+	}
 
-    public void setEssCanton(Canton essCanton) {
-        this.essCanton = essCanton;
-    }
+	public PersonaJuridica getPersonaJuridica() {
+		return personaJuridica;
+	}
 
-    public PersonaJuridica getEssPersonaJuridica() {
-        return essPersonaJuridica;
-    }
+	public void setPersonaJuridica(PersonaJuridica personaJuridica) {
+		this.personaJuridica = personaJuridica;
+	}
 
-    public void setEssPersonaJuridica(PersonaJuridica essPersonaJuridica) {
-        this.essPersonaJuridica = essPersonaJuridica;
-    }
+	public List<Evaluacion> getEvaluacionList() {
+		return evaluacionList;
+	}
 
-    @XmlTransient
-    public List<Evaluacion> getEvaluacionList() {
-        return evaluacionList;
-    }
+	public void setEvaluacionList(List<Evaluacion> evaluacionList) {
+		this.evaluacionList = evaluacionList;
+	}
 
-    public void setEvaluacionList(List<Evaluacion> evaluacionList) {
-        this.evaluacionList = evaluacionList;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (essId != null ? essId.hashCode() : 0);
-        return hash;
-    }
-
-
-    @Override
-    public String toString() {
-        return "org.ops.modelo.EstablecimientoSalud[ essId=" + essId + " ]";
-    }
-    
 }
