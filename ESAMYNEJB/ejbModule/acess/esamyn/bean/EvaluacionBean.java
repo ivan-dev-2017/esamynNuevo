@@ -3,6 +3,7 @@
  */
 package acess.esamyn.bean;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.ejb.EJB;
@@ -12,6 +13,8 @@ import javax.ejb.Stateless;
 import acess.esamyn.dao.RespuestaDAO;
 import acess.esamyn.dto.MensajeDto;
 import acess.esamyn.exception.EvaluacionException;
+import acess.esamyn.modelo.EstablecimientoSalud;
+import acess.esamyn.modelo.Evaluacion;
 import acess.esamyn.modelo.Parametro;
 import acess.esamyn.modelo.Respuesta;
 
@@ -34,8 +37,19 @@ public class EvaluacionBean {
 	 * @param codigoEstablecimientoSalud
 	 * @return
 	 */
-	public MensajeDto crearEvaluacion(Long codigoEstablecimientoSalud) throws EvaluacionException {
+	public void crearEvaluacion(Long codigoEstablecimientoSalud, String usuario) throws EvaluacionException {
 		MensajeDto resp = null;
+
+		EstablecimientoSalud establecimiento = new EstablecimientoSalud(codigoEstablecimientoSalud);
+
+		// 0. Se crea el objeto evaluacion
+		Evaluacion evaluacion = new Evaluacion();
+		evaluacion.setEvaCreado(new Date());
+		evaluacion.setEvaCreadoPor(usuario);
+		evaluacion.setEvaEstablecimientoSalud(establecimiento);
+		evaluacion.setEvaFechaInicio(new Date());
+
+		// TODO: Obtener el codigo de alguna manera
 
 		// 1. Se obtienen todos los parametros a ser evaluados.
 		List<Parametro> parametroList = null;
@@ -53,6 +67,7 @@ public class EvaluacionBean {
 			}
 		}
 
-		return resp;
+		// 4. Actualizar las encuestas con el ID de la evaluacion que se crea
+
 	}
 }
