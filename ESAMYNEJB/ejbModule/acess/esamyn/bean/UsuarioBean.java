@@ -1,8 +1,9 @@
-package acess.esamyn.bean.impl;
+package acess.esamyn.bean;
 
 import java.util.List;
 
 import javax.ejb.EJB;
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
 import com.saviasoft.persistence.util.constant.CriteriaTypeEnum;
@@ -10,24 +11,22 @@ import com.saviasoft.persistence.util.dao.GenericDao;
 import com.saviasoft.persistence.util.service.impl.GenericServiceImpl;
 import com.saviasoft.util.Criteria;
 
-import acess.esamyn.bean.UsuarioBEAN;
 import acess.esamyn.dao.UsuarioDAO;
 import acess.esamyn.dto.MensajeDto;
 import acess.esamyn.modelo.Usuario;
 
 @Stateless
-public class UsuarioBEANImpl extends GenericServiceImpl<Usuario, Long> implements UsuarioBEAN {
+@LocalBean
+public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 
 	@EJB
 	private UsuarioDAO usuarioDAO;
 
 	@Override
 	public GenericDao<Usuario, Long> getDao() {
-
 		return usuarioDAO;
 	}
 
-	@Override
 	public MensajeDto validarUSaurioContrasena(String usuario, String contrasenia) {
 
 		String[] ands = { "usuUsername" };
