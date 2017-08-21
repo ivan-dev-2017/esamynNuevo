@@ -19,7 +19,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -29,141 +28,116 @@ import javax.xml.bind.annotation.XmlTransient;
 @Table(name = "esa_formulario")
 public class Formulario implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "frm_id")
-    private Long frmId;
-    @Basic(optional = false)
-    @Column(name = "frm_creado")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date frmCreado;
-    @Basic(optional = false)
-    @Column(name = "frm_modificado")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date frmModificado;
-    @Column(name = "frm_nombre")
-    private String frmNombre;
-    @Column(name = "frm_titulo")
-    private String frmTitulo;
-    @Column(name = "frm_subtitulo")
-    private String frmSubtitulo;
-    @Column(name = "frm_ayuda")
-    private String frmAyuda;
-    @Column(name = "frm_clave")
-    private String frmClave;
-    @OneToMany(mappedBy = "prgFormulario")
-    private List<Pregunta> preguntaList;
-    @OneToMany(mappedBy = "encFormulario")
-    private List<Encuesta> encuestaList;
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Basic(optional = false)
+	@Column(name = "frm_id")
+	private Long codigo;
+	@Basic(optional = false)
+	@Column(name = "frm_creado")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date creado;
+	@Basic(optional = false)
+	@Column(name = "frm_modificado")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date modificado;
+	@Column(name = "frm_nombre")
+	private String nombre;
+	@Column(name = "frm_titulo")
+	private String titulo;
+	@Column(name = "frm_subtitulo")
+	private String subtitulo;
+	@Column(name = "frm_ayuda")
+	private String ayuda;
+	@Column(name = "frm_clave")
+	private String clave;
+	@OneToMany(mappedBy = "prgFormulario")
+	private List<Pregunta> preguntaLista;
+	@OneToMany(mappedBy = "encFormulario")
+	private List<Encuesta> encuestaLista;
 
-    public Formulario() {
-    }
+	public Formulario() {
+	}
 
-    public Formulario(Long frmId) {
-        this.frmId = frmId;
-    }
+	public Long getCodigo() {
+		return codigo;
+	}
 
-    public Formulario(Long frmId, Date frmCreado, Date frmModificado) {
-        this.frmId = frmId;
-        this.frmCreado = frmCreado;
-        this.frmModificado = frmModificado;
-    }
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
 
-    public Long getFrmId() {
-        return frmId;
-    }
+	public Date getCreado() {
+		return creado;
+	}
 
-    public void setFrmId(Long frmId) {
-        this.frmId = frmId;
-    }
+	public void setCreado(Date creado) {
+		this.creado = creado;
+	}
 
-    public Date getFrmCreado() {
-        return frmCreado;
-    }
+	public Date getModificado() {
+		return modificado;
+	}
 
-    public void setFrmCreado(Date frmCreado) {
-        this.frmCreado = frmCreado;
-    }
+	public void setModificado(Date modificado) {
+		this.modificado = modificado;
+	}
 
-    public Date getFrmModificado() {
-        return frmModificado;
-    }
+	public String getNombre() {
+		return nombre;
+	}
 
-    public void setFrmModificado(Date frmModificado) {
-        this.frmModificado = frmModificado;
-    }
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 
-    public String getFrmNombre() {
-        return frmNombre;
-    }
+	public String getTitulo() {
+		return titulo;
+	}
 
-    public void setFrmNombre(String frmNombre) {
-        this.frmNombre = frmNombre;
-    }
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
 
-    public String getFrmTitulo() {
-        return frmTitulo;
-    }
+	public String getSubtitulo() {
+		return subtitulo;
+	}
 
-    public void setFrmTitulo(String frmTitulo) {
-        this.frmTitulo = frmTitulo;
-    }
+	public void setSubtitulo(String subtitulo) {
+		this.subtitulo = subtitulo;
+	}
 
-    public String getFrmSubtitulo() {
-        return frmSubtitulo;
-    }
+	public String getAyuda() {
+		return ayuda;
+	}
 
-    public void setFrmSubtitulo(String frmSubtitulo) {
-        this.frmSubtitulo = frmSubtitulo;
-    }
+	public void setAyuda(String ayuda) {
+		this.ayuda = ayuda;
+	}
 
-    public String getFrmAyuda() {
-        return frmAyuda;
-    }
+	public String getClave() {
+		return clave;
+	}
 
-    public void setFrmAyuda(String frmAyuda) {
-        this.frmAyuda = frmAyuda;
-    }
+	public void setClave(String clave) {
+		this.clave = clave;
+	}
 
-    public String getFrmClave() {
-        return frmClave;
-    }
+	public List<Pregunta> getPreguntaLista() {
+		return preguntaLista;
+	}
 
-    public void setFrmClave(String frmClave) {
-        this.frmClave = frmClave;
-    }
+	public void setPreguntaLista(List<Pregunta> preguntaLista) {
+		this.preguntaLista = preguntaLista;
+	}
 
-    @XmlTransient
-    public List<Pregunta> getPreguntaList() {
-        return preguntaList;
-    }
+	public List<Encuesta> getEncuestaLista() {
+		return encuestaLista;
+	}
 
-    public void setPreguntaList(List<Pregunta> preguntaList) {
-        this.preguntaList = preguntaList;
-    }
+	public void setEncuestaLista(List<Encuesta> encuestaLista) {
+		this.encuestaLista = encuestaLista;
+	}
 
-    @XmlTransient
-    public List<Encuesta> getEncuestaList() {
-        return encuestaList;
-    }
-
-    public void setEncuestaList(List<Encuesta> encuestaList) {
-        this.encuestaList = encuestaList;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (frmId != null ? frmId.hashCode() : 0);
-        return hash;
-    }
-
-
-    @Override
-    public String toString() {
-        return "org.ops.modelo.Formulario[ frmId=" + frmId + " ]";
-    }
-    
 }

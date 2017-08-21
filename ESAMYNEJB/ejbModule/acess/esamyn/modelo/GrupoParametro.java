@@ -18,7 +18,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -28,115 +27,84 @@ import javax.xml.bind.annotation.XmlTransient;
 @Table(name = "esa_grupo_parametro")
 public class GrupoParametro implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "gpa_id")
-    private Long gpaId;
-    @Column(name = "gpa_texto")
-    private String gpaTexto;
-    @Column(name = "gpa_clave")
-    private String gpaClave;
-    @OneToMany(mappedBy = "parGrupoParametro")
-    private List<Parametro> parametroList;
-    @OneToMany(mappedBy = "gpaPadre")
-    private List<GrupoParametro> grupoParametroList;
-    @JoinColumn(name = "gpa_padre", referencedColumnName = "gpa_id")
-    @ManyToOne
-    private GrupoParametro gpaPadre;
-    @JoinColumn(name = "gpa_tipo_grupo_parametro", referencedColumnName = "tgp_id")
-    @ManyToOne
-    private TipoGrupoParametro gpaTipoGrupoParametro;
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Basic(optional = false)
+	@Column(name = "gpa_id")
+	private Long codigo;
+	@Column(name = "gpa_texto")
+	private String texto;
+	@Column(name = "gpa_clave")
+	private String clave;
+	@OneToMany(mappedBy = "parGrupoParametro")
+	private List<Parametro> parametroList;
+	@OneToMany(mappedBy = "gpaPadre")
+	private List<GrupoParametro> grupoParametroLista;
+	@JoinColumn(name = "gpa_padre", referencedColumnName = "gpa_id")
+	@ManyToOne
+	private GrupoParametro padre;
+	@JoinColumn(name = "gpa_tipo_grupo_parametro", referencedColumnName = "tgp_id")
+	@ManyToOne
+	private TipoGrupoParametro tipoGrupoParametro;
 
-    public GrupoParametro() {
-    }
+	public GrupoParametro() {
+	}
 
-    public GrupoParametro(Long gpaId) {
-        this.gpaId = gpaId;
-    }
+	public Long getCodigo() {
+		return codigo;
+	}
 
-    public Long getGpaId() {
-        return gpaId;
-    }
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
 
-    public void setGpaId(Long gpaId) {
-        this.gpaId = gpaId;
-    }
+	public String getTexto() {
+		return texto;
+	}
 
-    public String getGpaTexto() {
-        return gpaTexto;
-    }
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
 
-    public void setGpaTexto(String gpaTexto) {
-        this.gpaTexto = gpaTexto;
-    }
+	public String getClave() {
+		return clave;
+	}
 
-    public String getGpaClave() {
-        return gpaClave;
-    }
+	public void setClave(String clave) {
+		this.clave = clave;
+	}
 
-    public void setGpaClave(String gpaClave) {
-        this.gpaClave = gpaClave;
-    }
+	public List<Parametro> getParametroList() {
+		return parametroList;
+	}
 
-    @XmlTransient
-    public List<Parametro> getParametroList() {
-        return parametroList;
-    }
+	public void setParametroList(List<Parametro> parametroList) {
+		this.parametroList = parametroList;
+	}
 
-    public void setParametroList(List<Parametro> parametroList) {
-        this.parametroList = parametroList;
-    }
+	public List<GrupoParametro> getGrupoParametroLista() {
+		return grupoParametroLista;
+	}
 
-    @XmlTransient
-    public List<GrupoParametro> getGrupoParametroList() {
-        return grupoParametroList;
-    }
+	public void setGrupoParametroLista(List<GrupoParametro> grupoParametroLista) {
+		this.grupoParametroLista = grupoParametroLista;
+	}
 
-    public void setGrupoParametroList(List<GrupoParametro> grupoParametroList) {
-        this.grupoParametroList = grupoParametroList;
-    }
+	public GrupoParametro getPadre() {
+		return padre;
+	}
 
-    public GrupoParametro getGpaPadre() {
-        return gpaPadre;
-    }
+	public void setPadre(GrupoParametro padre) {
+		this.padre = padre;
+	}
 
-    public void setGpaPadre(GrupoParametro gpaPadre) {
-        this.gpaPadre = gpaPadre;
-    }
+	public TipoGrupoParametro getTipoGrupoParametro() {
+		return tipoGrupoParametro;
+	}
 
-    public TipoGrupoParametro getGpaTipoGrupoParametro() {
-        return gpaTipoGrupoParametro;
-    }
+	public void setTipoGrupoParametro(TipoGrupoParametro tipoGrupoParametro) {
+		this.tipoGrupoParametro = tipoGrupoParametro;
+	}
 
-    public void setGpaTipoGrupoParametro(TipoGrupoParametro gpaTipoGrupoParametro) {
-        this.gpaTipoGrupoParametro = gpaTipoGrupoParametro;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (gpaId != null ? gpaId.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof GrupoParametro)) {
-            return false;
-        }
-        GrupoParametro other = (GrupoParametro) object;
-        if ((this.gpaId == null && other.gpaId != null) || (this.gpaId != null && !this.gpaId.equals(other.gpaId))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "org.ops.modelo.GrupoParametro[ gpaId=" + gpaId + " ]";
-    }
-    
 }

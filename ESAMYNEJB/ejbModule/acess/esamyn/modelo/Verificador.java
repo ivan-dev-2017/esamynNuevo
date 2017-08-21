@@ -28,127 +28,101 @@ import javax.persistence.TemporalType;
 @Table(name = "esa_verificador")
 public class Verificador implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "ver_id")
-    private Long verId;
-    @Basic(optional = false)
-    @Column(name = "ver_creado")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date verCreado;
-    @Basic(optional = false)
-    @Column(name = "ver_modificado")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date verModificado;
-    @Basic(optional = false)
-    @Column(name = "ver_cumple")
-    private int verCumple;
-    @Basic(optional = false)
-    @Column(name = "ver_no_aplica")
-    private int verNoAplica;
-    @Basic(optional = false)
-    @Column(name = "ver_cantidad_medidas")
-    private int verCantidadMedidas;
-    @JoinColumn(name = "ver_evaluacion", referencedColumnName = "eva_id")
-    @ManyToOne
-    private Evaluacion verEvaluacion;
-    @JoinColumn(name = "ver_parametro", referencedColumnName = "par_id")
-    @ManyToOne
-    private Parametro verParametro;
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Basic(optional = false)
+	@Column(name = "ver_id")
+	private Long codigo;
+	@Basic(optional = false)
+	@Column(name = "ver_creado")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date creado;
+	@Basic(optional = false)
+	@Column(name = "ver_modificado")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date modificado;
+	@Basic(optional = false)
+	@Column(name = "ver_cumple")
+	private int cumple;
+	@Basic(optional = false)
+	@Column(name = "ver_no_aplica")
+	private int noAplica;
+	@Basic(optional = false)
+	@Column(name = "ver_cantidad_medidas")
+	private int cantidadMedidas;
+	@JoinColumn(name = "ver_evaluacion", referencedColumnName = "eva_id")
+	@ManyToOne
+	private Evaluacion evaluacion;
+	@JoinColumn(name = "ver_parametro", referencedColumnName = "par_id")
+	@ManyToOne
+	private Parametro parametro;
 
-    public Verificador() {
-    }
+	public Verificador() {
+	}
 
-    public Verificador(Long verId) {
-        this.verId = verId;
-    }
+	public Long getCodigo() {
+		return codigo;
+	}
 
-    public Verificador(Long verId, Date verCreado, Date verModificado, int verCumple, int verNoAplica, int verCantidadMedidas) {
-        this.verId = verId;
-        this.verCreado = verCreado;
-        this.verModificado = verModificado;
-        this.verCumple = verCumple;
-        this.verNoAplica = verNoAplica;
-        this.verCantidadMedidas = verCantidadMedidas;
-    }
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
 
-    public Long getVerId() {
-        return verId;
-    }
+	public Date getCreado() {
+		return creado;
+	}
 
-    public void setVerId(Long verId) {
-        this.verId = verId;
-    }
+	public void setCreado(Date creado) {
+		this.creado = creado;
+	}
 
-    public Date getVerCreado() {
-        return verCreado;
-    }
+	public Date getModificado() {
+		return modificado;
+	}
 
-    public void setVerCreado(Date verCreado) {
-        this.verCreado = verCreado;
-    }
+	public void setModificado(Date modificado) {
+		this.modificado = modificado;
+	}
 
-    public Date getVerModificado() {
-        return verModificado;
-    }
+	public int getCumple() {
+		return cumple;
+	}
 
-    public void setVerModificado(Date verModificado) {
-        this.verModificado = verModificado;
-    }
+	public void setCumple(int cumple) {
+		this.cumple = cumple;
+	}
 
-    public int getVerCumple() {
-        return verCumple;
-    }
+	public int getNoAplica() {
+		return noAplica;
+	}
 
-    public void setVerCumple(int verCumple) {
-        this.verCumple = verCumple;
-    }
+	public void setNoAplica(int noAplica) {
+		this.noAplica = noAplica;
+	}
 
-    public int getVerNoAplica() {
-        return verNoAplica;
-    }
+	public int getCantidadMedidas() {
+		return cantidadMedidas;
+	}
 
-    public void setVerNoAplica(int verNoAplica) {
-        this.verNoAplica = verNoAplica;
-    }
+	public void setCantidadMedidas(int cantidadMedidas) {
+		this.cantidadMedidas = cantidadMedidas;
+	}
 
-    public int getVerCantidadMedidas() {
-        return verCantidadMedidas;
-    }
+	public Evaluacion getEvaluacion() {
+		return evaluacion;
+	}
 
-    public void setVerCantidadMedidas(int verCantidadMedidas) {
-        this.verCantidadMedidas = verCantidadMedidas;
-    }
+	public void setEvaluacion(Evaluacion evaluacion) {
+		this.evaluacion = evaluacion;
+	}
 
-    public Evaluacion getVerEvaluacion() {
-        return verEvaluacion;
-    }
+	public Parametro getParametro() {
+		return parametro;
+	}
 
-    public void setVerEvaluacion(Evaluacion verEvaluacion) {
-        this.verEvaluacion = verEvaluacion;
-    }
+	public void setParametro(Parametro parametro) {
+		this.parametro = parametro;
+	}
 
-    public Parametro getVerParametro() {
-        return verParametro;
-    }
-
-    public void setVerParametro(Parametro verParametro) {
-        this.verParametro = verParametro;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (verId != null ? verId.hashCode() : 0);
-        return hash;
-    }
-
-
-    @Override
-    public String toString() {
-        return "org.ops.modelo.Verificador[ verId=" + verId + " ]";
-    }
-    
 }

@@ -16,7 +16,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -26,70 +25,49 @@ import javax.xml.bind.annotation.XmlTransient;
 @Table(name = "esa_tipo_pregunta")
 public class TipoPregunta implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "tpp_id")
-    private Long tppId;
-    @Column(name = "tpp_clave")
-    private String tppClave;
-    @Column(name = "tpp_etiqueta")
-    private String tppEtiqueta;
-    @OneToMany(mappedBy = "prgTipoPregunta")
-    private List<Pregunta> preguntaList;
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Basic(optional = false)
+	@Column(name = "tpp_id")
+	private Long codigo;
+	@Column(name = "tpp_clave")
+	private String clave;
+	@Column(name = "tpp_etiqueta")
+	private String etiqueta;
+	@OneToMany(mappedBy = "prgTipoPregunta")
+	private List<Pregunta> preguntaLista;
 
-    public TipoPregunta() {
-    }
+	public Long getCodigo() {
+		return codigo;
+	}
 
-    public TipoPregunta(Long tppId) {
-        this.tppId = tppId;
-    }
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
 
-    public Long getTppId() {
-        return tppId;
-    }
+	public String getClave() {
+		return clave;
+	}
 
-    public void setTppId(Long tppId) {
-        this.tppId = tppId;
-    }
+	public void setClave(String clave) {
+		this.clave = clave;
+	}
 
-    public String getTppClave() {
-        return tppClave;
-    }
+	public String getEtiqueta() {
+		return etiqueta;
+	}
 
-    public void setTppClave(String tppClave) {
-        this.tppClave = tppClave;
-    }
+	public void setEtiqueta(String etiqueta) {
+		this.etiqueta = etiqueta;
+	}
 
-    public String getTppEtiqueta() {
-        return tppEtiqueta;
-    }
+	public List<Pregunta> getPreguntaLista() {
+		return preguntaLista;
+	}
 
-    public void setTppEtiqueta(String tppEtiqueta) {
-        this.tppEtiqueta = tppEtiqueta;
-    }
+	public void setPreguntaLista(List<Pregunta> preguntaLista) {
+		this.preguntaLista = preguntaLista;
+	}
 
-    @XmlTransient
-    public List<Pregunta> getPreguntaList() {
-        return preguntaList;
-    }
-
-    public void setPreguntaList(List<Pregunta> preguntaList) {
-        this.preguntaList = preguntaList;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (tppId != null ? tppId.hashCode() : 0);
-        return hash;
-    }
-
-
-    @Override
-    public String toString() {
-        return "org.ops.modelo.TipoPregunta[ tppId=" + tppId + " ]";
-    }
-    
 }

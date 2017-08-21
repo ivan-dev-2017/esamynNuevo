@@ -60,7 +60,7 @@ public class EvaluacionBean {
 			// 3. Se obtienen todas las respuestas que se evaluan por el parametro del
 			// establecimiento a valuar
 			List<Respuesta> respuestaList = respuestaDAO.getRespuestasParaEvaluar(codigoEstablecimientoSalud,
-					param.getParId());
+					param.getCodigo());
 
 			if (respuestaList != null && !respuestaList.isEmpty()) {
 

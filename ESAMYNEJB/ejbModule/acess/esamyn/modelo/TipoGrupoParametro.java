@@ -16,7 +16,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -26,59 +25,42 @@ import javax.xml.bind.annotation.XmlTransient;
 @Table(name = "esa_tipo_grupo_parametro")
 public class TipoGrupoParametro implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "tgp_id")
-    private Long tgpId;
-    @Column(name = "tgp_texto")
-    private String tgpTexto;
-    @OneToMany(mappedBy = "gpaTipoGrupoParametro")
-    private List<GrupoParametro> grupoParametroList;
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Basic(optional = false)
+	@Column(name = "tgp_id")
+	private Long codigo;
+	@Column(name = "tgp_texto")
+	private String texto;
+	@OneToMany(mappedBy = "gpaTipoGrupoParametro")
+	private List<GrupoParametro> grupoParametroLista;
 
-    public TipoGrupoParametro() {
-    }
+	public TipoGrupoParametro() {
+	}
 
-    public TipoGrupoParametro(Long tgpId) {
-        this.tgpId = tgpId;
-    }
+	public Long getCodigo() {
+		return codigo;
+	}
 
-    public Long getTgpId() {
-        return tgpId;
-    }
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
 
-    public void setTgpId(Long tgpId) {
-        this.tgpId = tgpId;
-    }
+	public String getTexto() {
+		return texto;
+	}
 
-    public String getTgpTexto() {
-        return tgpTexto;
-    }
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
 
-    public void setTgpTexto(String tgpTexto) {
-        this.tgpTexto = tgpTexto;
-    }
+	public List<GrupoParametro> getGrupoParametroLista() {
+		return grupoParametroLista;
+	}
 
-    @XmlTransient
-    public List<GrupoParametro> getGrupoParametroList() {
-        return grupoParametroList;
-    }
+	public void setGrupoParametroLista(List<GrupoParametro> grupoParametroLista) {
+		this.grupoParametroLista = grupoParametroLista;
+	}
 
-    public void setGrupoParametroList(List<GrupoParametro> grupoParametroList) {
-        this.grupoParametroList = grupoParametroList;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (tgpId != null ? tgpId.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public String toString() {
-        return "org.ops.modelo.TipoGrupoParametro[ tgpId=" + tgpId + " ]";
-    }
-    
 }

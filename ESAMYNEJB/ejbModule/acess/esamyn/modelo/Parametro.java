@@ -18,7 +18,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -33,138 +32,114 @@ public class Parametro implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "par_id")
-    private Long parId;
+    private Long codigo;
     @Column(name = "par_puntaje")
-    private Integer parPuntaje;
+    private Integer puntaje;
     @Column(name = "par_texto")
-    private String parTexto;
+    private String texto;
     @Basic(optional = false)
     @Column(name = "par_obligatorio")
-    private int parObligatorio;
+    private int obligatorio;
     @Basic(optional = false)
     @Column(name = "par_umbral")
-    private int parUmbral;
+    private int umbral;
     @Basic(optional = false)
     @Column(name = "par_cantidad_minima")
-    private int parCantidadMinima;
+    private int cantidadMinima;
     @JoinColumn(name = "par_condicion", referencedColumnName = "con_id")
     @ManyToOne
-    private Condicion parCondicion;
+    private Condicion condicion;
     @JoinColumn(name = "par_grupo_parametro", referencedColumnName = "gpa_id")
     @ManyToOne
-    private GrupoParametro parGrupoParametro;
+    private GrupoParametro grupoParametro;
     @JoinColumn(name = "par_pregunta", referencedColumnName = "prg_id")
     @ManyToOne
-    private Pregunta parPregunta;
+    private Pregunta pregunta;
     @OneToMany(mappedBy = "verParametro")
-    private List<Verificador> verificadorList;
+    private List<Verificador> verificadorLista;
 
     public Parametro() {
     }
 
-    public Parametro(Long parId) {
-        this.parId = parId;
-    }
+	public Long getCodigo() {
+		return codigo;
+	}
 
-    public Parametro(Long parId, int parObligatorio, int parUmbral, int parCantidadMinima) {
-        this.parId = parId;
-        this.parObligatorio = parObligatorio;
-        this.parUmbral = parUmbral;
-        this.parCantidadMinima = parCantidadMinima;
-    }
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
 
-    public Long getParId() {
-        return parId;
-    }
+	public Integer getPuntaje() {
+		return puntaje;
+	}
 
-    public void setParId(Long parId) {
-        this.parId = parId;
-    }
+	public void setPuntaje(Integer puntaje) {
+		this.puntaje = puntaje;
+	}
 
-    public Integer getParPuntaje() {
-        return parPuntaje;
-    }
+	public String getTexto() {
+		return texto;
+	}
 
-    public void setParPuntaje(Integer parPuntaje) {
-        this.parPuntaje = parPuntaje;
-    }
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
 
-    public String getParTexto() {
-        return parTexto;
-    }
+	public int getObligatorio() {
+		return obligatorio;
+	}
 
-    public void setParTexto(String parTexto) {
-        this.parTexto = parTexto;
-    }
+	public void setObligatorio(int obligatorio) {
+		this.obligatorio = obligatorio;
+	}
 
-    public int getParObligatorio() {
-        return parObligatorio;
-    }
+	public int getUmbral() {
+		return umbral;
+	}
 
-    public void setParObligatorio(int parObligatorio) {
-        this.parObligatorio = parObligatorio;
-    }
+	public void setUmbral(int umbral) {
+		this.umbral = umbral;
+	}
 
-    public int getParUmbral() {
-        return parUmbral;
-    }
+	public int getCantidadMinima() {
+		return cantidadMinima;
+	}
 
-    public void setParUmbral(int parUmbral) {
-        this.parUmbral = parUmbral;
-    }
+	public void setCantidadMinima(int cantidadMinima) {
+		this.cantidadMinima = cantidadMinima;
+	}
 
-    public int getParCantidadMinima() {
-        return parCantidadMinima;
-    }
+	public Condicion getCondicion() {
+		return condicion;
+	}
 
-    public void setParCantidadMinima(int parCantidadMinima) {
-        this.parCantidadMinima = parCantidadMinima;
-    }
+	public void setCondicion(Condicion condicion) {
+		this.condicion = condicion;
+	}
 
-    public Condicion getParCondicion() {
-        return parCondicion;
-    }
+	public GrupoParametro getGrupoParametro() {
+		return grupoParametro;
+	}
 
-    public void setParCondicion(Condicion parCondicion) {
-        this.parCondicion = parCondicion;
-    }
+	public void setGrupoParametro(GrupoParametro grupoParametro) {
+		this.grupoParametro = grupoParametro;
+	}
 
-    public GrupoParametro getParGrupoParametro() {
-        return parGrupoParametro;
-    }
+	public Pregunta getPregunta() {
+		return pregunta;
+	}
 
-    public void setParGrupoParametro(GrupoParametro parGrupoParametro) {
-        this.parGrupoParametro = parGrupoParametro;
-    }
+	public void setPregunta(Pregunta pregunta) {
+		this.pregunta = pregunta;
+	}
 
-    public Pregunta getParPregunta() {
-        return parPregunta;
-    }
+	public List<Verificador> getVerificadorLista() {
+		return verificadorLista;
+	}
 
-    public void setParPregunta(Pregunta parPregunta) {
-        this.parPregunta = parPregunta;
-    }
+	public void setVerificadorLista(List<Verificador> verificadorLista) {
+		this.verificadorLista = verificadorLista;
+	}
 
-    @XmlTransient
-    public List<Verificador> getVerificadorList() {
-        return verificadorList;
-    }
-
-    public void setVerificadorList(List<Verificador> verificadorList) {
-        this.verificadorList = verificadorList;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (parId != null ? parId.hashCode() : 0);
-        return hash;
-    }
-
-
-    @Override
-    public String toString() {
-        return "org.ops.modelo.Parametro[ parId=" + parId + " ]";
-    }
-    
+   
 }

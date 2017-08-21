@@ -21,7 +21,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.xml.bind.annotation.XmlTransient;
+import javax.persistence.Transient;
 
 /**
  *
@@ -31,184 +31,160 @@ import javax.xml.bind.annotation.XmlTransient;
 @Table(name = "esa_usuario")
 public class Usuario implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "usu_id")
-    private Long usuId;
-    @Basic(optional = false)
-    @Column(name = "usu_creado")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date usuCreado;
-    @Basic(optional = false)
-    @Column(name = "usu_modificado")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date usuModificado;
-    @Column(name = "usu_nombres")
-    private String usuNombres;
-    @Column(name = "usu_apellidos")
-    private String usuApellidos;
-    @Column(name = "usu_username")
-    private String usuUsername;
-    @Column(name = "usu_password")
-    private String usuPassword;
-    @Basic(optional = false)
-    @Column(name = "usu_bloqueado")
-    private int usuBloqueado;
-    @Column(name = "usu_cedula")
-    private String usuCedula;
-    @Column(name = "usu_telefono")
-    private String usuTelefono;
-    @Column(name = "usu_correo_eletronico")
-    private String usuCorreoEletronico;
-    @JoinColumn(name = "usu_rol", referencedColumnName = "rol_id")
-    @ManyToOne
-    private Rol usuRol;
-    @OneToMany(mappedBy = "evaUsuario")
-    private List<Evaluacion> evaluacionList;
-    @OneToMany(mappedBy = "encUsuario")
-    private List<Encuesta> encuestaList;
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Basic(optional = false)
+	@Column(name = "usu_id")
+	private Long codigo;
+	@Basic(optional = false)
+	@Column(name = "usu_creado")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date creado;
+	@Basic(optional = false)
+	@Column(name = "usu_modificado")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date modificado;
+	@Column(name = "usu_nombres")
+	private String nombres;
+	@Column(name = "usu_apellidos")
+	private String apellidos;
+	@Column(name = "usu_username")
+	private String username;
+	@Column(name = "usu_password")
+	private String password;
+	@Basic(optional = false)
+	@Column(name = "usu_bloqueado")
+	private int bloqueado;
+	@Column(name = "usu_cedula")
+	private String cedula;
+	@Column(name = "usu_telefono")
+	private String telefono;
+	@Column(name = "usu_correo_eletronico")
+	private String correoEletronico;
+	@JoinColumn(name = "usu_rol", referencedColumnName = "rol_id")
+	@ManyToOne
+	private Rol rol;
+	@OneToMany(mappedBy = "evaUsuario")
+	private List<Evaluacion> evaluacionLista;
+	@OneToMany(mappedBy = "encUsuario")
+	private List<Encuesta> encuestaLista;
+	@Transient
+	private String token;
 
-    public Usuario() {
-    }
+	public Usuario() {
+	}
 
-    public Usuario(Long usuId) {
-        this.usuId = usuId;
-    }
+	public Long getCodigo() {
+		return codigo;
+	}
 
-    public Usuario(Long usuId, Date usuCreado, Date usuModificado, int usuBloqueado) {
-        this.usuId = usuId;
-        this.usuCreado = usuCreado;
-        this.usuModificado = usuModificado;
-        this.usuBloqueado = usuBloqueado;
-    }
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
 
-    public Long getUsuId() {
-        return usuId;
-    }
+	public Date getCreado() {
+		return creado;
+	}
 
-    public void setUsuId(Long usuId) {
-        this.usuId = usuId;
-    }
+	public void setCreado(Date creado) {
+		this.creado = creado;
+	}
 
-    public Date getUsuCreado() {
-        return usuCreado;
-    }
+	public Date getModificado() {
+		return modificado;
+	}
 
-    public void setUsuCreado(Date usuCreado) {
-        this.usuCreado = usuCreado;
-    }
+	public void setModificado(Date modificado) {
+		this.modificado = modificado;
+	}
 
-    public Date getUsuModificado() {
-        return usuModificado;
-    }
+	public String getNombres() {
+		return nombres;
+	}
 
-    public void setUsuModificado(Date usuModificado) {
-        this.usuModificado = usuModificado;
-    }
+	public void setNombres(String nombres) {
+		this.nombres = nombres;
+	}
 
-    public String getUsuNombres() {
-        return usuNombres;
-    }
+	public String getApellidos() {
+		return apellidos;
+	}
 
-    public void setUsuNombres(String usuNombres) {
-        this.usuNombres = usuNombres;
-    }
+	public void setApellidos(String apellidos) {
+		this.apellidos = apellidos;
+	}
 
-    public String getUsuApellidos() {
-        return usuApellidos;
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    public void setUsuApellidos(String usuApellidos) {
-        this.usuApellidos = usuApellidos;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-    public String getUsuUsername() {
-        return usuUsername;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    public void setUsuUsername(String usuUsername) {
-        this.usuUsername = usuUsername;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    public String getUsuPassword() {
-        return usuPassword;
-    }
+	public int getBloqueado() {
+		return bloqueado;
+	}
 
-    public void setUsuPassword(String usuPassword) {
-        this.usuPassword = usuPassword;
-    }
+	public void setBloqueado(int bloqueado) {
+		this.bloqueado = bloqueado;
+	}
 
-    public int getUsuBloqueado() {
-        return usuBloqueado;
-    }
+	public String getCedula() {
+		return cedula;
+	}
 
-    public void setUsuBloqueado(int usuBloqueado) {
-        this.usuBloqueado = usuBloqueado;
-    }
+	public void setCedula(String cedula) {
+		this.cedula = cedula;
+	}
 
-    public String getUsuCedula() {
-        return usuCedula;
-    }
+	public String getTelefono() {
+		return telefono;
+	}
 
-    public void setUsuCedula(String usuCedula) {
-        this.usuCedula = usuCedula;
-    }
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
 
-    public String getUsuTelefono() {
-        return usuTelefono;
-    }
+	public String getCorreoEletronico() {
+		return correoEletronico;
+	}
 
-    public void setUsuTelefono(String usuTelefono) {
-        this.usuTelefono = usuTelefono;
-    }
+	public void setCorreoEletronico(String correoEletronico) {
+		this.correoEletronico = correoEletronico;
+	}
 
-    public String getUsuCorreoEletronico() {
-        return usuCorreoEletronico;
-    }
+	public Rol getRol() {
+		return rol;
+	}
 
-    public void setUsuCorreoEletronico(String usuCorreoEletronico) {
-        this.usuCorreoEletronico = usuCorreoEletronico;
-    }
+	public void setRol(Rol rol) {
+		this.rol = rol;
+	}
 
-    public Rol getUsuRol() {
-        return usuRol;
-    }
+	public List<Evaluacion> getEvaluacionLista() {
+		return evaluacionLista;
+	}
 
-    public void setUsuRol(Rol usuRol) {
-        this.usuRol = usuRol;
-    }
+	public void setEvaluacionLista(List<Evaluacion> evaluacionLista) {
+		this.evaluacionLista = evaluacionLista;
+	}
 
-    @XmlTransient
-    public List<Evaluacion> getEvaluacionList() {
-        return evaluacionList;
-    }
+	public List<Encuesta> getEncuestaLista() {
+		return encuestaLista;
+	}
 
-    public void setEvaluacionList(List<Evaluacion> evaluacionList) {
-        this.evaluacionList = evaluacionList;
-    }
+	public void setEncuestaLista(List<Encuesta> encuestaLista) {
+		this.encuestaLista = encuestaLista;
+	}
 
-    @XmlTransient
-    public List<Encuesta> getEncuestaList() {
-        return encuestaList;
-    }
-
-    public void setEncuestaList(List<Encuesta> encuestaList) {
-        this.encuestaList = encuestaList;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (usuId != null ? usuId.hashCode() : 0);
-        return hash;
-    }
-
-
-    @Override
-    public String toString() {
-        return "org.ops.modelo.Usuario[ usuId=" + usuId + " ]";
-    }
-    
 }

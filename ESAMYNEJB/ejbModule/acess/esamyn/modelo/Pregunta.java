@@ -21,7 +21,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -31,205 +30,179 @@ import javax.xml.bind.annotation.XmlTransient;
 @Table(name = "esa_pregunta")
 public class Pregunta implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "prg_id")
-    private Long prgId;
-    @Basic(optional = false)
-    @Column(name = "prg_creado")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date prgCreado;
-    @Basic(optional = false)
-    @Column(name = "prg_modificado")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date prgModificado;
-    @Column(name = "prg_texto")
-    private String prgTexto;
-    @Column(name = "prg_codigo_verificacion")
-    private String prgCodigoVerificacion;
-    @Column(name = "prg_ayuda")
-    private String prgAyuda;
-    @Column(name = "prg_prefijo")
-    private String prgPrefijo;
-    @Column(name = "prg_subfijo")
-    private String prgSubfijo;
-    @Column(name = "prg_validacion")
-    private String prgValidacion;
-    @Column(name = "prg_orden")
-    private Integer prgOrden;
-    @JoinColumn(name = "prg_formulario", referencedColumnName = "frm_id")
-    @ManyToOne
-    private Formulario prgFormulario;
-    @OneToMany(mappedBy = "prgPadre")
-    private List<Pregunta> preguntaList;
-    @JoinColumn(name = "prg_padre", referencedColumnName = "prg_id")
-    @ManyToOne
-    private Pregunta prgPadre;
-    @JoinColumn(name = "prg_tipo_pregunta", referencedColumnName = "tpp_id")
-    @ManyToOne
-    private TipoPregunta prgTipoPregunta;
-    @OneToMany(mappedBy = "parPregunta")
-    private List<Parametro> parametroList;
-    @OneToMany(mappedBy = "resPregunta")
-    private List<Respuesta> respuestaList;
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Basic(optional = false)
+	@Column(name = "prg_id")
+	private Long codigo;
+	@Basic(optional = false)
+	@Column(name = "prg_creado")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date creado;
+	@Basic(optional = false)
+	@Column(name = "prg_modificado")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date modificado;
+	@Column(name = "prg_texto")
+	private String texto;
+	@Column(name = "prg_codigo_verificacion")
+	private String codigoVerificacion;
+	@Column(name = "prg_ayuda")
+	private String ayuda;
+	@Column(name = "prg_prefijo")
+	private String prefijo;
+	@Column(name = "prg_subfijo")
+	private String subfijo;
+	@Column(name = "prg_validacion")
+	private String validacion;
+	@Column(name = "prg_orden")
+	private Integer orden;
+	@JoinColumn(name = "prg_formulario", referencedColumnName = "frm_id")
+	@ManyToOne
+	private Formulario formulario;
+	@OneToMany(mappedBy = "prgPadre")
+	private List<Pregunta> preguntaLista;
+	@JoinColumn(name = "prg_padre", referencedColumnName = "prg_id")
+	@ManyToOne
+	private Pregunta padre;
+	@JoinColumn(name = "prg_tipo_pregunta", referencedColumnName = "tpp_id")
+	@ManyToOne
+	private TipoPregunta tipoPregunta;
+	@OneToMany(mappedBy = "parPregunta")
+	private List<Parametro> parametroLista;
+	@OneToMany(mappedBy = "resPregunta")
+	private List<Respuesta> respuestaLista;
 
-    public Pregunta() {
-    }
+	public Pregunta() {
+	}
 
-    public Pregunta(Long prgId) {
-        this.prgId = prgId;
-    }
+	public Long getCodigo() {
+		return codigo;
+	}
 
-    public Pregunta(Long prgId, Date prgCreado, Date prgModificado) {
-        this.prgId = prgId;
-        this.prgCreado = prgCreado;
-        this.prgModificado = prgModificado;
-    }
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
 
-    public Long getPrgId() {
-        return prgId;
-    }
+	public Date getCreado() {
+		return creado;
+	}
 
-    public void setPrgId(Long prgId) {
-        this.prgId = prgId;
-    }
+	public void setCreado(Date creado) {
+		this.creado = creado;
+	}
 
-    public Date getPrgCreado() {
-        return prgCreado;
-    }
+	public Date getModificado() {
+		return modificado;
+	}
 
-    public void setPrgCreado(Date prgCreado) {
-        this.prgCreado = prgCreado;
-    }
+	public void setModificado(Date modificado) {
+		this.modificado = modificado;
+	}
 
-    public Date getPrgModificado() {
-        return prgModificado;
-    }
+	public String getTexto() {
+		return texto;
+	}
 
-    public void setPrgModificado(Date prgModificado) {
-        this.prgModificado = prgModificado;
-    }
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
 
-    public String getPrgTexto() {
-        return prgTexto;
-    }
+	public String getCodigoVerificacion() {
+		return codigoVerificacion;
+	}
 
-    public void setPrgTexto(String prgTexto) {
-        this.prgTexto = prgTexto;
-    }
+	public void setCodigoVerificacion(String codigoVerificacion) {
+		this.codigoVerificacion = codigoVerificacion;
+	}
 
-    public String getPrgCodigoVerificacion() {
-        return prgCodigoVerificacion;
-    }
+	public String getAyuda() {
+		return ayuda;
+	}
 
-    public void setPrgCodigoVerificacion(String prgCodigoVerificacion) {
-        this.prgCodigoVerificacion = prgCodigoVerificacion;
-    }
+	public void setAyuda(String ayuda) {
+		this.ayuda = ayuda;
+	}
 
-    public String getPrgAyuda() {
-        return prgAyuda;
-    }
+	public String getPrefijo() {
+		return prefijo;
+	}
 
-    public void setPrgAyuda(String prgAyuda) {
-        this.prgAyuda = prgAyuda;
-    }
+	public void setPrefijo(String prefijo) {
+		this.prefijo = prefijo;
+	}
 
-    public String getPrgPrefijo() {
-        return prgPrefijo;
-    }
+	public String getSubfijo() {
+		return subfijo;
+	}
 
-    public void setPrgPrefijo(String prgPrefijo) {
-        this.prgPrefijo = prgPrefijo;
-    }
+	public void setSubfijo(String subfijo) {
+		this.subfijo = subfijo;
+	}
 
-    public String getPrgSubfijo() {
-        return prgSubfijo;
-    }
+	public String getValidacion() {
+		return validacion;
+	}
 
-    public void setPrgSubfijo(String prgSubfijo) {
-        this.prgSubfijo = prgSubfijo;
-    }
+	public void setValidacion(String validacion) {
+		this.validacion = validacion;
+	}
 
-    public String getPrgValidacion() {
-        return prgValidacion;
-    }
+	public Integer getOrden() {
+		return orden;
+	}
 
-    public void setPrgValidacion(String prgValidacion) {
-        this.prgValidacion = prgValidacion;
-    }
+	public void setOrden(Integer orden) {
+		this.orden = orden;
+	}
 
-    public Integer getPrgOrden() {
-        return prgOrden;
-    }
+	public Formulario getFormulario() {
+		return formulario;
+	}
 
-    public void setPrgOrden(Integer prgOrden) {
-        this.prgOrden = prgOrden;
-    }
+	public void setFormulario(Formulario formulario) {
+		this.formulario = formulario;
+	}
 
-    public Formulario getPrgFormulario() {
-        return prgFormulario;
-    }
+	public List<Pregunta> getPreguntaLista() {
+		return preguntaLista;
+	}
 
-    public void setPrgFormulario(Formulario prgFormulario) {
-        this.prgFormulario = prgFormulario;
-    }
+	public void setPreguntaLista(List<Pregunta> preguntaLista) {
+		this.preguntaLista = preguntaLista;
+	}
 
-    @XmlTransient
-    public List<Pregunta> getPreguntaList() {
-        return preguntaList;
-    }
+	public Pregunta getPadre() {
+		return padre;
+	}
 
-    public void setPreguntaList(List<Pregunta> preguntaList) {
-        this.preguntaList = preguntaList;
-    }
+	public void setPadre(Pregunta padre) {
+		this.padre = padre;
+	}
 
-    public Pregunta getPrgPadre() {
-        return prgPadre;
-    }
+	public TipoPregunta getTipoPregunta() {
+		return tipoPregunta;
+	}
 
-    public void setPrgPadre(Pregunta prgPadre) {
-        this.prgPadre = prgPadre;
-    }
+	public void setTipoPregunta(TipoPregunta tipoPregunta) {
+		this.tipoPregunta = tipoPregunta;
+	}
 
-    public TipoPregunta getPrgTipoPregunta() {
-        return prgTipoPregunta;
-    }
+	public List<Parametro> getParametroLista() {
+		return parametroLista;
+	}
 
-    public void setPrgTipoPregunta(TipoPregunta prgTipoPregunta) {
-        this.prgTipoPregunta = prgTipoPregunta;
-    }
+	public void setParametroLista(List<Parametro> parametroLista) {
+		this.parametroLista = parametroLista;
+	}
 
-    @XmlTransient
-    public List<Parametro> getParametroList() {
-        return parametroList;
-    }
+	public List<Respuesta> getRespuestaLista() {
+		return respuestaLista;
+	}
 
-    public void setParametroList(List<Parametro> parametroList) {
-        this.parametroList = parametroList;
-    }
+	public void setRespuestaLista(List<Respuesta> respuestaLista) {
+		this.respuestaLista = respuestaLista;
+	}
 
-    @XmlTransient
-    public List<Respuesta> getRespuestaList() {
-        return respuestaList;
-    }
-
-    public void setRespuestaList(List<Respuesta> respuestaList) {
-        this.respuestaList = respuestaList;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (prgId != null ? prgId.hashCode() : 0);
-        return hash;
-    }
-
-
-    @Override
-    public String toString() {
-        return "org.ops.modelo.Pregunta[ prgId=" + prgId + " ]";
-    }
-    
 }

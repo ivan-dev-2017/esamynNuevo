@@ -29,142 +29,119 @@ import javax.persistence.TemporalType;
 @Table(name = "esa_respuesta")
 public class Respuesta implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "res_id")
-    private Long resId;
-    @Basic(optional = false)
-    @Column(name = "res_creado")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date resCreado;
-    @Basic(optional = false)
-    @Column(name = "res_modificado")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date resModificado;
-    @Column(name = "res_creado_por")
-    private String resCreadoPor;
-    @Column(name = "res_modificado_por")
-    private String resModificadoPor;
-    @Column(name = "res_valor_numero")
-    private BigInteger resValorNumero;
-    @Column(name = "res_valor_texto")
-    private String resValorTexto;
-    @Column(name = "res_valor_fecha")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date resValorFecha;
-    @JoinColumn(name = "res_encuesta", referencedColumnName = "enc_id")
-    @ManyToOne
-    private Encuesta resEncuesta;
-    @JoinColumn(name = "res_pregunta", referencedColumnName = "prg_id")
-    @ManyToOne
-    private Pregunta resPregunta;
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Basic(optional = false)
+	@Column(name = "res_id")
+	private Long codigo;
+	@Basic(optional = false)
+	@Column(name = "res_creado")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date creado;
+	@Basic(optional = false)
+	@Column(name = "res_modificado")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date modificado;
+	@Column(name = "res_creado_por")
+	private String creadoPor;
+	@Column(name = "res_modificado_por")
+	private String modificadoPor;
+	@Column(name = "res_valor_numero")
+	private BigInteger valorNumero;
+	@Column(name = "res_valor_texto")
+	private String valorTexto;
+	@Column(name = "res_valor_fecha")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date valorFecha;
+	@JoinColumn(name = "res_encuesta", referencedColumnName = "enc_id")
+	@ManyToOne
+	private Encuesta encuesta;
+	@JoinColumn(name = "res_pregunta", referencedColumnName = "prg_id")
+	@ManyToOne
+	private Pregunta pregunta;
 
-    public Respuesta() {
-    }
+	public Respuesta() {
+	}
 
-    public Respuesta(Long resId) {
-        this.resId = resId;
-    }
+	public Long getCodigo() {
+		return codigo;
+	}
 
-    public Respuesta(Long resId, Date resCreado, Date resModificado) {
-        this.resId = resId;
-        this.resCreado = resCreado;
-        this.resModificado = resModificado;
-    }
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
 
-    public Long getResId() {
-        return resId;
-    }
+	public Date getCreado() {
+		return creado;
+	}
 
-    public void setResId(Long resId) {
-        this.resId = resId;
-    }
+	public void setCreado(Date creado) {
+		this.creado = creado;
+	}
 
-    public Date getResCreado() {
-        return resCreado;
-    }
+	public Date getModificado() {
+		return modificado;
+	}
 
-    public void setResCreado(Date resCreado) {
-        this.resCreado = resCreado;
-    }
+	public void setModificado(Date modificado) {
+		this.modificado = modificado;
+	}
 
-    public Date getResModificado() {
-        return resModificado;
-    }
+	public String getCreadoPor() {
+		return creadoPor;
+	}
 
-    public void setResModificado(Date resModificado) {
-        this.resModificado = resModificado;
-    }
+	public void setCreadoPor(String creadoPor) {
+		this.creadoPor = creadoPor;
+	}
 
-    public String getResCreadoPor() {
-        return resCreadoPor;
-    }
+	public String getModificadoPor() {
+		return modificadoPor;
+	}
 
-    public void setResCreadoPor(String resCreadoPor) {
-        this.resCreadoPor = resCreadoPor;
-    }
+	public void setModificadoPor(String modificadoPor) {
+		this.modificadoPor = modificadoPor;
+	}
 
-    public String getResModificadoPor() {
-        return resModificadoPor;
-    }
+	public BigInteger getValorNumero() {
+		return valorNumero;
+	}
 
-    public void setResModificadoPor(String resModificadoPor) {
-        this.resModificadoPor = resModificadoPor;
-    }
+	public void setValorNumero(BigInteger valorNumero) {
+		this.valorNumero = valorNumero;
+	}
 
-    public BigInteger getResValorNumero() {
-        return resValorNumero;
-    }
+	public String getValorTexto() {
+		return valorTexto;
+	}
 
-    public void setResValorNumero(BigInteger resValorNumero) {
-        this.resValorNumero = resValorNumero;
-    }
+	public void setValorTexto(String valorTexto) {
+		this.valorTexto = valorTexto;
+	}
 
-    public String getResValorTexto() {
-        return resValorTexto;
-    }
+	public Date getValorFecha() {
+		return valorFecha;
+	}
 
-    public void setResValorTexto(String resValorTexto) {
-        this.resValorTexto = resValorTexto;
-    }
+	public void setValorFecha(Date valorFecha) {
+		this.valorFecha = valorFecha;
+	}
 
-    public Date getResValorFecha() {
-        return resValorFecha;
-    }
+	public Encuesta getEncuesta() {
+		return encuesta;
+	}
 
-    public void setResValorFecha(Date resValorFecha) {
-        this.resValorFecha = resValorFecha;
-    }
+	public void setEncuesta(Encuesta encuesta) {
+		this.encuesta = encuesta;
+	}
 
-    public Encuesta getResEncuesta() {
-        return resEncuesta;
-    }
+	public Pregunta getPregunta() {
+		return pregunta;
+	}
 
-    public void setResEncuesta(Encuesta resEncuesta) {
-        this.resEncuesta = resEncuesta;
-    }
+	public void setPregunta(Pregunta pregunta) {
+		this.pregunta = pregunta;
+	}
 
-    public Pregunta getResPregunta() {
-        return resPregunta;
-    }
-
-    public void setResPregunta(Pregunta resPregunta) {
-        this.resPregunta = resPregunta;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (resId != null ? resId.hashCode() : 0);
-        return hash;
-    }
-
-
-    @Override
-    public String toString() {
-        return "org.ops.modelo.Respuesta[ resId=" + resId + " ]";
-    }
-    
 }

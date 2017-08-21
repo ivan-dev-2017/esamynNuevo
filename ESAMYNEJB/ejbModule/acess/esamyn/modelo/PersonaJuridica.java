@@ -34,95 +34,71 @@ public class PersonaJuridica implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "pju_id")
-    private Long pjuId;
+    private Long codigo;
     @Basic(optional = false)
     @Column(name = "pju_creado")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date pjuCreado;
+    private Date creado;
     @Basic(optional = false)
     @Column(name = "pju_modificado")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date pjuModificado;
+    private Date modificado;
     @Column(name = "pju_razon_social")
-    private String pjuRazonSocial;
+    private String razonSocial;
     @Column(name = "pju_ruc")
-    private String pjuRuc;
+    private String ruc;
     @OneToMany(mappedBy = "essPersonaJuridica")
-    private List<EstablecimientoSalud> establecimientoSaludList;
+    private List<EstablecimientoSalud> establecimientoSaludLista;
 
     public PersonaJuridica() {
     }
 
-    public PersonaJuridica(Long pjuId) {
-        this.pjuId = pjuId;
-    }
+	public Long getCodigo() {
+		return codigo;
+	}
 
-    public PersonaJuridica(Long pjuId, Date pjuCreado, Date pjuModificado) {
-        this.pjuId = pjuId;
-        this.pjuCreado = pjuCreado;
-        this.pjuModificado = pjuModificado;
-    }
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
 
-    public Long getPjuId() {
-        return pjuId;
-    }
+	public Date getCreado() {
+		return creado;
+	}
 
-    public void setPjuId(Long pjuId) {
-        this.pjuId = pjuId;
-    }
+	public void setCreado(Date creado) {
+		this.creado = creado;
+	}
 
-    public Date getPjuCreado() {
-        return pjuCreado;
-    }
+	public Date getModificado() {
+		return modificado;
+	}
 
-    public void setPjuCreado(Date pjuCreado) {
-        this.pjuCreado = pjuCreado;
-    }
+	public void setModificado(Date modificado) {
+		this.modificado = modificado;
+	}
 
-    public Date getPjuModificado() {
-        return pjuModificado;
-    }
+	public String getRazonSocial() {
+		return razonSocial;
+	}
 
-    public void setPjuModificado(Date pjuModificado) {
-        this.pjuModificado = pjuModificado;
-    }
+	public void setRazonSocial(String razonSocial) {
+		this.razonSocial = razonSocial;
+	}
 
-    public String getPjuRazonSocial() {
-        return pjuRazonSocial;
-    }
+	public String getRuc() {
+		return ruc;
+	}
 
-    public void setPjuRazonSocial(String pjuRazonSocial) {
-        this.pjuRazonSocial = pjuRazonSocial;
-    }
+	public void setRuc(String ruc) {
+		this.ruc = ruc;
+	}
 
-    public String getPjuRuc() {
-        return pjuRuc;
-    }
+	public List<EstablecimientoSalud> getEstablecimientoSaludLista() {
+		return establecimientoSaludLista;
+	}
 
-    public void setPjuRuc(String pjuRuc) {
-        this.pjuRuc = pjuRuc;
-    }
+	public void setEstablecimientoSaludLista(List<EstablecimientoSalud> establecimientoSaludLista) {
+		this.establecimientoSaludLista = establecimientoSaludLista;
+	}
 
-    @XmlTransient
-    public List<EstablecimientoSalud> getEstablecimientoSaludList() {
-        return establecimientoSaludList;
-    }
-
-    public void setEstablecimientoSaludList(List<EstablecimientoSalud> establecimientoSaludList) {
-        this.establecimientoSaludList = establecimientoSaludList;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (pjuId != null ? pjuId.hashCode() : 0);
-        return hash;
-    }
-
-
-    @Override
-    public String toString() {
-        return "org.ops.modelo.PersonaJuridica[ pjuId=" + pjuId + " ]";
-    }
-    
 }

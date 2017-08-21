@@ -41,7 +41,7 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 		if (lista != null && !lista.isEmpty()) {
 			// validar contrasena
 			Usuario u = lista.get(0);
-			if (u.getUsuPassword().equals(contrasenia)) {
+			if (u.getPassword().equals(contrasenia)) {
 
 				dto = new MensajeDto(false, "", u);
 			} else {
