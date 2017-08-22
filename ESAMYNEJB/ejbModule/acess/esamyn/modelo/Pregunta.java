@@ -17,10 +17,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 /**
  *
@@ -61,7 +61,7 @@ public class Pregunta implements Serializable {
 	@JoinColumn(name = "prg_formulario", referencedColumnName = "frm_id")
 	@ManyToOne
 	private Formulario formulario;
-	@OneToMany(mappedBy = "prgPadre")
+	@Transient
 	private List<Pregunta> preguntaLista;
 	@JoinColumn(name = "prg_padre", referencedColumnName = "prg_id")
 	@ManyToOne
@@ -69,9 +69,9 @@ public class Pregunta implements Serializable {
 	@JoinColumn(name = "prg_tipo_pregunta", referencedColumnName = "tpp_id")
 	@ManyToOne
 	private TipoPregunta tipoPregunta;
-	@OneToMany(mappedBy = "parPregunta")
+	@Transient
 	private List<Parametro> parametroLista;
-	@OneToMany(mappedBy = "resPregunta")
+	@Transient
 	private List<Respuesta> respuestaLista;
 
 	public Pregunta() {

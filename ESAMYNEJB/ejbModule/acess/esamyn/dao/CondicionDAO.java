@@ -9,14 +9,14 @@ import javax.ejb.Local;
 
 import com.saviasoft.persistence.util.dao.GenericDao;
 
-import acess.esamyn.modelo.Condicion;
+import acess.esamyn.modelo.CondicionNa;
 
 /**
  * @author Duval
  * 
  */
 @Local
-public interface CondicionDAO extends GenericDao<Condicion, Long> {
+public interface CondicionDAO extends GenericDao<CondicionNa, Long> {
 	
 }
 

@@ -16,8 +16,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 /**
  *
@@ -27,39 +27,35 @@ import javax.persistence.Table;
 @Table(name = "esa_parametro")
 public class Parametro implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "par_id")
-    private Long codigo;
-    @Column(name = "par_puntaje")
-    private Integer puntaje;
-    @Column(name = "par_texto")
-    private String texto;
-    @Basic(optional = false)
-    @Column(name = "par_obligatorio")
-    private int obligatorio;
-    @Basic(optional = false)
-    @Column(name = "par_umbral")
-    private int umbral;
-    @Basic(optional = false)
-    @Column(name = "par_cantidad_minima")
-    private int cantidadMinima;
-    @JoinColumn(name = "par_condicion", referencedColumnName = "con_id")
-    @ManyToOne
-    private Condicion condicion;
-    @JoinColumn(name = "par_grupo_parametro", referencedColumnName = "gpa_id")
-    @ManyToOne
-    private GrupoParametro grupoParametro;
-    @JoinColumn(name = "par_pregunta", referencedColumnName = "prg_id")
-    @ManyToOne
-    private Pregunta pregunta;
-    @OneToMany(mappedBy = "verParametro")
-    private List<Verificador> verificadorLista;
-
-    public Parametro() {
-    }
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Basic(optional = false)
+	@Column(name = "par_id")
+	private Long codigo;
+	@Column(name = "par_puntaje")
+	private Integer puntaje;
+	@Column(name = "par_texto")
+	private String texto;
+	@Basic(optional = false)
+	@Column(name = "par_obligatorio")
+	private int obligatorio;
+	@Basic(optional = false)
+	@Column(name = "par_umbral")
+	private int umbral;
+	@Basic(optional = false)
+	@Column(name = "par_cantidad_minima")
+	private int cantidadMinima;
+	@JoinColumn(name = "par_condicion_na", referencedColumnName = "cna_id")
+	@ManyToOne
+	private CondicionNa condicionNa;
+	@JoinColumn(name = "par_grupo_parametro", referencedColumnName = "gpa_id")
+	@ManyToOne
+	private GrupoParametro grupoParametro;
+	@Transient
+	private List<Verificador> verificadorList;
+	@Transient
+	private List<ParametroPregunta> parametroPreguntaList;
 
 	public Long getCodigo() {
 		return codigo;
@@ -109,12 +105,12 @@ public class Parametro implements Serializable {
 		this.cantidadMinima = cantidadMinima;
 	}
 
-	public Condicion getCondicion() {
-		return condicion;
+	public CondicionNa getCondicionNa() {
+		return condicionNa;
 	}
 
-	public void setCondicion(Condicion condicion) {
-		this.condicion = condicion;
+	public void setCondicionNa(CondicionNa condicionNa) {
+		this.condicionNa = condicionNa;
 	}
 
 	public GrupoParametro getGrupoParametro() {
@@ -125,21 +121,20 @@ public class Parametro implements Serializable {
 		this.grupoParametro = grupoParametro;
 	}
 
-	public Pregunta getPregunta() {
-		return pregunta;
+	public List<Verificador> getVerificadorList() {
+		return verificadorList;
 	}
 
-	public void setPregunta(Pregunta pregunta) {
-		this.pregunta = pregunta;
+	public void setVerificadorList(List<Verificador> verificadorList) {
+		this.verificadorList = verificadorList;
 	}
 
-	public List<Verificador> getVerificadorLista() {
-		return verificadorLista;
+	public List<ParametroPregunta> getParametroPreguntaList() {
+		return parametroPreguntaList;
 	}
 
-	public void setVerificadorLista(List<Verificador> verificadorLista) {
-		this.verificadorLista = verificadorLista;
+	public void setParametroPreguntaList(List<ParametroPregunta> parametroPreguntaList) {
+		this.parametroPreguntaList = parametroPreguntaList;
 	}
 
-   
 }

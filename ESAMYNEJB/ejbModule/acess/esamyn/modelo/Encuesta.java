@@ -17,10 +17,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 /**
  *
@@ -58,7 +58,7 @@ public class Encuesta implements Serializable {
 	@Column(name = "enc_fecha_final")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaFinal;
-	@OneToMany(mappedBy = "resEncuesta")
+	@Transient
 	private List<Respuesta> respuestaLista;
 	@JoinColumn(name = "enc_evaluacion", referencedColumnName = "eva_id")
 	@ManyToOne

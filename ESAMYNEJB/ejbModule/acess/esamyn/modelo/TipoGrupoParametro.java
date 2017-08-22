@@ -6,7 +6,6 @@
 package acess.esamyn.modelo;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -14,7 +13,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -33,8 +31,6 @@ public class TipoGrupoParametro implements Serializable {
 	private Long codigo;
 	@Column(name = "tgp_texto")
 	private String texto;
-	@OneToMany(mappedBy = "gpaTipoGrupoParametro")
-	private List<GrupoParametro> grupoParametroLista;
 
 	public TipoGrupoParametro() {
 	}
@@ -55,12 +51,5 @@ public class TipoGrupoParametro implements Serializable {
 		this.texto = texto;
 	}
 
-	public List<GrupoParametro> getGrupoParametroLista() {
-		return grupoParametroLista;
-	}
-
-	public void setGrupoParametroLista(List<GrupoParametro> grupoParametroLista) {
-		this.grupoParametroLista = grupoParametroLista;
-	}
 
 }

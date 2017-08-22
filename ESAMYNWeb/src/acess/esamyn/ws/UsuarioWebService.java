@@ -8,6 +8,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import acess.esamyn.dto.AccesoDto;
 import acess.esamyn.dto.MensajeDto;
 
 /**
@@ -28,9 +29,8 @@ public class UsuarioWebService {
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public MensajeDto sayHello() {
+	public MensajeDto sayHello(AccesoDto accesoDto) {
 
-		String dto = "ESAMYN pruebas";
 		return null;
 	}
 }

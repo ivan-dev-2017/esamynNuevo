@@ -17,7 +17,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -65,9 +64,9 @@ public class Usuario implements Serializable {
 	@JoinColumn(name = "usu_rol", referencedColumnName = "rol_id")
 	@ManyToOne
 	private Rol rol;
-	@OneToMany(mappedBy = "evaUsuario")
+	@Transient
 	private List<Evaluacion> evaluacionLista;
-	@OneToMany(mappedBy = "encUsuario")
+	@Transient
 	private List<Encuesta> encuestaLista;
 	@Transient
 	private String token;

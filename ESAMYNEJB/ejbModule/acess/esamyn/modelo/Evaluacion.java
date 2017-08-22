@@ -8,7 +8,6 @@ package acess.esamyn.modelo;
 import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -18,7 +17,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -63,16 +61,13 @@ public class Evaluacion implements Serializable {
 	@Basic(optional = false)
 	@Column(name = "eva_cantidad_encuestas")
 	private int cantidadEncuestas;
-	@OneToMany(mappedBy = "verEvaluacion")
-	private List<Verificador> verificadorList;
+
 	@JoinColumn(name = "eva_establecimiento_salud", referencedColumnName = "ess_id")
 	@ManyToOne
 	private EstablecimientoSalud establecimientoSalud;
 	@JoinColumn(name = "eva_usuario", referencedColumnName = "usu_id")
 	@ManyToOne
 	private Usuario usuario;
-	@OneToMany(mappedBy = "encEvaluacion")
-	private List<Encuesta> encuestaLista;
 
 	public Evaluacion() {
 	}
@@ -157,14 +152,6 @@ public class Evaluacion implements Serializable {
 		this.cantidadEncuestas = cantidadEncuestas;
 	}
 
-	public List<Verificador> getVerificadorList() {
-		return verificadorList;
-	}
-
-	public void setVerificadorList(List<Verificador> verificadorList) {
-		this.verificadorList = verificadorList;
-	}
-
 	public EstablecimientoSalud getEstablecimientoSalud() {
 		return establecimientoSalud;
 	}
@@ -179,14 +166,6 @@ public class Evaluacion implements Serializable {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
-	}
-
-	public List<Encuesta> getEncuestaLista() {
-		return encuestaLista;
-	}
-
-	public void setEncuestaLista(List<Encuesta> encuestaLista) {
-		this.encuestaLista = encuestaLista;
 	}
 
 }

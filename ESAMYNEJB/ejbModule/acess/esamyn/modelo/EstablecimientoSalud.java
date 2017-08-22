@@ -17,10 +17,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 /**
  *
@@ -62,10 +62,6 @@ public class EstablecimientoSalud implements Serializable {
 	private String nombreResponsable;
 	@Column(name = "ess_zona")
 	private String zona;
-	public EstablecimientoSalud(Long codigo) {
-		super();
-		this.codigo = codigo;
-	}
 
 	@Column(name = "ess_distrito")
 	private String distrito;
@@ -75,14 +71,17 @@ public class EstablecimientoSalud implements Serializable {
 	@JoinColumn(name = "ess_persona_juridica", referencedColumnName = "pju_id")
 	@ManyToOne
 	private PersonaJuridica personaJuridica;
-	@OneToMany(mappedBy = "evaEstablecimientoSalud")
+	@Transient
 	private List<Evaluacion> evaluacionList;
 
 	public EstablecimientoSalud() {
 	}
 
-	
-	
+	public EstablecimientoSalud(Long codigo) {
+		super();
+		this.codigo = codigo;
+	}
+
 	public Long getCodigo() {
 		return codigo;
 	}

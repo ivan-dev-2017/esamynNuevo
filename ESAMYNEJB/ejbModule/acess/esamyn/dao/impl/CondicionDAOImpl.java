@@ -12,14 +12,14 @@ import javax.persistence.PersistenceContext;
 import com.saviasoft.persistence.util.dao.ejb.GenericEmDaoEjb;
 
 import acess.esamyn.dao.CondicionDAO;
-import acess.esamyn.modelo.Condicion;
+import acess.esamyn.modelo.CondicionNa;
 
 /**
  * @author Duval
  * 
  */
 @Stateless
-public class CondicionDAOImpl extends GenericEmDaoEjb<Condicion, Long> implements
+public class CondicionDAOImpl extends GenericEmDaoEjb<CondicionNa, Long> implements
 		CondicionDAO {
 
 	@PersistenceContext(unitName = "esamyn-pu")
@@ -31,7 +31,7 @@ public class CondicionDAOImpl extends GenericEmDaoEjb<Condicion, Long> implement
 	}
 
 	public CondicionDAOImpl() {
-		super(Condicion.class);
+		super(CondicionNa.class);
 	}
 
 }

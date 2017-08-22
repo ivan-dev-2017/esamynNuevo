@@ -6,7 +6,6 @@
 package acess.esamyn.modelo;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -14,7 +13,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -35,8 +33,6 @@ public class TipoPregunta implements Serializable {
 	private String clave;
 	@Column(name = "tpp_etiqueta")
 	private String etiqueta;
-	@OneToMany(mappedBy = "prgTipoPregunta")
-	private List<Pregunta> preguntaLista;
 
 	public Long getCodigo() {
 		return codigo;
@@ -62,12 +58,5 @@ public class TipoPregunta implements Serializable {
 		this.etiqueta = etiqueta;
 	}
 
-	public List<Pregunta> getPreguntaLista() {
-		return preguntaLista;
-	}
-
-	public void setPreguntaLista(List<Pregunta> preguntaLista) {
-		this.preguntaLista = preguntaLista;
-	}
 
 }

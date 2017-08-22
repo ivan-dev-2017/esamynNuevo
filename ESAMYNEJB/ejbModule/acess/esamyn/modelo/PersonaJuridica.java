@@ -15,11 +15,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.xml.bind.annotation.XmlTransient;
+import javax.persistence.Transient;
 
 /**
  *
@@ -47,7 +46,7 @@ public class PersonaJuridica implements Serializable {
     private String razonSocial;
     @Column(name = "pju_ruc")
     private String ruc;
-    @OneToMany(mappedBy = "essPersonaJuridica")
+    @Transient
     private List<EstablecimientoSalud> establecimientoSaludLista;
 
     public PersonaJuridica() {

@@ -16,8 +16,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 /**
  *
@@ -37,9 +37,9 @@ public class GrupoParametro implements Serializable {
 	private String texto;
 	@Column(name = "gpa_clave")
 	private String clave;
-	@OneToMany(mappedBy = "parGrupoParametro")
+	@Transient
 	private List<Parametro> parametroList;
-	@OneToMany(mappedBy = "gpaPadre")
+	@Transient
 	private List<GrupoParametro> grupoParametroLista;
 	@JoinColumn(name = "gpa_padre", referencedColumnName = "gpa_id")
 	@ManyToOne
