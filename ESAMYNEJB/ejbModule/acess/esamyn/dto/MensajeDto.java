@@ -8,6 +8,12 @@ public class MensajeDto {
 	
 	private Object objeto;
 	
+	
+	
+
+	public MensajeDto() {
+		super();
+	}
 
 	public MensajeDto(boolean error, String mensaje, Object objeto) {
 		super();

@@ -13,6 +13,8 @@ public class Aplicacion extends Application {
 	public Set<Class<?>> getClasses() {
 		Set<Class<?>> classes = new HashSet<Class<?>>();
 		classes.add(HolaWebService.class);
+		classes.add(UsuarioWebService.class);
+		classes.add(PreguntaWebService.class);
 
 		return classes;
 	}

@@ -12,6 +12,7 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -64,15 +65,14 @@ public class Pregunta implements Serializable {
 	@Transient
 	private List<Pregunta> preguntaLista;
 	@JoinColumn(name = "prg_padre", referencedColumnName = "prg_id")
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	private Pregunta padre;
 	@JoinColumn(name = "prg_tipo_pregunta", referencedColumnName = "tpp_id")
 	@ManyToOne
 	private TipoPregunta tipoPregunta;
+	
 	@Transient
-	private List<Parametro> parametroLista;
-	@Transient
-	private List<Respuesta> respuestaLista;
+	private Respuesta respuesta;
 
 	public Pregunta() {
 	}
@@ -189,20 +189,14 @@ public class Pregunta implements Serializable {
 		this.tipoPregunta = tipoPregunta;
 	}
 
-	public List<Parametro> getParametroLista() {
-		return parametroLista;
+	public Respuesta getRespuesta() {
+		return respuesta;
 	}
 
-	public void setParametroLista(List<Parametro> parametroLista) {
-		this.parametroLista = parametroLista;
+	public void setRespuesta(Respuesta respuesta) {
+		this.respuesta = respuesta;
 	}
-
-	public List<Respuesta> getRespuestaLista() {
-		return respuestaLista;
-	}
-
-	public void setRespuestaLista(List<Respuesta> respuestaLista) {
-		this.respuestaLista = respuestaLista;
-	}
+	
+	
 
 }

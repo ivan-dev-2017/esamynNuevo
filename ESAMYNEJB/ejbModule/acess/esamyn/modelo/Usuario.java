@@ -7,7 +7,6 @@ package acess.esamyn.modelo;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -20,7 +19,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  *
@@ -28,6 +29,8 @@ import javax.persistence.Transient;
  */
 @Entity
 @Table(name = "esa_usuario")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "usuario")
 public class Usuario implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -61,15 +64,11 @@ public class Usuario implements Serializable {
 	private String telefono;
 	@Column(name = "usu_correo_eletronico")
 	private String correoEletronico;
+	@Column(name = "usu_sesion")
+	private String token;
 	@JoinColumn(name = "usu_rol", referencedColumnName = "rol_id")
 	@ManyToOne
 	private Rol rol;
-	@Transient
-	private List<Evaluacion> evaluacionLista;
-	@Transient
-	private List<Encuesta> encuestaLista;
-	@Transient
-	private String token;
 
 	public Usuario() {
 	}
@@ -170,20 +169,14 @@ public class Usuario implements Serializable {
 		this.rol = rol;
 	}
 
-	public List<Evaluacion> getEvaluacionLista() {
-		return evaluacionLista;
+	public String getToken() {
+		return token;
 	}
 
-	public void setEvaluacionLista(List<Evaluacion> evaluacionLista) {
-		this.evaluacionLista = evaluacionLista;
+	public void setToken(String token) {
+		this.token = token;
 	}
 
-	public List<Encuesta> getEncuestaLista() {
-		return encuestaLista;
-	}
-
-	public void setEncuestaLista(List<Encuesta> encuestaLista) {
-		this.encuestaLista = encuestaLista;
-	}
+	
 
 }

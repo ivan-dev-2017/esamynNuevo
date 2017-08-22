@@ -7,7 +7,6 @@ package acess.esamyn.modelo;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -18,7 +17,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 
 /**
  *
@@ -52,10 +50,6 @@ public class Formulario implements Serializable {
 	private String ayuda;
 	@Column(name = "frm_clave")
 	private String clave;
-	@Transient
-	private List<Pregunta> preguntaLista;
-	@Transient
-	private List<Encuesta> encuestaLista;
 
 	public Formulario() {
 	}
@@ -122,22 +116,6 @@ public class Formulario implements Serializable {
 
 	public void setClave(String clave) {
 		this.clave = clave;
-	}
-
-	public List<Pregunta> getPreguntaLista() {
-		return preguntaLista;
-	}
-
-	public void setPreguntaLista(List<Pregunta> preguntaLista) {
-		this.preguntaLista = preguntaLista;
-	}
-
-	public List<Encuesta> getEncuestaLista() {
-		return encuestaLista;
-	}
-
-	public void setEncuestaLista(List<Encuesta> encuestaLista) {
-		this.encuestaLista = encuestaLista;
 	}
 
 }

@@ -1,5 +1,7 @@
 package acess.esamyn.ws;
 
+import java.util.List;
+
 import javax.ejb.EJB;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
@@ -11,46 +13,37 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 
+import acess.esamyn.bean.PreguntaBean;
 import acess.esamyn.bean.UsuarioBean;
-import acess.esamyn.dto.AccesoWsDto;
 import acess.esamyn.dto.MensajeDto;
-import acess.esamyn.modelo.Usuario;
+import acess.esamyn.dto.PreguntaDto;
+import acess.esamyn.dto.PreguntaWsDto;
 
 /**
  * Session Bean implementation class HelloJAXRSWebService
  */
 @Stateless
 @LocalBean
-@Path("/usuario")
-public class UsuarioWebService {
+@Path("/pregunta")
+public class PreguntaWebService {
 
 	@EJB
 	private UsuarioBean usuarioBean;
 
+	@EJB
+	private PreguntaBean preguntaBean;
+
 	/**
 	 * Default constructor.
 	 */
-	public UsuarioWebService() {
+	public PreguntaWebService() {
 		// TODO Auto-generated constructor stub
 	}
 
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public MensajeDto login(AccesoWsDto accesoDto) {
-
-		System.out.println("entra");
-
-		MensajeDto dto = usuarioBean.validarUsuarioContrasena(accesoDto.getUsuario(), accesoDto.getPassword());
-
-		return dto;
-	}
-
-	@POST
-	@Path("{guardar}/")
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
-	public MensajeDto guardar(Usuario usuario, @Context HttpHeaders headers) {
+	public MensajeDto buscarPreguntas(PreguntaWsDto pregunta, @Context HttpHeaders headers) {
 
 		String token = headers.getRequestHeader("ApiToken").get(0);
 
@@ -60,7 +53,14 @@ public class UsuarioWebService {
 
 		MensajeDto dto;
 		if (valida) {
-			dto = usuarioBean.guardar(usuario);
+
+			List<PreguntaDto> lista = preguntaBean.obtenerPreguntasFormulario(pregunta.getIdFormulario());
+
+			if (lista != null) {
+				dto = new MensajeDto(false, "", lista);
+			} else {
+				dto = new MensajeDto(true, "No existen preguntas para el formulario seleccionado", null);
+			}
 
 		} else {
 			dto = new MensajeDto(true, "Token invalido", null);

@@ -7,8 +7,8 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "usuario")
-public class AccesoDto implements Serializable {
+@XmlType(name = "login")
+public class AccesoWsDto implements Serializable {
 
 	/**
 	 * 
