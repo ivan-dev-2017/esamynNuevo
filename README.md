@@ -9,7 +9,7 @@ Proyecto de la OPS "Establecimientos de Salud Amigos de la Madre y el Niño", co
 
 Para realizar la conexión SSH al ambiente de **desarrollo**: 
 ```
-ssh -P 9412 miusuario@45.55.147.66`
+ssh -P 9412 miusuario@45.55.147.66
 ```
 
 Para pasar archivos al directorio `/home/miusuario` en el servidor de **desarrollo**: 
