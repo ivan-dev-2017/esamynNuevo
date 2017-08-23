@@ -4,6 +4,7 @@ Proyecto de la OPS "Establecimientos de Salud Amigos de la Madre y el Niño", co
 ## AMBIENTE DE DESARROLLO
 
 * Dueño: JYBARO
+* hostname: esamyn-des
 * IP SSH: 45.55.147.66 (edakos.com)
 * Puerto SSH: 9412
 
@@ -32,6 +33,7 @@ psql -p 6543 -h 45.55.147.66 -U esamyn_user -W acess
 
 ## AMBIENTE DE PRUEBAS
 * Dueño: OPS
+* hostname: ESAMYN-TEST
 * IP SSH: 200.7.213.18
 * Puerto SSH: 2202
 
