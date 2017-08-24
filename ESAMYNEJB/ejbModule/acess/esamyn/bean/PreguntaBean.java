@@ -15,7 +15,6 @@ import com.saviasoft.util.Criteria;
 import acess.esamyn.dao.PreguntaDAO;
 import acess.esamyn.dto.PreguntaDto;
 import acess.esamyn.modelo.Pregunta;
-import acess.esamyn.modelo.Respuesta;
 
 @Stateless
 @LocalBean
@@ -43,9 +42,10 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 
 		if (lista != null && !lista.isEmpty()) {
 			List<PreguntaDto> padres = buscarRaiz(lista, idFormulario);
-			// for (Pregunta pregunta : padres) {
-			// pregunta = llenarHijos(lista, pregunta);
-			// }
+
+			for (PreguntaDto pregunta : padres) {
+				pregunta = llenarHijos(lista, pregunta, idFormulario);
+			}
 
 			return padres;
 		}
@@ -54,23 +54,37 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 
 	}
 
-	private PreguntaDto llenarHijos(List<Pregunta> lista, PreguntaDto padre) {
+	private PreguntaDto llenarHijos(List<Pregunta> lista, PreguntaDto padre, Long idFormulario) {
 
 		List<PreguntaDto> hijos = new ArrayList<>();
 
-		Respuesta r = new Respuesta();
+		// Respuesta r = new Respuesta();
 		// Buscar respuestas formularios
-		//padre.setRespuesta(r);
+		// padre.setRespuesta(r);
 
 		for (Pregunta p : lista) {
 
 			if (!p.getCodigo().equals(padre.getCodigo()) && p.getPadre() != null) {
 				if (p.getPadre().getCodigo().equals(padre.getCodigo())) {
-					//hijos.add(p);
+
+					PreguntaDto dto = new PreguntaDto();
+					dto.setCodigo(p.getCodigo());
+					dto.setAyuda(p.getAyuda());
+					dto.setCodigoTipoPregunta(p.getTipoPregunta() != null ? p.getTipoPregunta().getCodigo() : null);
+					dto.setEtiquetaTipoPregunta(p.getTipoPregunta() != null ? p.getTipoPregunta().getEtiqueta() : null);
+					dto.setIdFormulario(idFormulario);
+					dto.setOrden(p.getOrden());
+					dto.setPrefijo(p.getPrefijo());
+					dto.setPreguntaLista(null);
+					dto.setSubfijo(p.getSubfijo());
+					dto.setTexto(p.getTexto());
+					dto.setValidacion(p.getValidacion());
+
+					dto = llenarHijos(lista, dto, idFormulario);
+
+					hijos.add(dto);
 				}
 			}
-
-			// p = llenarHijos(lista, p);
 
 		}
 
@@ -106,6 +120,7 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 				dto.setValidacion(p.getValidacion());
 
 				padres.add(dto);
+
 			}
 		}
 

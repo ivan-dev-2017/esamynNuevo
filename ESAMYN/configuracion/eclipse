@@ -1,0 +1,9 @@
+En Window/preferences
+
+Buscar Runtime Enviroment
+- Dentro de default classpath
+- Seleccionar el servidor wildfly 10
+
+  Aumentar global modules
+     org.apache.commons.codec
+
