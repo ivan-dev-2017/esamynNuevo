@@ -54,15 +54,14 @@ public class Respuesta implements Serializable {
 	@Column(name = "res_valor_fecha")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date valorFecha;
+	@Column(name = "res_valor_booleano")
+	private Boolean valorBooleano;
 	@JoinColumn(name = "res_encuesta", referencedColumnName = "enc_id")
 	@ManyToOne
 	private Encuesta encuesta;
 	@JoinColumn(name = "res_pregunta", referencedColumnName = "prg_id")
 	@ManyToOne
 	private Pregunta pregunta;
-
-	public Respuesta() {
-	}
 
 	public Long getCodigo() {
 		return codigo;
@@ -126,6 +125,14 @@ public class Respuesta implements Serializable {
 
 	public void setValorFecha(Date valorFecha) {
 		this.valorFecha = valorFecha;
+	}
+
+	public Boolean getValorBooleano() {
+		return valorBooleano;
+	}
+
+	public void setValorBooleano(Boolean valorBooleano) {
+		this.valorBooleano = valorBooleano;
 	}
 
 	public Encuesta getEncuesta() {
