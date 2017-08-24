@@ -1,0 +1,190 @@
+/* how many menu-items do you wish to display? //
+
+// minimum: 2 // maximum: 10 //
+*/
+$items: 2;
+
+@function pi() {
+  @return 3.14159265359;
+}
+
+@function rad($angle) {
+  $unit: unit($angle);
+  $unitless: $angle / ($angle * 0 + 1);
+  // If the angle has 'deg' as unit, convert to radians.
+  @if $unit == deg {
+    $unitless: $unitless / 180 * pi();
+  }
+  @return $unitless;
+}
+
+@function sin($angle) {
+  $sin: 0;
+  $angle: rad($angle);
+  // Iterate a bunch of times.
+  @for $i from 0 through 10 {
+    $sin: $sin + pow(-1, $i) * pow($angle, (2 * $i + 1)) / fact(2 * $i + 1);
+  }
+  @return $sin;
+}
+
+@function cos($angle) {
+  $cos: 0;
+  $angle: rad($angle);
+  // Iterate a bunch of times.
+  @for $i from 0 through 10 {
+    $cos: $cos + pow(-1, $i) * pow($angle, 2 * $i) / fact(2 * $i);
+  }
+  @return $cos;
+}
+
+@function tan($angle) {
+  @return sin($angle) / cos($angle);
+}
+
+@function pow($number, $exp) {
+  $value: 1;
+  @if $exp > 0 {
+    @for $i from 1 through $exp {
+      $value: $value * $number;
+    }
+  }
+  @else if $exp < 0 {
+    @for $i from 1 through -$exp {
+      $value: $value / $number;
+    }
+  }
+  @return $value;
+}
+
+@function fact($number) {
+  $value: 1;
+  @if $number > 0 {
+    @for $i from 1 through $number {
+      $value: $value * $i;
+    }
+  }
+  @return $value;
+}
+
+@import url(http://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css);
+
+* {
+  Box-sizing: Border-box;
+}
+
+#menu {
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 500px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  list-style: none;
+  font-size: 200%;
+  transition: width 500ms, height 500ms, margin 500ms;
+  overflow: hidden;
+}
+
+#menu:target {
+  width: 300px;
+  height: 300px;
+  margin: -150px 0 0 -150px;
+}
+
+.menu-button {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -75px 0 0 -75px;
+  background: #fff;
+  box-shadow: 0 0 0 1px #fff;
+  border-radius: 500px;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 0;
+}  
+
+.icon-plus:before, .icon-minus:before {
+  color: #8cc;
+  position: relative;
+  top: 40%;
+  left: 42%;
+  transition: opacity 500ms ease-in;
+  text-decoration: none;
+  z-index: 2;
+}
+
+#menu:not(:target) > a:first-of-type,
+#menu:target > a:last-of-type {
+  opacity: 1;
+  z-index: 1;
+}
+
+.menu-item-back {
+  background: #8cc;
+  width: 175px;
+  height: 150px;
+  position: absolute;
+  transform-origin: 0px 150px;
+  margin-top: -150px;
+  left: 50%;
+  top: 50%;
+  border: 1px solid whitesmoke;
+}
+
+.menu-item-back:hover {
+  background: #9dd;
+}
+
+.menu-item {
+  position: absolute;
+  text-decoration: none;
+  top: 50%;
+  left: 50%;
+  display: none;
+}
+
+.menu-item:before {
+  color: #fff;
+  position: absolute;
+  text-decoration: none;
+  top: -12px;
+  left: 30px;
+  z-index: 1;
+}
+
+$deg: 360deg/$items;
+$radius: 110px;
+
+@for $i from 1 through $items {
+  
+  $x: sin(($deg * $i) - $deg - 90) * $radius;
+  $y: cos(($deg * $i) - $deg - 90) * $radius;
+  
+  .menu-item:nth-child(#{$i+2}) {
+    display: block;
+  }
+
+
+  .menu-item:nth-child(#{$i+2}) .menu-item-back {
+    @if $items == 2 {
+      transform: 
+        rotate(($deg * $i - ($deg/2) - 90)) 
+        translate(-50%, -50%);
+      width: 350px;
+      height: 300px;
+    } @else {
+      transform: 
+        rotate(($deg * $i - ($deg/2) - 90)) 
+        skew((90 - $deg) * -1);
+    }
+  }
+  .menu-item:nth-child(#{$i+2}):before {
+    margin: $x 0 0 $y;
+  }
+}

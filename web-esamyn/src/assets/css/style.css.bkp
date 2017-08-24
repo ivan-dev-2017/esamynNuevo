@@ -1,0 +1,30 @@
+/** ./style.css **/
+/* Jumbotron */
+.demo-layout-transparent {
+  background: linear-gradient(
+      rgba(102, 178, 255, 1),
+      rgba(1, 1, 1, 0)
+    );
+    /*,url('/assets/img/NEWLOGO.png') center / cover;*/
+  height: 400px;
+}
+
+/* Nav Bar */
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  background: rgba(102, 178, 255, 1);
+  color: red;
+}
+
+/* Header Text */
+.header-text{
+  text-align: center;
+  vertical-align: middle;
+  line-height: 250px;
+  color: yellow;
+}
+/* Content Wrapper */
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
