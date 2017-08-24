@@ -1,0 +1,4474 @@
+{
+  "token": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE0OTQ0NjM5OTYsImlzcyI6Ind3dy5yZWxhdGl2ZS1lbmdpbmUuY29tIiwiZXhwIjoxNDk0NDY0MDQ2fQ.U_AkMtVs6KoV-qau9jr5C760wEK4q8as_eVM3W4FM8U",
+  "usuario": {
+    "nombre": "luis.tamayo",
+    "id": null,
+    "role": null,
+    "password": "relative.2012",
+    "company": null,
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE0OTQ0NjM5OTYsImlzcyI6Ind3dy5yZWxhdGl2ZS1lbmdpbmUuY29tIiwiZXhwIjoxNDk0NDY0MDQ2fQ.U_AkMtVs6KoV-qau9jr5C760wEK4q8as_eVM3W4FM8U",
+    "language": null,
+    "loggedIn": true,
+    "type": null
+  },
+  "user": null,
+  "name": "luis.tamayo",
+  "identificador": null,
+  "cargo": null,
+  "password": "relative.2012",
+  "newPassword": null,
+  "role": null,
+  "roleDescripcion": null,
+  "sessionId": null,
+  "captcha": null,
+  "captchaPublicKey": null,
+  "loggedIn": true,
+  "menuWrapper": {
+    "crudsItemRol": {
+      "47-2": {
+        "nombre": null,
+        "valor": null,
+        "condition": null,
+        "tipoParametro": null,
+        "checked": false,
+        "fieldOne": null,
+        "fieldTwo": null,
+        "fieldThree": null,
+        "fieldFour": null,
+        "fieldFive": null,
+        "fieldSix": null,
+        "fieldSeven": null,
+        "fieldEight": null,
+        "fieldNine": null,
+        "fieldTen": null,
+        "fieldEleven": null,
+        "fieldTwelve": null,
+        "fieldThirteen": null,
+        "crear": true,
+        "actualizar": true,
+        "eliminar": true,
+        "consultar": true
+      },
+      "48-2": {
+        "nombre": null,
+        "valor": null,
+        "condition": null,
+        "tipoParametro": null,
+        "checked": false,
+        "fieldOne": null,
+        "fieldTwo": null,
+        "fieldThree": null,
+        "fieldFour": null,
+        "fieldFive": null,
+        "fieldSix": null,
+        "fieldSeven": null,
+        "fieldEight": null,
+        "fieldNine": null,
+        "fieldTen": null,
+        "fieldEleven": null,
+        "fieldTwelve": null,
+        "fieldThirteen": null,
+        "crear": true,
+        "actualizar": true,
+        "eliminar": true,
+        "consultar": true
+      },
+      "49-2": {
+        "nombre": null,
+        "valor": null,
+        "condition": null,
+        "tipoParametro": null,
+        "checked": false,
+        "fieldOne": null,
+        "fieldTwo": null,
+        "fieldThree": null,
+        "fieldFour": null,
+        "fieldFive": null,
+        "fieldSix": null,
+        "fieldSeven": null,
+        "fieldEight": null,
+        "fieldNine": null,
+        "fieldTen": null,
+        "fieldEleven": null,
+        "fieldTwelve": null,
+        "fieldThirteen": null,
+        "crear": true,
+        "actualizar": true,
+        "eliminar": true,
+        "consultar": true
+      },
+      "50-2": {
+        "nombre": null,
+        "valor": null,
+        "condition": null,
+        "tipoParametro": null,
+        "checked": false,
+        "fieldOne": null,
+        "fieldTwo": null,
+        "fieldThree": null,
+        "fieldFour": null,
+        "fieldFive": null,
+        "fieldSix": null,
+        "fieldSeven": null,
+        "fieldEight": null,
+        "fieldNine": null,
+        "fieldTen": null,
+        "fieldEleven": null,
+        "fieldTwelve": null,
+        "fieldThirteen": null,
+        "crear": true,
+        "actualizar": true,
+        "eliminar": true,
+        "consultar": true
+      },
+      "40-2": {
+        "nombre": null,
+        "valor": null,
+        "condition": null,
+        "tipoParametro": null,
+        "checked": false,
+        "fieldOne": null,
+        "fieldTwo": null,
+        "fieldThree": null,
+        "fieldFour": null,
+        "fieldFive": null,
+        "fieldSix": null,
+        "fieldSeven": null,
+        "fieldEight": null,
+        "fieldNine": null,
+        "fieldTen": null,
+        "fieldEleven": null,
+        "fieldTwelve": null,
+        "fieldThirteen": null,
+        "crear": true,
+        "actualizar": true,
+        "eliminar": true,
+        "consultar": true
+      },
+      "51-2": {
+        "nombre": null,
+        "valor": null,
+        "condition": null,
+        "tipoParametro": null,
+        "checked": false,
+        "fieldOne": null,
+        "fieldTwo": null,
+        "fieldThree": null,
+        "fieldFour": null,
+        "fieldFive": null,
+        "fieldSix": null,
+        "fieldSeven": null,
+        "fieldEight": null,
+        "fieldNine": null,
+        "fieldTen": null,
+        "fieldEleven": null,
+        "fieldTwelve": null,
+        "fieldThirteen": null,
+        "crear": true,
+        "actualizar": true,
+        "eliminar": true,
+        "consultar": true
+      },
+      "41-2": {
+        "nombre": null,
+        "valor": null,
+        "condition": null,
+        "tipoParametro": null,
+        "checked": false,
+        "fieldOne": null,
+        "fieldTwo": null,
+        "fieldThree": null,
+        "fieldFour": null,
+        "fieldFive": null,
+        "fieldSix": null,
+        "fieldSeven": null,
+        "fieldEight": null,
+        "fieldNine": null,
+        "fieldTen": null,
+        "fieldEleven": null,
+        "fieldTwelve": null,
+        "fieldThirteen": null,
+        "crear": true,
+        "actualizar": true,
+        "eliminar": true,
+        "consultar": true
+      },
+      "52-2": {
+        "nombre": null,
+        "valor": null,
+        "condition": null,
+        "tipoParametro": null,
+        "checked": false,
+        "fieldOne": null,
+        "fieldTwo": null,
+        "fieldThree": null,
+        "fieldFour": null,
+        "fieldFive": null,
+        "fieldSix": null,
+        "fieldSeven": null,
+        "fieldEight": null,
+        "fieldNine": null,
+        "fieldTen": null,
+        "fieldEleven": null,
+        "fieldTwelve": null,
+        "fieldThirteen": null,
+        "crear": true,
+        "actualizar": true,
+        "eliminar": true,
+        "consultar": true
+      },
+      "42-2": {
+        "nombre": null,
+        "valor": null,
+        "condition": null,
+        "tipoParametro": null,
+        "checked": false,
+        "fieldOne": null,
+        "fieldTwo": null,
+        "fieldThree": null,
+        "fieldFour": null,
+        "fieldFive": null,
+        "fieldSix": null,
+        "fieldSeven": null,
+        "fieldEight": null,
+        "fieldNine": null,
+        "fieldTen": null,
+        "fieldEleven": null,
+        "fieldTwelve": null,
+        "fieldThirteen": null,
+        "crear": true,
+        "actualizar": true,
+        "eliminar": true,
+        "consultar": true
+      },
+      "53-2": {
+        "nombre": null,
+        "valor": null,
+        "condition": null,
+        "tipoParametro": null,
+        "checked": false,
+        "fieldOne": null,
+        "fieldTwo": null,
+        "fieldThree": null,
+        "fieldFour": null,
+        "fieldFive": null,
+        "fieldSix": null,
+        "fieldSeven": null,
+        "fieldEight": null,
+        "fieldNine": null,
+        "fieldTen": null,
+        "fieldEleven": null,
+        "fieldTwelve": null,
+        "fieldThirteen": null,
+        "crear": true,
+        "actualizar": true,
+        "eliminar": true,
+        "consultar": true
+      },
+      "43-2": {
+        "nombre": null,
+        "valor": null,
+        "condition": null,
+        "tipoParametro": null,
+        "checked": false,
+        "fieldOne": null,
+        "fieldTwo": null,
+        "fieldThree": null,
+        "fieldFour": null,
+        "fieldFive": null,
+        "fieldSix": null,
+        "fieldSeven": null,
+        "fieldEight": null,
+        "fieldNine": null,
+        "fieldTen": null,
+        "fieldEleven": null,
+        "fieldTwelve": null,
+        "fieldThirteen": null,
+        "crear": true,
+        "actualizar": true,
+        "eliminar": true,
+        "consultar": true
+      },
+      "54-2": {
+        "nombre": null,
+        "valor": null,
+        "condition": null,
+        "tipoParametro": null,
+        "checked": false,
+        "fieldOne": null,
+        "fieldTwo": null,
+        "fieldThree": null,
+        "fieldFour": null,
+        "fieldFive": null,
+        "fieldSix": null,
+        "fieldSeven": null,
+        "fieldEight": null,
+        "fieldNine": null,
+        "fieldTen": null,
+        "fieldEleven": null,
+        "fieldTwelve": null,
+        "fieldThirteen": null,
+        "crear": true,
+        "actualizar": true,
+        "eliminar": true,
+        "consultar": true
+      },
+      "44-2": {
+        "nombre": null,
+        "valor": null,
+        "condition": null,
+        "tipoParametro": null,
+        "checked": false,
+        "fieldOne": null,
+        "fieldTwo": null,
+        "fieldThree": null,
+        "fieldFour": null,
+        "fieldFive": null,
+        "fieldSix": null,
+        "fieldSeven": null,
+        "fieldEight": null,
+        "fieldNine": null,
+        "fieldTen": null,
+        "fieldEleven": null,
+        "fieldTwelve": null,
+        "fieldThirteen": null,
+        "crear": true,
+        "actualizar": true,
+        "eliminar": true,
+        "consultar": true
+      },
+      "55-2": {
+        "nombre": null,
+        "valor": null,
+        "condition": null,
+        "tipoParametro": null,
+        "checked": false,
+        "fieldOne": null,
+        "fieldTwo": null,
+        "fieldThree": null,
+        "fieldFour": null,
+        "fieldFive": null,
+        "fieldSix": null,
+        "fieldSeven": null,
+        "fieldEight": null,
+        "fieldNine": null,
+        "fieldTen": null,
+        "fieldEleven": null,
+        "fieldTwelve": null,
+        "fieldThirteen": null,
+        "crear": true,
+        "actualizar": true,
+        "eliminar": true,
+        "consultar": true
+      },
+      "45-2": {
+        "nombre": null,
+        "valor": null,
+        "condition": null,
+        "tipoParametro": null,
+        "checked": false,
+        "fieldOne": null,
+        "fieldTwo": null,
+        "fieldThree": null,
+        "fieldFour": null,
+        "fieldFive": null,
+        "fieldSix": null,
+        "fieldSeven": null,
+        "fieldEight": null,
+        "fieldNine": null,
+        "fieldTen": null,
+        "fieldEleven": null,
+        "fieldTwelve": null,
+        "fieldThirteen": null,
+        "crear": true,
+        "actualizar": true,
+        "eliminar": true,
+        "consultar": true
+      },
+      "56-2": {
+        "nombre": null,
+        "valor": null,
+        "condition": null,
+        "tipoParametro": null,
+        "checked": false,
+        "fieldOne": null,
+        "fieldTwo": null,
+        "fieldThree": null,
+        "fieldFour": null,
+        "fieldFive": null,
+        "fieldSix": null,
+        "fieldSeven": null,
+        "fieldEight": null,
+        "fieldNine": null,
+        "fieldTen": null,
+        "fieldEleven": null,
+        "fieldTwelve": null,
+        "fieldThirteen": null,
+        "crear": true,
+        "actualizar": true,
+        "eliminar": true,
+        "consultar": true
+      },
+      "46-2": {
+        "nombre": null,
+        "valor": null,
+        "condition": null,
+        "tipoParametro": null,
+        "checked": false,
+        "fieldOne": null,
+        "fieldTwo": null,
+        "fieldThree": null,
+        "fieldFour": null,
+        "fieldFive": null,
+        "fieldSix": null,
+        "fieldSeven": null,
+        "fieldEight": null,
+        "fieldNine": null,
+        "fieldTen": null,
+        "fieldEleven": null,
+        "fieldTwelve": null,
+        "fieldThirteen": null,
+        "crear": true,
+        "actualizar": true,
+        "eliminar": true,
+        "consultar": true
+      }
+    },
+    "panelMenuAppList": [
+      {
+        "codigo": 0,
+        "label": "EXCO-CORE",
+        "link": null,
+        "accion": null,
+        "style": "glyphicon glyphicon-th",
+        "classStyle": null,
+        "children": [
+          {
+            "codigo": 1,
+            "label": "GESTION DE CATALOGOS YY",
+            "link": null,
+            "accion": null,
+            "style": "glyphicon glyphicon-th-list",
+            "classStyle": null,
+            "children": [
+              {
+                "codigo": 11,
+                "label": "SEGURIDAD",
+                "link": null,
+                "accion": null,
+                "style": "fa fa-lock",
+                "classStyle": "LOGISTICA",
+                "children": [
+                  {
+                    "codigo": 46,
+                    "label": "ADMINISTRACION GLOBAL SEGURIDAD",
+                    "link": "/globaladminsecurity",
+                    "accion": "globaladminsecurity",
+                    "style": "fa fa-lock",
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 47,
+                    "label": "GESTION DE EMPLEADO",
+                    "link": "/empleado",
+                    "accion": "empleado",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 46,
+                    "label": "GESTION DE CARGO",
+                    "link": "/cargo",
+                    "accion": "cargo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 47,
+                    "label": "GESTION DE EMPLEADO",
+                    "link": "/empleado",
+                    "accion": "empleado",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 10,
+                "label": "LOCALIDADES",
+                "link": null,
+                "accion": null,
+                "style": "glyphicon glyphicon-map-marker",
+                "classStyle": "LOCALIDADES",
+                "children": [
+                  {
+                    "codigo": 45,
+                    "label": "GESTION DE SITIO",
+                    "link": "/sitio",
+                    "accion": "sitio",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 44,
+                    "label": "GESTION DE LOCALIDAD",
+                    "link": "/localidad",
+                    "accion": "localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 45,
+                    "label": "GESTION DE SITIO",
+                    "link": "/sitio",
+                    "accion": "sitio",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 44,
+                    "label": "GESTION DE LOCALIDAD",
+                    "link": "/localidad",
+                    "accion": "localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 12,
+                "label": "PUNTO DE VENTA",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "PUNTO_VENTA",
+                "children": [
+                  {
+                    "codigo": 49,
+                    "label": "GESTION CONFIGURACION POS",
+                    "link": "/gestionPos",
+                    "accion": "gestionPos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 48,
+                    "label": "GESTION POS",
+                    "link": "/pos",
+                    "accion": "pos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 49,
+                    "label": "GESTION CONFIGURACION POS",
+                    "link": "/gestionPos",
+                    "accion": "gestionPos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 48,
+                    "label": "GESTION POS",
+                    "link": "/pos",
+                    "accion": "pos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 8,
+                "label": "EMPRESAS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "EMPRESA",
+                "children": [
+                  {
+                    "codigo": 40,
+                    "label": "GESTION DE EMPRESAS",
+                    "link": "/empresa",
+                    "accion": "empresa",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 40,
+                    "label": "GESTION DE EMPRESAS",
+                    "link": "/empresa",
+                    "accion": "empresa",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 15,
+                "label": "TICKETS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "TICKET",
+                "children": [
+                  {
+                    "codigo": 55,
+                    "label": "LISTADO DE TICKETS GENERADOS",
+                    "link": "/ticketImpresionList",
+                    "accion": "ticketImpresionList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 56,
+                    "label": "DASHBOARD",
+                    "link": "/dashboardTicket",
+                    "accion": "dashboardTicket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 54,
+                    "label": "LISTADO DE TICKETS",
+                    "link": "/ticketList",
+                    "accion": "ticketList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 53,
+                    "label": "GENERACION TICKETS ESPECIAL",
+                    "link": "/ticketEspecial",
+                    "accion": "ticketEspecial",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 52,
+                    "label": "VENTA TICKETS",
+                    "link": "/ticket",
+                    "accion": "ticket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 55,
+                    "label": "LISTADO DE TICKETS GENERADOS",
+                    "link": "/ticketImpresionList",
+                    "accion": "ticketImpresionList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 56,
+                    "label": "DASHBOARD",
+                    "link": "/dashboardTicket",
+                    "accion": "dashboardTicket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 54,
+                    "label": "LISTADO DE TICKETS",
+                    "link": "/ticketList",
+                    "accion": "ticketList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 53,
+                    "label": "GENERACION TICKETS ESPECIAL",
+                    "link": "/ticketEspecial",
+                    "accion": "ticketEspecial",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 52,
+                    "label": "VENTA TICKETS",
+                    "link": "/ticket",
+                    "accion": "ticket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 9,
+                "label": "EVENTOS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "EVENTO",
+                "children": [
+                  {
+                    "codigo": 41,
+                    "label": "GESTION DE EVENTOS",
+                    "link": "/evento",
+                    "accion": "evento",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 43,
+                    "label": "GESTION DE REGISTRO OPERATIVO",
+                    "link": "/registro",
+                    "accion": "registro",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 42,
+                    "label": "GESTION EVENTO LOCALIDAD",
+                    "link": "/evento_localidad",
+                    "accion": "evento_localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 41,
+                    "label": "GESTION DE EVENTOS",
+                    "link": "/evento",
+                    "accion": "evento",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 43,
+                    "label": "GESTION DE REGISTRO OPERATIVO",
+                    "link": "/registro",
+                    "accion": "registro",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 42,
+                    "label": "GESTION EVENTO LOCALIDAD",
+                    "link": "/evento_localidad",
+                    "accion": "evento_localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 13,
+                "label": "ACCESO",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "ACCESO",
+                "children": [
+                  {
+                    "codigo": 50,
+                    "label": "VALIDACION DE INGRESO CLIENTES",
+                    "link": "/validacionIngreso",
+                    "accion": "validacionIngreso",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 51,
+                    "label": "VALIDACION DE INGRESO OPERATIVOS",
+                    "link": "/c",
+                    "accion": "validacionIngresoOperativo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 50,
+                    "label": "VALIDACION DE INGRESO CLIENTES",
+                    "link": "/validacionIngreso",
+                    "accion": "validacionIngreso",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 51,
+                    "label": "VALIDACION DE INGRESO OPERATIVOS",
+                    "link": "/c",
+                    "accion": "validacionIngresoOperativo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              }
+            ],
+            "childrenArray": [
+              {
+                "codigo": 11,
+                "label": "SEGURIDAD",
+                "link": null,
+                "accion": null,
+                "style": "fa fa-lock",
+                "classStyle": "LOGISTICA",
+                "children": [
+                  {
+                    "codigo": 46,
+                    "label": "ADMINISTRACION GLOBAL SEGURIDAD",
+                    "link": "/globaladminsecurity",
+                    "accion": "globaladminsecurity",
+                    "style": "fa fa-lock",
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 47,
+                    "label": "GESTION DE EMPLEADO",
+                    "link": "/empleado",
+                    "accion": "empleado",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 46,
+                    "label": "GESTION DE CARGO",
+                    "link": "/cargo",
+                    "accion": "cargo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 47,
+                    "label": "GESTION DE EMPLEADO",
+                    "link": "/empleado",
+                    "accion": "empleado",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 10,
+                "label": "LOCALIDADES",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "LOCALIDADES",
+                "children": [
+                  {
+                    "codigo": 45,
+                    "label": "GESTION DE SITIO",
+                    "link": "/sitio",
+                    "accion": "sitio",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 44,
+                    "label": "GESTION DE LOCALIDAD",
+                    "link": "/localidad",
+                    "accion": "localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 45,
+                    "label": "GESTION DE SITIO",
+                    "link": "/sitio",
+                    "accion": "sitio",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 44,
+                    "label": "GESTION DE LOCALIDAD",
+                    "link": "/localidad",
+                    "accion": "localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 12,
+                "label": "PUNTO DE VENTA",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "PUNTO_VENTA",
+                "children": [
+                  {
+                    "codigo": 49,
+                    "label": "GESTION CONFIGURACION POS",
+                    "link": "/gestionPos",
+                    "accion": "gestionPos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 48,
+                    "label": "GESTION POS",
+                    "link": "/pos",
+                    "accion": "pos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 49,
+                    "label": "GESTION CONFIGURACION POS",
+                    "link": "/gestionPos",
+                    "accion": "gestionPos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 48,
+                    "label": "GESTION POS",
+                    "link": "/pos",
+                    "accion": "pos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 8,
+                "label": "EMPRESAS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "EMPRESA",
+                "children": [
+                  {
+                    "codigo": 40,
+                    "label": "GESTION DE EMPRESAS",
+                    "link": "/empresa",
+                    "accion": "empresa",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 40,
+                    "label": "GESTION DE EMPRESAS",
+                    "link": "/empresa",
+                    "accion": "empresa",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 15,
+                "label": "TICKETS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "TICKET",
+                "children": [
+                  {
+                    "codigo": 55,
+                    "label": "LISTADO DE TICKETS GENERADOS",
+                    "link": "/ticketImpresionList",
+                    "accion": "ticketImpresionList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 56,
+                    "label": "DASHBOARD",
+                    "link": "/dashboardTicket",
+                    "accion": "dashboardTicket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 54,
+                    "label": "LISTADO DE TICKETS",
+                    "link": "/ticketList",
+                    "accion": "ticketList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 53,
+                    "label": "GENERACION TICKETS ESPECIAL",
+                    "link": "/ticketEspecial",
+                    "accion": "ticketEspecial",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 52,
+                    "label": "VENTA TICKETS",
+                    "link": "/ticket",
+                    "accion": "ticket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 55,
+                    "label": "LISTADO DE TICKETS GENERADOS",
+                    "link": "/ticketImpresionList",
+                    "accion": "ticketImpresionList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 56,
+                    "label": "DASHBOARD",
+                    "link": "/dashboardTicket",
+                    "accion": "dashboardTicket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 54,
+                    "label": "LISTADO DE TICKETS",
+                    "link": "/ticketList",
+                    "accion": "ticketList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 53,
+                    "label": "GENERACION TICKETS ESPECIAL",
+                    "link": "/ticketEspecial",
+                    "accion": "ticketEspecial",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 52,
+                    "label": "VENTA TICKETS",
+                    "link": "/ticket",
+                    "accion": "ticket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 9,
+                "label": "EVENTOS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "EVENTO",
+                "children": [
+                  {
+                    "codigo": 41,
+                    "label": "GESTION DE EVENTOS",
+                    "link": "/evento",
+                    "accion": "evento",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 43,
+                    "label": "GESTION DE REGISTRO OPERATIVO",
+                    "link": "/registro",
+                    "accion": "registro",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 42,
+                    "label": "GESTION EVENTO LOCALIDAD",
+                    "link": "/evento_localidad",
+                    "accion": "evento_localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 41,
+                    "label": "GESTION DE EVENTOS",
+                    "link": "/evento",
+                    "accion": "evento",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 43,
+                    "label": "GESTION DE REGISTRO OPERATIVO",
+                    "link": "/registro",
+                    "accion": "registro",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 42,
+                    "label": "GESTION EVENTO LOCALIDAD",
+                    "link": "/evento_localidad",
+                    "accion": "evento_localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 13,
+                "label": "ACCESO",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "ACCESO",
+                "children": [
+                  {
+                    "codigo": 50,
+                    "label": "VALIDACION DE INGRESO CLIENTES",
+                    "link": "/validacionIngreso",
+                    "accion": "validacionIngreso",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 51,
+                    "label": "VALIDACION DE INGRESO OPERATIVOS",
+                    "link": "/c",
+                    "accion": "validacionIngresoOperativo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 50,
+                    "label": "VALIDACION DE INGRESO CLIENTES",
+                    "link": "/validacionIngreso",
+                    "accion": "validacionIngreso",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 51,
+                    "label": "VALIDACION DE INGRESO OPERATIVOS",
+                    "link": "/c",
+                    "accion": "validacionIngresoOperativo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "childrenArray": [
+          {
+            "codigo": 1,
+            "label": "GESTION DE CATALOGOS WW",
+            "link": null,
+            "accion": null,
+            "style": null,
+            "classStyle": null,
+            "children": [
+              {
+                "codigo": 11,
+                "label": "SEGURIDAD",
+                "link": null,
+                "accion": null,
+                "style": "fa fa-lock",
+                "classStyle": "LOGISTICA",
+                "children": [
+                  {
+                    "codigo": 46,
+                    "label": "ADMINISTRACION GLOBAL SEGURIDAD",
+                    "link": "/globaladminsecurity",
+                    "accion": "globaladminsecurity",
+                    "style": "fa fa-lock",
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 47,
+                    "label": "GESTION DE EMPLEADO",
+                    "link": "/empleado",
+                    "accion": "empleado",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 46,
+                    "label": "GESTION DE CARGO",
+                    "link": "/cargo",
+                    "accion": "cargo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 47,
+                    "label": "GESTION DE EMPLEADO",
+                    "link": "/empleado",
+                    "accion": "empleado",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 10,
+                "label": "LOCALIDADES",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "LOCALIDADES",
+                "children": [
+                  {
+                    "codigo": 45,
+                    "label": "GESTION DE SITIO",
+                    "link": "/sitio",
+                    "accion": "sitio",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 44,
+                    "label": "GESTION DE LOCALIDAD",
+                    "link": "/localidad",
+                    "accion": "localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 45,
+                    "label": "GESTION DE SITIO",
+                    "link": "/sitio",
+                    "accion": "sitio",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 44,
+                    "label": "GESTION DE LOCALIDAD",
+                    "link": "/localidad",
+                    "accion": "localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 12,
+                "label": "PUNTO DE VENTA",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "PUNTO_VENTA",
+                "children": [
+                  {
+                    "codigo": 49,
+                    "label": "GESTION CONFIGURACION POS",
+                    "link": "/gestionPos",
+                    "accion": "gestionPos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 48,
+                    "label": "GESTION POS",
+                    "link": "/pos",
+                    "accion": "pos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 49,
+                    "label": "GESTION CONFIGURACION POS",
+                    "link": "/gestionPos",
+                    "accion": "gestionPos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 48,
+                    "label": "GESTION POS",
+                    "link": "/pos",
+                    "accion": "pos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 8,
+                "label": "EMPRESAS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "EMPRESA",
+                "children": [
+                  {
+                    "codigo": 40,
+                    "label": "GESTION DE EMPRESAS",
+                    "link": "/empresa",
+                    "accion": "empresa",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 40,
+                    "label": "GESTION DE EMPRESAS",
+                    "link": "/empresa",
+                    "accion": "empresa",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 15,
+                "label": "TICKETS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "TICKET",
+                "children": [
+                  {
+                    "codigo": 55,
+                    "label": "LISTADO DE TICKETS GENERADOS",
+                    "link": "/ticketImpresionList",
+                    "accion": "ticketImpresionList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 56,
+                    "label": "DASHBOARD",
+                    "link": "/dashboardTicket",
+                    "accion": "dashboardTicket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 54,
+                    "label": "LISTADO DE TICKETS",
+                    "link": "/ticketList",
+                    "accion": "ticketList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 53,
+                    "label": "GENERACION TICKETS ESPECIAL",
+                    "link": "/ticketEspecial",
+                    "accion": "ticketEspecial",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 52,
+                    "label": "VENTA TICKETS",
+                    "link": "/ticket",
+                    "accion": "ticket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 55,
+                    "label": "LISTADO DE TICKETS GENERADOS",
+                    "link": "/ticketImpresionList",
+                    "accion": "ticketImpresionList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 56,
+                    "label": "DASHBOARD",
+                    "link": "/dashboardTicket",
+                    "accion": "dashboardTicket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 54,
+                    "label": "LISTADO DE TICKETS",
+                    "link": "/ticketList",
+                    "accion": "ticketList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 53,
+                    "label": "GENERACION TICKETS ESPECIAL",
+                    "link": "/ticketEspecial",
+                    "accion": "ticketEspecial",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 52,
+                    "label": "VENTA TICKETS",
+                    "link": "/ticket",
+                    "accion": "ticket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 9,
+                "label": "EVENTOS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "EVENTO",
+                "children": [
+                  {
+                    "codigo": 41,
+                    "label": "GESTION DE EVENTOS",
+                    "link": "/evento",
+                    "accion": "evento",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 43,
+                    "label": "GESTION DE REGISTRO OPERATIVO",
+                    "link": "/registro",
+                    "accion": "registro",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 42,
+                    "label": "GESTION EVENTO LOCALIDAD",
+                    "link": "/evento_localidad",
+                    "accion": "evento_localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 41,
+                    "label": "GESTION DE EVENTOS",
+                    "link": "/evento",
+                    "accion": "evento",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 43,
+                    "label": "GESTION DE REGISTRO OPERATIVO",
+                    "link": "/registro",
+                    "accion": "registro",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 42,
+                    "label": "GESTION EVENTO LOCALIDAD",
+                    "link": "/evento_localidad",
+                    "accion": "evento_localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 13,
+                "label": "ACCESO",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "ACCESO",
+                "children": [
+                  {
+                    "codigo": 50,
+                    "label": "VALIDACION DE INGRESO CLIENTES",
+                    "link": "/validacionIngreso",
+                    "accion": "validacionIngreso",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 51,
+                    "label": "VALIDACION DE INGRESO OPERATIVOS",
+                    "link": "/c",
+                    "accion": "validacionIngresoOperativo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 50,
+                    "label": "VALIDACION DE INGRESO CLIENTES",
+                    "link": "/validacionIngreso",
+                    "accion": "validacionIngreso",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 51,
+                    "label": "VALIDACION DE INGRESO OPERATIVOS",
+                    "link": "/c",
+                    "accion": "validacionIngresoOperativo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              }
+            ],
+            "childrenArray": [
+              {
+                "codigo": 11,
+                "label": "LOGISTICA",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "LOGISTICA",
+                "children": [
+                  {
+                    "codigo": 46,
+                    "label": "GESTION DE CARGO",
+                    "link": "/cargo",
+                    "accion": "cargo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 47,
+                    "label": "GESTION DE EMPLEADO",
+                    "link": "/empleado",
+                    "accion": "empleado",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 46,
+                    "label": "GESTION DE CARGO",
+                    "link": "/cargo",
+                    "accion": "cargo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 47,
+                    "label": "GESTION DE EMPLEADO",
+                    "link": "/empleado",
+                    "accion": "empleado",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 10,
+                "label": "LOCALIDADES",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "LOCALIDADES",
+                "children": [
+                  {
+                    "codigo": 45,
+                    "label": "GESTION DE SITIO",
+                    "link": "/sitio",
+                    "accion": "sitio",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 44,
+                    "label": "GESTION DE LOCALIDAD",
+                    "link": "/localidad",
+                    "accion": "localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 45,
+                    "label": "GESTION DE SITIO",
+                    "link": "/sitio",
+                    "accion": "sitio",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 44,
+                    "label": "GESTION DE LOCALIDAD",
+                    "link": "/localidad",
+                    "accion": "localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 12,
+                "label": "PUNTO DE VENTA",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "PUNTO_VENTA",
+                "children": [
+                  {
+                    "codigo": 49,
+                    "label": "GESTION CONFIGURACION POS",
+                    "link": "/gestionPos",
+                    "accion": "gestionPos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 48,
+                    "label": "GESTION POS",
+                    "link": "/pos",
+                    "accion": "pos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 49,
+                    "label": "GESTION CONFIGURACION POS",
+                    "link": "/gestionPos",
+                    "accion": "gestionPos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 48,
+                    "label": "GESTION POS",
+                    "link": "/pos",
+                    "accion": "pos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 8,
+                "label": "EMPRESAS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "EMPRESA",
+                "children": [
+                  {
+                    "codigo": 40,
+                    "label": "GESTION DE EMPRESAS",
+                    "link": "/empresa",
+                    "accion": "empresa",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 40,
+                    "label": "GESTION DE EMPRESAS",
+                    "link": "/empresa",
+                    "accion": "empresa",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 15,
+                "label": "TICKETS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "TICKET",
+                "children": [
+                  {
+                    "codigo": 55,
+                    "label": "LISTADO DE TICKETS GENERADOS",
+                    "link": "/ticketImpresionList",
+                    "accion": "ticketImpresionList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 56,
+                    "label": "DASHBOARD",
+                    "link": "/dashboardTicket",
+                    "accion": "dashboardTicket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 54,
+                    "label": "LISTADO DE TICKETS",
+                    "link": "/ticketList",
+                    "accion": "ticketList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 53,
+                    "label": "GENERACION TICKETS ESPECIAL",
+                    "link": "/ticketEspecial",
+                    "accion": "ticketEspecial",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 52,
+                    "label": "VENTA TICKETS",
+                    "link": "/ticket",
+                    "accion": "ticket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 55,
+                    "label": "LISTADO DE TICKETS GENERADOS",
+                    "link": "/ticketImpresionList",
+                    "accion": "ticketImpresionList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 56,
+                    "label": "DASHBOARD",
+                    "link": "/dashboardTicket",
+                    "accion": "dashboardTicket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 54,
+                    "label": "LISTADO DE TICKETS",
+                    "link": "/ticketList",
+                    "accion": "ticketList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 53,
+                    "label": "GENERACION TICKETS ESPECIAL",
+                    "link": "/ticketEspecial",
+                    "accion": "ticketEspecial",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 52,
+                    "label": "VENTA TICKETS",
+                    "link": "/ticket",
+                    "accion": "ticket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 9,
+                "label": "EVENTOS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "EVENTO",
+                "children": [
+                  {
+                    "codigo": 41,
+                    "label": "GESTION DE EVENTOS",
+                    "link": "/evento",
+                    "accion": "evento",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 43,
+                    "label": "GESTION DE REGISTRO OPERATIVO",
+                    "link": "/registro",
+                    "accion": "registro",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 42,
+                    "label": "GESTION EVENTO LOCALIDAD",
+                    "link": "/evento_localidad",
+                    "accion": "evento_localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 41,
+                    "label": "GESTION DE EVENTOS",
+                    "link": "/evento",
+                    "accion": "evento",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 43,
+                    "label": "GESTION DE REGISTRO OPERATIVO",
+                    "link": "/registro",
+                    "accion": "registro",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 42,
+                    "label": "GESTION EVENTO LOCALIDAD",
+                    "link": "/evento_localidad",
+                    "accion": "evento_localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 13,
+                "label": "ACCESO",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "ACCESO",
+                "children": [
+                  {
+                    "codigo": 50,
+                    "label": "VALIDACION DE INGRESO CLIENTES",
+                    "link": "/validacionIngreso",
+                    "accion": "validacionIngreso",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 51,
+                    "label": "VALIDACION DE INGRESO OPERATIVOS",
+                    "link": "/c",
+                    "accion": "validacionIngresoOperativo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 50,
+                    "label": "VALIDACION DE INGRESO CLIENTES",
+                    "link": "/validacionIngreso",
+                    "accion": "validacionIngreso",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 51,
+                    "label": "VALIDACION DE INGRESO OPERATIVOS",
+                    "link": "/c",
+                    "accion": "validacionIngresoOperativo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "panelMenuAppListArray": [
+      {
+        "codigo": 0,
+        "label": "EXCO-CORE",
+        "link": null,
+        "accion": null,
+        "style": "fa fa-dashboard",
+        "classStyle": null,
+        "children": [
+          {
+            "codigo": 1,
+            "label": "GESTION DE CATALOGOS XX",
+            "link": null,
+            "accion": null,
+            "style": "glyphicon glyphicon-th-list",
+            "classStyle": null,
+            "children": [
+              {
+                "codigo": 11,
+                "label": "SEGURIDAD",
+                "link": null,
+                "accion": null,
+                "style": "fa fa-lock",
+                "classStyle": "LOGISTICA",
+                "children": [
+                  {
+                    "codigo": 46,
+                    "label": "ADMINISTRACION GLOBAL SEGURIDAD",
+                    "link": "/globaladminsecurity",
+                    "accion": "globaladminsecurity",
+                    "style": "fa fa-lock",
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 47,
+                    "label": "GESTION DE EMPLEADO",
+                    "link": "/empleado",
+                    "accion": "empleado",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 46,
+                    "label": "GESTION DE CARGO",
+                    "link": "/cargo",
+                    "accion": "cargo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 47,
+                    "label": "GESTION DE EMPLEADO",
+                    "link": "/empleado",
+                    "accion": "empleado",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 10,
+                "label": "LOCALIDADES",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "LOCALIDADES",
+                "children": [
+                  {
+                    "codigo": 45,
+                    "label": "GESTION DE SITIO",
+                    "link": "/sitio",
+                    "accion": "sitio",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 44,
+                    "label": "GESTION DE LOCALIDAD",
+                    "link": "/localidad",
+                    "accion": "localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 45,
+                    "label": "GESTION DE SITIO",
+                    "link": "/sitio",
+                    "accion": "sitio",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 44,
+                    "label": "GESTION DE LOCALIDAD",
+                    "link": "/localidad",
+                    "accion": "localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 12,
+                "label": "PUNTO DE VENTA",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "PUNTO_VENTA",
+                "children": [
+                  {
+                    "codigo": 49,
+                    "label": "GESTION CONFIGURACION POS",
+                    "link": "/gestionPos",
+                    "accion": "gestionPos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 48,
+                    "label": "GESTION POS",
+                    "link": "/pos",
+                    "accion": "pos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 49,
+                    "label": "GESTION CONFIGURACION POS",
+                    "link": "/gestionPos",
+                    "accion": "gestionPos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 48,
+                    "label": "GESTION POS",
+                    "link": "/pos",
+                    "accion": "pos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 8,
+                "label": "EMPRESAS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "EMPRESA",
+                "children": [
+                  {
+                    "codigo": 40,
+                    "label": "GESTION DE EMPRESAS",
+                    "link": "/empresa",
+                    "accion": "empresa",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 40,
+                    "label": "GESTION DE EMPRESAS",
+                    "link": "/empresa",
+                    "accion": "empresa",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 15,
+                "label": "TICKETS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "TICKET",
+                "children": [
+                  {
+                    "codigo": 55,
+                    "label": "LISTADO DE TICKETS GENERADOS",
+                    "link": "/ticketImpresionList",
+                    "accion": "ticketImpresionList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 56,
+                    "label": "DASHBOARD",
+                    "link": "/dashboardTicket",
+                    "accion": "dashboardTicket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 54,
+                    "label": "LISTADO DE TICKETS",
+                    "link": "/ticketList",
+                    "accion": "ticketList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 53,
+                    "label": "GENERACION TICKETS ESPECIAL",
+                    "link": "/ticketEspecial",
+                    "accion": "ticketEspecial",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 52,
+                    "label": "VENTA TICKETS",
+                    "link": "/ticket",
+                    "accion": "ticket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 55,
+                    "label": "LISTADO DE TICKETS GENERADOS",
+                    "link": "/ticketImpresionList",
+                    "accion": "ticketImpresionList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 56,
+                    "label": "DASHBOARD",
+                    "link": "/dashboardTicket",
+                    "accion": "dashboardTicket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 54,
+                    "label": "LISTADO DE TICKETS",
+                    "link": "/ticketList",
+                    "accion": "ticketList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 53,
+                    "label": "GENERACION TICKETS ESPECIAL",
+                    "link": "/ticketEspecial",
+                    "accion": "ticketEspecial",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 52,
+                    "label": "VENTA TICKETS",
+                    "link": "/ticket",
+                    "accion": "ticket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 9,
+                "label": "EVENTOS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "EVENTO",
+                "children": [
+                  {
+                    "codigo": 41,
+                    "label": "GESTION DE EVENTOS",
+                    "link": "/evento",
+                    "accion": "evento",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 43,
+                    "label": "GESTION DE REGISTRO OPERATIVO",
+                    "link": "/registro",
+                    "accion": "registro",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 42,
+                    "label": "GESTION EVENTO LOCALIDAD",
+                    "link": "/evento_localidad",
+                    "accion": "evento_localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 41,
+                    "label": "GESTION DE EVENTOS",
+                    "link": "/evento",
+                    "accion": "evento",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 43,
+                    "label": "GESTION DE REGISTRO OPERATIVO",
+                    "link": "/registro",
+                    "accion": "registro",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 42,
+                    "label": "GESTION EVENTO LOCALIDAD",
+                    "link": "/evento_localidad",
+                    "accion": "evento_localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 13,
+                "label": "ACCESO",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "ACCESO",
+                "children": [
+                  {
+                    "codigo": 50,
+                    "label": "VALIDACION DE INGRESO CLIENTES",
+                    "link": "/validacionIngreso",
+                    "accion": "validacionIngreso",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 51,
+                    "label": "VALIDACION DE INGRESO OPERATIVOS",
+                    "link": "/c",
+                    "accion": "validacionIngresoOperativo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 50,
+                    "label": "VALIDACION DE INGRESO CLIENTES",
+                    "link": "/validacionIngreso",
+                    "accion": "validacionIngreso",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 51,
+                    "label": "VALIDACION DE INGRESO OPERATIVOS",
+                    "link": "/c",
+                    "accion": "validacionIngresoOperativo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              }
+            ],
+            "childrenArray": [
+              {
+                "codigo": 11,
+                "label": "SEGURIDAD",
+                "link": null,
+                "accion": null,
+                "style": "fa fa-lock",
+                "classStyle": "LOGISTICA",
+                "children": [
+                  {
+                    "codigo": 46,
+                    "label": "ADMINISTRACION GLOBAL SEGURIDAD",
+                    "link": "/globaladminsecurity",
+                    "accion": "globaladminsecurity",
+                    "style": "fa fa-lock",
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 47,
+                    "label": "GESTION DE EMPLEADO",
+                    "link": "/empleado",
+                    "accion": "empleado",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 46,
+                    "label": "GESTION DE CARGO",
+                    "link": "/cargo",
+                    "accion": "cargo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 47,
+                    "label": "GESTION DE EMPLEADO",
+                    "link": "/empleado",
+                    "accion": "empleado",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 10,
+                "label": "LOCALIDADES",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "LOCALIDADES",
+                "children": [
+                  {
+                    "codigo": 45,
+                    "label": "GESTION DE SITIO",
+                    "link": "/sitio",
+                    "accion": "sitio",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 44,
+                    "label": "GESTION DE LOCALIDAD",
+                    "link": "/localidad",
+                    "accion": "localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 45,
+                    "label": "GESTION DE SITIO",
+                    "link": "/sitio",
+                    "accion": "sitio",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 44,
+                    "label": "GESTION DE LOCALIDAD",
+                    "link": "/localidad",
+                    "accion": "localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 12,
+                "label": "PUNTO DE VENTA",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "PUNTO_VENTA",
+                "children": [
+                  {
+                    "codigo": 49,
+                    "label": "GESTION CONFIGURACION POS",
+                    "link": "/gestionPos",
+                    "accion": "gestionPos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 48,
+                    "label": "GESTION POS",
+                    "link": "/pos",
+                    "accion": "pos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 49,
+                    "label": "GESTION CONFIGURACION POS",
+                    "link": "/gestionPos",
+                    "accion": "gestionPos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 48,
+                    "label": "GESTION POS",
+                    "link": "/pos",
+                    "accion": "pos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 8,
+                "label": "EMPRESAS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "EMPRESA",
+                "children": [
+                  {
+                    "codigo": 40,
+                    "label": "GESTION DE EMPRESAS",
+                    "link": "/empresa",
+                    "accion": "empresa",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 40,
+                    "label": "GESTION DE EMPRESAS",
+                    "link": "/empresa",
+                    "accion": "empresa",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 15,
+                "label": "TICKETS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "TICKET",
+                "children": [
+                  {
+                    "codigo": 55,
+                    "label": "LISTADO DE TICKETS GENERADOS",
+                    "link": "/ticketImpresionList",
+                    "accion": "ticketImpresionList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 56,
+                    "label": "DASHBOARD",
+                    "link": "/dashboardTicket",
+                    "accion": "dashboardTicket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 54,
+                    "label": "LISTADO DE TICKETS",
+                    "link": "/ticketList",
+                    "accion": "ticketList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 53,
+                    "label": "GENERACION TICKETS ESPECIAL",
+                    "link": "/ticketEspecial",
+                    "accion": "ticketEspecial",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 52,
+                    "label": "VENTA TICKETS",
+                    "link": "/ticket",
+                    "accion": "ticket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 55,
+                    "label": "LISTADO DE TICKETS GENERADOS",
+                    "link": "/ticketImpresionList",
+                    "accion": "ticketImpresionList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 56,
+                    "label": "DASHBOARD",
+                    "link": "/dashboardTicket",
+                    "accion": "dashboardTicket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 54,
+                    "label": "LISTADO DE TICKETS",
+                    "link": "/ticketList",
+                    "accion": "ticketList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 53,
+                    "label": "GENERACION TICKETS ESPECIAL",
+                    "link": "/ticketEspecial",
+                    "accion": "ticketEspecial",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 52,
+                    "label": "VENTA TICKETS",
+                    "link": "/ticket",
+                    "accion": "ticket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 9,
+                "label": "EVENTOS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "EVENTO",
+                "children": [
+                  {
+                    "codigo": 41,
+                    "label": "GESTION DE EVENTOS",
+                    "link": "/evento",
+                    "accion": "evento",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 43,
+                    "label": "GESTION DE REGISTRO OPERATIVO",
+                    "link": "/registro",
+                    "accion": "registro",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 42,
+                    "label": "GESTION EVENTO LOCALIDAD",
+                    "link": "/evento_localidad",
+                    "accion": "evento_localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 41,
+                    "label": "GESTION DE EVENTOS",
+                    "link": "/evento",
+                    "accion": "evento",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 43,
+                    "label": "GESTION DE REGISTRO OPERATIVO",
+                    "link": "/registro",
+                    "accion": "registro",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 42,
+                    "label": "GESTION EVENTO LOCALIDAD",
+                    "link": "/evento_localidad",
+                    "accion": "evento_localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 13,
+                "label": "ACCESO",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "ACCESO",
+                "children": [
+                  {
+                    "codigo": 50,
+                    "label": "VALIDACION DE INGRESO CLIENTES",
+                    "link": "/validacionIngreso",
+                    "accion": "validacionIngreso",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 51,
+                    "label": "VALIDACION DE INGRESO OPERATIVOS",
+                    "link": "/c",
+                    "accion": "validacionIngresoOperativo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 50,
+                    "label": "VALIDACION DE INGRESO CLIENTES",
+                    "link": "/validacionIngreso",
+                    "accion": "validacionIngreso",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 51,
+                    "label": "VALIDACION DE INGRESO OPERATIVOS",
+                    "link": "/c",
+                    "accion": "validacionIngresoOperativo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "childrenArray": [
+          {
+            "codigo": 1,
+            "label": "GESTION DE CATALOGOS ZZ",
+            "link": null,
+            "accion": null,
+            "style": null,
+            "classStyle": null,
+            "children": [
+              {
+                "codigo": 11,
+                "label": "LOGISTICA",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "LOGISTICA",
+                "children": [
+                  {
+                    "codigo": 46,
+                    "label": "GESTION DE CARGO",
+                    "link": "/cargo",
+                    "accion": "cargo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 47,
+                    "label": "GESTION DE EMPLEADO",
+                    "link": "/empleado",
+                    "accion": "empleado",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 46,
+                    "label": "GESTION DE CARGO",
+                    "link": "/cargo",
+                    "accion": "cargo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 47,
+                    "label": "GESTION DE EMPLEADO",
+                    "link": "/empleado",
+                    "accion": "empleado",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 10,
+                "label": "LOCALIDADES",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "LOCALIDADES",
+                "children": [
+                  {
+                    "codigo": 45,
+                    "label": "GESTION DE SITIO",
+                    "link": "/sitio",
+                    "accion": "sitio",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 44,
+                    "label": "GESTION DE LOCALIDAD",
+                    "link": "/localidad",
+                    "accion": "localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 45,
+                    "label": "GESTION DE SITIO",
+                    "link": "/sitio",
+                    "accion": "sitio",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 44,
+                    "label": "GESTION DE LOCALIDAD",
+                    "link": "/localidad",
+                    "accion": "localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 12,
+                "label": "PUNTO DE VENTA",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "PUNTO_VENTA",
+                "children": [
+                  {
+                    "codigo": 49,
+                    "label": "GESTION CONFIGURACION POS",
+                    "link": "/gestionPos",
+                    "accion": "gestionPos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 48,
+                    "label": "GESTION POS",
+                    "link": "/pos",
+                    "accion": "pos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 49,
+                    "label": "GESTION CONFIGURACION POS",
+                    "link": "/gestionPos",
+                    "accion": "gestionPos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 48,
+                    "label": "GESTION POS",
+                    "link": "/pos",
+                    "accion": "pos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 8,
+                "label": "EMPRESAS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "EMPRESA",
+                "children": [
+                  {
+                    "codigo": 40,
+                    "label": "GESTION DE EMPRESAS",
+                    "link": "/empresa",
+                    "accion": "empresa",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 40,
+                    "label": "GESTION DE EMPRESAS",
+                    "link": "/empresa",
+                    "accion": "empresa",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 15,
+                "label": "TICKETS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "TICKET",
+                "children": [
+                  {
+                    "codigo": 55,
+                    "label": "LISTADO DE TICKETS GENERADOS",
+                    "link": "/ticketImpresionList",
+                    "accion": "ticketImpresionList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 56,
+                    "label": "DASHBOARD",
+                    "link": "/dashboardTicket",
+                    "accion": "dashboardTicket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 54,
+                    "label": "LISTADO DE TICKETS",
+                    "link": "/ticketList",
+                    "accion": "ticketList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 53,
+                    "label": "GENERACION TICKETS ESPECIAL",
+                    "link": "/ticketEspecial",
+                    "accion": "ticketEspecial",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 52,
+                    "label": "VENTA TICKETS",
+                    "link": "/ticket",
+                    "accion": "ticket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 55,
+                    "label": "LISTADO DE TICKETS GENERADOS",
+                    "link": "/ticketImpresionList",
+                    "accion": "ticketImpresionList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 56,
+                    "label": "DASHBOARD",
+                    "link": "/dashboardTicket",
+                    "accion": "dashboardTicket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 54,
+                    "label": "LISTADO DE TICKETS",
+                    "link": "/ticketList",
+                    "accion": "ticketList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 53,
+                    "label": "GENERACION TICKETS ESPECIAL",
+                    "link": "/ticketEspecial",
+                    "accion": "ticketEspecial",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 52,
+                    "label": "VENTA TICKETS",
+                    "link": "/ticket",
+                    "accion": "ticket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 9,
+                "label": "EVENTOS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "EVENTO",
+                "children": [
+                  {
+                    "codigo": 41,
+                    "label": "GESTION DE EVENTOS",
+                    "link": "/evento",
+                    "accion": "evento",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 43,
+                    "label": "GESTION DE REGISTRO OPERATIVO",
+                    "link": "/registro",
+                    "accion": "registro",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 42,
+                    "label": "GESTION EVENTO LOCALIDAD",
+                    "link": "/evento_localidad",
+                    "accion": "evento_localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 41,
+                    "label": "GESTION DE EVENTOS",
+                    "link": "/evento",
+                    "accion": "evento",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 43,
+                    "label": "GESTION DE REGISTRO OPERATIVO",
+                    "link": "/registro",
+                    "accion": "registro",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 42,
+                    "label": "GESTION EVENTO LOCALIDAD",
+                    "link": "/evento_localidad",
+                    "accion": "evento_localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 13,
+                "label": "ACCESO",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "ACCESO",
+                "children": [
+                  {
+                    "codigo": 50,
+                    "label": "VALIDACION DE INGRESO CLIENTES",
+                    "link": "/validacionIngreso",
+                    "accion": "validacionIngreso",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 51,
+                    "label": "VALIDACION DE INGRESO OPERATIVOS",
+                    "link": "/c",
+                    "accion": "validacionIngresoOperativo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 50,
+                    "label": "VALIDACION DE INGRESO CLIENTES",
+                    "link": "/validacionIngreso",
+                    "accion": "validacionIngreso",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 51,
+                    "label": "VALIDACION DE INGRESO OPERATIVOS",
+                    "link": "/c",
+                    "accion": "validacionIngresoOperativo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              }
+            ],
+            "childrenArray": [
+              {
+                "codigo": 11,
+                "label": "SEGURIDAD",
+                "link": null,
+                "accion": null,
+                "style": "fa fa-lock",
+                "classStyle": "LOGISTICA",
+                "children": [
+                  {
+                    "codigo": 46,
+                    "label": "ADMINISTRACION GLOBAL SEGURIDAD",
+                    "link": "/globaladminsecurity",
+                    "accion": "globaladminsecurity",
+                    "style": "fa fa-lock",
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 47,
+                    "label": "GESTION DE EMPLEADO",
+                    "link": "/empleado",
+                    "accion": "empleado",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 46,
+                    "label": "ADMINISTRACION GLOBAL SEGURIDAD",
+                    "link": "/globaladminsecurity",
+                    "accion": "/globaladminsecurity",
+                    "style": "fa fa-lock",
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 47,
+                    "label": "GESTION DE EMPLEADO",
+                    "link": "/empleado",
+                    "accion": "empleado",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 10,
+                "label": "LOCALIDADES",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "LOCALIDADES",
+                "children": [
+                  {
+                    "codigo": 45,
+                    "label": "GESTION DE SITIO",
+                    "link": "/sitio",
+                    "accion": "sitio",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 44,
+                    "label": "GESTION DE LOCALIDAD",
+                    "link": "/localidad",
+                    "accion": "localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 45,
+                    "label": "GESTION DE SITIO",
+                    "link": "/sitio",
+                    "accion": "sitio",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 44,
+                    "label": "GESTION DE LOCALIDAD",
+                    "link": "/localidad",
+                    "accion": "localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 12,
+                "label": "PUNTO DE VENTA",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "PUNTO_VENTA",
+                "children": [
+                  {
+                    "codigo": 49,
+                    "label": "GESTION CONFIGURACION POS",
+                    "link": "/gestionPos",
+                    "accion": "gestionPos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 48,
+                    "label": "GESTION POS",
+                    "link": "/pos",
+                    "accion": "pos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 49,
+                    "label": "GESTION CONFIGURACION POS",
+                    "link": "/gestionPos",
+                    "accion": "gestionPos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 48,
+                    "label": "GESTION POS",
+                    "link": "/pos",
+                    "accion": "pos",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 8,
+                "label": "EMPRESAS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "EMPRESA",
+                "children": [
+                  {
+                    "codigo": 40,
+                    "label": "GESTION DE EMPRESAS",
+                    "link": "/empresa",
+                    "accion": "empresa",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 40,
+                    "label": "GESTION DE EMPRESAS",
+                    "link": "/empresa",
+                    "accion": "empresa",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 15,
+                "label": "TICKETS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "TICKET",
+                "children": [
+                  {
+                    "codigo": 55,
+                    "label": "LISTADO DE TICKETS GENERADOS",
+                    "link": "/ticketImpresionList",
+                    "accion": "ticketImpresionList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 56,
+                    "label": "DASHBOARD",
+                    "link": "/dashboardTicket",
+                    "accion": "dashboardTicket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 54,
+                    "label": "LISTADO DE TICKETS",
+                    "link": "/ticketList",
+                    "accion": "ticketList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 53,
+                    "label": "GENERACION TICKETS ESPECIAL",
+                    "link": "/ticketEspecial",
+                    "accion": "ticketEspecial",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 52,
+                    "label": "VENTA TICKETS",
+                    "link": "/ticket",
+                    "accion": "ticket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 55,
+                    "label": "LISTADO DE TICKETS GENERADOS",
+                    "link": "/ticketImpresionList",
+                    "accion": "ticketImpresionList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 56,
+                    "label": "DASHBOARD",
+                    "link": "/dashboardTicket",
+                    "accion": "dashboardTicket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 54,
+                    "label": "LISTADO DE TICKETS",
+                    "link": "/ticketList",
+                    "accion": "ticketList",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 53,
+                    "label": "GENERACION TICKETS ESPECIAL",
+                    "link": "/ticketEspecial",
+                    "accion": "ticketEspecial",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 52,
+                    "label": "VENTA TICKETS",
+                    "link": "/ticket",
+                    "accion": "ticket",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 9,
+                "label": "EVENTOS",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "EVENTO",
+                "children": [
+                  {
+                    "codigo": 41,
+                    "label": "GESTION DE EVENTOS",
+                    "link": "/evento",
+                    "accion": "evento",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 43,
+                    "label": "GESTION DE REGISTRO OPERATIVO",
+                    "link": "/registro",
+                    "accion": "registro",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 42,
+                    "label": "GESTION EVENTO LOCALIDAD",
+                    "link": "/evento_localidad",
+                    "accion": "evento_localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 41,
+                    "label": "GESTION DE EVENTOS",
+                    "link": "/evento",
+                    "accion": "evento",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 43,
+                    "label": "GESTION DE REGISTRO OPERATIVO",
+                    "link": "/registro",
+                    "accion": "registro",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 42,
+                    "label": "GESTION EVENTO LOCALIDAD",
+                    "link": "/evento_localidad",
+                    "accion": "evento_localidad",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              },
+              {
+                "codigo": 13,
+                "label": "ACCESO",
+                "link": null,
+                "accion": null,
+                "style": null,
+                "classStyle": "ACCESO",
+                "children": [
+                  {
+                    "codigo": 50,
+                    "label": "VALIDACION DE INGRESO CLIENTES",
+                    "link": "/validacionIngreso",
+                    "accion": "validacionIngreso",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 51,
+                    "label": "VALIDACION DE INGRESO OPERATIVOS",
+                    "link": "/c",
+                    "accion": "validacionIngresoOperativo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ],
+                "childrenArray": [
+                  {
+                    "codigo": 50,
+                    "label": "VALIDACION DE INGRESO CLIENTES",
+                    "link": "/validacionIngreso",
+                    "accion": "validacionIngreso",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  },
+                  {
+                    "codigo": 51,
+                    "label": "VALIDACION DE INGRESO OPERATIVOS",
+                    "link": "/c",
+                    "accion": "validacionIngresoOperativo",
+                    "style": null,
+                    "classStyle": null,
+                    "children": null,
+                    "childrenArray": [
+                      
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+	  {
+        "codigo": 1,
+        "label": "EXCO-BUSINESS",
+        "link": null,
+        "accion": null,
+        "style": "fa fa-dashboard",
+        "classStyle": null,
+        "children": []
+      }  	      
+    ]
+  },
+  "firstLogin": false,
+  "servicios": {
+    "gestionventa.crud": "../resources/gestionVentaRestController/:idGestionVenta",
+    "cliente.crud": "../resources/clienteRestController/:idCliente",
+    "gestionventa.compraProductoTemporal": "../resources/gestionVentaExtendedRestController/compraProductoTemporal",
+    "pin.asignaPin": "../resources/pinRestController/asignaPin",
+    "gestionventa.loadComprasCliente": "../resources/gestionVentaExtendedRestController/loadComprasCliente",
+    "gestionventa.generateTransfer": "../resources/gestionVentaExtendedRestController/generateTransfer",
+    "cliente.consultaporparametros": "../resources/clienteRestController/:idCliente",
+    "gestionventa.registroTemporal": "../resources/gestionVentaExtendedRestController/registroTemporal",
+    "producto.crud": "../resources/productoRestController/:idCatalogoProducto",
+    "pin.crud": "../resources/pinRestController/:idPin",
+    "vendedor.crud": "../resources/vendedorRestController/:idVendedor",
+    "gestionventa.loadSaleValue": "../resources/gestionVentaExtendedRestController/loadSaleValue"
+  }
+}
