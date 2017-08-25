@@ -23,8 +23,8 @@ import ec.gob.acess.esamyn.modelo.Usuario;
 /**
  * 
  * Clase: UsuarioWebService.java
- * @author Duval Barragan
- * Fecha: Aug 25, 2017
+ * 
+ * @author Duval Barragan Fecha: Aug 25, 2017
  * @version 1.0
  *
  */
@@ -33,98 +33,106 @@ import ec.gob.acess.esamyn.modelo.Usuario;
 @Path("/usuario")
 public class UsuarioWebService {
 
-	@EJB
-	private UsuarioBean usuarioBean;
+    @EJB
+    private UsuarioBean usuarioBean;
 
-	/**
-	 * Default constructor.
-	 */
-	public UsuarioWebService() {
-		// TODO Auto-generated constructor stub
+    /**
+     * Default constructor.
+     */
+    public UsuarioWebService() {
+	// TODO Auto-generated constructor stub
+    }
+
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public MensajeDto login(AccesoWsDto accesoDto) {
+
+	System.out.println("entra");
+
+	MensajeDto mensajeDto = usuarioBean.validarUsuarioContrasena(accesoDto.getUsuario(), accesoDto.getPassword());
+
+	return mensajeDto;
+    }
+
+    @POST
+    @Path("{guardar}/")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public MensajeDto guardar(Usuario usuario, @Context HttpHeaders headers) {
+
+	String token = headers.getRequestHeader("ApiToken").get(0);
+	MensajeDto mensajeDto;
+	try {
+	    boolean valida = usuarioBean.validaToken(token);
+
+	    if (valida) {
+		mensajeDto = usuarioBean.guardar(usuario);
+
+	    } else {
+		mensajeDto = new MensajeDto(true, "Token invalido", null);
+	    }
+	} catch (Exception e) {
+	    mensajeDto = new MensajeDto(true, "Error token " + e.getMessage(), null);
 	}
+	return mensajeDto;
+    }
 
-	@POST
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
-	public MensajeDto login(AccesoWsDto accesoDto) {
+    @GET
+    @Path("{lista}/")
+    @Produces(MediaType.APPLICATION_JSON)
+    public MensajeDto lista(@Context HttpHeaders headers) {
+	MensajeDto mensajeDto;
 
-		System.out.println("entra");
+	String token = headers.getRequestHeader("ApiToken").get(0);
 
-		MensajeDto dto = usuarioBean.validarUsuarioContrasena(accesoDto.getUsuario(), accesoDto.getPassword());
+	try {
+	    boolean valida = usuarioBean.validaToken(token);
 
-		return dto;
+	    if (valida) {
+
+		List<Usuario> lista = usuarioBean.findAll();
+		mensajeDto = new MensajeDto(false, "", lista);
+
+	    } else {
+		mensajeDto = new MensajeDto(true, "Token invalido", null);
+	    }
+	} catch (Exception e) {
+	    mensajeDto = new MensajeDto(true, "Error token " + e.getMessage(), null);
 	}
+	return mensajeDto;
+    }
 
-	@POST
-	@Path("{guardar}/")
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
-	public MensajeDto guardar(Usuario usuario, @Context HttpHeaders headers) {
+    @POST
+    @Path("{eliminar}/")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public MensajeDto eliminar(EliminarDto eliminar, @Context HttpHeaders headers) {
 
-		String token = headers.getRequestHeader("ApiToken").get(0);
+	String token = headers.getRequestHeader("ApiToken").get(0);
 
-		System.out.println("entra+" + token);
+	System.out.println("entra+" + token);
 
-		boolean valida = usuarioBean.validaToken(token);
+	MensajeDto mensajeDto;
+	boolean valida;
+	try {
+	    valida = usuarioBean.validaToken(token);
 
-		MensajeDto dto;
-		if (valida) {
-			dto = usuarioBean.guardar(usuario);
-
-		} else {
-			dto = new MensajeDto(true, "Token invalido", null);
+	    if (valida) {
+		try {
+		    usuarioBean.delete(eliminar.getCodigo());
+		    mensajeDto = new MensajeDto(false, "Objeto eliminado", null);
+		} catch (Exception e) {
+		    mensajeDto = new MensajeDto(true, "No se puede eliminar " + e.getMessage(), null);
 		}
-		return dto;
+
+	    } else {
+		mensajeDto = new MensajeDto(true, "Token invalido", null);
+	    }
+	} catch (Exception e) {
+	    mensajeDto = new MensajeDto(true, "Error token " + e.getMessage(), null);
 	}
-
-	@GET
-	@Path("{lista}/")
-	@Produces(MediaType.APPLICATION_JSON)
-	public MensajeDto lista(@Context HttpHeaders headers) {
-
-		String token = headers.getRequestHeader("ApiToken").get(0);
-
-		System.out.println("entra+" + token);
-
-		boolean valida = usuarioBean.validaToken(token);
-
-		MensajeDto dto;
-		if (valida) {
-
-			List<Usuario> lista = usuarioBean.findAll();
-			dto = new MensajeDto(false, "", lista);
-
-		} else {
-			dto = new MensajeDto(true, "Token invalido", null);
-		}
-		return dto;
-	}
-
-	@POST
-	@Path("{eliminar}/")
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
-	public MensajeDto eliminar(EliminarDto eliminar, @Context HttpHeaders headers) {
-
-		String token = headers.getRequestHeader("ApiToken").get(0);
-
-		System.out.println("entra+" + token);
-
-		boolean valida = usuarioBean.validaToken(token);
-
-		MensajeDto dto;
-		if (valida) {
-			try {
-				usuarioBean.delete(eliminar.getCodigo());
-				dto = new MensajeDto(false, "Objeto eliminado", null);
-			} catch (Exception e) {
-				dto = new MensajeDto(true, "No se puede eliminar " + e.getMessage(), null);
-			}
-
-		} else {
-			dto = new MensajeDto(true, "Token invalido", null);
-		}
-		return dto;
-	}
+	return mensajeDto;
+    }
 
 }

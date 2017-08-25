@@ -19,6 +19,7 @@ import ec.gob.acess.esamyn.dto.MensajeDto;
 import ec.gob.acess.esamyn.modelo.Usuario;
 import ec.gob.acess.esamyn.util.CifradoUtil;
 import ec.gob.acess.esamyn.util.Md5;
+import ec.gob.acess.esamyn.util.PasswordUtil;
 
 /**
  * 
@@ -54,7 +55,7 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 
 	Criteria criteria = new Criteria(ands, operator, valores);
 
-	MensajeDto dto = null;
+	MensajeDto mensajeDto = null;
 
 	List<Usuario> lista = findByCriterias(criteria);
 	if (lista != null && !lista.isEmpty()) {
@@ -71,18 +72,18 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 
 		update(u);
 
-		dto = new MensajeDto(false, "", u);
+		mensajeDto = new MensajeDto(false, "", u);
 	    } else {
-		dto = new MensajeDto(true, "Contraseña incorrecta", null);
+		mensajeDto = new MensajeDto(true, "Contraseña incorrecta", null);
 	    }
 
 	} else {
 
-	    dto = new MensajeDto(true, "El usuario no esta registrado", null);
+	    mensajeDto = new MensajeDto(true, "El usuario no esta registrado", null);
 
 	}
 
-	return dto;
+	return mensajeDto;
     }
 
     /**
@@ -93,33 +94,33 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
      */
     public MensajeDto guardar(Usuario usuario) {
 
-	MensajeDto dto = new MensajeDto();
+	MensajeDto mensajeDto = new MensajeDto();
 
 	try {
 
 	    if (usuario.getCodigo() == null) {
 
-		dto.setError(false);
-		dto.setMensaje("Usuario Guardado");
+		mensajeDto.setError(false);
+		mensajeDto.setMensaje("Usuario Guardado");
 		usuario.setCreado(new Date());
 		usuario.setModificado(new Date());
 		create(usuario);
-		dto.setObjeto(usuario);
+		mensajeDto.setObjeto(usuario);
 	    } else {
-		dto.setError(false);
-		dto.setMensaje("Usuario Actualizado");
+		mensajeDto.setError(false);
+		mensajeDto.setMensaje("Usuario Actualizado");
 		usuario.setModificado(new Date());
 		update(usuario);
-		dto.setObjeto(usuario);
+		mensajeDto.setObjeto(usuario);
 	    }
 
 	} catch (Exception e) {
-	    dto.setError(true);
-	    dto.setMensaje("Error al guardar: " + e.getMessage());
-	    dto.setObjeto(null);
+	    mensajeDto.setError(true);
+	    mensajeDto.setMensaje("Error al guardar: " + e.getMessage());
+	    mensajeDto.setObjeto(null);
 	}
 
-	return dto;
+	return mensajeDto;
 
     }
 
@@ -129,7 +130,7 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
      * @param token
      * @return
      */
-    public boolean validaToken(String token) {
+    public boolean validaToken(String token) throws Exception {
 
 	String revToken;
 	boolean validaToken = false;
@@ -137,8 +138,7 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 	    revToken = CifradoUtil.desencriptar(token, "esamyn");
 	} catch (Exception e) {
 
-	    e.printStackTrace();
-	    return validaToken;
+	    throw e;
 	}
 
 	String[] arr = revToken.split("-");
@@ -161,9 +161,17 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 	return validaToken;
     }
 
+    /**
+     * Metodo para cambiar password de un usuario
+     * 
+     * @param token
+     * @param passAntigua
+     * @param passNueva
+     * @return
+     */
     public MensajeDto cambiarPassword(String token, String passAntigua, String passNueva) {
 
-	MensajeDto dto = null;
+	MensajeDto mensajeDto = null;
 
 	if (passAntigua.equals(passNueva)) {
 
@@ -182,27 +190,78 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 			update(usuario);
 
 		    } else {
-			dto = new MensajeDto(true, "La contraseña ingresada no es igual a su contraseña actual", null);
+			mensajeDto = new MensajeDto(true, "La contraseña ingresada no es igual a su contraseña actual",
+				null);
 		    }
 
 		} else {
-		    dto = new MensajeDto(true, "Token invalido", null);
+		    mensajeDto = new MensajeDto(true, "Token invalido", null);
 		}
 
 	    } catch (NoSuchAlgorithmException e) {
-		dto = new MensajeDto(true, e.getMessage(), null);
+		mensajeDto = new MensajeDto(true, e.getMessage(), null);
+	    } catch (Exception e) {
+		mensajeDto = new MensajeDto(true, e.getMessage(), null);
 	    }
 
 	} else {
 
-	    dto = new MensajeDto(true, "Las contraseñas no son iguales", null);
+	    mensajeDto = new MensajeDto(true, "Las contraseñas no son iguales", null);
 	}
 
-	return dto;
+	return mensajeDto;
 
     }
 
-    public Usuario buscarPorToken(String token) {
+    public MensajeDto olvidoPassword(String userName) {
+	MensajeDto mensajeDto;
+
+	String[] ands = { "username" };
+	CriteriaTypeEnum[] operator = { CriteriaTypeEnum.STRING_EQUALS };
+	Object[] valores = { userName };
+
+	Criteria criteria = new Criteria(ands, operator, valores);
+
+	List<Usuario> lista = findByCriterias(criteria);
+	if (lista != null && !lista.isEmpty()) {
+
+	    Usuario usuario = lista.get(0);
+
+	    String contrasena = PasswordUtil.getCadenaAlfanumAleatoria(6);
+
+	    String pass;
+	    try {
+		pass = Md5.aplicarHash(contrasena);
+		usuario.setPassword(pass);
+
+		update(usuario);
+		
+		//TODO enviar correo
+		
+		//TODO buscar texto cooreo
+
+		mensajeDto = new MensajeDto(false, "Cambio de contraseña", null);
+
+	    } catch (NoSuchAlgorithmException e) {
+		mensajeDto = new MensajeDto(true, "Error al encriptar " + e.getMessage(), null);
+	    }
+
+	} else {
+
+	    mensajeDto = new MensajeDto(true, "No existe el usuario", null);
+
+	}
+
+	return mensajeDto;
+    }
+
+    /**
+     * Busca usaurio por token
+     * 
+     * @param token
+     * @return
+     */
+    public Usuario buscarPorToken(String token) throws Exception {
 
 	String revToken;
 	try {
@@ -225,8 +284,9 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 		}
 	    }
 	} catch (Exception e) {
-	    // TODO Auto-generated catch block
+
 	    e.printStackTrace();
+	    throw e;
 	}
 
 	return null;

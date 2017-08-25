@@ -20,8 +20,8 @@ import ec.gob.acess.esamyn.modelo.Pregunta;
 /**
  * 
  * Clase: PreguntaBean.java
- * @author Duval Barragan
- * Fecha: Aug 25, 2017
+ * 
+ * @author Duval Barragan Fecha: Aug 25, 2017
  * @version 1.0
  *
  */
@@ -29,118 +29,120 @@ import ec.gob.acess.esamyn.modelo.Pregunta;
 @LocalBean
 public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 
-	@EJB
-	private PreguntaDAO preguntaDAO;
+    @EJB
+    private PreguntaDAO preguntaDAO;
 
-	@Override
-	public GenericDao<Pregunta, Long> getDao() {
-		return preguntaDAO;
+    @Override
+    public GenericDao<Pregunta, Long> getDao() {
+	return preguntaDAO;
+    }
+
+    public EncuestaDto obtenerPreguntasFormulario(Long idFormulario, Long IdEncuesta) {
+
+	// TODO BUSCAR ENCUESTA
+
+	EncuestaDto encuesta = new EncuestaDto();
+
+	encuesta.setIdEncuesta(IdEncuesta);
+	encuesta.setIdFormulario(idFormulario);
+
+	String[] ands = { "formulario.codigo" };
+	CriteriaTypeEnum[] operator = { CriteriaTypeEnum.LONG_EQUALS };
+	Object[] valores = { idFormulario };
+	String[] orderby = { "orden" };
+	boolean[] asc = { true };
+
+	Criteria criteria = new Criteria(ands, operator, valores, orderby, asc);
+
+	List<Pregunta> lista = findByCriterias(criteria);
+
+	if (lista != null && !lista.isEmpty()) {
+	    List<PreguntaDto> padres = buscarRaiz(lista, idFormulario);
+
+	    for (PreguntaDto pregunta : padres) {
+		pregunta = llenarHijos(lista, pregunta, idFormulario);
+	    }
+
+	    encuesta.setPregunta(padres);
+
+	    return encuesta;
 	}
 
-	public EncuestaDto obtenerPreguntasFormulario(Long idFormulario, Long IdEncuesta) {
+	return null;
 
-		// TODO BUSCAR ENCUESTA
+    }
 
-		EncuestaDto encuesta = new EncuestaDto();
+    private PreguntaDto llenarHijos(List<Pregunta> lista, PreguntaDto padre, Long idFormulario) {
 
-		encuesta.setIdEncuesta(IdEncuesta);
-		encuesta.setIdFormulario(idFormulario);
+	List<PreguntaDto> hijos = new ArrayList<>();
 
-		String[] ands = { "formulario.codigo" };
-		CriteriaTypeEnum[] operator = { CriteriaTypeEnum.LONG_EQUALS };
-		Object[] valores = { idFormulario };
-		String[] orderby = { "orden" };
-		boolean[] asc = { true };
+	// Respuesta r = new Respuesta();
+	// Buscar respuestas formularios
+	// padre.setRespuesta(r);
 
-		Criteria criteria = new Criteria(ands, operator, valores, orderby, asc);
+	for (Pregunta p : lista) {
 
-		List<Pregunta> lista = findByCriterias(criteria);
+	    if (!p.getCodigo().equals(padre.getCodigo()) && p.getPadre() != null) {
+		if (p.getPadre().getCodigo().equals(padre.getCodigo())) {
 
-		if (lista != null && !lista.isEmpty()) {
-			List<PreguntaDto> padres = buscarRaiz(lista, idFormulario);
+		    PreguntaDto preguntaDto = new PreguntaDto();
+		    preguntaDto.setCodigo(p.getCodigo());
+		    preguntaDto.setAyuda(p.getAyuda());
+		    preguntaDto.setCodigoTipoPregunta(
+			    p.getTipoPregunta() != null ? p.getTipoPregunta().getCodigo() : null);
+		    preguntaDto.setEtiquetaTipoPregunta(
+			    p.getTipoPregunta() != null ? p.getTipoPregunta().getEtiqueta() : null);
+		    preguntaDto.setOrden(p.getOrden());
+		    preguntaDto.setPrefijo(p.getPrefijo());
+		    preguntaDto.setPreguntaLista(null);
+		    preguntaDto.setSubfijo(p.getSubfijo());
+		    preguntaDto.setTexto(p.getTexto());
+		    preguntaDto.setValidacion(p.getValidacion());
 
-			for (PreguntaDto pregunta : padres) {
-				pregunta = llenarHijos(lista, pregunta, idFormulario);
-			}
+		    preguntaDto = llenarHijos(lista, preguntaDto, idFormulario);
 
-			encuesta.setPregunta(padres);
-
-			return encuesta;
+		    hijos.add(preguntaDto);
 		}
-
-		return null;
-
-	}
-
-	private PreguntaDto llenarHijos(List<Pregunta> lista, PreguntaDto padre, Long idFormulario) {
-
-		List<PreguntaDto> hijos = new ArrayList<>();
-
-		// Respuesta r = new Respuesta();
-		// Buscar respuestas formularios
-		// padre.setRespuesta(r);
-
-		for (Pregunta p : lista) {
-
-			if (!p.getCodigo().equals(padre.getCodigo()) && p.getPadre() != null) {
-				if (p.getPadre().getCodigo().equals(padre.getCodigo())) {
-
-					PreguntaDto dto = new PreguntaDto();
-					dto.setCodigo(p.getCodigo());
-					dto.setAyuda(p.getAyuda());
-					dto.setCodigoTipoPregunta(p.getTipoPregunta() != null ? p.getTipoPregunta().getCodigo() : null);
-					dto.setEtiquetaTipoPregunta(p.getTipoPregunta() != null ? p.getTipoPregunta().getEtiqueta() : null);
-					dto.setOrden(p.getOrden());
-					dto.setPrefijo(p.getPrefijo());
-					dto.setPreguntaLista(null);
-					dto.setSubfijo(p.getSubfijo());
-					dto.setTexto(p.getTexto());
-					dto.setValidacion(p.getValidacion());
-
-					dto = llenarHijos(lista, dto, idFormulario);
-
-					hijos.add(dto);
-				}
-			}
-
-		}
-
-		if (!hijos.isEmpty()) {
-			padre.setPreguntaLista(hijos);
-		} else {
-			padre.setPreguntaLista(null);
-		}
-
-		return padre;
+	    }
 
 	}
 
-	private List<PreguntaDto> buscarRaiz(List<Pregunta> lista, Long idFormulario) {
-
-		List<PreguntaDto> padres = new ArrayList<>();
-
-		for (Pregunta p : lista) {
-
-			if (p.getPadre() == null) {
-
-				PreguntaDto dto = new PreguntaDto();
-				dto.setCodigo(p.getCodigo());
-				dto.setAyuda(p.getAyuda());
-				dto.setCodigoTipoPregunta(p.getTipoPregunta() != null ? p.getTipoPregunta().getCodigo() : null);
-				dto.setEtiquetaTipoPregunta(p.getTipoPregunta() != null ? p.getTipoPregunta().getEtiqueta() : null);
-				dto.setOrden(p.getOrden());
-				dto.setPrefijo(p.getPrefijo());
-				dto.setPreguntaLista(null);
-				dto.setSubfijo(p.getSubfijo());
-				dto.setTexto(p.getTexto());
-				dto.setValidacion(p.getValidacion());
-
-				padres.add(dto);
-
-			}
-		}
-
-		return padres;
+	if (!hijos.isEmpty()) {
+	    padre.setPreguntaLista(hijos);
+	} else {
+	    padre.setPreguntaLista(null);
 	}
+
+	return padre;
+
+    }
+
+    private List<PreguntaDto> buscarRaiz(List<Pregunta> lista, Long idFormulario) {
+
+	List<PreguntaDto> padres = new ArrayList<>();
+
+	for (Pregunta p : lista) {
+
+	    if (p.getPadre() == null) {
+
+		PreguntaDto preguntaDto = new PreguntaDto();
+		preguntaDto.setCodigo(p.getCodigo());
+		preguntaDto.setAyuda(p.getAyuda());
+		preguntaDto.setCodigoTipoPregunta(p.getTipoPregunta() != null ? p.getTipoPregunta().getCodigo() : null);
+		preguntaDto.setEtiquetaTipoPregunta(p.getTipoPregunta() != null ? p.getTipoPregunta().getEtiqueta() : null);
+		preguntaDto.setOrden(p.getOrden());
+		preguntaDto.setPrefijo(p.getPrefijo());
+		preguntaDto.setPreguntaLista(null);
+		preguntaDto.setSubfijo(p.getSubfijo());
+		preguntaDto.setTexto(p.getTexto());
+		preguntaDto.setValidacion(p.getValidacion());
+
+		padres.add(preguntaDto);
+
+	    }
+	}
+
+	return padres;
+    }
 
 }

@@ -20,8 +20,8 @@ import ec.gob.acess.esamyn.dto.PreguntaWsDto;
 /**
  * 
  * Clase: PreguntaWebService.java
- * @author Duval Barragan
- * Fecha: Aug 25, 2017
+ * 
+ * @author Duval Barragan Fecha: Aug 25, 2017
  * @version 1.0
  *
  */
@@ -30,45 +30,50 @@ import ec.gob.acess.esamyn.dto.PreguntaWsDto;
 @Path("/pregunta")
 public class PreguntaWebService {
 
-	@EJB
-	private UsuarioBean usuarioBean;
+    @EJB
+    private UsuarioBean usuarioBean;
 
-	@EJB
-	private PreguntaBean preguntaBean;
+    @EJB
+    private PreguntaBean preguntaBean;
 
-	/**
-	 * Default constructor.
-	 */
-	public PreguntaWebService() {
-		// TODO Auto-generated constructor stub
-	}
+    /**
+     * Default constructor.
+     */
+    public PreguntaWebService() {
+	// TODO Auto-generated constructor stub
+    }
 
-	@POST
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
-	public MensajeDto buscarPreguntas(PreguntaWsDto pregunta, @Context HttpHeaders headers) {
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public MensajeDto buscarPreguntas(PreguntaWsDto pregunta, @Context HttpHeaders headers) {
 
-		String token = headers.getRequestHeader("ApiToken").get(0);
+	String token = headers.getRequestHeader("ApiToken").get(0);
 
-		System.out.println("entra+" + token);
+	System.out.println("entra+" + token);
 
-		boolean valida = usuarioBean.validaToken(token);
+	MensajeDto mensajeDto;
+	try {
+	    boolean valida = usuarioBean.validaToken(token);
 
-		MensajeDto dto;
-		if (valida) {
+	    if (valida) {
 
-			EncuestaDto encuesta = preguntaBean.obtenerPreguntasFormulario(pregunta.getIdFormulario(),
-					pregunta.getIdEncuesta());
+		EncuestaDto encuesta = preguntaBean.obtenerPreguntasFormulario(pregunta.getIdFormulario(),
+			pregunta.getIdEncuesta());
 
-			if (encuesta != null) {
-				dto = new MensajeDto(false, "", encuesta);
-			} else {
-				dto = new MensajeDto(true, "No existen preguntas para el formulario seleccionado", null);
-			}
-
+		if (encuesta != null) {
+		    mensajeDto = new MensajeDto(false, "", encuesta);
 		} else {
-			dto = new MensajeDto(true, "Token invalido", null);
+		    mensajeDto = new MensajeDto(true, "No existen preguntas para el formulario seleccionado", null);
 		}
-		return dto;
+
+	    } else {
+		mensajeDto = new MensajeDto(true, "Token invalido", null);
+	    }
+
+	} catch (Exception e) {
+	    mensajeDto = new MensajeDto(true, "Error token " + e.getMessage(), null);
 	}
+	return mensajeDto;
+    }
 }

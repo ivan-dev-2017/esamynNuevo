@@ -30,7 +30,7 @@ public class HolaWebService {
 	@Produces("application/json")
 	public String sayHello() {
 
-		String dto = "ESAMYN pruebas";
-		return dto;
+		String mensajeDto = "ESAMYN pruebas";
+		return mensajeDto;
 	}
 }
