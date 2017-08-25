@@ -1,5 +1,7 @@
 package acess.esamyn.dto;
 
+import java.math.BigInteger;
+import java.util.Date;
 import java.util.List;
 
 public class PreguntaDto {
@@ -20,11 +22,21 @@ public class PreguntaDto {
 
 	private Long idFormulario;
 
-	private List<PreguntaDto> preguntaLista;
-
 	private Long codigoTipoPregunta;
 
 	private String etiquetaTipoPregunta;
+
+	private Long codigoRespuesta;
+
+	private Long codigoEncuesta;
+
+	private BigInteger valorNumero;
+
+	private String valorTexto;
+
+	private Date valorFecha;
+
+	private List<PreguntaDto> preguntaLista;
 
 	public Long getCodigo() {
 		return codigo;
@@ -112,6 +124,46 @@ public class PreguntaDto {
 
 	public void setEtiquetaTipoPregunta(String etiquetaTipoPregunta) {
 		this.etiquetaTipoPregunta = etiquetaTipoPregunta;
+	}
+
+	public Long getCodigoRespuesta() {
+		return codigoRespuesta;
+	}
+
+	public void setCodigoRespuesta(Long codigoRespuesta) {
+		this.codigoRespuesta = codigoRespuesta;
+	}
+
+	public Long getCodigoEncuesta() {
+		return codigoEncuesta;
+	}
+
+	public void setCodigoEncuesta(Long codigoEncuesta) {
+		this.codigoEncuesta = codigoEncuesta;
+	}
+
+	public BigInteger getValorNumero() {
+		return valorNumero;
+	}
+
+	public void setValorNumero(BigInteger valorNumero) {
+		this.valorNumero = valorNumero;
+	}
+
+	public String getValorTexto() {
+		return valorTexto;
+	}
+
+	public void setValorTexto(String valorTexto) {
+		this.valorTexto = valorTexto;
+	}
+
+	public Date getValorFecha() {
+		return valorFecha;
+	}
+
+	public void setValorFecha(Date valorFecha) {
+		this.valorFecha = valorFecha;
 	}
 
 }

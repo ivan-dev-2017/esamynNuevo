@@ -15,6 +15,7 @@ public class Aplicacion extends Application {
 		classes.add(HolaWebService.class);
 		classes.add(UsuarioWebService.class);
 		classes.add(PreguntaWebService.class);
+		classes.add(FormularioWebService.class);
 
 		return classes;
 	}
