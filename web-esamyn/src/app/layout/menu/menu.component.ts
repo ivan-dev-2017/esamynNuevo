@@ -33,7 +33,7 @@ export class MenuComponent implements OnInit {
 	          //console.log("==>va a llenar el inner html: " );
 	          //this.htmlMenu=this.generateMenu(menu);
 	          this.panelMenuAppList=menu;
-	          console.log("==>menu cargado en storage: "  +JSON.stringify(this.panelMenuAppList)  );
+	          //console.log("==>menu cargado en storage: "  +JSON.stringify(this.panelMenuAppList)  );
 	        } else {
 	        	console.log("==>no cambio usuaerio: ");
 	        	this.loginWrapper.loggedIn=false;

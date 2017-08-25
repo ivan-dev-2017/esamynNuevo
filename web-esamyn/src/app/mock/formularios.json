@@ -1,0 +1,86 @@
+{
+"error": false,
+"mensaje": "",
+"objeto": [
+{
+"codigo": 2,
+"creado": 1500561382557,
+"modificado": 1500561382557,
+"nombre": "Formulario de Observación",
+"titulo": "Formulario de Observación",
+"subtitulo": null,
+"ayuda": null,
+"clave": "2"
+},
+{
+"codigo": 1,
+"creado": 1500561382557,
+"modificado": 1500561382557,
+"nombre": "Formulario de Información del Establecimiento",
+"titulo": "Formulario de Información del Establecimiento",
+"subtitulo": null,
+"ayuda": null,
+"clave": "1"
+},
+{
+"codigo": 4,
+"creado": 1500561382557,
+"modificado": 1500561382557,
+"nombre": "Formulario de Encuesta para Madres Puérperas",
+"titulo": "Formulario de Encuesta para Madres Puérperas",
+"subtitulo": null,
+"ayuda": null,
+"clave": "4"
+},
+{
+"codigo": 3,
+"creado": 1500561382557,
+"modificado": 1500561382557,
+"nombre": "Formulario de Encuesta para Madres Gestantes",
+"titulo": "Formulario de Encuesta para Madres Gestantes",
+"subtitulo": null,
+"ayuda": null,
+"clave": "3"
+},
+{
+"codigo": 6,
+"creado": 1500561382557,
+"modificado": 1500561382557,
+"nombre": "Formulario de Encuesta para Personal de Salud sin contacto directo con madres",
+"titulo": "Formulario de Encuesta para Personal de Salud sin contacto directo con madres",
+"subtitulo": null,
+"ayuda": null,
+"clave": "5b"
+},
+{
+"codigo": 5,
+"creado": 1500561382557,
+"modificado": 1500561382557,
+"nombre": "Formulario de Encuesta para Personal de Salud en Contacto con la Madre",
+"titulo": "Formulario de Encuesta para Personal de Salud en Contacto con la Madre",
+"subtitulo": null,
+"ayuda": null,
+"clave": "5a"
+},
+{
+"codigo": 8,
+"creado": 1500561382557,
+"modificado": 1500561382557,
+"nombre": "Formulario de Evaluación",
+"titulo": "Formulario de Evaluación",
+"subtitulo": null,
+"ayuda": null,
+"clave": "eva"
+},
+{
+"codigo": 7,
+"creado": 1500561382557,
+"modificado": 1500561382557,
+"nombre": "Formulario de Revisión de Historias Clínicas",
+"titulo": "Formulario de Revisión de Historias Clínicas",
+"subtitulo": null,
+"ayuda": null,
+"clave": "6"
+}
+]
+}

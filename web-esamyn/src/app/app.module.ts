@@ -27,7 +27,7 @@ import 'hammerjs';
  */
 import { AuthGuard } from './guard/index';
 import { AlertService, AuthenticationService,UserService,GlobalService, MessageService,GlobaleventsmanagerService,
-	     WebApiObservableService,SecurityService} from './service/index';
+	     WebApiObservableService,SecurityService,CoreesamynService} from './service/index';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -35,6 +35,8 @@ import { LeftpanelComponent } from './layout/leftpanel/leftpanel.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { MenuComponent } from './layout/menu/menu.component';
 import { EmailvalidatorDirective,NumbervalidatorDirective } from './validator/index';
+import { FormularioListComponent } from './formulario/list/list.component';
+
 
 
 /**
@@ -59,7 +61,8 @@ import { MessageComponent } from './comp/message/message.component';
     ModalpromptComponent,
     EmailvalidatorDirective,
     NumbervalidatorDirective,
-    MessageComponent
+    MessageComponent,
+    FormularioListComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +85,8 @@ import { MessageComponent } from './comp/message/message.component';
 		GlobaleventsmanagerService,
 		MessageService,
 		WebApiObservableService,
-		SecurityService
+		SecurityService,
+		CoreesamynService
               ],
   entryComponents: [
                     ModalpromptComponent

@@ -21,13 +21,7 @@ export class AuthenticationService {
     login(usuarioAuth: Login) {
     	console.log("=====.AuthenticationService ingresa a login " + JSON.stringify(usuarioAuth));
     	this.headers = new Headers({ 'Content-Type': 'application/json','Accept':'application/json','Authorization': 'login'+ this.config.keyFirstLogin });
-    	/*let usuario= new User();
-    	usuario.nombre=usuarioAuth.name;
-    	usuario.password=usuarioAuth.password;
-    	usuarioAuth.usuario=usuario;
-    	console.log("===xxx>usuario enviado para login "+ JSON.stringify(usuarioAuth));*/
-    	let usuarioesamyn={usuario:"1716187206",password:"81dc9bdb52d04dc20036dbd8313ed055"};
-    	
+    	/*let usuarioesamyn={usuario:"1716187206",password:"81dc9bdb52d04dc20036dbd8313ed055"};
     	return this.http.post(  this.config.apiUrl+ 'rest/usuario',
     	        usuarioesamyn)
         		.map((response: Response) => {
@@ -43,11 +37,30 @@ export class AuthenticationService {
         				localStorage.setItem('currentUser', JSON.stringify(usuario));
 						//localStorage.setItem('menu', JSON.stringify(loginWrapper.menuWrapper.panelMenuAppList));
 						localStorage.setItem('defaultPageSize', loginWrapper.defaultPageSize);
-						localStorage.setItem('services', JSON.stringify(loginWrapper.servicios));
+						localStorage.setItem('services', JSON.stringify(this.config.servicios ));
         			}
         			return user;
-        		});
+        		});*/
     	
+    	let usuario= new User();
+        usuario.nombre=usuarioAuth.name;
+        usuario.password=usuarioAuth.password;
+        usuarioAuth.usuario=usuario;
+        return this.http.post(  this.config.apiUrl+ 'resources/loginExtendedRestController/login',
+                usuarioAuth)
+            .map((response: Response) => {
+                console.log("===>respondiod ");
+                //console.log("===>respuesta "+ JSON.stringify(response));
+                let loginWrapper = response.json();
+                console.log("===>retorno login wrapper "+ JSON.stringify(loginWrapper));
+                let user = loginWrapper.usuario;
+                if (user && user.token) {
+                    localStorage.setItem('currentUser', JSON.stringify(user));
+                    localStorage.setItem('menu', JSON.stringify(loginWrapper.menuWrapper.panelMenuAppList));
+                    localStorage.setItem('defaultPageSize', loginWrapper.defaultPageSize);
+                    localStorage.setItem('services', JSON.stringify(loginWrapper.servicios));
+                }
+            });
     }
 
     logout(usuarioAuth: User) {
