@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DialogService } from "ng2-bootstrap-modal";
-import {UserServiceMock} from "../mock/UserServiceMock";
 import {PaginatedList, User,ItemMenu} from "../model/index";
 import {UserService,GlobaleventsmanagerService,AlertService} from "../service/index";
 import {ModalpromptComponent} from "../comp/modalprompt/modalprompt.component";
@@ -9,8 +8,7 @@ import {ModalpromptComponent} from "../comp/modalprompt/modalprompt.component";
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-  providers:[UserServiceMock]
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
 	
@@ -21,8 +19,7 @@ export class HomeComponent implements OnInit {
 	confirmResult:boolean = null;
 	promptMessage:string = "";
 
-  constructor(private userService:UserServiceMock,
-		  private globalEventsManager: GlobaleventsmanagerService, 
+  constructor(		  private globalEventsManager: GlobaleventsmanagerService, 
 	      private alertService: AlertService,
 	      private dialogService:DialogService) { 
 	  console.log("===> ingresa a inicializar CONSYRUCTOR HOME");
@@ -56,11 +53,11 @@ export class HomeComponent implements OnInit {
    */
   setPage(pageInfo){
     this.page.pageNumber = pageInfo.offset;
-    this.userService.getAllPaginated(this.page).subscribe(pagedData => {
+    /*this.userService.getAllPaginated(this.page).subscribe(pagedData => {
       this.page = pagedData;
       this.rows = pagedData.list;
-    });
-    console.log( "termino de cargar home " + JSON.stringify(this.page) );
+    });*/
+    //console.log( "termino de cargar home " + JSON.stringify(this.page) );
   }
   
   showPrompt() {

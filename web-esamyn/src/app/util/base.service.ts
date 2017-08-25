@@ -20,8 +20,9 @@ export class BaseService {
 		}
 		console.log("===previo a valdar servicios");
 		if( localStorage.getItem('services') ){
-			console.log("===ingresa si existe servicios " + JSON.stringify( localStorage.getItem('services') ));
+			//console.log("===ingresa si existe servicios " + localStorage.getItem('services'));
 			this.services= JSON.parse( localStorage.getItem('services'));
+			
 		}
 		
 	}
@@ -36,11 +37,16 @@ export class BaseService {
 	}
 	
 	getAllPaginated(page:Page, serviceName:string ) {
-	  	
+	    console.log("==> Entra a  getAllPaginated " + serviceName + " - " + this.services[serviceName]  );
+	    console.log("===servicios as jason " + JSON.stringify(this.services) );
 	  	let x= this.services[serviceName];
-	  	this.setSearchParams( page );  
+	  	if( page != null ){  
+	  	  this.setSearchParams( page );  
 	      console.log("==> parametros obtenidos " +  this.params.toString() );
 	      this.options = new RequestOptions({ headers: this.headers, search:this.params });
+	  	} else {
+	  	  this.options = new RequestOptions({ headers: this.headers });
+	  	}  
 	      return this.http.get(this.config.apiUrl + x, this.options)
 	          .map((response: Response) => {
 					let paginatedListx = response.json();
