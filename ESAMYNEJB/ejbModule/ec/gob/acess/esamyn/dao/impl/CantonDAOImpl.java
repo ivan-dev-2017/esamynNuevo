@@ -10,8 +10,12 @@ import ec.gob.acess.esamyn.dao.CantonDAO;
 import ec.gob.acess.esamyn.modelo.Canton;
 
 /**
- * @author Duval
  * 
+ * Implementacion de CantonDAO para acceso a datos de clase Canton
+ * @author Duval Barragan
+ * Fecha: Aug 28, 2017
+ * @version 1.0
+ *
  */
 @Stateless
 public class CantonDAOImpl extends GenericEmDaoEjb<Canton, Long> implements

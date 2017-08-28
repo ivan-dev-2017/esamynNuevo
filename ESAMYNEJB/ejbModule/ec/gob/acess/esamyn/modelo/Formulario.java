@@ -14,6 +14,9 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
 import ec.gob.acess.esamyn.dto.FormularioDto;
 
@@ -23,6 +26,8 @@ import ec.gob.acess.esamyn.dto.FormularioDto;
  */
 @Entity
 @Table(name = "esa_formulario")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "formulario")
 public class Formulario implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -60,19 +60,19 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 	List<Usuario> lista = findByCriterias(criteria);
 	if (lista != null && !lista.isEmpty()) {
 	    // validar contrasena
-	    Usuario u = lista.get(0);
-	    if (u.getPassword().equals(contrasenia)) {
+	    Usuario usuarioObjeto = lista.get(0);
+	    if (usuarioObjeto.getPassword().equals(contrasenia)) {
 
 		// generamos token
 		Calendar c = Calendar.getInstance();
-		String token = CifradoUtil.encriptar(u.getCodigo() + "-" + u.getUsername() + "-" + c.getTimeInMillis(),
+		String token = CifradoUtil.encriptar(usuarioObjeto.getCodigo() + "-" + usuarioObjeto.getUsername() + "-" + c.getTimeInMillis(),
 			"esamyn");
 		System.out.println("token: " + token);
-		u.setToken(token);
+		usuarioObjeto.setToken(token);
 
-		update(u);
+		update(usuarioObjeto);
 
-		mensajeDto = new MensajeDto(false, "", u);
+		mensajeDto = new MensajeDto(false, "", usuarioObjeto);
 	    } else {
 		mensajeDto = new MensajeDto(true, "Contraseña incorrecta", null);
 	    }
@@ -173,7 +173,7 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 
 	MensajeDto mensajeDto = null;
 
-	if (passAntigua.equals(passNueva)) {
+	
 
 	    try {
 		String clave1 = Md5.aplicarHash(passAntigua);
@@ -184,10 +184,11 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 
 		if (usuario != null) {
 
-		    if (clave1.equals(clave1)) {
+		    if (clave1.equals(usuario.getPassword())) {
 
 			usuario.setPassword(clave2);
 			update(usuario);
+			mensajeDto = new MensajeDto(false, "Contraseña cambiada", null);
 
 		    } else {
 			mensajeDto = new MensajeDto(true, "La contraseña ingresada no es igual a su contraseña actual",
@@ -202,10 +203,7 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 		mensajeDto = new MensajeDto(true, "Error al encriptar " + e.getMessage(), null);
 	    }
 
-	} else {
-
-	    mensajeDto = new MensajeDto(true, "Las contraseñas no son iguales", null);
-	}
+	
 
 	return mensajeDto;
 

@@ -6,9 +6,11 @@ import javax.ejb.EJB;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.HttpHeaders;
@@ -104,7 +106,7 @@ public class UsuarioWebService {
 	return mensajeDto;
     }
 
-    @POST
+    @DELETE
     @Path("eliminar")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
@@ -165,9 +167,9 @@ public class UsuarioWebService {
     }
 
     @POST
-    @Path("cambiar")
+    @Path("olvido/{username}")
     @Produces(MediaType.APPLICATION_JSON)
-    public MensajeDto olvido(String userName, @Context HttpHeaders headers) {
+    public MensajeDto olvido(@PathParam("username") String userName, @Context HttpHeaders headers) {
 
 	String token = headers.getRequestHeader("ApiToken").get(0);
 
