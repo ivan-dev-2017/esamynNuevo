@@ -169,7 +169,7 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
      * @param passNueva
      * @return
      */
-    public MensajeDto cambiarPassword(String token, String passAntigua, String passNueva) {
+    public MensajeDto cambiarPassword(Long idUsuario, String passAntigua, String passNueva) {
 
 	MensajeDto mensajeDto = null;
 
@@ -180,7 +180,7 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 
 		String clave2 = Md5.aplicarHash(passNueva);
 
-		Usuario usuario = buscarPorToken(token);
+		Usuario usuario = findByPk(idUsuario);
 
 		if (usuario != null) {
 
@@ -195,13 +195,11 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 		    }
 
 		} else {
-		    mensajeDto = new MensajeDto(true, "Token invalido", null);
+		    mensajeDto = new MensajeDto(true, "No existe el usuario", null);
 		}
 
 	    } catch (NoSuchAlgorithmException e) {
-		mensajeDto = new MensajeDto(true, e.getMessage(), null);
-	    } catch (Exception e) {
-		mensajeDto = new MensajeDto(true, e.getMessage(), null);
+		mensajeDto = new MensajeDto(true, "Error al encriptar " + e.getMessage(), null);
 	    }
 
 	} else {
@@ -235,10 +233,10 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 		usuario.setPassword(pass);
 
 		update(usuario);
-		
-		//TODO enviar correo
-		
-		//TODO buscar texto cooreo
+
+		// TODO enviar correo
+
+		// TODO buscar texto cooreo
 
 		mensajeDto = new MensajeDto(false, "Cambio de contraseña", null);
 

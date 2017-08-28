@@ -18,6 +18,7 @@ import ec.gob.acess.esamyn.bean.UsuarioBean;
 import ec.gob.acess.esamyn.dto.AccesoWsDto;
 import ec.gob.acess.esamyn.dto.EliminarDto;
 import ec.gob.acess.esamyn.dto.MensajeDto;
+import ec.gob.acess.esamyn.dto.PasswordWsDto;
 import ec.gob.acess.esamyn.modelo.Usuario;
 
 /**
@@ -56,7 +57,7 @@ public class UsuarioWebService {
     }
 
     @POST
-    @Path("{guardar}/")
+    @Path("guardar")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public MensajeDto guardar(Usuario usuario, @Context HttpHeaders headers) {
@@ -79,7 +80,7 @@ public class UsuarioWebService {
     }
 
     @GET
-    @Path("{lista}/")
+    @Path("lista")
     @Produces(MediaType.APPLICATION_JSON)
     public MensajeDto lista(@Context HttpHeaders headers) {
 	MensajeDto mensajeDto;
@@ -104,14 +105,12 @@ public class UsuarioWebService {
     }
 
     @POST
-    @Path("{eliminar}/")
+    @Path("eliminar")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public MensajeDto eliminar(EliminarDto eliminar, @Context HttpHeaders headers) {
 
 	String token = headers.getRequestHeader("ApiToken").get(0);
-
-	System.out.println("entra+" + token);
 
 	MensajeDto mensajeDto;
 	boolean valida;
@@ -124,6 +123,64 @@ public class UsuarioWebService {
 		    mensajeDto = new MensajeDto(false, "Objeto eliminado", null);
 		} catch (Exception e) {
 		    mensajeDto = new MensajeDto(true, "No se puede eliminar " + e.getMessage(), null);
+		}
+
+	    } else {
+		mensajeDto = new MensajeDto(true, "Token invalido", null);
+	    }
+	} catch (Exception e) {
+	    mensajeDto = new MensajeDto(true, "Error token " + e.getMessage(), null);
+	}
+	return mensajeDto;
+    }
+
+    @POST
+    @Path("cambiar")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public MensajeDto eliminar(PasswordWsDto password, @Context HttpHeaders headers) {
+
+	String token = headers.getRequestHeader("ApiToken").get(0);
+
+	MensajeDto mensajeDto;
+	boolean valida;
+	try {
+	    valida = usuarioBean.validaToken(token);
+
+	    if (valida) {
+		try {
+		    mensajeDto = usuarioBean.cambiarPassword(password.getCodigoUsuario(), password.getPasswordAntiguo(),
+			    password.getPasswordNuevo());
+		} catch (Exception e) {
+		    mensajeDto = new MensajeDto(true, "Error: " + e.getMessage(), null);
+		}
+
+	    } else {
+		mensajeDto = new MensajeDto(true, "Token invalido", null);
+	    }
+	} catch (Exception e) {
+	    mensajeDto = new MensajeDto(true, "Error token " + e.getMessage(), null);
+	}
+	return mensajeDto;
+    }
+
+    @POST
+    @Path("cambiar")
+    @Produces(MediaType.APPLICATION_JSON)
+    public MensajeDto olvido(String userName, @Context HttpHeaders headers) {
+
+	String token = headers.getRequestHeader("ApiToken").get(0);
+
+	MensajeDto mensajeDto;
+	boolean valida;
+	try {
+	    valida = usuarioBean.validaToken(token);
+
+	    if (valida) {
+		try {
+		    mensajeDto = usuarioBean.olvidoPassword(userName);
+		} catch (Exception e) {
+		    mensajeDto = new MensajeDto(true, "Error: " + e.getMessage(), null);
 		}
 
 	    } else {

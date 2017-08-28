@@ -12,10 +12,10 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 
-import ec.gob.acess.esamyn.bean.FormularioBean;
+import ec.gob.acess.esamyn.bean.EstablecimientoSaludBean;
 import ec.gob.acess.esamyn.bean.UsuarioBean;
 import ec.gob.acess.esamyn.dto.MensajeDto;
-import ec.gob.acess.esamyn.modelo.Formulario;
+import ec.gob.acess.esamyn.modelo.EstablecimientoSalud;
 
 /**
  * 
@@ -27,13 +27,13 @@ import ec.gob.acess.esamyn.modelo.Formulario;
  */
 @Stateless
 @LocalBean
-@Path("/formulario")
+@Path("/establecimientoSalud")
 public class EstablecimientoSaludWebService {
 
     @EJB
     private UsuarioBean usuarioBean;
     @EJB
-    private FormularioBean formularioBean;
+    private EstablecimientoSaludBean establecimientoSaludBean;
 
     /**
      * Default constructor.
@@ -43,21 +43,19 @@ public class EstablecimientoSaludWebService {
     }
 
     @GET
-    @Path("{lista}/")
+    @Path("lista")
     @Produces(MediaType.APPLICATION_JSON)
     public MensajeDto lista(@Context HttpHeaders headers) {
 
 	MensajeDto mensajeDto;
 	String token = headers.getRequestHeader("ApiToken").get(0);
 
-	System.out.println("entra+" + token);
-
 	try {
 	    boolean valida = usuarioBean.validaToken(token);
 
 	    if (valida) {
 
-		List<Formulario> lista = formularioBean.findAll();
+		List<EstablecimientoSalud> lista = establecimientoSaludBean.findAll();
 		mensajeDto = new MensajeDto(false, "", lista);
 
 	    } else {

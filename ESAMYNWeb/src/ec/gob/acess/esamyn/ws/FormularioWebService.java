@@ -5,6 +5,7 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
+import javax.websocket.server.PathParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -43,9 +44,9 @@ public class FormularioWebService {
     }
 
     @GET
-    @Path("{lista}/")
+    @Path("lista/{idEstablecimiento}")
     @Produces(MediaType.APPLICATION_JSON)
-    public MensajeDto lista(@Context HttpHeaders headers) {
+    public MensajeDto lista(@PathParam("idEstablecimiento") String idEstablecimiento, @Context HttpHeaders headers) {
 
 	String token = headers.getRequestHeader("ApiToken").get(0);
 
