@@ -21,7 +21,8 @@ export class AuthenticationService {
     login(usuarioAuth: Login) {
     	console.log("=====.AuthenticationService ingresa a login " + JSON.stringify(usuarioAuth));
     	this.headers = new Headers({ 'Content-Type': 'application/json','Accept':'application/json','Authorization': 'login'+ this.config.keyFirstLogin });
-    	/*let usuarioesamyn={usuario:"1716187206",password:"81dc9bdb52d04dc20036dbd8313ed055"};
+    	//let usuarioesamyn={usuario:"1716187206",password:"81dc9bdb52d04dc20036dbd8313ed055"};
+    	let usuarioesamyn={usuario:"1716187206",password:"81dc9bdb52d04dc20036dbd8313ed055"};
     	return this.http.post(  this.config.apiUrl+ 'rest/usuario',
     	        usuarioesamyn)
         		.map((response: Response) => {
@@ -40,9 +41,9 @@ export class AuthenticationService {
 						localStorage.setItem('services', JSON.stringify(this.config.servicios ));
         			}
         			return user;
-        		});*/
+        		});
     	
-    	let usuario= new User();
+    	/*let usuario= new User();
         usuario.nombre=usuarioAuth.name;
         usuario.password=usuarioAuth.password;
         usuarioAuth.usuario=usuario;
@@ -60,7 +61,7 @@ export class AuthenticationService {
                     localStorage.setItem('defaultPageSize', loginWrapper.defaultPageSize);
                     localStorage.setItem('services', JSON.stringify(loginWrapper.servicios));
                 }
-            });
+            });*/
     }
 
     logout(usuarioAuth: User) {

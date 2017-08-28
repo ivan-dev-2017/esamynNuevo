@@ -28,5 +28,19 @@ export class CoreesamynService extends BaseService {
           }
        );
   }
+  
+  getPreguntasList(){ 
+      console.log( "==Entra en CoreesamynService getFormulariosList" );
+      //return this.getAllPaginated(null, 'formulario.crud.findall');
+      return this.http.get('./app/mock/preguntas.json').map((response) =>{
+          let paginatedListx = response.json();
+          return paginatedListx.objeto;
+          },
+          error => {
+              console.log("==>despues de buscar usuario error  " + JSON.stringify(error));
+              return error;
+          }
+       );
+  }
 
 }
