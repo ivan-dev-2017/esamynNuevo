@@ -12,53 +12,24 @@
         </div>
       </div>
       
-      
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">MENU NAVEGACION</li>
-        <ng-template ngFor let-modulo [ngForOf]="panelMenuAppList" [ngForTrackBy]="moduloTrackBy">
-	        <li class="treeview">
-	          <a href="#">
-	            <i class="{{modulo.style}}"></i> <span>{{modulo.label}}</span>
+        <li class="treeview">
+        	<a href="#">
+	            <i class="fa fa-file-text"></i> <span>ENCUESTAS</span>
 	            <span class="pull-right-container">
 	              <i class="fa fa-angle-left pull-right"></i>
 	            </span>
 	          </a>
-	          <ng-template ngFor let-group [ngForOf]="modulo.items" [ngForTrackBy]="groupTrackBy">
-		          <ul class="treeview-menu">
-		            <li class="treeview">
-			          <a href="#">
-			            <i class="{{group.style}}"></i> <span>{{group.label}}</span>
-			            <span class="pull-right-container">
-			              <i class="fa fa-angle-left pull-right"></i>
-			            </span>
-			          </a>
-			          <ng-template ngFor let-subGroup [ngForOf]="group.items" [ngForTrackBy]="subGroupTrackBy">
-				          <ul class="treeview-menu">
-				            <li class="treeview">
-					          <a href="#">
-					            <i class="{{subGroup.style}}"></i> <span>{{subGroup.label}}</span>
-					            <span class="pull-right-container">
-					              <i class="fa fa-angle-left pull-right"></i>
-					            </span>
-					          </a>
-						          <ul class="treeview-menu">
-						          	<li class="active">
-						          		<a *ngFor="let item of subGroup.items; let l = index;" [routerLink]="item.routerLink[0]" >
-	            							<i class="{{item.style}}"></i> {{item.label}}
-	            							
-	            						</a>
-	            					</li>	
-						          </ul>
-					        </li>
-				          </ul>
-			          </ng-template>
-			        </li>
-		          </ul>
-	          </ng-template>
-	        </li>
-        </ng-template>
-        
+	          <ul class="treeview-menu">
+	          	<li class="active">
+	          		<a [routerLink]="'/foesamn'" >
+						<i class="fa fa-circle-o"></i> FORMULARIO OBSERVACIONES
+					</a>
+				</li>	
+	          </ul>
+        </li>
       </ul>
     </section>
     <!-- /.sidebar -->

@@ -36,6 +36,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { MenuComponent } from './layout/menu/menu.component';
 import { EmailvalidatorDirective,NumbervalidatorDirective } from './validator/index';
 import { FormularioListComponent } from './formulario/list/list.component';
+import { FoesamnComponent } from './encuesta/foesamn/foesamn.component';
 
 
 
@@ -62,7 +63,8 @@ import { MessageComponent } from './comp/message/message.component';
     EmailvalidatorDirective,
     NumbervalidatorDirective,
     MessageComponent,
-    FormularioListComponent
+    FormularioListComponent,
+    FoesamnComponent
   ],
   imports: [
     BrowserModule,

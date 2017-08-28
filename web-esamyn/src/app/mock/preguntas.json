@@ -1,0 +1,91 @@
+{
+  "error": false,
+  "mensaje": "",
+  "objeto": {
+    "idEncuesta": null,
+    "idFormulario": 6,
+    "responsable": null,
+    "cargo": null,
+    "extra": null,
+    "pregunta": [
+      {
+        "codigo": 7390,
+        "texto": "1. ¿El establecimiento cuenta con material edu-comunicacional exhibido en areas visibles relacionado a la norma ESAMyN?",
+        "ayuda": null,
+        "prefijo": null,
+        "subfijo": null,
+        "validacion": null,
+        "orden": 1,
+        "codigoTipoPregunta": null,
+        "etiquetaTipoPregunta": null,
+        "codigoRespuesta": null,
+        "codigoEncuesta": null,
+        "valorNumero": null,
+        "valorTexto": null,
+        "valorFecha": null,
+        "valorBooleano": null,
+        "preguntaLista": [
+          {
+            "codigo": 7391,
+            "texto": "SI",
+            "ayuda": null,
+            "prefijo": null,
+            "subfijo": null,
+            "validacion": null,
+            "orden": 1,
+            "codigoTipoPregunta": null,
+            "etiquetaTipoPregunta": null,
+            "codigoRespuesta": null,
+            "codigoEncuesta": null,
+            "valorNumero": null,
+            "valorTexto": null,
+            "valorFecha": null,
+            "valorBooleano": null,
+            "preguntaLista": [
+              {
+                "codigo": 7391,
+                "texto": "¿Cuántos elementos observó?",
+                "ayuda": null,
+                "prefijo": null,
+                "subfijo": null,
+                "validacion": null,
+                "orden": 1,
+                "codigoTipoPregunta": null,
+                "etiquetaTipoPregunta": null,
+                "codigoRespuesta": null,
+                "codigoEncuesta": null,
+                "valorNumero": null,
+                "valorTexto": null,
+                "valorFecha": null,
+                "valorBooleano": null,
+                "preguntaLista": [
+                  
+                ]
+              }
+            ]
+          },
+          {
+            "codigo": 7391,
+            "texto": "NO",
+            "ayuda": null,
+            "prefijo": null,
+            "subfijo": null,
+            "validacion": null,
+            "orden": 2,
+            "codigoTipoPregunta": null,
+            "etiquetaTipoPregunta": null,
+            "codigoRespuesta": null,
+            "codigoEncuesta": null,
+            "valorNumero": null,
+            "valorTexto": null,
+            "valorFecha": null,
+            "valorBooleano": null,
+            "preguntaLista": [
+              
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
