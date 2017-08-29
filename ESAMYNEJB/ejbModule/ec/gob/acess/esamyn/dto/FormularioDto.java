@@ -8,7 +8,7 @@ import java.util.Date;
  * Clase: FormularioDto.java
  * 
  * @author Duval Barragan 
- * Fecha: Aug 28, 2017
+ * @date Aug 28, 2017
  * @version 1.0
  *
  */

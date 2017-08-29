@@ -26,7 +26,7 @@ import ec.gob.acess.esamyn.modelo.Canton;
  * 
  * Clase CantonWebService.java que publica servicios web objeto Canton
  * 
- * @author Duval Barragan Fecha: Aug 25, 2017
+ * @author Duval Barragan @date Aug 25, 2017
  * @version 1.0
  *
  */

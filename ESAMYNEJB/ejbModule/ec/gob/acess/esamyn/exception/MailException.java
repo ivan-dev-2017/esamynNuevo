@@ -6,7 +6,7 @@ import javax.ejb.ApplicationException;
 /**
  * Clase que controla excepciones de los metodos de correos
  * 
- * @author Juan Ochoa Fecha: Aug 25, 2017
+ * @author Juan Ochoa @date Aug 25, 2017
  * @version 1.0
  *
  */

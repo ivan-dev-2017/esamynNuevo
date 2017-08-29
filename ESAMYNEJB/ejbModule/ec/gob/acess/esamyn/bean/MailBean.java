@@ -28,8 +28,13 @@ import ec.gob.acess.esamyn.exception.GeneralException;
 /**
  * 
  * Clase: MailBean.java
+<<<<<<< HEAD
+ * @author Duval Barragan
+ * @date Aug 25, 2017
+=======
  * 
  * @author Duval Barragan Fecha: Aug 25, 2017
+>>>>>>> branch 'master' of https://github.com/jybaro/esamyn.git
  * @version 1.0
  *
  */

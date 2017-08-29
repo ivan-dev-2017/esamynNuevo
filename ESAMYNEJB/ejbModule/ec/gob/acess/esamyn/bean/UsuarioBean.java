@@ -24,7 +24,7 @@ import ec.gob.acess.esamyn.util.PasswordUtil;
  * 
  * Clase: UsuarioBean.java
  * 
- * @author Duval Barragan Fecha: Aug 25, 2017 Version: 1.0
+ * @author Duval Barragan @date Aug 25, 2017 Version: 1.0
  *
  */
 @Stateless
