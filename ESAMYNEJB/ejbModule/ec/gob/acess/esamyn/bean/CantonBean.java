@@ -46,7 +46,7 @@ public class CantonBean extends GenericServiceImpl<Canton, Long> {
 		mensajeDto.setObjeto(canton);
 	    } else {
 		mensajeDto.setError(false);
-		mensajeDto.setMensaje("Modifica Actualizado");
+		mensajeDto.setMensaje("Actualiza Objeto");
 		update(canton);
 		mensajeDto.setObjeto(canton);
 	    }

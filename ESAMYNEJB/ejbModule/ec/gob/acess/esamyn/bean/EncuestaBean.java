@@ -46,7 +46,7 @@ public class EncuestaBean extends GenericServiceImpl<Encuesta, Long> {
 		mensajeDto.setObjeto(encuesta);
 	    } else {
 		mensajeDto.setError(false);
-		mensajeDto.setMensaje("Modifica Actualizado");
+		mensajeDto.setMensaje("Actualiza Objeto");
 		update(encuesta);
 		mensajeDto.setObjeto(encuesta);
 	    }

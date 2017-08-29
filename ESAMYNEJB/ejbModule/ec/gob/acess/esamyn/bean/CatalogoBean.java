@@ -46,7 +46,7 @@ public class CatalogoBean extends GenericServiceImpl<Catalogo, Long> {
 				mensajeDto.setObjeto(catalogo);
 			} else {
 				mensajeDto.setError(false);
-				mensajeDto.setMensaje("Modifica Actualizado");
+				mensajeDto.setMensaje("Actualiza Objeto");
 				update(catalogo);
 				mensajeDto.setObjeto(catalogo);
 			}
