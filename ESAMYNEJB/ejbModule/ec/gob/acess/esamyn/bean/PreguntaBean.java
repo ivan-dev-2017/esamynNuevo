@@ -40,6 +40,12 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 	return preguntaDAO;
     }
 
+    /**
+     * 
+     * @param idFormulario
+     * @param IdEncuesta
+     * @return
+     */
     public EncuestaDto obtenerPreguntasFormulario(Long idFormulario, Long IdEncuesta) { // NOPMD by saviasoft3 on 8/29/17 2:44 PM
 
 	// TODO BUSCAR ENCUESTA
