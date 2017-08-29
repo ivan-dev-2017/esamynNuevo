@@ -14,7 +14,7 @@ export class BaseService {
 	constructor( ){
 		this.params = new URLSearchParams();
 		if( localStorage.getItem('currentUser') ){
-			console.log("===ingresa si esta logeado");
+			//console.log("===ingresa si esta logeado");
 			let u = JSON.parse( localStorage.getItem('currentUser') );
 			this.headers= new Headers({ 'Content-Type': 'application/json','Accept':'application/json', 'Authorization': 'Bearer' + u.token });
 		}
@@ -37,12 +37,12 @@ export class BaseService {
 	}
 	
 	getAllPaginated(page:Page, serviceName:string ) {
-	    console.log("==> Entra a  getAllPaginated " + serviceName + " - " + this.services[serviceName]  );
-	    console.log("===servicios as jason " + JSON.stringify(this.services) );
+	    //console.log("==> Entra a  getAllPaginated " + serviceName + " - " + this.services[serviceName]  );
+	    //console.log("===servicios as jason " + JSON.stringify(this.services) );
 	  	let x= this.services[serviceName];
 	  	if( page != null ){  
 	  	  this.setSearchParams( page );  
-	      console.log("==> parametros obtenidos " +  this.params.toString() );
+	      //console.log("==> parametros obtenidos " +  this.params.toString() );
 	      this.options = new RequestOptions({ headers: this.headers, search:this.params });
 	  	} else {
 	  	  this.options = new RequestOptions({ headers: this.headers });
@@ -61,7 +61,7 @@ export class BaseService {
 	findByPk(id:string, serviceName:string ) {
 	    this.params = new URLSearchParams();
         this.params.append("id", id);
-          console.log("==> parametros obtenidos " +  this.params.toString() );
+          //console.log("==> parametros obtenidos " +  this.params.toString() );
           this.options = new RequestOptions({ headers: this.headers, search:this.params });
           return this.http.get(this.config.apiUrl +this.services[serviceName], this.options)
               .map((response: Response) => {
@@ -75,7 +75,7 @@ export class BaseService {
       }
 	
 	manage(entidad, serviceName:string ) {
-          console.log("==> parametros obtenidos " +  this.params.toString() );
+          //console.log("==> parametros obtenidos " +  this.params.toString() );
           this.options = new RequestOptions({ headers: this.headers });
           return this.http.post(this.config.apiUrl + this.services[serviceName], 
                   {"entidad":entidad}

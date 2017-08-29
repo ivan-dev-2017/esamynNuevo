@@ -1,0 +1,405 @@
+<div class="row bg-blue">
+	<div class="col-md-2 ">ZONA</div><div class="col-md-1" style="background-color:white; color:black;">bb</div>
+	<div class="col-md-2">DISTRITO</div><div class="col-md-1" style="background-color:white; color:black;">dd</div>
+	<div class="col-md-4">NOMBRE ESTABLECIMIENTO DE SALUD</div><div class="col-md-4" style="background-color:white; color:black;">ff</div>
+</div>
+<div class="row bg-blue">
+	<div class="col-md-4">NOMBRE RESPONSABLE ES</div><div class="col-md-4" style="background-color:white; color:black;">ff</div>
+	<div class="col-md-4">CARGO</div><div class="col-md-4" style="background-color:white; color:black;">ff</div>
+</div>
+<div class="row bg-blue">
+	<div class="col-md-4">UNICODE</div><div class="col-md-4" style="background-color:white; color:black;">ff</div>
+	<div class="col-md-4">NOMBRE EVALUADOR/A</div><div class="col-md-4" style="background-color:white; color:black;">ff</div>
+</div>
+<div class="row bg-blue">
+	<div class="col-md-4">FECHA</div>
+	<div class="col-md-1" style="background-color:white; color:black;">dd</div>
+	<div class="col-md-1" style="background-color:white; color:black;">mm</div>
+	<div class="col-md-1" style="background-color:white; color:black;">yyyy</div>
+	<div class="col-md-4">NUMERO DE PERSONAL QUE TRABAJA EN EL ES</div>
+	<div class="col-md-4" style="background-color:white; color:black;">xx</div>
+</div>
+<div class="row bg-navy">
+	<div class="col-md-16">A. DATOS DEL ESTABLECIMIENTO DE SALUD</div>
+</div>
+<div class="row bg-blue">
+	<div class="col-md-4">Tipo de establecimiento</div>
+	<div class="col-md-12" style="background-color:white; color:black;"> xx</div>
+</div>
+<div class="row bg-navy">
+	<div class="col-md-16">B. OBSERVACIONES</div>
+</div>
+<div class="row bg-blue">
+	<div class="col-md-1">VERIF</div>
+	<div class="col-md-5">PREGUNTAS</div>
+	<div class="col-md-8">RESPUESTAS</div>
+</div>
+	<div *ngIf="preguntas?.length && preguntas[0].orden==1" id="pregunta1" class="row">
+		<div class="col-md-1 bg-lime"></div>
+		<div class="col-md-5  bg-lime" [innerHTML]="preguntas[0].texto"></div>
+		<div class="col-md-4" *ngIf="preguntas[0].preguntaLista?.length">
+			<div class="row" *ngIf="preguntas[0].preguntaLista[0].orden==1">
+				<div class="col-md-2">
+					{{preguntas[0].preguntaLista[0].texto}}
+				</div>
+				<div class="col-md-2">
+					<input type="checkbox" [(ngModel)]="preguntas[0].preguntaLista[0].valorBooleano" />
+				</div>
+			</div>	
+			<div class="row" *ngIf="preguntas[0].preguntaLista[0].preguntaLista?.length && preguntas[0].preguntaLista[0].valorBooleano">
+				<div class="col-md-2">
+					{{preguntas[0].preguntaLista[0].preguntaLista[0].texto}}
+				</div>
+				<div class="col-md-2">
+					<input type="text" [(ngModel)]="preguntas[0].preguntaLista[0].preguntaLista[0].valorTexto" />
+				</div>
+			</div>	
+		</div>
+		<div class="col-md-4" *ngIf="preguntas[0].preguntaLista?.length && preguntas[0].preguntaLista[1].orden==2">
+			{{preguntas[0].preguntaLista[1].texto}}
+		</div>
+		<div class="col-md-4">
+			<input type="checkbox"  [(ngModel)]="preguntas[0].preguntaLista[1].valorBooleano" />
+		</div>
+	</div>
+	<div id="pregunta2" class="row">
+		<div class="col-md-1 bg-lime"></div>
+		<div class="col-md-5  bg-lime">PREGUNTA 2</div>
+		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-2">
+					SI
+				</div>
+				<div class="col-md-2">
+					<input type="checkbox"/>
+				</div>
+				<div class="col-md-2">
+					NO
+				</div>
+				<div class="col-md-2">
+					<input type="checkbox"/>
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col-md-4">
+					Observaciones
+				</div>
+				<div class="col-md-4">
+					<textarea rows="4" cols="50"></textarea>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div id="pregunta3" class="row">
+		<div class="col-md-1 bg-lime"></div>
+		<div class="col-md-5  bg-lime">PREGUNTA 3</div>
+		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-2">
+					SI
+				</div>
+				<div class="col-md-2">
+					<input type="checkbox"/>
+				</div>
+				<div class="col-md-2">
+					NO
+				</div>
+				<div class="col-md-2">
+					<input type="checkbox"/>
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col-md-4">
+					Observaciones
+				</div>
+				<div class="col-md-4">
+					<textarea rows="4" cols="50"></textarea>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div id="pregunta4" class="row">
+		<div class="col-md-1 bg-lime"></div>
+		<div class="col-md-5  bg-lime">PREGUNTA 4</div>
+		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-2">
+					SI
+				</div>
+				<div class="col-md-2">
+					<input type="checkbox"/>
+				</div>
+				<div class="col-md-2">
+					NO
+				</div>
+				<div class="col-md-2">
+					<input type="checkbox"/>
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col-md-4">
+					Observaciones
+				</div>
+				<div class="col-md-4">
+					<textarea rows="4" cols="50"></textarea>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div id="pregunta5" class="row">
+		<div class="col-md-1 bg-lime"></div>
+		<div class="col-md-5  bg-lime">PREGUNTA 5</div>
+		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-2">
+					SI
+				</div>
+				<div class="col-md-2">
+					<input type="checkbox"/>
+				</div>
+				<div class="col-md-4">
+					<div class="row">
+						<div class="col-md-2">
+							NO
+						</div>
+						<div class="col-md-2">
+							<input type="checkbox"/>
+						</div>
+					</div>
+					<div  class="row">
+						<div class="col-md-5  bg-lime">PREGUNTA 5.1</div>
+						<div class="col-md-8">
+							<div class="row">
+								<div class="col-md-2">
+									SI
+								</div>
+								<div class="col-md-2">
+									<input type="checkbox"/>
+								</div>
+								<div class="col-md-2">
+									NO
+								</div>
+								<div class="col-md-2">
+									<input type="checkbox"/>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>	
+			</div>	
+		</div>
+	</div>
+	<div id="pregunta6" class="row">
+		<div class="col-md-1 bg-lime"></div>
+		<div class="col-md-5  bg-lime">PREGUNTA 6</div>
+		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-2">
+					SI
+				</div>
+				<div class="col-md-2">
+					<input type="checkbox"/>
+				</div>
+				<div class="col-md-4">
+					<div class="row">
+						<div class="col-md-2">
+							NO
+						</div>
+						<div class="col-md-2">
+							<input type="checkbox"/>
+						</div>
+					</div>
+					<div  class="row">
+						<div class="col-md-5  bg-lime">PREGUNTA 6.1</div>
+						<div class="col-md-8">
+							<div class="row">
+								<div class="col-md-2">
+									SI
+								</div>
+								<div class="col-md-2">
+									<input type="checkbox"/>
+								</div>
+								<div class="col-md-2">
+									NO
+								</div>
+								<div class="col-md-2">
+									<input type="checkbox"/>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>	
+			</div>	
+			<div class="row">
+				<div class="col-md-2">
+					OBSERVACIONES
+				</div>
+				<div class="col-md-6">
+					<input type="text"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="pregunta7" class="row">
+		<div class="col-md-1 bg-lime"></div>
+		<div class="col-md-5  bg-lime">PREGUNTA 7</div>
+		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-2">
+					PREGUNTA 7.1<br>
+					<input type="text"/>
+				</div>
+				<div class="col-md-3">
+					PREGUNTA 7.2<br>
+					<input type="text"/>
+				</div>
+				<div class="col-md-3">
+					PREGUNTA 7.3<br>
+					<input type="text"/>
+				</div>	
+			</div>	
+			<div class="row">
+				<div class="col-md-2">
+					OBSERVACIONES
+				</div>
+				<div class="col-md-6">
+					<textarea rows="4" cols="50"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="pregunta8" class="row">
+		<div class="col-md-1 bg-lime"></div>
+		<div class="col-md-5  bg-lime">PREGUNTA 8</div>
+		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-2">
+					PREGUNTA 8.1<br>
+					<input type="text"/>
+				</div>
+				<div class="col-md-2">
+					PREGUNTA 8.2<br>
+					<input type="text"/>
+				</div>
+				<div class="col-md-2">
+					PREGUNTA 8.3<br>
+					<input type="text"/>
+				</div>	
+				<div class="col-md-2">
+					PREGUNTA 8.3<br>
+					<input type="text"/>
+				</div>	
+			</div>	
+			<div class="row">
+				<div class="col-md-2">
+					OBSERVACIONES
+				</div>
+				<div class="col-md-6">
+					<textarea rows="4" cols="50"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="pregunta9" class="row">
+		<div class="col-md-1 bg-lime"></div>
+		<div class="col-md-5  bg-lime">PREGUNTA 9</div>
+		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-2">
+					PREGUNTA 9.1<br>
+					<input type="text"/>
+				</div>
+				<div class="col-md-3">
+					PREGUNTA 9.2<br>
+					<input type="text"/>
+				</div>
+				<div class="col-md-3">
+					PREGUNTA 9.3<br>
+					<input type="text"/>
+				</div>	
+			</div>	
+			<div class="row">
+				<div class="col-md-2">
+					OBSERVACIONES
+				</div>
+				<div class="col-md-6">
+					<textarea rows="4" cols="50"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="pregunta10" class="row">
+		<div class="col-md-1 bg-lime"></div>
+		<div class="col-md-5  bg-lime">PREGUNTA 10</div>
+		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-2">
+					SI
+				</div>
+				<div class="col-md-2">
+					<input type="checkbox"/>
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col-md-2">
+					Cuantos elementos observo
+				</div>
+				<div class="col-md-2">
+					<input type="text"/>
+				</div>
+			</div>	
+		</div>
+		<div class="col-md-4">
+			NO
+		</div>
+		<div class="col-md-4">
+			<input type="checkbox"/>
+		</div>
+	</div>
+	<div id="pregunta11" class="row">
+		<div class="col-md-1 bg-lime"></div>
+		<div class="col-md-5  bg-lime">PREGUNTA 11</div>
+		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-2">
+					SI
+				</div>
+				<div class="col-md-2">
+					<input type="checkbox"/>
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col-md-2">
+					¿Qué tipo de patrocinio o material
+					de promoción de la industria de sucedáneos
+					de la leche materna?
+				</div>
+				<div class="col-md-2">
+					<textarea rows="4" cols="50"></textarea>
+				</div>
+	    </div>
+	    <div class="row">  
+				<div class="col-md-2">
+					Nombre de empresas
+				</div>
+				<div class="col-md-2">
+					<textarea rows="4" cols="50"></textarea>
+				</div>
+			</div>	
+		</div>
+		<div class="col-md-4">
+			NO
+		</div>
+		<div class="col-md-4">
+			<input type="checkbox"/>
+		</div>
+	</div>
+	<div id="pregunta12" class="row">
+		<div class="col-md-1 bg-lime"></div>
+		<div class="col-md-5  bg-lime">PREGUNTA 12</div>
+		<div class="col-md-8">
+			<textarea rows="4" cols="50"></textarea>
+		</div>
+	</div>
+
+	<button id="envio" (click)="saveEncuesta()"></button>
