@@ -18,12 +18,16 @@ import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 /**
+ * 
+ * Entidad que refleja la estructura de tabla esa_cumple_condicion_no_aplica
+ * @author Duval Barragan
+ * Fecha: Aug 29, 2017
+ * @version 1.0
  *
- * @author saviasoft3
  */
 @Entity
-@Table(name = "esa_cumple_condicion_na")
-public class CumpleCondicionNa implements Serializable {
+@Table(name = "esa_cumple_condicion_no_aplica")
+public class CumpleCondicionNoAplica implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	@Id
@@ -44,14 +48,14 @@ public class CumpleCondicionNa implements Serializable {
 	private int ccnCumple;
 	@Transient
 	private List<Verificador> verificadorLista;
-	@JoinColumn(name = "ccn_condicion_na", referencedColumnName = "cna_id")
+	@JoinColumn(name = "ccn_condicion_no_aplica", referencedColumnName = "cna_id")
 	@ManyToOne(optional = false)
-	private CondicionNa ccnCondicionNa;
+	private CondicionNoAplica ccnCondicionNoAplica;
 	@JoinColumn(name = "ccn_evaluacion", referencedColumnName = "eva_id")
 	@ManyToOne(optional = false)
 	private Evaluacion evaluacion;
 
-	public CumpleCondicionNa() {
+	public CumpleCondicionNoAplica() {
 	}
 
 	public Long getCodigo() {
@@ -94,12 +98,13 @@ public class CumpleCondicionNa implements Serializable {
 		this.verificadorLista = verificadorLista;
 	}
 
-	public CondicionNa getCcnCondicionNa() {
-		return ccnCondicionNa;
+
+	public CondicionNoAplica getCcnCondicionNoAplica() {
+	    return ccnCondicionNoAplica;
 	}
 
-	public void setCcnCondicionNa(CondicionNa ccnCondicionNa) {
-		this.ccnCondicionNa = ccnCondicionNa;
+	public void setCcnCondicionNoAplica(CondicionNoAplica ccnCondicionNoAplica) {
+	    this.ccnCondicionNoAplica = ccnCondicionNoAplica;
 	}
 
 	public Evaluacion getEvaluacion() {

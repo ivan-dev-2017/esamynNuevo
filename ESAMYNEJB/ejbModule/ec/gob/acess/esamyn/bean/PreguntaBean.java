@@ -19,9 +19,10 @@ import ec.gob.acess.esamyn.modelo.Pregunta;
 
 /**
  * 
- * Clase: PreguntaBean.java
+ * Clase que maneja la logica de clase Pregunta
  * 
- * @author Duval Barragan Fecha: Aug 25, 2017
+ * @author Duval Barragan
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */
@@ -129,7 +130,8 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 		preguntaDto.setCodigo(p.getCodigo());
 		preguntaDto.setAyuda(p.getAyuda());
 		preguntaDto.setCodigoTipoPregunta(p.getTipoPregunta() != null ? p.getTipoPregunta().getCodigo() : null);
-		preguntaDto.setEtiquetaTipoPregunta(p.getTipoPregunta() != null ? p.getTipoPregunta().getEtiqueta() : null);
+		preguntaDto.setEtiquetaTipoPregunta(
+			p.getTipoPregunta() != null ? p.getTipoPregunta().getEtiqueta() : null);
 		preguntaDto.setOrden(p.getOrden());
 		preguntaDto.setPrefijo(p.getPrefijo());
 		preguntaDto.setPreguntaLista(null);

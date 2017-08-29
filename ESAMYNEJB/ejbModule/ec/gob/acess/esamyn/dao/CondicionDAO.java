@@ -5,7 +5,7 @@ import javax.ejb.Local;
 
 import com.saviasoft.persistence.util.dao.GenericDao;
 
-import ec.gob.acess.esamyn.modelo.CondicionNa;
+import ec.gob.acess.esamyn.modelo.CondicionNoAplica;
 
 /**
  * 
@@ -16,7 +16,7 @@ import ec.gob.acess.esamyn.modelo.CondicionNa;
  *
  */
 @Local
-public interface CondicionDAO extends GenericDao<CondicionNa, Long> {
+public interface CondicionDAO extends GenericDao<CondicionNoAplica, Long> {
 	
 }
 

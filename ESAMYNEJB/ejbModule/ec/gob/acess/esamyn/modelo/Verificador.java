@@ -23,101 +23,112 @@ import javax.persistence.TemporalType;
 @Table(name = "esa_verificador")
 public class Verificador implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Basic(optional = false)
-	@Column(name = "ver_id")
-	private Long codigo;
-	@Basic(optional = false)
-	@Column(name = "ver_creado")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date creado;
-	@Basic(optional = false)
-	@Column(name = "ver_modificado")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date modificado;
-	@Basic(optional = false)
-	@Column(name = "ver_cumple")
-	private int cumple;
-	@Basic(optional = false)
-	@Column(name = "ver_no_aplica")
-	private int noAplica;
-	@Basic(optional = false)
-	@Column(name = "ver_cantidad_medidas")
-	private int cantidadMedidas;
-	@JoinColumn(name = "ver_evaluacion", referencedColumnName = "eva_id")
-	@ManyToOne
-	private Evaluacion evaluacion;
-	@JoinColumn(name = "ver_parametro", referencedColumnName = "par_id")
-	@ManyToOne
-	private Parametro parametro;
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "ver_id")
+    private Long codigo;
+    @Basic(optional = false)
+    @Column(name = "ver_creado")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date creado;
+    @Basic(optional = false)
+    @Column(name = "ver_modificado")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date modificado;
+    @Basic(optional = false)
+    @Column(name = "ver_cumple")
+    private int cumple;
+    @Basic(optional = false)
+    @Column(name = "ver_no_aplica")
+    private int noAplica;
+    @Basic(optional = false)
+    @Column(name = "ver_cantidad_medidas")
+    private int cantidadMedidas;
+    @JoinColumn(name = "ver_evaluacion", referencedColumnName = "eva_id")
+    @ManyToOne
+    private Evaluacion evaluacion;
+    @JoinColumn(name = "ver_parametro", referencedColumnName = "par_id")
+    @ManyToOne
+    private Parametro parametro;
+    @JoinColumn(name = "ver_cumple_condicion_no_aplica", referencedColumnName = "ccn_id")
+    @ManyToOne
+    private CumpleCondicionNoAplica verCumpleCondicionNoAplica;
 
-	public Verificador() {
-	}
+    public Verificador() {
+    }
 
-	public Long getCodigo() {
-		return codigo;
-	}
+    public Long getCodigo() {
+	return codigo;
+    }
 
-	public void setCodigo(Long codigo) {
-		this.codigo = codigo;
-	}
+    public void setCodigo(Long codigo) {
+	this.codigo = codigo;
+    }
 
-	public Date getCreado() {
-		return creado;
-	}
+    public Date getCreado() {
+	return creado;
+    }
 
-	public void setCreado(Date creado) {
-		this.creado = creado;
-	}
+    public void setCreado(Date creado) {
+	this.creado = creado;
+    }
 
-	public Date getModificado() {
-		return modificado;
-	}
+    public Date getModificado() {
+	return modificado;
+    }
 
-	public void setModificado(Date modificado) {
-		this.modificado = modificado;
-	}
+    public void setModificado(Date modificado) {
+	this.modificado = modificado;
+    }
 
-	public int getCumple() {
-		return cumple;
-	}
+    public int getCumple() {
+	return cumple;
+    }
 
-	public void setCumple(int cumple) {
-		this.cumple = cumple;
-	}
+    public void setCumple(int cumple) {
+	this.cumple = cumple;
+    }
 
-	public int getNoAplica() {
-		return noAplica;
-	}
+    public int getNoAplica() {
+	return noAplica;
+    }
 
-	public void setNoAplica(int noAplica) {
-		this.noAplica = noAplica;
-	}
+    public void setNoAplica(int noAplica) {
+	this.noAplica = noAplica;
+    }
 
-	public int getCantidadMedidas() {
-		return cantidadMedidas;
-	}
+    public int getCantidadMedidas() {
+	return cantidadMedidas;
+    }
 
-	public void setCantidadMedidas(int cantidadMedidas) {
-		this.cantidadMedidas = cantidadMedidas;
-	}
+    public void setCantidadMedidas(int cantidadMedidas) {
+	this.cantidadMedidas = cantidadMedidas;
+    }
 
-	public Evaluacion getEvaluacion() {
-		return evaluacion;
-	}
+    public Evaluacion getEvaluacion() {
+	return evaluacion;
+    }
 
-	public void setEvaluacion(Evaluacion evaluacion) {
-		this.evaluacion = evaluacion;
-	}
+    public void setEvaluacion(Evaluacion evaluacion) {
+	this.evaluacion = evaluacion;
+    }
 
-	public Parametro getParametro() {
-		return parametro;
-	}
+    public Parametro getParametro() {
+	return parametro;
+    }
 
-	public void setParametro(Parametro parametro) {
-		this.parametro = parametro;
-	}
+    public void setParametro(Parametro parametro) {
+	this.parametro = parametro;
+    }
+
+    public CumpleCondicionNoAplica getVerCumpleCondicionNoAplica() {
+	return verCumpleCondicionNoAplica;
+    }
+
+    public void setVerCumpleCondicionNoAplica(CumpleCondicionNoAplica verCumpleCondicionNoAplica) {
+	this.verCumpleCondicionNoAplica = verCumpleCondicionNoAplica;
+    }
 
 }
