@@ -7,7 +7,7 @@ import javax.ejb.ApplicationException;
  * 
  * Clase: EvaluacionException.java
  * @author Juan Ochoa
- * Fecha: Aug 25, 2017
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */

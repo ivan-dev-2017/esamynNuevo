@@ -13,7 +13,7 @@ import ec.gob.acess.esamyn.modelo.Canton;
  * 
  * Implementacion de CantonDAO para acceso a datos de clase Canton
  * @author Duval Barragan
- * Fecha: Aug 28, 2017
+ * @date Aug 28, 2017
  * @version 1.0
  *
  */

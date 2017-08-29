@@ -19,7 +19,7 @@ import org.apache.commons.codec.binary.Base64;
  * 
  * Clase: CifradoUtil.java
  * @author Duval Barragan
- * Fecha: Aug 25, 2017
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */

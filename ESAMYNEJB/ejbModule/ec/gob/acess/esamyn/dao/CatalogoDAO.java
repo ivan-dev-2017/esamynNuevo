@@ -11,7 +11,7 @@ import ec.gob.acess.esamyn.modelo.Catalogo;
  * 
  * Clase: CatalogoDAO.java
  * 
- * @author Duval Barragan Fecha: Aug 25, 2017
+ * @author Duval Barragan @date Aug 25, 2017
  * @version 1.0
  *
  */

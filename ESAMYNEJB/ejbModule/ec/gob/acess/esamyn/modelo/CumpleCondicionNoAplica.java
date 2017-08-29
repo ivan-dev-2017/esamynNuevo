@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * Entidad que refleja la estructura de tabla esa_cumple_condicion_no_aplica
  * @author Duval Barragan
- * Fecha: Aug 29, 2017
+ * @date Aug 29, 2017
  * @version 1.0
  *
  */
