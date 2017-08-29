@@ -1,13 +1,3 @@
-/*
- * MailServicioImpl.java
- *
-* Clase Generada por GeneradorCodigo (Saviasoft)
-* 
-* Copyright (c) Saviasoft. Todos los derechos reservados.
-*
-* Mon Feb 20 15:20:47 ECT 2017
-*/
-
 package ec.gob.acess.esamyn.bean;
 
 import java.io.File;
@@ -65,47 +55,45 @@ public class MailBean {
 	try {
 
 	    // PARAMETROS
-	    String HOST = prop.getProperty("host");
-	    String PORT = prop.getProperty("port");
-	    String PROTOCOL = prop.getProperty("protocol");
-	    final String USERNAME = prop.getProperty("username");
-	    final String PASSWORD = prop.getProperty("password");
-	    String FROM = prop.getProperty("from");
-	    String DEBUG = prop.getProperty("debug");
+	    String host = prop.getProperty("host");
+	    String port = prop.getProperty("port");
+	    String protocolo = prop.getProperty("protocol");
+	    final String usuario = prop.getProperty("username");
+	    final String contrasenia = prop.getProperty("password");
+	    String correoFrom = prop.getProperty("from");
 
 	    Properties p = new Properties();
 	    // DESARROLLO
-	    if (HOST.equals("smtp.gmail.com")) {
+	    if (host.equals("smtp.gmail.com")) {
 		LOG.info("GMAIL.");
-		p.put("mail.smtp.host", HOST);// "smtp.gmail.com
-		p.put("mail.smtp.socketFactory.port", PORT);// PORT, 465
+		p.put("mail.smtp.host", host);// "smtp.gmail.com
+		p.put("mail.smtp.socketFactory.port", port);// PORT, 465
 		p.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
 		p.put("mail.smtp.auth", true);
-		p.put("mail.smtp.from", FROM);// message.getFrom(),
+		p.put("mail.smtp.from", correoFrom);// message.getFrom(),
 					      // testmail@saviasoft.com/testmail12123
-		p.put("mail.smtp.port", PORT);// PORT 465
-		p.put("mail.transport.protocol", PROTOCOL);
+		p.put("mail.smtp.port", port);// PORT 465
+		p.put("mail.transport.protocol", protocolo);
 		p.put("mail.smtp.starttls.enable", true);
 
 	    } else {
 
 		LOG.info("OTRO CORREO.");
 		// PRODUCCION
-		p.put("mail.smtps.host", HOST);
+		p.put("mail.smtps.host", host);
 		p.put("mail.smtps.auth", true);
-		p.put("mail.smtps.from", FROM);
-		p.put("mail.smtps.port", PORT);
-		p.put("mail.transport.protocol", PROTOCOL);// tiene que ser smtp
+		p.put("mail.smtps.from", correoFrom);
+		p.put("mail.smtps.port", port);
+		p.put("mail.transport.protocol", protocolo);// tiene que ser smtp
 	    }
 
 	    // Session mailSession = Session.getDefaultInstance(p);
 	    Session mailSession = Session.getInstance(p, new javax.mail.Authenticator() {
 		protected PasswordAuthentication getPasswordAuthentication() {
-		    return new PasswordAuthentication(USERNAME, PASSWORD);
+		    return new PasswordAuthentication(usuario, contrasenia);
 		}
 	    });
 
-	    mailSession.setDebug(Boolean.parseBoolean(DEBUG));// true para desarrollo
 	    Transport transport = mailSession.getTransport();
 
 	    if (message.getType() == null) {
@@ -178,7 +166,7 @@ public class MailBean {
 		return;
 	    }
 
-	    InternetAddress from = new InternetAddress(FROM);
+	    InternetAddress from = new InternetAddress(correoFrom);
 	    mimeMessage.setFrom(from);
 
 	    transport.connect();
