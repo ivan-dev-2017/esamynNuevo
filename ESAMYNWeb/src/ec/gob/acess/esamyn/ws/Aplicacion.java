@@ -28,6 +28,7 @@ public class Aplicacion extends Application {
 		classes.add(EstablecimientoSaludWebService.class);
 		classes.add(CantonWebService.class);
 		classes.add(CatalogoWebService.class);
+		classes.add(EncuestaWebService.class);
 
 		return classes;
 	}

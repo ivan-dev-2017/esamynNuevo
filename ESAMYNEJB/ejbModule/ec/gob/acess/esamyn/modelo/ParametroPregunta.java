@@ -1,7 +1,6 @@
 package ec.gob.acess.esamyn.modelo;
 
 import java.io.Serializable;
-import java.util.Date;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -12,15 +11,24 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlType;
 
 /**
+ * 
+ * Entidad que refleja la estructura de tabla esa_parametro_pregunta
+ * 
+ * @author Duval Barragan
+ * @date Aug 28, 2017
+ * @version 1.0
  *
- * @author saviasoft3
  */
 @Entity
 @Table(name = "esa_parametro_pregunta")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "parametro pregunta")
 public class ParametroPregunta implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -29,16 +37,10 @@ public class ParametroPregunta implements Serializable {
 	@Basic(optional = false)
 	@Column(name = "ppr_id")
 	private Long codigo;
-	@Basic(optional = false)
-	@Column(name = "ppr_creado")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date creado;
-	@Basic(optional = false)
-	@Column(name = "ppr_modificado")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date modificado;
+
 	@JoinColumn(name = "ppr_parametro", referencedColumnName = "par_id")
 	@ManyToOne(optional = false)
+	@XmlTransient
 	private Parametro parametro;
 	@JoinColumn(name = "ppr_pregunta", referencedColumnName = "prg_id")
 	@ManyToOne(optional = false)
@@ -50,22 +52,6 @@ public class ParametroPregunta implements Serializable {
 
 	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
-	}
-
-	public Date getCreado() {
-		return creado;
-	}
-
-	public void setCreado(Date creado) {
-		this.creado = creado;
-	}
-
-	public Date getModificado() {
-		return modificado;
-	}
-
-	public void setModificado(Date modificado) {
-		this.modificado = modificado;
 	}
 
 	public Parametro getParametro() {
