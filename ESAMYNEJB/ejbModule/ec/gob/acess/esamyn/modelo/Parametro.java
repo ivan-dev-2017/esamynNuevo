@@ -15,8 +15,13 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 /**
+ * 
+ * Entidad que refleja la estructura de tabla esa_parametro
+ * 
+ * @author Duval Barragan
+ * @date Aug 28, 2017
+ * @version 1.0
  *
- * @author saviasoft3
  */
 @Entity
 @Table(name = "esa_parametro")
@@ -100,13 +105,12 @@ public class Parametro implements Serializable {
 		this.cantidadMinima = cantidadMinima;
 	}
 
-
 	public CondicionNoAplica getCondicionNoAplica() {
-	    return condicionNoAplica;
+		return condicionNoAplica;
 	}
 
 	public void setCondicionNoAplica(CondicionNoAplica condicionNoAplica) {
-	    this.condicionNoAplica = condicionNoAplica;
+		this.condicionNoAplica = condicionNoAplica;
 	}
 
 	public GrupoParametro getGrupoParametro() {

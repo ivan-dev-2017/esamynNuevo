@@ -46,8 +46,6 @@ public class EvaluacionBean {
 
 		// 0. Se crea el objeto evaluacion
 		Evaluacion evaluacion = new Evaluacion();
-		evaluacion.setCreado(new Date());
-		evaluacion.setCreadoPor(usuario);
 		evaluacion.setEstablecimientoSalud(establecimiento);
 		evaluacion.setFechaInicio(new Date());
 

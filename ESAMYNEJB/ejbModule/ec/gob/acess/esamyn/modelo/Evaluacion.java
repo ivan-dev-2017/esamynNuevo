@@ -15,13 +15,24 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlType;
 
 /**
+ * 
+ * Entidad que refleja la estructura de tabla esa_evaluacion
+ * 
+ * @author Duval Barragan
+ * @date Aug 28, 2017
+ * @version 1.0
  *
- * @author saviasoft3
  */
 @Entity
 @Table(name = "esa_evaluacion")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "evaluacion")
 public class Evaluacion implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -30,19 +41,8 @@ public class Evaluacion implements Serializable {
 	@Basic(optional = false)
 	@Column(name = "eva_id")
 	private Long codigo;
-	@Basic(optional = false)
-	@Column(name = "eva_creado")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date creado;
-	@Basic(optional = false)
-	@Column(name = "eva_modificado")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date modificado;
-	@Column(name = "eva_creado_por")
-	private String creadoPor;
-	@Column(name = "eva_modificado_por")
-	private String modificadoPor;
 	@Column(name = "eva_numero")
+	@XmlTransient
 	private Integer numero;
 	@Column(name = "eva_calificacion")
 	private BigInteger calificacion;
@@ -73,38 +73,6 @@ public class Evaluacion implements Serializable {
 
 	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
-	}
-
-	public Date getCreado() {
-		return creado;
-	}
-
-	public void setCreado(Date creado) {
-		this.creado = creado;
-	}
-
-	public Date getModificado() {
-		return modificado;
-	}
-
-	public void setModificado(Date modificado) {
-		this.modificado = modificado;
-	}
-
-	public String getCreadoPor() {
-		return creadoPor;
-	}
-
-	public void setCreadoPor(String creadoPor) {
-		this.creadoPor = creadoPor;
-	}
-
-	public String getModificadoPor() {
-		return modificadoPor;
-	}
-
-	public void setModificadoPor(String modificadoPor) {
-		this.modificadoPor = modificadoPor;
 	}
 
 	public Integer getNumero() {

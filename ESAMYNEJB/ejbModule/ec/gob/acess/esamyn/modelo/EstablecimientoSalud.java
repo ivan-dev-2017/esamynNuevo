@@ -1,7 +1,6 @@
 package ec.gob.acess.esamyn.modelo;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Basic;
@@ -13,16 +12,25 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlType;
 
 /**
+ * 
+ * Entidad que refleja la estructura de tabla esa_establecimiento_salud
+ * 
+ * @author Duval Barragan
+ * @date Aug 28, 2017
+ * @version 1.0
  *
- * @author saviasoft3
  */
 @Entity
 @Table(name = "esa_establecimiento_salud")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "establecimiento de salud")
 public class EstablecimientoSalud implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -31,15 +39,9 @@ public class EstablecimientoSalud implements Serializable {
 	@Basic(optional = false)
 	@Column(name = "ess_id")
 	private Long codigo;
-	@Basic(optional = false)
-	@Column(name = "ess_creado")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date creado;
-	@Basic(optional = false)
-	@Column(name = "ess_modificado")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date modificado;
+
 	@Column(name = "ess_nombre")
+	@XmlTransient
 	private String nombre;
 	@Column(name = "ess_unicodigo")
 	private String unicodigo;
@@ -83,22 +85,6 @@ public class EstablecimientoSalud implements Serializable {
 
 	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
-	}
-
-	public Date getCreado() {
-		return creado;
-	}
-
-	public void setCreado(Date creado) {
-		this.creado = creado;
-	}
-
-	public Date getModificado() {
-		return modificado;
-	}
-
-	public void setModificado(Date modificado) {
-		this.modificado = modificado;
 	}
 
 	public String getNombre() {

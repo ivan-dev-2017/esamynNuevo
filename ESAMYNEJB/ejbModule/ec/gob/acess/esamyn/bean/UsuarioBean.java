@@ -2,7 +2,6 @@ package ec.gob.acess.esamyn.bean;
 
 import java.security.NoSuchAlgorithmException;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import javax.ejb.EJB;
@@ -102,14 +101,11 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 
 		mensajeDto.setError(false);
 		mensajeDto.setMensaje("Usuario Guardado");
-		usuario.setCreado(new Date());
-		usuario.setModificado(new Date());
 		create(usuario);
 		mensajeDto.setObjeto(usuario);
 	    } else {
 		mensajeDto.setError(false);
 		mensajeDto.setMensaje("Usuario Actualizado");
-		usuario.setModificado(new Date());
 		update(usuario);
 		mensajeDto.setObjeto(usuario);
 	    }
