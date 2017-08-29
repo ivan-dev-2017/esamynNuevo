@@ -66,7 +66,6 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 		Calendar c = Calendar.getInstance();
 		String token = CifradoUtil.encriptar(usuarioObjeto.getCodigo() + "-" + usuarioObjeto.getUsername() + "-" + c.getTimeInMillis(),
 			"esamyn");
-		System.out.println("token: " + token);
 		usuarioObjeto.setToken(token);
 
 		update(usuarioObjeto);

@@ -12,8 +12,11 @@ import javax.ejb.ApplicationException;
  *
  */
 @ApplicationException(rollback = true)
-@SuppressWarnings(value = "serial")
 public class EvaluacionException extends Exception {
+	/**
+     * 
+     */
+    private static final long serialVersionUID = 4866001732056489950L;
 	private String summary;
 	private Throwable cause;
 

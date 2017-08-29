@@ -12,7 +12,11 @@ import java.util.Random;
  */
 public class PasswordUtil {
 
-	
+	/**
+	 * 
+	 * @param longitud
+	 * @return
+	 */
 	public static String getCadenaAlfanumAleatoria(int longitud) {
 		String cadenaAleatoria = "";
 		long milis = new java.util.GregorianCalendar().getTimeInMillis();

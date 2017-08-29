@@ -13,9 +13,7 @@ import java.security.NoSuchAlgorithmException;
  */
 public class Md5 {
 
-	private Md5() {
-	}
-
+	
 	/**
 	 * Aplica Hash a la cadena de texto
 	 * 
@@ -42,7 +40,5 @@ public class Md5 {
 
 	}
 
-	public static void main(String[] args) throws NoSuchAlgorithmException {
-		System.out.println(aplicarHash("1234"));
-	}
+	
 }

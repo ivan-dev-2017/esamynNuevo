@@ -50,8 +50,6 @@ public class PreguntaWebService {
 
 	String token = headers.getRequestHeader("ApiToken").get(0);
 
-	System.out.println("entra+" + token);
-
 	MensajeDto mensajeDto;
 	try {
 	    boolean valida = usuarioBean.validaToken(token);
