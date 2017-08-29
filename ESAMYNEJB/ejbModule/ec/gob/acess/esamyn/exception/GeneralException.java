@@ -11,30 +11,30 @@ import javax.ejb.ApplicationException;
  *
  */
 @ApplicationException(rollback = true)
-public class MailException extends Exception {
+public class GeneralException extends RuntimeException {
     /**
      * 
      */
-    private static final long serialVersionUID = -7156341398429647282L;
+    private static final long serialVersionUID = 4430814155462912260L;
     private String summary;
     private String detail;
     private Throwable cause;
 
-    public MailException(String summary) {
+    public GeneralException(String summary) {
 	this.summary = summary;
     }
 
-    public MailException(String summary, Throwable cause) {
+    public GeneralException(String summary, Throwable cause) {
 	this.summary = summary;
 	this.cause = cause;
     }
 
-    public MailException(String arg0, String summary, String detail) {
+    public GeneralException(String arg0, String summary, String detail) {
 	this.summary = summary;
 	this.detail = detail;
     }
 
-    public MailException(String summary, String detail, Throwable cause) {
+    public GeneralException(String summary, String detail, Throwable cause) {
 	this.summary = summary;
 	this.detail = detail;
 	this.cause = cause;

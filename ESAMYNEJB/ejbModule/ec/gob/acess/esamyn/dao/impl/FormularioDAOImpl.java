@@ -18,11 +18,11 @@ public class FormularioDAOImpl extends GenericEmDaoEjb<Formulario, Long> impleme
 		FormularioDAO {
 
 	@PersistenceContext(unitName = "esamyn-pu")
-	private EntityManager em;
+	private EntityManager entityManager;
 
 	@Override
 	protected EntityManager getEm() {
-		return em;
+		return entityManager;
 	}
 
 	public FormularioDAOImpl() {

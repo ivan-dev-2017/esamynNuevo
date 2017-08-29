@@ -4,7 +4,6 @@ import javax.ejb.Local;
 
 import com.saviasoft.persistence.util.dao.GenericDao;
 
-import ec.gob.acess.esamyn.modelo.Canton;
 import ec.gob.acess.esamyn.modelo.Pregunta;
 
 /**

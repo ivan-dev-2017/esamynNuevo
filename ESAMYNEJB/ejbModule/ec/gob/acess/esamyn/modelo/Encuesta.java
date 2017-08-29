@@ -25,6 +25,9 @@ import javax.persistence.Transient;
 @Table(name = "esa_encuesta")
 public class Encuesta implements Serializable {
 
+    /**
+     * 
+     */
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

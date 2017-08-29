@@ -51,7 +51,6 @@ public class UsuarioWebService {
     @Consumes(MediaType.APPLICATION_JSON)
     public MensajeDto login(AccesoWsDto accesoDto) {
 
-	System.out.println("entra");
 
 	MensajeDto mensajeDto = usuarioBean.validarUsuarioContrasena(accesoDto.getUsuario(), accesoDto.getPassword());
 
