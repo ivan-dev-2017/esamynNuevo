@@ -11,8 +11,7 @@
 		        [selected]="selected"
 	            [selectionType]="'single'"
 	            (activate)="onActivate($event)"
-	            (select)='onSelect($event)'
-		        >
+	            (select)='onSelect($event)'>
 		        <ngx-datatable-column name="Nombre" prop="nombre" [width]="10">
 		          <ng-template let-column="column" ngx-datatable-header-template>
 		            {{column.name}}
@@ -31,8 +30,6 @@
 				        </a>
 		          </ng-template>
 		        </ngx-datatable-column>
-		      </ngx-datatable>
-		        
 		      </ngx-datatable>
 		      
 		</div>
