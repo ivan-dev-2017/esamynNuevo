@@ -10,8 +10,12 @@ import ec.gob.acess.esamyn.dao.UsuarioDAO;
 import ec.gob.acess.esamyn.modelo.Usuario;
 
 /**
- * @author Duval
  * 
+ * Implementacion de UsuarioDAO para acceso a datos de clase Usuario
+ * @author Duval Barragan
+ * Fecha: Aug 30, 2017
+ * @version 1.0
+ *
  */
 @Stateless
 public class UsuarioDAOImpl extends GenericEmDaoEjb<Usuario, Long> implements

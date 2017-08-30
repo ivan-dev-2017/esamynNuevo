@@ -3,6 +3,8 @@ package ec.gob.acess.esamyn.ws;
 import java.util.List;
 
 import javax.ejb.EJB;
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -14,40 +16,47 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 
-import ec.gob.acess.esamyn.bean.EstablecimientoSaludBean;
+import ec.gob.acess.esamyn.bean.GrupoParametroBean;
 import ec.gob.acess.esamyn.bean.UsuarioBean;
 import ec.gob.acess.esamyn.dto.EliminarDto;
 import ec.gob.acess.esamyn.dto.MensajeDto;
-import ec.gob.acess.esamyn.modelo.EstablecimientoSalud;
+import ec.gob.acess.esamyn.modelo.GrupoParametro;
 
 /**
  * 
- * Clase: EstablecimientoSaludWebService.java
+ * Clase GrupoParametroWebService.java que publica servicios web objeto GrupoParametro
  * 
  * @author Duval Barragan @date Aug 25, 2017
  * @version 1.0
  *
  */
-
-@Path("/establecimientoSalud")
-public class EstablecimientoSaludWebService {
+@Stateless
+@LocalBean
+@Path("/grupoParametro")
+public class GrupoParametroWebService {
 
     @EJB
     private UsuarioBean usuarioBean;
     @EJB
-    private EstablecimientoSaludBean establecimientoSaludBean;
+    private GrupoParametroBean grupoParametroBean;
 
     /**
      * Default constructor.
      */
-    public EstablecimientoSaludWebService() {
+    public GrupoParametroWebService() {
 	// TODO Auto-generated constructor stub
     }
 
+    /**
+     * Retorna lista de grupoParametroes
+     * 
+     * @param headers
+     * @return
+     */
     @GET
     @Path("todos")
     @Produces(MediaType.APPLICATION_JSON)
-    public MensajeDto lista(@Context HttpHeaders headers) {
+    public MensajeDto todos(@Context HttpHeaders headers) {
 
 	MensajeDto mensajeDto;
 	String token = headers.getRequestHeader("ApiToken").get(0);
@@ -57,8 +66,8 @@ public class EstablecimientoSaludWebService {
 
 	    if (valida) {
 
-		List<EstablecimientoSalud> lista = establecimientoSaludBean.findAll();
-		mensajeDto = new MensajeDto(false, "", lista);
+		List<GrupoParametro> listaGrupoParametroes = grupoParametroBean.findAll();
+		mensajeDto = new MensajeDto(false, "", listaGrupoParametroes);
 
 	    } else {
 		mensajeDto = new MensajeDto(true, "Token invalido", null);
@@ -69,11 +78,11 @@ public class EstablecimientoSaludWebService {
 	}
 	return mensajeDto;
     }
-    
+
     /**
      * Metodo que guarda y actualiza
      * 
-     * @param establecimientoSalud
+     * @param grupoParametro
      * @param headers
      * @return
      */
@@ -81,7 +90,7 @@ public class EstablecimientoSaludWebService {
     @Path("guardar")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public MensajeDto guardar(EstablecimientoSalud establecimientoSalud, @Context HttpHeaders headers) {
+    public MensajeDto guardar(GrupoParametro grupoParametro, @Context HttpHeaders headers) {
 
 	String token = headers.getRequestHeader("ApiToken").get(0);
 	MensajeDto mensajeDto;
@@ -90,7 +99,7 @@ public class EstablecimientoSaludWebService {
 
 	    if (valida) {
 
-		mensajeDto = establecimientoSaludBean.guardar(establecimientoSalud);
+		mensajeDto = grupoParametroBean.guardar(grupoParametro);
 
 	    } else {
 		mensajeDto = new MensajeDto(true, "Token invalido", null);
@@ -125,10 +134,10 @@ public class EstablecimientoSaludWebService {
 
 	    if (valida) {
 
-		EstablecimientoSalud establecimientoSalud = establecimientoSaludBean.findByPk(codigoObjeto);
+				GrupoParametro grupoParametro = grupoParametroBean.findByPk(codigoObjeto);
 
-		if (establecimientoSalud != null) {
-		    mensajeDto = new MensajeDto(false, "", establecimientoSalud);
+		if (grupoParametro != null) {
+		    mensajeDto = new MensajeDto(false, "", grupoParametro);
 		} else {
 		    mensajeDto = new MensajeDto(true, "No se encuentra objeto con código " + codigo, null);
 		}
@@ -164,7 +173,7 @@ public class EstablecimientoSaludWebService {
 
 	    if (valida) {
 		try {
-		    establecimientoSaludBean.delete(eliminar.getCodigo());
+		    grupoParametroBean.delete(eliminar.getCodigo());
 		    mensajeDto = new MensajeDto(false, "Objeto eliminado", null);
 		} catch (Exception e) {
 		    mensajeDto = new MensajeDto(true, "No se puede eliminar " + e.getMessage(), null);

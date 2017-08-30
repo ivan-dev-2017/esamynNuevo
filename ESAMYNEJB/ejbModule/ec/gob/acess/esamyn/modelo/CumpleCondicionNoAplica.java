@@ -21,6 +21,7 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * 
  * Entidad que refleja la estructura de tabla esa_cumple_condicion_no_aplica
+ * 
  * @author Duval Barragan
  * @date Aug 29, 2017
  * @version 1.0
@@ -38,7 +39,7 @@ public class CumpleCondicionNoAplica implements Serializable {
 	@Basic(optional = false)
 	@Column(name = "ccn_id")
 	private Long codigo;
-	
+
 	@Basic(optional = false)
 	@XmlTransient
 	@Column(name = "ccn_cumple")
@@ -48,6 +49,7 @@ public class CumpleCondicionNoAplica implements Serializable {
 	@JoinColumn(name = "ccn_condicion_no_aplica", referencedColumnName = "cna_id")
 	@ManyToOne(optional = false)
 	private CondicionNoAplica condicionNoAplica;
+
 	@JoinColumn(name = "ccn_evaluacion", referencedColumnName = "eva_id")
 	@ManyToOne(optional = false)
 	private Evaluacion evaluacion;
@@ -94,7 +96,5 @@ public class CumpleCondicionNoAplica implements Serializable {
 	public void setEvaluacion(Evaluacion evaluacion) {
 		this.evaluacion = evaluacion;
 	}
-
-	
 
 }

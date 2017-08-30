@@ -1,6 +1,7 @@
 package ec.gob.acess.esamyn.bean;
 
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -13,7 +14,11 @@ import com.saviasoft.persistence.util.dao.GenericDao;
 import com.saviasoft.persistence.util.service.impl.GenericServiceImpl;
 import com.saviasoft.util.Criteria;
 
+import ec.gob.acess.esamyn.cliente.QueueMailServicio;
+import ec.gob.acess.esamyn.constante.CatalogoEnum;
+import ec.gob.acess.esamyn.constante.MailTypeEnum;
 import ec.gob.acess.esamyn.dao.UsuarioDAO;
+import ec.gob.acess.esamyn.dto.MailMessage;
 import ec.gob.acess.esamyn.dto.MensajeDto;
 import ec.gob.acess.esamyn.modelo.Usuario;
 import ec.gob.acess.esamyn.util.CifradoUtil;
@@ -22,9 +27,11 @@ import ec.gob.acess.esamyn.util.PasswordUtil;
 
 /**
  * 
- * Clase: UsuarioBean.java
+ * Clase que maneja la logica de clase Usuario
  * 
- * @author Duval Barragan @date Aug 25, 2017 Version: 1.0
+ * @author Duval Barragan
+ * @date Aug 25, 2017
+ * @version 1.0
  *
  */
 @Stateless
@@ -33,6 +40,11 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 
     @EJB
     private UsuarioDAO usuarioDAO;
+    @EJB
+    private CatalogoBean catalogoBean;
+
+    @EJB
+    private QueueMailServicio queueMailServicio;
 
     @Override
     public GenericDao<Usuario, Long> getDao() {
@@ -64,7 +76,8 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 
 		// generamos token
 		Calendar c = Calendar.getInstance();
-		String token = CifradoUtil.encriptar(usuarioObjeto.getCodigo() + "-" + usuarioObjeto.getUsername() + "-" + c.getTimeInMillis(),
+		String token = CifradoUtil.encriptar(
+			usuarioObjeto.getCodigo() + "-" + usuarioObjeto.getUsername() + "-" + c.getTimeInMillis(),
 			"esamyn");
 		usuarioObjeto.setToken(token);
 
@@ -168,37 +181,33 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 
 	MensajeDto mensajeDto = null;
 
-	
+	try {
+	    String clave1 = Md5.aplicarHash(passAntigua);
 
-	    try {
-		String clave1 = Md5.aplicarHash(passAntigua);
+	    String clave2 = Md5.aplicarHash(passNueva);
 
-		String clave2 = Md5.aplicarHash(passNueva);
+	    Usuario usuario = findByPk(idUsuario);
 
-		Usuario usuario = findByPk(idUsuario);
+	    if (usuario != null) {
 
-		if (usuario != null) {
+		if (clave1.equals(usuario.getPassword())) {
 
-		    if (clave1.equals(usuario.getPassword())) {
-
-			usuario.setPassword(clave2);
-			update(usuario);
-			mensajeDto = new MensajeDto(false, "Contraseña cambiada", null);
-
-		    } else {
-			mensajeDto = new MensajeDto(true, "La contraseña ingresada no es igual a su contraseña actual",
-				null);
-		    }
+		    usuario.setPassword(clave2);
+		    update(usuario);
+		    mensajeDto = new MensajeDto(false, "Contraseña cambiada", null);
 
 		} else {
-		    mensajeDto = new MensajeDto(true, "No existe el usuario", null);
+		    mensajeDto = new MensajeDto(true, "La contraseña ingresada no es igual a su contraseña actual",
+			    null);
 		}
 
-	    } catch (NoSuchAlgorithmException e) {
-		mensajeDto = new MensajeDto(true, "Error al encriptar " + e.getMessage(), null);
+	    } else {
+		mensajeDto = new MensajeDto(true, "No existe el usuario", null);
 	    }
 
-	
+	} catch (NoSuchAlgorithmException e) {
+	    mensajeDto = new MensajeDto(true, "Error al encriptar " + e.getMessage(), null);
+	}
 
 	return mensajeDto;
 
@@ -227,9 +236,17 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 
 		update(usuario);
 
-		// TODO enviar correo
+		String textoCorreo = catalogoBean.buscarPorIdentificador(CatalogoEnum.TEXTO_OLVIDO).getValor();
 
-		// TODO buscar texto cooreo
+		textoCorreo = textoCorreo.replaceFirst("<<nombre_usuario>>", usuario.getNombres())
+			.replaceAll("<<nueva_clave>>", contrasena);
+
+		List<String> listaTo = new ArrayList<>();
+		listaTo.add(usuario.getCorreoEletronico());
+
+		MailMessage mensaje = new MailMessage(textoCorreo, MailTypeEnum.HTML, "Olvido de Contraseña", listaTo);
+
+		queueMailServicio.encolarMail(mensaje);
 
 		mensajeDto = new MensajeDto(false, "Cambio de contraseña", null);
 
@@ -281,5 +298,32 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 	}
 
 	return null;
+    }
+
+    /**
+     * Metodo que elimina el token de sesion
+     * 
+     * @param token
+     * @return
+     */
+    public MensajeDto invalidarSesion(String token) {
+
+	MensajeDto mensajeDto;
+
+	try {
+	    Usuario usuario = buscarPorToken(token);
+
+	    usuario.setToken(null);
+
+	    update(usuario);
+
+	    mensajeDto = new MensajeDto(true, "Servicio logout", null);
+
+	} catch (Exception e) {
+	    mensajeDto = new MensajeDto(true, "Error token " + e.getMessage(), null);
+	}
+
+	return mensajeDto;
+
     }
 }
