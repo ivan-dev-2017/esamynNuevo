@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Md5} from 'ts-md5/dist/md5';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { AlertService, AuthenticationService } from '../service/index';
@@ -43,6 +43,10 @@ export class LoginComponent implements OnInit {
 
     login() {
     	console.log("==> entra a login " );
+    	if( this.model ){
+    	    this.model.password=Md5.hashStr(this.model.password)  as string ;
+    	}
+    	
         this.authenticationService.login(this.model)
             .subscribe(
                 data => {
