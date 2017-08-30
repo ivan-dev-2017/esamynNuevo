@@ -30,6 +30,8 @@ public class Aplicacion extends Application {
 		classes.add(CatalogoWebService.class);
 		classes.add(EncuestaWebService.class);
 		classes.add(CondicionNoAplicaWebService.class);
+		classes.add(CumpleCondicionNoAplicaWebService.class);
+		classes.add(GrupoParametroWebService.class);
 		return classes;
 	}
 
