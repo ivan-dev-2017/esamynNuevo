@@ -16,7 +16,8 @@ import ec.gob.acess.esamyn.modelo.Canton;
  * 
  * Clase que maneja la logica de clase Canton
  * 
- * @author Duval Barragan Fecha: Aug 25, 2017
+ * @author Duval Barragan
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */
@@ -24,41 +25,41 @@ import ec.gob.acess.esamyn.modelo.Canton;
 @LocalBean
 public class CantonBean extends GenericServiceImpl<Canton, Long> {
 
-    @EJB
-    private CantonDAO cantonDAO;
+	@EJB
+	private CantonDAO cantonDAO;
 
-    @Override
-    public GenericDao<Canton, Long> getDao() {
-	return cantonDAO;
-    }
-
-    public MensajeDto guardar(Canton canton) {
-
-	MensajeDto mensajeDto = new MensajeDto();
-
-	try {
-
-	    if (canton.getCodigo() == null) {
-
-		mensajeDto.setError(false);
-		mensajeDto.setMensaje("Canton Guardado");
-		create(canton);
-		mensajeDto.setObjeto(canton);
-	    } else {
-		mensajeDto.setError(false);
-		mensajeDto.setMensaje("Modifica Actualizado");
-		update(canton);
-		mensajeDto.setObjeto(canton);
-	    }
-
-	} catch (Exception e) {
-	    mensajeDto.setError(true);
-	    mensajeDto.setMensaje("Error al guardar: " + e.getMessage());
-	    mensajeDto.setObjeto(null);
+	@Override
+	public GenericDao<Canton, Long> getDao() {
+		return cantonDAO;
 	}
 
-	return mensajeDto;
+	public MensajeDto guardar(Canton canton) {
 
-    }
+		MensajeDto mensajeDto = new MensajeDto();
+
+		try {
+
+			if (canton.getCodigo() == null) {
+
+				mensajeDto.setError(false);
+				mensajeDto.setMensaje("Canton Guardado");
+				create(canton);
+				mensajeDto.setObjeto(canton);
+			} else {
+				mensajeDto.setError(false);
+				mensajeDto.setMensaje("Actualiza Objeto");
+				update(canton);
+				mensajeDto.setObjeto(canton);
+			}
+
+		} catch (Exception e) {
+			mensajeDto.setError(true);
+			mensajeDto.setMensaje("Error al guardar: " + e.getMessage());
+			mensajeDto.setObjeto(null);
+		}
+
+		return mensajeDto;
+
+	}
 
 }

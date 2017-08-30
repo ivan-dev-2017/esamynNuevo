@@ -6,13 +6,16 @@ import javax.ejb.ApplicationException;
 /**
  * Clase que controla excepciones de los metodos de correos
  * 
- * @author Juan Ochoa Fecha: Aug 25, 2017
+ * @author Juan Ochoa @date Aug 25, 2017
  * @version 1.0
  *
  */
 @ApplicationException(rollback = true)
-@SuppressWarnings(value = "serial")
 public class MailException extends Exception {
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -7156341398429647282L;
     private String summary;
     private String detail;
     private Throwable cause;

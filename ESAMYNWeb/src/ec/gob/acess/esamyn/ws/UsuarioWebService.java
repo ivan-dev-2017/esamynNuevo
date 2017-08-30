@@ -3,8 +3,6 @@ package ec.gob.acess.esamyn.ws;
 import java.util.List;
 
 import javax.ejb.EJB;
-import javax.ejb.LocalBean;
-import javax.ejb.Stateless;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -25,14 +23,14 @@ import ec.gob.acess.esamyn.modelo.Usuario;
 
 /**
  * 
- * Clase: UsuarioWebService.java
+ * Clase UsuarioWebService.java que publica servicios web objeto Usuario
  * 
- * @author Duval Barragan Fecha: Aug 25, 2017
+ * @author Duval Barragan
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */
-@Stateless
-@LocalBean
+
 @Path("/usuario")
 public class UsuarioWebService {
 
@@ -40,24 +38,35 @@ public class UsuarioWebService {
     private UsuarioBean usuarioBean;
 
     /**
-     * Default constructor.
+     * constructor.
      */
     public UsuarioWebService() {
-	// TODO Auto-generated constructor stub
+
     }
 
+    /**
+     * Servicio login
+     * 
+     * @param accesoDto
+     * @return
+     */
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public MensajeDto login(AccesoWsDto accesoDto) {
-
-	System.out.println("entra");
 
 	MensajeDto mensajeDto = usuarioBean.validarUsuarioContrasena(accesoDto.getUsuario(), accesoDto.getPassword());
 
 	return mensajeDto;
     }
 
+    /**
+     * Metodo guardar o actualizar objeto
+     * 
+     * @param usuario
+     * @param headers
+     * @return
+     */
     @POST
     @Path("guardar")
     @Produces(MediaType.APPLICATION_JSON)
@@ -81,6 +90,12 @@ public class UsuarioWebService {
 	return mensajeDto;
     }
 
+    /**
+     * Metodo devuelve Lista de usuarios
+     * 
+     * @param headers
+     * @return
+     */
     @GET
     @Path("lista")
     @Produces(MediaType.APPLICATION_JSON)
@@ -106,6 +121,13 @@ public class UsuarioWebService {
 	return mensajeDto;
     }
 
+    /**
+     * Metodo elimina Objeto
+     * 
+     * @param eliminar
+     * @param headers
+     * @return
+     */
     @DELETE
     @Path("eliminar")
     @Produces(MediaType.APPLICATION_JSON)
@@ -136,11 +158,18 @@ public class UsuarioWebService {
 	return mensajeDto;
     }
 
+    /**
+     * Metodo para cambiar Contraseña
+     * 
+     * @param password
+     * @param headers
+     * @return
+     */
     @POST
     @Path("cambiar")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public MensajeDto eliminar(PasswordWsDto password, @Context HttpHeaders headers) {
+    public MensajeDto cambiar(PasswordWsDto password, @Context HttpHeaders headers) {
 
 	String token = headers.getRequestHeader("ApiToken").get(0);
 
@@ -166,6 +195,13 @@ public class UsuarioWebService {
 	return mensajeDto;
     }
 
+    /**
+     * Metodo cambio y correo de contraseña
+     * 
+     * @param userName
+     * @param headers
+     * @return
+     */
     @POST
     @Path("olvido/{username}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -192,6 +228,23 @@ public class UsuarioWebService {
 	    mensajeDto = new MensajeDto(true, "Error token " + e.getMessage(), null);
 	}
 	return mensajeDto;
+    }
+
+    /**
+     * Servicio para logout
+     * 
+     * @param headers
+     * @return
+     */
+    @POST
+    @Path("logout")
+    @Produces(MediaType.APPLICATION_JSON)
+    public MensajeDto logout(@Context HttpHeaders headers) {
+
+	String token = headers.getRequestHeader("ApiToken").get(0);
+
+	return usuarioBean.invalidarSesion(token);
+
     }
 
 }

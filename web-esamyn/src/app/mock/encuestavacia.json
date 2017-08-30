@@ -1,0 +1,23 @@
+{
+"error": false,
+"mensaje": "",
+"objeto": [
+{
+"id":,
+"creado":"",
+"modificado":"",
+"creado_por":"",
+"modificado_por":"",
+"formulario":"",
+"usuario":"",
+"evaluacion":"",
+"finalizada":,
+"fecha_inicial":"",
+"fecha_final":"",
+"establecimiento_salud":"",
+"responsable":"",
+"cargo":" ",
+"extra":""
+}
+]
+}

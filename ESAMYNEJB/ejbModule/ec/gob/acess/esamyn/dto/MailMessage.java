@@ -23,7 +23,7 @@ import ec.gob.acess.esamyn.constante.MailTypeEnum;
  * 
  * Clase: MailMessage.java
  * @author Duval Barragan
- * Fecha: Aug 25, 2017
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */
@@ -31,57 +31,138 @@ public class MailMessage implements Serializable {
 
 	private static final long serialVersionUID = 6737851095735445347L;
 
-	private String content;
+	private String contenido;
 
-	private MailTypeEnum type;
+	private MailTypeEnum tipo;
 
-	private String subject;
-	// private String from;
-
+	private String tema;
 	private List<String> to = new ArrayList<>();
 	private List<String> cc = new ArrayList<>();
 	private List<String> cco = new ArrayList<>();
 
 	private HashMap<String, File> attachList;
 
-	private String configuracion;
-
 	public MailMessage() {
 		super();
 	}
 
-	public MailMessage(String content, MailTypeEnum type, String subject, String from, List<String> to, List<String> cc,
-			List<String> cco, HashMap<String, File> attachList, String configuracion) {
+	public MailMessage(String content, MailTypeEnum type, String subject, List<String> to, List<String> cc,
+			List<String> cco, HashMap<String, File> attachList) {
 		super();
-		this.content = content;
-		this.type = type;
-		this.subject = subject;
+		this.contenido = content;
+		this.tipo = type;
+		this.tema = subject;
 		this.to = to;
 		this.cc = cc;
 		this.cco = cco;
 		this.attachList = attachList;
-		this.configuracion = configuracion;
 	}
 
-	public MailMessage(String content, MailTypeEnum type, String subject, String from, List<String> to,
-			String configuracion) {
+	public MailMessage(String content, MailTypeEnum type, String subject,  List<String> to) {
 		super();
-		this.content = content;
-		this.type = type;
-		this.subject = subject;
+		this.contenido = content;
+		this.tipo = type;
+		this.tema = subject;
 		this.to = to;
-		this.configuracion = configuracion;
+	}
+	
+
+	/**
+	 * @return the contenido
+	 */
+	public String getContenido() {
+	    return contenido;
 	}
 
-	// public InternetAddress getFromAddres() throws AddressException {
-	// return new InternetAddress(this.from);
-	// }
+	/**
+	 * @param contenido the contenido to set
+	 */
+	public void setContenido(String contenido) {
+	    this.contenido = contenido;
+	}
 
-	public boolean isTieneAdjunto() {
-		if (attachList != null && attachList.size() > 0) {
-			return true;
-		}
-		return false;
+	/**
+	 * @return the tipo
+	 */
+	public MailTypeEnum getTipo() {
+	    return tipo;
+	}
+
+	/**
+	 * @param tipo the tipo to set
+	 */
+	public void setTipo(MailTypeEnum tipo) {
+	    this.tipo = tipo;
+	}
+
+	/**
+	 * @return the tema
+	 */
+	public String getTema() {
+	    return tema;
+	}
+
+	/**
+	 * @param tema the tema to set
+	 */
+	public void setTema(String tema) {
+	    this.tema = tema;
+	}
+
+	/**
+	 * @return the to
+	 */
+	public List<String> getTo() {
+	    return to;
+	}
+
+	/**
+	 * @param to the to to set
+	 */
+	public void setTo(List<String> to) {
+	    this.to = to;
+	}
+
+	/**
+	 * @return the cc
+	 */
+	public List<String> getCc() {
+	    return cc;
+	}
+
+	/**
+	 * @param cc the cc to set
+	 */
+	public void setCc(List<String> cc) {
+	    this.cc = cc;
+	}
+
+	/**
+	 * @return the cco
+	 */
+	public List<String> getCco() {
+	    return cco;
+	}
+
+	/**
+	 * @param cco the cco to set
+	 */
+	public void setCco(List<String> cco) {
+	    this.cco = cco;
+	}
+
+	/**
+	 * @return the attachList
+	 */
+	public HashMap<String, File> getAttachList() {
+	    return attachList;
+	}
+
+	/**
+	 * @param attachList the attachList to set
+	 */
+	public void setAttachList(HashMap<String, File> attachList) {
+	    this.attachList = attachList;
 	}
 
 	public InternetAddress[] getToAddresses() throws AddressException {
@@ -114,110 +195,7 @@ public class MailMessage implements Serializable {
 		return resultado.toArray(new InternetAddress[this.to.size()]);
 	}
 
-	/**
-	 * @return the content
-	 */
-	public String getContent() {
-		return content;
-	}
 
-	/**
-	 * @param content
-	 *            the content to set
-	 */
-	public void setContent(String content) {
-		this.content = content;
-	}
 
-	/**
-	 * @return the subject
-	 */
-	public String getSubject() {
-		return subject;
-	}
-
-	/**
-	 * @param subject
-	 *            the subject to set
-	 */
-	public void setSubject(String subject) {
-		this.subject = subject;
-	}
-
-	/**
-	 * @return the to
-	 */
-	public List<String> getTo() {
-		return to;
-	}
-
-	/**
-	 * @param to
-	 *            the to to set
-	 */
-	public void setTo(List<String> to) {
-		this.to = to;
-	}
-
-	/**
-	 * @return the cc
-	 */
-	public List<String> getCc() {
-		return cc;
-	}
-
-	/**
-	 * @param cc
-	 *            the cc to set
-	 */
-	public void setCc(List<String> cc) {
-		this.cc = cc;
-	}
-
-	/**
-	 * @return the cco
-	 */
-	public List<String> getCco() {
-		return cco;
-	}
-
-	/**
-	 * @param cco
-	 *            the cco to set
-	 */
-	public void setCco(List<String> cco) {
-		this.cco = cco;
-	}
-
-	/**
-	 * @return the attachList
-	 */
-	public HashMap<String, File> getAttachList() {
-		return attachList;
-	}
-
-	/**
-	 * @param attachList
-	 *            the attachList to set
-	 */
-	public void setAttachList(HashMap<String, File> attachList) {
-		this.attachList = attachList;
-	}
-
-	public MailTypeEnum getType() {
-		return type;
-	}
-
-	public void setType(MailTypeEnum type) {
-		this.type = type;
-	}
-
-	public String getConfiguracion() {
-		return configuracion;
-	}
-
-	public void setConfiguracion(String configuracion) {
-		this.configuracion = configuracion;
-	}
 
 }

@@ -1,7 +1,6 @@
 package ec.gob.acess.esamyn.modelo;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Basic;
@@ -13,17 +12,26 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlType;
 
 /**
+ * 
+ * Entidad que refleja la estructura de tabla esa_cumple_condicion_no_aplica
+ * 
+ * @author Duval Barragan
+ * @date Aug 29, 2017
+ * @version 1.0
  *
- * @author saviasoft3
  */
 @Entity
-@Table(name = "esa_cumple_condicion_na")
-public class CumpleCondicionNa implements Serializable {
+@Table(name = "esa_cumple_condicion_no_aplica")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "cumple condicion no aplica")
+public class CumpleCondicionNoAplica implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	@Id
@@ -31,27 +39,22 @@ public class CumpleCondicionNa implements Serializable {
 	@Basic(optional = false)
 	@Column(name = "ccn_id")
 	private Long codigo;
+
 	@Basic(optional = false)
-	@Column(name = "ccn_creado")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date ccnCreado;
-	@Basic(optional = false)
-	@Column(name = "ccn_modificado")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date ccnModificado;
-	@Basic(optional = false)
+	@XmlTransient
 	@Column(name = "ccn_cumple")
-	private int ccnCumple;
+	private int cumple;
 	@Transient
 	private List<Verificador> verificadorLista;
-	@JoinColumn(name = "ccn_condicion_na", referencedColumnName = "cna_id")
+	@JoinColumn(name = "ccn_condicion_no_aplica", referencedColumnName = "cna_id")
 	@ManyToOne(optional = false)
-	private CondicionNa ccnCondicionNa;
+	private CondicionNoAplica condicionNoAplica;
+
 	@JoinColumn(name = "ccn_evaluacion", referencedColumnName = "eva_id")
 	@ManyToOne(optional = false)
 	private Evaluacion evaluacion;
 
-	public CumpleCondicionNa() {
+	public CumpleCondicionNoAplica() {
 	}
 
 	public Long getCodigo() {
@@ -62,28 +65,12 @@ public class CumpleCondicionNa implements Serializable {
 		this.codigo = codigo;
 	}
 
-	public Date getCcnCreado() {
-		return ccnCreado;
+	public int getCumple() {
+		return cumple;
 	}
 
-	public void setCcnCreado(Date ccnCreado) {
-		this.ccnCreado = ccnCreado;
-	}
-
-	public Date getCcnModificado() {
-		return ccnModificado;
-	}
-
-	public void setCcnModificado(Date ccnModificado) {
-		this.ccnModificado = ccnModificado;
-	}
-
-	public int getCcnCumple() {
-		return ccnCumple;
-	}
-
-	public void setCcnCumple(int ccnCumple) {
-		this.ccnCumple = ccnCumple;
+	public void setCumple(int cumple) {
+		this.cumple = cumple;
 	}
 
 	public List<Verificador> getVerificadorLista() {
@@ -94,12 +81,12 @@ public class CumpleCondicionNa implements Serializable {
 		this.verificadorLista = verificadorLista;
 	}
 
-	public CondicionNa getCcnCondicionNa() {
-		return ccnCondicionNa;
+	public CondicionNoAplica getCondicionNoAplica() {
+		return condicionNoAplica;
 	}
 
-	public void setCcnCondicionNa(CondicionNa ccnCondicionNa) {
-		this.ccnCondicionNa = ccnCondicionNa;
+	public void setCondicionNoAplica(CondicionNoAplica condicionNoAplica) {
+		this.condicionNoAplica = condicionNoAplica;
 	}
 
 	public Evaluacion getEvaluacion() {

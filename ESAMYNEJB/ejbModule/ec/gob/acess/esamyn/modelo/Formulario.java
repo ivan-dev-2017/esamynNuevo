@@ -1,7 +1,6 @@
 package ec.gob.acess.esamyn.modelo;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Basic;
@@ -11,18 +10,22 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
 import ec.gob.acess.esamyn.dto.FormularioDto;
 
 /**
+ * 
+ * Entidad que refleja la estructura de tabla esa_formulario
+ * 
+ * @author Duval Barragan
+ * @date Aug 28, 2017
+ * @version 1.0
  *
- * @author saviasoft3
  */
 @Entity
 @Table(name = "esa_formulario")
@@ -30,108 +33,83 @@ import ec.gob.acess.esamyn.dto.FormularioDto;
 @XmlType(name = "formulario")
 public class Formulario implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "frm_id")
-    private Long codigo;
-    @Basic(optional = false)
-    @Column(name = "frm_creado")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date creado;
-    @Basic(optional = false)
-    @Column(name = "frm_modificado")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date modificado;
-    @Column(name = "frm_nombre")
-    private String nombre;
-    @Column(name = "frm_titulo")
-    private String titulo;
-    @Column(name = "frm_subtitulo")
-    private String subtitulo;
-    @Column(name = "frm_ayuda")
-    private String ayuda;
-    @Column(name = "frm_clave")
-    private String clave;
-    @Transient
-    private List<FormularioDto> contestadosLista;
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Basic(optional = false)
+	@Column(name = "frm_id")
+	private Long codigo;
+	@Column(name = "frm_nombre")
+	@XmlTransient
+	private String nombre;
+	@Column(name = "frm_titulo")
+	private String titulo;
+	@Column(name = "frm_subtitulo")
+	private String subtitulo;
+	@Column(name = "frm_ayuda")
+	private String ayuda;
+	@Column(name = "frm_clave")
+	private String clave;
+	@Transient
+	private List<FormularioDto> contestadosLista;
 
-    public Formulario() {
-    }
+	public Formulario() {
+	}
 
-    public Long getCodigo() {
-	return codigo;
-    }
+	public Long getCodigo() {
+		return codigo;
+	}
 
-    public void setCodigo(Long codigo) {
-	this.codigo = codigo;
-    }
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
 
-    public Date getCreado() {
-	return creado;
-    }
+	public String getNombre() {
+		return nombre;
+	}
 
-    public void setCreado(Date creado) {
-	this.creado = creado;
-    }
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 
-    public Date getModificado() {
-	return modificado;
-    }
+	public String getTitulo() {
+		return titulo;
+	}
 
-    public void setModificado(Date modificado) {
-	this.modificado = modificado;
-    }
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
 
-    public String getNombre() {
-	return nombre;
-    }
+	public String getSubtitulo() {
+		return subtitulo;
+	}
 
-    public void setNombre(String nombre) {
-	this.nombre = nombre;
-    }
+	public void setSubtitulo(String subtitulo) {
+		this.subtitulo = subtitulo;
+	}
 
-    public String getTitulo() {
-	return titulo;
-    }
+	public String getAyuda() {
+		return ayuda;
+	}
 
-    public void setTitulo(String titulo) {
-	this.titulo = titulo;
-    }
+	public void setAyuda(String ayuda) {
+		this.ayuda = ayuda;
+	}
 
-    public String getSubtitulo() {
-	return subtitulo;
-    }
+	public String getClave() {
+		return clave;
+	}
 
-    public void setSubtitulo(String subtitulo) {
-	this.subtitulo = subtitulo;
-    }
+	public void setClave(String clave) {
+		this.clave = clave;
+	}
 
-    public String getAyuda() {
-	return ayuda;
-    }
+	public List<FormularioDto> getContestadosLista() {
+		return contestadosLista;
+	}
 
-    public void setAyuda(String ayuda) {
-	this.ayuda = ayuda;
-    }
-
-    public String getClave() {
-	return clave;
-    }
-
-    public void setClave(String clave) {
-	this.clave = clave;
-    }
-
-    public List<FormularioDto> getContestadosLista() {
-        return contestadosLista;
-    }
-
-    public void setContestadosLista(List<FormularioDto> contestadosLista) {
-        this.contestadosLista = contestadosLista;
-    }
-    
-    
+	public void setContestadosLista(List<FormularioDto> contestadosLista) {
+		this.contestadosLista = contestadosLista;
+	}
 
 }

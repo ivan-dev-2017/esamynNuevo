@@ -11,22 +11,17 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlType;
 
 /**
  * 
  * Entidad que refleja la estructura de tabla esa_canton
  * @author Duval Barragan
- * Fecha: Aug 28, 2017
+ * @date Aug 28, 2017
  * @version 1.0
  *
  */
 @Entity
 @Table(name = "esa_canton")
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "canton")
 public class Canton implements Serializable {
 
     private static final long serialVersionUID = 1L;
