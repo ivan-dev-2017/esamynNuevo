@@ -32,20 +32,23 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 
     @EJB
     private PreguntaDAO preguntaDAO;
+    @EJB
+    private EncuestaBean encuestaBean;
 
     @Override
     public GenericDao<Pregunta, Long> getDao() {
 	return preguntaDAO;
     }
 
-    public EncuestaDto obtenerPreguntasFormulario(Long idFormulario, Long IdEncuesta) {
+    /**
+     * 
+     * @param idFormulario
+     * @param IdEncuesta
+     * @return
+     */
+    public EncuestaDto obtenerPreguntasFormulario(Long idFormulario, Long IdEncuesta) { // NOPMD by saviasoft3 on 8/29/17 2:44 PM
 
 	// TODO BUSCAR ENCUESTA
-
-	EncuestaDto encuesta = new EncuestaDto();
-
-	encuesta.setIdEncuesta(IdEncuesta);
-	encuesta.setIdFormulario(idFormulario);
 
 	String[] ands = { "formulario.codigo" };
 	CriteriaTypeEnum[] operator = { CriteriaTypeEnum.LONG_EQUALS };
@@ -63,6 +66,13 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 	    for (PreguntaDto pregunta : padres) {
 		pregunta = llenarHijos(lista, pregunta, idFormulario);
 	    }
+	    
+
+		EncuestaDto encuesta = new EncuestaDto();
+
+		encuesta.setIdEncuesta(IdEncuesta);
+		encuesta.setIdFormulario(idFormulario);
+
 
 	    encuesta.setPregunta(padres);
 

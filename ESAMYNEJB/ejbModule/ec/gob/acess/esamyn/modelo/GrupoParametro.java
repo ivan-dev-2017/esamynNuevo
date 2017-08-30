@@ -13,13 +13,24 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlType;
 
 /**
+ * 
+ * Entidad que refleja la estructura de tabla esa_grupo_parametro
+ * 
+ * @author Duval Barragan
+ * @date Aug 28, 2017
+ * @version 1.0
  *
- * @author saviasoft3
  */
 @Entity
 @Table(name = "esa_grupo_parametro")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "grupoParametro")
 public class GrupoParametro implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -32,8 +43,11 @@ public class GrupoParametro implements Serializable {
 	private String texto;
 	@Column(name = "gpa_clave")
 	private String clave;
+	@XmlTransient
 	@Transient
 	private List<Parametro> parametroList;
+	
+	@XmlTransient
 	@Transient
 	private List<GrupoParametro> grupoParametroLista;
 	@JoinColumn(name = "gpa_padre", referencedColumnName = "gpa_id")

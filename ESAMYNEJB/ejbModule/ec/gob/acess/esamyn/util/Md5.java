@@ -7,15 +7,13 @@ import java.security.NoSuchAlgorithmException;
  * 
  * Clase: Md5.java
  * @author Duval Barragan
- * Fecha: Aug 25, 2017
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */
 public class Md5 {
 
-	private Md5() {
-	}
-
+	
 	/**
 	 * Aplica Hash a la cadena de texto
 	 * 
@@ -42,7 +40,5 @@ public class Md5 {
 
 	}
 
-	public static void main(String[] args) throws NoSuchAlgorithmException {
-		System.out.println(aplicarHash("1234"));
-	}
+	
 }

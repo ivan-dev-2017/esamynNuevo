@@ -1,7 +1,6 @@
 package ec.gob.acess.esamyn.modelo;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Basic;
@@ -14,16 +13,25 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlType;
 
 /**
+ * 
+ * Entidad que refleja la estructura de tabla esa_pregunta
+ * 
+ * @author Duval Barragan
+ * @date Aug 28, 2017
+ * @version 1.0
  *
- * @author saviasoft3
  */
 @Entity
 @Table(name = "esa_pregunta")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "pregunta")
 public class Pregunta implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -32,15 +40,9 @@ public class Pregunta implements Serializable {
 	@Basic(optional = false)
 	@Column(name = "prg_id")
 	private Long codigo;
-	@Basic(optional = false)
-	@Column(name = "prg_creado")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date creado;
-	@Basic(optional = false)
-	@Column(name = "prg_modificado")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date modificado;
+
 	@Column(name = "prg_texto")
+	@XmlTransient
 	private String texto;
 	@Column(name = "prg_codigo_verificacion")
 	private String codigoVerificacion;
@@ -65,7 +67,6 @@ public class Pregunta implements Serializable {
 	@JoinColumn(name = "prg_tipo_pregunta", referencedColumnName = "tpp_id")
 	@ManyToOne
 	private TipoPregunta tipoPregunta;
-	
 	@Transient
 	private Respuesta respuesta;
 
@@ -78,22 +79,6 @@ public class Pregunta implements Serializable {
 
 	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
-	}
-
-	public Date getCreado() {
-		return creado;
-	}
-
-	public void setCreado(Date creado) {
-		this.creado = creado;
-	}
-
-	public Date getModificado() {
-		return modificado;
-	}
-
-	public void setModificado(Date modificado) {
-		this.modificado = modificado;
 	}
 
 	public String getTexto() {
@@ -191,7 +176,5 @@ public class Pregunta implements Serializable {
 	public void setRespuesta(Respuesta respuesta) {
 		this.respuesta = respuesta;
 	}
-	
-	
 
 }

@@ -13,13 +13,24 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlType;
 
 /**
+ * 
+ * Entidad que refleja la estructura de tabla esa_parametro
+ * 
+ * @author Duval Barragan
+ * @date Aug 28, 2017
+ * @version 1.0
  *
- * @author saviasoft3
  */
 @Entity
 @Table(name = "esa_parametro")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "catalogo")
 public class Parametro implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -47,8 +58,10 @@ public class Parametro implements Serializable {
 	@JoinColumn(name = "par_grupo_parametro", referencedColumnName = "gpa_id")
 	@ManyToOne
 	private GrupoParametro grupoParametro;
+	@XmlTransient
 	@Transient
 	private List<Verificador> verificadorList;
+	@XmlTransient
 	@Transient
 	private List<ParametroPregunta> parametroPreguntaList;
 
@@ -100,13 +113,12 @@ public class Parametro implements Serializable {
 		this.cantidadMinima = cantidadMinima;
 	}
 
-
 	public CondicionNoAplica getCondicionNoAplica() {
-	    return condicionNoAplica;
+		return condicionNoAplica;
 	}
 
 	public void setCondicionNoAplica(CondicionNoAplica condicionNoAplica) {
-	    this.condicionNoAplica = condicionNoAplica;
+		this.condicionNoAplica = condicionNoAplica;
 	}
 
 	public GrupoParametro getGrupoParametro() {

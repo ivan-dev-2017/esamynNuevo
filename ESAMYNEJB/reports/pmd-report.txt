@@ -1,0 +1,1445 @@
+ejbModule/ec/gob/acess/esamyn/bean/CantonBean.java:25:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/bean/CantonBean.java:28:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/bean/CantonBean.java:28:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/CantonBean.java:31:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/CantonBean.java:35:	Parameter 'canton' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/CantonBean.java:35:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/CantonBean.java:37:	Local variable 'mensajeDto' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/CantonBean.java:54:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+ejbModule/ec/gob/acess/esamyn/bean/CatalogoBean.java:25:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/bean/CatalogoBean.java:28:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/bean/CatalogoBean.java:28:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/CatalogoBean.java:31:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/CatalogoBean.java:36:	Parameter 'catalogo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/CatalogoBean.java:36:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/CatalogoBean.java:37:	Local variable 'mensajeDto' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/CatalogoBean.java:54:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+ejbModule/ec/gob/acess/esamyn/bean/EncuestaBean.java:25:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/bean/EncuestaBean.java:28:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/bean/EncuestaBean.java:28:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/EncuestaBean.java:31:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/EncuestaBean.java:35:	Parameter 'encuesta' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/EncuestaBean.java:35:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/EncuestaBean.java:37:	Local variable 'mensajeDto' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/EncuestaBean.java:54:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+ejbModule/ec/gob/acess/esamyn/bean/EstablecimientoSaludBean.java:24:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/bean/EstablecimientoSaludBean.java:27:	Avoid excessively long variable names like establecimientoSaludDAO
+ejbModule/ec/gob/acess/esamyn/bean/EstablecimientoSaludBean.java:27:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/bean/EstablecimientoSaludBean.java:27:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/EstablecimientoSaludBean.java:30:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/EvaluacionBean.java:31:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/bean/EvaluacionBean.java:34:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/bean/EvaluacionBean.java:34:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/EvaluacionBean.java:42:	Avoid excessively long variable names like codigoEstablecimientoSalud
+ejbModule/ec/gob/acess/esamyn/bean/EvaluacionBean.java:42:	Found 'UR'-anomaly for variable 'param' (lines '42'-'64').
+ejbModule/ec/gob/acess/esamyn/bean/EvaluacionBean.java:42:	Parameter 'codigoEstablecimientoSalud' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/EvaluacionBean.java:42:	Parameter 'usuario' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/EvaluacionBean.java:43:	Avoid unused local variables such as 'resp'.
+ejbModule/ec/gob/acess/esamyn/bean/EvaluacionBean.java:43:	Found 'DU'-anomaly for variable 'resp' (lines '43'-'74').
+ejbModule/ec/gob/acess/esamyn/bean/EvaluacionBean.java:43:	Local variable 'resp' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/EvaluacionBean.java:45:	Local variable 'establecimiento' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/EvaluacionBean.java:48:	Local variable 'evaluacion' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/EvaluacionBean.java:57:	Local variable 'parametroList' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/EvaluacionBean.java:61:	Local variable 'param' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/EvaluacionBean.java:64:	Local variable 'respuestaList' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/EvaluacionBean.java:67:	Avoid empty if statements
+ejbModule/ec/gob/acess/esamyn/bean/EvaluacionBean.java:67:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/FormularioBean.java:24:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/bean/FormularioBean.java:27:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/bean/FormularioBean.java:27:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/FormularioBean.java:30:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:1:	Comment is too large: Too many lines
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:47:	The class 'MailBean' has a Cyclomatic Complexity of 15 (Highest = 25).
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:47:	The class 'MailBean' has a Modified Cyclomatic Complexity of 12 (Highest = 22).
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:47:	The class 'MailBean' has a Standard Cyclomatic Complexity of 12 (Highest = 22).
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:49:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:54:	Avoid really long methods.
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:54:	Parameter 'message' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:54:	The method 'sender' has a Cyclomatic Complexity of 25.
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:54:	The method 'sender' has a Modified Cyclomatic Complexity of 22.
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:54:	The method 'sender' has a Standard Cyclomatic Complexity of 22.
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:54:	The method sender() has an NPath complexity of 4006
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:60:	Local variable 'prop' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:61:	Found 'DU'-anomaly for variable 'input' (lines '61'-'212').
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:61:	Found 'DU'-anomaly for variable 'input' (lines '61'-'212').
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:61:	Local variable 'input' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:71:	Local variable 'HOST' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:71:	Variables should start with a lowercase character, 'HOST' starts with uppercase character.
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:72:	Local variable 'PORT' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:72:	Variables should start with a lowercase character, 'PORT' starts with uppercase character.
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:73:	Local variable 'PROTOCOL' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:73:	Variables should start with a lowercase character, 'PROTOCOL' starts with uppercase character.
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:76:	Local variable 'FROM' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:76:	Variables should start with a lowercase character, 'FROM' starts with uppercase character.
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:77:	Found 'DU'-anomaly for variable 'DEBUG' (lines '77'-'212').
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:77:	Found 'DU'-anomaly for variable 'DEBUG' (lines '77'-'212').
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:77:	Local variable 'DEBUG' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:77:	Variables should start with a lowercase character, 'DEBUG' starts with uppercase character.
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:79:	Avoid variables with short names like p
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:79:	Local variable 'p' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:81:	Position literals first in String comparisons
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:81:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:106:	Found 'DU'-anomaly for variable 'mailSession' (lines '106'-'212').
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:106:	Found 'DU'-anomaly for variable 'mailSession' (lines '106'-'212').
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:106:	Local variable 'mailSession' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:107:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:113:	Avoid declaring a variable if it is unreferenced before a possible exit point.
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:113:	Local variable 'transport' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:119:	Local variable 'mimeMessage' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:123:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:123:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:128:	Local variable 'fileList' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:128:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:129:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:129:	Substitute calls to size() == 0 (or size() != 0, size() > 0, size() < 1) with calls to isEmpty()
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:130:	Local variable 'multipart' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:131:	Avoid excessively long variable names like messageBodyPartHtml
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:131:	Local variable 'messageBodyPartHtml' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:132:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:133:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:135:	Local variable 'file' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:136:	Avoid instantiating new objects inside loops
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:136:	Local variable 'mbp' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:147:	Avoid variables with short names like t
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:149:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:150:	Local variable 'to' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:153:	Avoid instantiating new objects inside loops
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:159:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:160:	Local variable 'to' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:163:	Avoid instantiating new objects inside loops
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:170:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:171:	Local variable 'to' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:174:	Avoid instantiating new objects inside loops
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:185:	Local variable 'from' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:188:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:190:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:192:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:195:	Avoid printStackTrace(); use a logger call instead.
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:197:	Avoid printStackTrace(); use a logger call instead.
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:198:	There is log block not surrounded by if
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:198:	There is log block not surrounded by if
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:199:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:200:	Avoid printStackTrace(); use a logger call instead.
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:201:	There is log block not surrounded by if
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:201:	There is log block not surrounded by if
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:205:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:207:	Avoid printStackTrace(); use a logger call instead.
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:214:	Parameter 'texto' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:214:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:215:	Found 'DD'-anomaly for variable 'vacio' (lines '215'-'217').
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:216:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/MailBean.java:216:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:31:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:34:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:34:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:36:	Avoid unused private fields such as 'encuestaBean'.
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:36:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:39:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:43:	Parameter 'IdEncuesta' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:43:	Parameter 'idFormulario' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:43:	Variables should start with a lowercase character, 'IdEncuesta' starts with uppercase character.
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:43:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:47:	Local variable 'ands' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:48:	Local variable 'operator' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:49:	Local variable 'valores' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:50:	Local variable 'orderby' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:51:	Local variable 'asc' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:53:	Local variable 'criteria' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:55:	Local variable 'lista' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:57:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:58:	Local variable 'padres' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:65:	Local variable 'encuesta' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:73:	A method should have only one exit point, and that should be the last statement in the method
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:80:	Found 'UR'-anomaly for variable 'p' (lines '80'-'90').
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:80:	Parameter 'idFormulario' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:80:	Parameter 'lista' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:80:	Parameter 'padre' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:82:	Local variable 'hijos' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:88:	Local variable 'p' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:90:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:91:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:91:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:91:	These nested if statements could be combined
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:93:	Avoid instantiating new objects inside loops
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:96:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:97:	Avoid if (x != y) ..; else ..;
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:97:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:98:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:99:	Avoid if (x != y) ..; else ..;
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:99:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:115:	Avoid if (x != y) ..; else ..;
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:125:	Avoid unused method parameters such as 'idFormulario'.
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:125:	Found 'UR'-anomaly for variable 'p' (lines '125'-'131').
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:125:	Parameter 'idFormulario' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:125:	Parameter 'lista' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:127:	Local variable 'padres' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:129:	Local variable 'p' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:133:	Avoid instantiating new objects inside loops
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:133:	Local variable 'preguntaDto' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:136:	Avoid if (x != y) ..; else ..;
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:136:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:136:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:137:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:138:	Avoid if (x != y) ..; else ..;
+ejbModule/ec/gob/acess/esamyn/bean/PreguntaBean.java:138:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:33:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:36:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:36:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:39:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:50:	Parameter 'contrasenia' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:50:	Parameter 'usuario' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:52:	Local variable 'ands' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:53:	Local variable 'operator' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:54:	Local variable 'valores' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:56:	Local variable 'criteria' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:58:	Found 'DD'-anomaly for variable 'mensajeDto' (lines '58'-'75').
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:58:	Found 'DD'-anomaly for variable 'mensajeDto' (lines '58'-'77').
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:58:	Found 'DD'-anomaly for variable 'mensajeDto' (lines '58'-'82').
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:60:	Local variable 'lista' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:61:	Avoid if (x != y) ..; else ..;
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:61:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:63:	Local variable 'usuarioObjeto' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:63:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:64:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:64:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:67:	Avoid variables with short names like c
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:67:	Local variable 'c' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:68:	Local variable 'token' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:68:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:68:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:68:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:70:	System.out.println is used
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:71:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:95:	Parameter 'usuario' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:97:	Local variable 'mensajeDto' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:117:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:133:	A method/constructor shouldnt explicitly throw java.lang.Exception
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:133:	Parameter 'token' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:136:	Avoid declaring a variable if it is unreferenced before a possible exit point.
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:136:	Found 'DU'-anomaly for variable 'validaToken' (lines '136'-'162').
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:138:	Found 'DU'-anomaly for variable 'revToken' (lines '138'-'162').
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:139:	A catch statement that catches an exception only to rethrow it should be avoided.
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:139:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:144:	Local variable 'arr' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:144:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:146:	Avoid using Literals in Conditional Statements
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:148:	Local variable 'codigo' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:148:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:150:	Avoid variables with short names like u
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:150:	Local variable 'u' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:154:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:154:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:154:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:154:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:154:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:154:	These nested if statements could be combined
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:172:	Parameter 'idUsuario' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:172:	Parameter 'passAntigua' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:172:	Parameter 'passNueva' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:174:	Found 'DD'-anomaly for variable 'mensajeDto' (lines '174'-'191').
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:174:	Found 'DD'-anomaly for variable 'mensajeDto' (lines '174'-'194').
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:174:	Found 'DD'-anomaly for variable 'mensajeDto' (lines '174'-'199').
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:179:	Found 'DU'-anomaly for variable 'clave1' (lines '179'-'210').
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:179:	Local variable 'clave1' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:181:	Found 'DU'-anomaly for variable 'clave2' (lines '181'-'210').
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:181:	Local variable 'clave2' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:183:	Local variable 'usuario' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:185:	Avoid if (x != y) ..; else ..;
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:187:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:187:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:189:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:191:	Found 'DD'-anomaly for variable 'mensajeDto' (lines '191'-'203').
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:194:	Found 'DD'-anomaly for variable 'mensajeDto' (lines '194'-'203').
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:199:	Found 'DD'-anomaly for variable 'mensajeDto' (lines '199'-'203').
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:212:	Parameter 'userName' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:212:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:215:	Local variable 'ands' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:216:	Local variable 'operator' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:217:	Local variable 'valores' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:219:	Local variable 'criteria' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:221:	Local variable 'lista' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:222:	Avoid if (x != y) ..; else ..;
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:222:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:224:	Local variable 'usuario' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:224:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:226:	Local variable 'contrasena' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:231:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:239:	Found 'DD'-anomaly for variable 'mensajeDto' (lines '239'-'242').
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:260:	A method/constructor shouldnt explicitly throw java.lang.Exception
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:260:	Parameter 'token' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:265:	Local variable 'arr' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:265:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:267:	Avoid using Literals in Conditional Statements
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:269:	Local variable 'codigo' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:269:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:271:	Avoid variables with short names like u
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:271:	Local variable 'u' could be declared final
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:275:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:275:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:275:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:275:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:275:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:275:	These nested if statements could be combined
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:277:	A method should have only one exit point, and that should be the last statement in the method
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:282:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+ejbModule/ec/gob/acess/esamyn/bean/UsuarioBean.java:284:	Avoid printStackTrace(); use a logger call instead.
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:35:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:37:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:40:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:40:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:43:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:43:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:46:	Parameter 'mmessage' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:46:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:50:	Found 'DD'-anomaly for variable 'connection' (lines '50'-'54').
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:51:	Found 'DD'-anomaly for variable 'session' (lines '51'-'55').
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:55:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:57:	Local variable 'messageProducer' could be declared final
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:57:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:59:	Local variable 'objectMessage' could be declared final
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:59:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:60:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:62:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:65:	Avoid printStackTrace(); use a logger call instead.
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:69:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:71:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/cliente/QueueMailServicio.java:74:	Avoid printStackTrace(); use a logger call instead.
+ejbModule/ec/gob/acess/esamyn/constante/CatalogoEnum.java:3:	enumCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/constante/MailTypeEnum.java:23:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/constante/MailTypeEnum.java:25:	Parameter 'valor' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/constante/MailTypeEnum.java:29:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/constante/MailTypeEnum.java:33:	Parameter 'valor' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/constante/MailTypeEnum.java:33:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/PreguntaDAO.java:7:	Avoid unused imports such as 'ec.gob.acess.esamyn.modelo.Canton'
+ejbModule/ec/gob/acess/esamyn/dao/RespuestaDAO.java:29:	Avoid excessively long variable names like codigoEstablecimientoSalud
+ejbModule/ec/gob/acess/esamyn/dao/impl/CantonDAOImpl.java:25:	Avoid variables with short names like em
+ejbModule/ec/gob/acess/esamyn/dao/impl/CantonDAOImpl.java:25:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/dao/impl/CantonDAOImpl.java:25:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/CantonDAOImpl.java:28:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/CantonDAOImpl.java:32:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/CatalogoDAOImpl.java:21:	Avoid variables with short names like em
+ejbModule/ec/gob/acess/esamyn/dao/impl/CatalogoDAOImpl.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/dao/impl/CatalogoDAOImpl.java:21:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/CatalogoDAOImpl.java:24:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/CatalogoDAOImpl.java:28:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/CondicionDAOImpl.java:21:	Avoid variables with short names like em
+ejbModule/ec/gob/acess/esamyn/dao/impl/CondicionDAOImpl.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/dao/impl/CondicionDAOImpl.java:21:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/CondicionDAOImpl.java:24:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/CondicionDAOImpl.java:28:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/EncuestaDAOImpl.java:21:	Avoid variables with short names like em
+ejbModule/ec/gob/acess/esamyn/dao/impl/EncuestaDAOImpl.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/dao/impl/EncuestaDAOImpl.java:21:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/EncuestaDAOImpl.java:24:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/EncuestaDAOImpl.java:28:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/EstablecimientoSaludDAOImpl.java:21:	Avoid variables with short names like em
+ejbModule/ec/gob/acess/esamyn/dao/impl/EstablecimientoSaludDAOImpl.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/dao/impl/EstablecimientoSaludDAOImpl.java:21:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/EstablecimientoSaludDAOImpl.java:24:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/EstablecimientoSaludDAOImpl.java:28:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/EvaluacionDAOImpl.java:21:	Avoid variables with short names like em
+ejbModule/ec/gob/acess/esamyn/dao/impl/EvaluacionDAOImpl.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/dao/impl/EvaluacionDAOImpl.java:21:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/EvaluacionDAOImpl.java:24:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/EvaluacionDAOImpl.java:28:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/FormularioDAOImpl.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/dao/impl/FormularioDAOImpl.java:21:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/FormularioDAOImpl.java:24:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/FormularioDAOImpl.java:28:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/GrupoParametroDAOImpl.java:21:	Avoid variables with short names like em
+ejbModule/ec/gob/acess/esamyn/dao/impl/GrupoParametroDAOImpl.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/dao/impl/GrupoParametroDAOImpl.java:21:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/GrupoParametroDAOImpl.java:24:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/GrupoParametroDAOImpl.java:28:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/ParametroDAOImpl.java:21:	Avoid variables with short names like em
+ejbModule/ec/gob/acess/esamyn/dao/impl/ParametroDAOImpl.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/dao/impl/ParametroDAOImpl.java:21:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/ParametroDAOImpl.java:24:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/ParametroDAOImpl.java:28:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/PersonaJuridicaDAOImpl.java:21:	Avoid variables with short names like em
+ejbModule/ec/gob/acess/esamyn/dao/impl/PersonaJuridicaDAOImpl.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/dao/impl/PersonaJuridicaDAOImpl.java:21:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/PersonaJuridicaDAOImpl.java:24:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/PersonaJuridicaDAOImpl.java:28:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/PreguntaDAOImpl.java:21:	Avoid variables with short names like em
+ejbModule/ec/gob/acess/esamyn/dao/impl/PreguntaDAOImpl.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/dao/impl/PreguntaDAOImpl.java:21:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/PreguntaDAOImpl.java:24:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/PreguntaDAOImpl.java:28:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/ProvinciaDAOImpl.java:21:	Avoid variables with short names like em
+ejbModule/ec/gob/acess/esamyn/dao/impl/ProvinciaDAOImpl.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/dao/impl/ProvinciaDAOImpl.java:21:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/ProvinciaDAOImpl.java:24:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/ProvinciaDAOImpl.java:28:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/RespuestaDAOImpl.java:23:	Avoid variables with short names like em
+ejbModule/ec/gob/acess/esamyn/dao/impl/RespuestaDAOImpl.java:23:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/dao/impl/RespuestaDAOImpl.java:23:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/RespuestaDAOImpl.java:26:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/RespuestaDAOImpl.java:30:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/RespuestaDAOImpl.java:36:	Comment is too large: Line too long
+ejbModule/ec/gob/acess/esamyn/dao/impl/RespuestaDAOImpl.java:39:	Avoid excessively long variable names like codigoEstablecimientoSalud
+ejbModule/ec/gob/acess/esamyn/dao/impl/RespuestaDAOImpl.java:39:	Parameter 'codigoEstablecimientoSalud' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dao/impl/RespuestaDAOImpl.java:39:	Parameter 'codigoParametro' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dao/impl/RespuestaDAOImpl.java:39:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/RespuestaDAOImpl.java:40:	Local variable 'hql' could be declared final
+ejbModule/ec/gob/acess/esamyn/dao/impl/RolDAOImpl.java:21:	Avoid variables with short names like em
+ejbModule/ec/gob/acess/esamyn/dao/impl/RolDAOImpl.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/dao/impl/RolDAOImpl.java:21:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/RolDAOImpl.java:24:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/RolDAOImpl.java:28:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/TipoGrupoParametroDAOImpl.java:21:	Avoid variables with short names like em
+ejbModule/ec/gob/acess/esamyn/dao/impl/TipoGrupoParametroDAOImpl.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/dao/impl/TipoGrupoParametroDAOImpl.java:21:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/TipoGrupoParametroDAOImpl.java:24:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/TipoGrupoParametroDAOImpl.java:28:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/TipoPreguntaDAOImpl.java:21:	Avoid variables with short names like em
+ejbModule/ec/gob/acess/esamyn/dao/impl/TipoPreguntaDAOImpl.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/dao/impl/TipoPreguntaDAOImpl.java:21:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/TipoPreguntaDAOImpl.java:24:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/TipoPreguntaDAOImpl.java:28:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/UsuarioDAOImpl.java:21:	Avoid variables with short names like em
+ejbModule/ec/gob/acess/esamyn/dao/impl/UsuarioDAOImpl.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/dao/impl/UsuarioDAOImpl.java:21:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/UsuarioDAOImpl.java:24:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/UsuarioDAOImpl.java:28:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/VerificadorDAOImpl.java:21:	Avoid variables with short names like em
+ejbModule/ec/gob/acess/esamyn/dao/impl/VerificadorDAOImpl.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/dao/impl/VerificadorDAOImpl.java:21:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/VerificadorDAOImpl.java:24:	protectedMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dao/impl/VerificadorDAOImpl.java:28:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:13:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:20:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:22:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:24:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:26:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:28:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:30:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:32:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:36:	Parameter 'idFormulario' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:36:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:40:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:44:	Parameter 'responsable' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:44:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:48:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:52:	Parameter 'cargo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:52:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:56:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:60:	Parameter 'extra' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:60:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:64:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:68:	Parameter 'idEncuesta' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:68:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:72:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:76:	Parameter 'pregunta' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/EncuestaDto.java:76:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/EvaluacionDto.java:14:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/dto/FormularioDto.java:15:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/dto/FormularioDto.java:21:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/FormularioDto.java:22:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/FormularioDto.java:23:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/FormularioDto.java:25:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/FormularioDto.java:29:	Parameter 'fecha' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/FormularioDto.java:29:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/FormularioDto.java:33:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/FormularioDto.java:37:	Parameter 'estado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/FormularioDto.java:37:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/FormularioDto.java:41:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/FormularioDto.java:45:	Parameter 'contestados' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/FormularioDto.java:45:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:34:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:36:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:38:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:41:	Avoid variables with short names like to
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:41:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:42:	Avoid variables with short names like cc
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:42:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:43:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:45:	Avoid using implementation types like 'HashMap'; use the interface instead
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:45:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:47:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:49:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:53:	Avoid unused constructor parameters such as 'from'.
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:53:	Avoid variables with short names like cc
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:53:	Avoid variables with short names like to
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:53:	Parameter 'cc' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:53:	Parameter 'content' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:53:	Parameter 'from' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:53:	Parameter 'subject' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:53:	Parameter 'to' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:53:	Parameter 'type' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:53:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:54:	Avoid using implementation types like 'HashMap'; use the interface instead
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:54:	Parameter 'attachList' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:54:	Parameter 'cco' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:54:	Parameter 'configuracion' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:66:	Avoid unused constructor parameters such as 'from'.
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:66:	Avoid variables with short names like to
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:66:	Parameter 'content' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:66:	Parameter 'from' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:66:	Parameter 'subject' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:66:	Parameter 'to' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:66:	Parameter 'type' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:66:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:67:	Parameter 'configuracion' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:80:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:81:	Avoid unnecessary if..then..else statements when returning booleans
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:81:	Substitute calls to size() == 0 (or size() != 0, size() > 0, size() < 1) with calls to isEmpty()
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:82:	A method should have only one exit point, and that should be the last statement in the method
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:87:	Found 'UR'-anomaly for variable 't' (lines '87'-'91').
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:87:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:88:	Local variable 'resultado' could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:90:	Local variable 't' could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:91:	Avoid instantiating new objects inside loops
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:97:	Found 'UR'-anomaly for variable 't' (lines '97'-'101').
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:97:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:98:	Local variable 'resultado' could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:100:	Local variable 't' could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:101:	Avoid instantiating new objects inside loops
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:107:	Found 'UR'-anomaly for variable 't' (lines '107'-'111').
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:107:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:108:	Local variable 'resultado' could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:110:	Local variable 't' could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:111:	Avoid instantiating new objects inside loops
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:128:	Parameter 'content' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:143:	Parameter 'subject' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:158:	Avoid variables with short names like to
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:158:	Parameter 'to' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:173:	Avoid variables with short names like cc
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:173:	Parameter 'cc' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:188:	Parameter 'cco' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:195:	Avoid using implementation types like 'HashMap'; use the interface instead
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:203:	Avoid using implementation types like 'HashMap'; use the interface instead
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:203:	Parameter 'attachList' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:207:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:211:	Parameter 'type' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:211:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:215:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:219:	Parameter 'configuracion' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MailMessage.java:219:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MensajeDto.java:17:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MensajeDto.java:19:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MensajeDto.java:21:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MensajeDto.java:23:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MensajeDto.java:27:	Parameter 'error' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MensajeDto.java:27:	Parameter 'mensaje' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MensajeDto.java:27:	Parameter 'objeto' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MensajeDto.java:27:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MensajeDto.java:34:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MensajeDto.java:38:	Parameter 'error' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MensajeDto.java:38:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MensajeDto.java:42:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MensajeDto.java:46:	Parameter 'mensaje' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MensajeDto.java:46:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MensajeDto.java:50:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/MensajeDto.java:54:	Parameter 'objeto' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/MensajeDto.java:54:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:16:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:16:	Too many fields
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:20:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:22:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:24:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:26:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:28:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:30:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:32:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:34:	Avoid excessively long variable names like codigoTipoPregunta
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:34:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:36:	Avoid excessively long variable names like etiquetaTipoPregunta
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:36:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:38:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:40:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:42:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:44:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:46:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:48:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:50:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:52:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:56:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:56:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:60:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:64:	Parameter 'texto' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:64:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:68:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:72:	Parameter 'ayuda' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:72:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:76:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:80:	Parameter 'prefijo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:80:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:84:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:88:	Parameter 'subfijo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:88:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:92:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:96:	Parameter 'validacion' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:96:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:100:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:104:	Parameter 'orden' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:104:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:108:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:112:	Parameter 'preguntaLista' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:112:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:116:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:120:	Avoid excessively long variable names like codigoTipoPregunta
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:120:	Parameter 'codigoTipoPregunta' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:120:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:124:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:128:	Avoid excessively long variable names like etiquetaTipoPregunta
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:128:	Parameter 'etiquetaTipoPregunta' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:128:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:132:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:136:	Parameter 'codigoRespuesta' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:136:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:140:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:144:	Parameter 'codigoEncuesta' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:144:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:148:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:152:	Parameter 'valorNumero' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:152:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:156:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:160:	Parameter 'valorTexto' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:160:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:164:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:168:	Parameter 'valorFecha' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:168:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:172:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:176:	Parameter 'valorBooleano' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/dto/PreguntaDto.java:176:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/EvaluacionException.java:17:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/EvaluacionException.java:18:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/EvaluacionException.java:20:	It is a good practice to call super() in a constructor
+ejbModule/ec/gob/acess/esamyn/exception/EvaluacionException.java:20:	Parameter 'summary' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/exception/EvaluacionException.java:20:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/EvaluacionException.java:24:	It is a good practice to call super() in a constructor
+ejbModule/ec/gob/acess/esamyn/exception/EvaluacionException.java:24:	Parameter 'cause' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/exception/EvaluacionException.java:24:	Parameter 'summary' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/exception/EvaluacionException.java:24:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/EvaluacionException.java:29:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/EvaluacionException.java:33:	Parameter 'summary' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/exception/EvaluacionException.java:33:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/EvaluacionException.java:37:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/EvaluacionException.java:41:	Parameter 'cause' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/exception/EvaluacionException.java:41:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:16:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:17:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:18:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:20:	It is a good practice to call super() in a constructor
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:20:	Parameter 'summary' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:20:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:24:	It is a good practice to call super() in a constructor
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:24:	Parameter 'cause' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:24:	Parameter 'summary' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:24:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:29:	Avoid unused constructor parameters such as 'arg0'.
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:29:	It is a good practice to call super() in a constructor
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:29:	Parameter 'arg0' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:29:	Parameter 'detail' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:29:	Parameter 'summary' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:29:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:34:	It is a good practice to call super() in a constructor
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:34:	Parameter 'cause' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:34:	Parameter 'detail' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:34:	Parameter 'summary' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:34:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:40:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:44:	Parameter 'summary' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:44:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:48:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:52:	Parameter 'detail' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:52:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:56:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:60:	Parameter 'cause' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/exception/MailException.java:60:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/listener/QueueMailListener.java:28:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/listener/QueueMailListener.java:30:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/listener/QueueMailListener.java:33:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+ejbModule/ec/gob/acess/esamyn/listener/QueueMailListener.java:33:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/listener/QueueMailListener.java:39:	Parameter 'message' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/listener/QueueMailListener.java:45:	Avoid variables with short names like mm
+ejbModule/ec/gob/acess/esamyn/listener/QueueMailListener.java:45:	Local variable 'mm' could be declared final
+ejbModule/ec/gob/acess/esamyn/listener/QueueMailListener.java:45:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/listener/QueueMailListener.java:45:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/listener/QueueMailListener.java:48:	Avoid printStackTrace(); use a logger call instead.
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:37:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:39:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:41:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:45:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:47:	Avoid unnecessary constructors - the compiler will generate these for you
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:47:	Document empty constructor
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:47:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:50:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:54:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:54:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:58:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:62:	Parameter 'nombre' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:62:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:66:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:70:	Parameter 'codigoINEN' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:70:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:74:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:78:	Parameter 'provincia' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Canton.java:78:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:29:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:33:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:37:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:40:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:43:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:45:	Avoid unnecessary constructors - the compiler will generate these for you
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:45:	Document empty constructor
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:45:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:48:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:52:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:52:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:56:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:60:	Parameter 'creado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:60:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:64:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:68:	Parameter 'modificado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:68:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:72:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:76:	Parameter 'identificador' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:76:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:80:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:84:	Parameter 'valor' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Catalogo.java:84:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:27:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:34:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:36:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:38:	Avoid excessively long variable names like esaParametroCollection
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:38:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:40:	Avoid excessively long variable names like cumpleCondicionNaList
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:40:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:42:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:46:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:46:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:50:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:54:	Parameter 'cnaTexto' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:54:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:58:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:62:	Avoid excessively long variable names like esaParametroCollection
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:62:	Parameter 'esaParametroCollection' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:62:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:66:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:70:	Avoid excessively long variable names like cumpleCondicionNaList
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:70:	Parameter 'cumpleCondicionNaList' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/CondicionNoAplica.java:70:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:37:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:41:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:45:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:48:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:50:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:53:	Avoid excessively long variable names like ccnCondicionNoAplica
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:53:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:56:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:58:	Avoid unnecessary constructors - the compiler will generate these for you
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:58:	Document empty constructor
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:58:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:61:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:65:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:65:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:69:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:73:	Parameter 'ccnCreado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:73:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:77:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:81:	Parameter 'ccnModificado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:81:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:85:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:89:	Parameter 'ccnCumple' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:89:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:93:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:97:	Parameter 'verificadorLista' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:97:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:102:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:106:	Avoid excessively long variable names like ccnCondicionNoAplica
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:106:	Parameter 'ccnCondicionNoAplica' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:106:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:110:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:114:	Parameter 'evaluacion' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/CumpleCondicionNoAplica.java:114:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:26:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:26:	Too many fields
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:33:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:37:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:41:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:43:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:45:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:48:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:52:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:55:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:57:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:59:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:61:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:63:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:66:	Avoid excessively long variable names like establecimientoSalud
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:66:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:69:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:72:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:75:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:76:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:79:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:79:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:82:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:85:	Parameter 'creado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:85:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:88:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:91:	Parameter 'modificado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:91:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:94:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:97:	Parameter 'creadoPor' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:97:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:100:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:103:	Parameter 'modificadoPor' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:103:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:106:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:109:	Parameter 'finalizada' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:109:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:112:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:115:	Parameter 'fechaInicial' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:115:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:118:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:121:	Parameter 'fechaFinal' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:121:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:124:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:127:	Parameter 'responsable' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:127:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:130:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:133:	Parameter 'cargo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:133:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:136:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:139:	Parameter 'extra' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:139:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:142:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:145:	Parameter 'respuestaLista' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:145:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:148:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:151:	Avoid excessively long variable names like establecimientoSalud
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:151:	Parameter 'establecimientoSalud' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:151:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:154:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:157:	Parameter 'evaluacion' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:157:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:160:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:163:	Parameter 'formulario' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:163:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:166:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:169:	Parameter 'usuario' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Encuesta.java:169:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:26:	Too many fields
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:33:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:37:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:41:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:43:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:45:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:47:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:49:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:51:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:53:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:55:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:57:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:59:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:62:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:65:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:68:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:70:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:72:	Document empty constructor
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:72:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:75:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:75:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:80:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:84:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:84:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:88:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:92:	Parameter 'creado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:92:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:96:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:100:	Parameter 'modificado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:100:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:104:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:108:	Parameter 'nombre' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:108:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:112:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:116:	Parameter 'unicodigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:116:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:120:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:124:	Parameter 'direccion' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:124:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:128:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:132:	Parameter 'latitud' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:132:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:136:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:140:	Parameter 'longitud' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:140:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:144:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:148:	Parameter 'telefono' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:148:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:152:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:156:	Parameter 'correoElectronico' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:156:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:160:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:164:	Parameter 'nombreResponsable' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:164:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:168:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:172:	Parameter 'zona' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:172:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:176:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:180:	Parameter 'distrito' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:180:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:184:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:188:	Parameter 'canton' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:188:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:192:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:196:	Parameter 'personaJuridica' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:196:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:200:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:204:	Parameter 'evaluacionList' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/EstablecimientoSalud.java:204:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:32:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:36:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:40:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:42:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:44:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:46:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:48:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:52:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:55:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:58:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:62:	Avoid excessively long variable names like establecimientoSalud
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:62:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:65:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:67:	Avoid unnecessary constructors - the compiler will generate these for you
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:67:	Document empty constructor
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:67:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:70:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:74:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:74:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:78:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:82:	Parameter 'creado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:82:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:86:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:90:	Parameter 'modificado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:90:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:94:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:98:	Parameter 'creadoPor' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:98:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:102:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:106:	Parameter 'modificadoPor' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:106:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:110:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:114:	Parameter 'numero' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:114:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:118:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:122:	Parameter 'calificacion' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:122:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:126:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:130:	Parameter 'fechaInicio' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:130:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:134:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:138:	Parameter 'fechaCalificacion' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:138:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:142:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:146:	Parameter 'cantidadEncuestas' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:146:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:150:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:154:	Avoid excessively long variable names like establecimientoSalud
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:154:	Parameter 'establecimientoSalud' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:154:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:158:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:162:	Parameter 'usuario' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Evaluacion.java:162:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:38:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:42:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:46:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:48:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:50:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:52:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:54:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:56:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:58:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:60:	Avoid unnecessary constructors - the compiler will generate these for you
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:60:	Document empty constructor
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:60:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:63:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:67:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:67:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:71:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:75:	Parameter 'creado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:75:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:79:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:83:	Parameter 'modificado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:83:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:87:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:91:	Parameter 'nombre' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:91:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:95:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:99:	Parameter 'titulo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:99:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:103:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:107:	Parameter 'subtitulo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:107:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:111:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:115:	Parameter 'ayuda' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:115:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:119:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:123:	Parameter 'clave' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:123:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:127:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:131:	Parameter 'contestadosLista' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Formulario.java:131:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:30:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:32:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:34:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:36:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:38:	Avoid excessively long variable names like grupoParametroLista
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:38:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:41:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:44:	Avoid excessively long variable names like tipoGrupoParametro
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:44:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:46:	Avoid unnecessary constructors - the compiler will generate these for you
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:46:	Document empty constructor
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:46:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:49:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:53:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:53:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:57:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:61:	Parameter 'texto' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:61:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:65:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:69:	Parameter 'clave' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:69:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:73:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:77:	Parameter 'parametroList' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:77:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:81:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:85:	Avoid excessively long variable names like grupoParametroLista
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:85:	Parameter 'grupoParametroLista' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:85:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:89:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:93:	Parameter 'padre' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:93:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:97:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:101:	Avoid excessively long variable names like tipoGrupoParametro
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:101:	Parameter 'tipoGrupoParametro' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/GrupoParametro.java:101:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:23:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:30:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:32:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:34:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:37:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:40:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:43:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:46:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:49:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:51:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:53:	Avoid excessively long variable names like parametroPreguntaList
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:53:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:55:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:59:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:59:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:63:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:67:	Parameter 'puntaje' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:67:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:71:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:75:	Parameter 'texto' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:75:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:79:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:83:	Parameter 'obligatorio' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:83:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:87:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:91:	Parameter 'umbral' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:91:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:95:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:99:	Parameter 'cantidadMinima' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:99:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:104:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:108:	Parameter 'condicionNoAplica' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:108:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:112:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:116:	Parameter 'grupoParametro' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:116:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:120:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:124:	Parameter 'verificadorList' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:124:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:128:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:132:	Avoid excessively long variable names like parametroPreguntaList
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:132:	Parameter 'parametroPreguntaList' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Parametro.java:132:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:24:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:31:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:35:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:39:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:42:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:45:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:47:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:51:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:51:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:55:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:59:	Parameter 'creado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:59:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:63:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:67:	Parameter 'modificado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:67:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:71:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:75:	Parameter 'parametro' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:75:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:79:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:83:	Parameter 'pregunta' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/ParametroPregunta.java:83:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:31:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:35:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:39:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:41:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:43:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:45:	Avoid excessively long variable names like establecimientoSaludLista
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:45:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:47:	Avoid unnecessary constructors - the compiler will generate these for you
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:47:	Document empty constructor
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:47:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:50:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:54:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:54:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:58:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:62:	Parameter 'creado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:62:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:66:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:70:	Parameter 'modificado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:70:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:74:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:78:	Parameter 'razonSocial' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:78:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:82:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:86:	Parameter 'ruc' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:86:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:90:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:94:	Avoid excessively long variable names like establecimientoSaludLista
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:94:	Parameter 'establecimientoSaludLista' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/PersonaJuridica.java:94:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:34:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:38:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:42:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:44:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:46:	Avoid excessively long variable names like codigoVerificacion
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:46:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:48:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:50:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:52:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:54:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:56:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:59:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:61:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:64:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:67:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:70:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:72:	Avoid unnecessary constructors - the compiler will generate these for you
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:72:	Document empty constructor
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:72:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:75:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:79:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:79:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:83:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:87:	Parameter 'creado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:87:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:91:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:95:	Parameter 'modificado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:95:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:99:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:103:	Parameter 'texto' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:103:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:107:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:111:	Avoid excessively long variable names like codigoVerificacion
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:111:	Parameter 'codigoVerificacion' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:111:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:115:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:119:	Parameter 'ayuda' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:119:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:123:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:127:	Parameter 'prefijo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:127:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:131:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:135:	Parameter 'subfijo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:135:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:139:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:143:	Parameter 'validacion' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:143:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:147:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:151:	Parameter 'orden' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:151:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:155:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:159:	Parameter 'formulario' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:159:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:163:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:167:	Parameter 'preguntaLista' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:167:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:171:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:175:	Parameter 'padre' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:175:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:179:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:183:	Parameter 'tipoPregunta' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:183:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:187:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:191:	Parameter 'respuesta' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Pregunta.java:191:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Provincia.java:26:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Provincia.java:28:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Provincia.java:30:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Provincia.java:32:	Avoid unnecessary constructors - the compiler will generate these for you
+ejbModule/ec/gob/acess/esamyn/modelo/Provincia.java:32:	Document empty constructor
+ejbModule/ec/gob/acess/esamyn/modelo/Provincia.java:32:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Provincia.java:35:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Provincia.java:39:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Provincia.java:39:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Provincia.java:43:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Provincia.java:47:	Parameter 'nombre' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Provincia.java:47:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Provincia.java:51:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Provincia.java:55:	Parameter 'codigoInen' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Provincia.java:55:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:25:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:32:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:36:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:40:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:42:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:44:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:46:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:48:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:51:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:53:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:56:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:59:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:61:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:65:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:65:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:69:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:73:	Parameter 'creado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:73:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:77:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:81:	Parameter 'modificado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:81:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:85:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:89:	Parameter 'creadoPor' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:89:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:93:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:97:	Parameter 'modificadoPor' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:97:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:101:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:105:	Parameter 'valorNumero' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:105:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:109:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:113:	Parameter 'valorTexto' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:113:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:117:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:121:	Parameter 'valorFecha' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:121:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:125:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:129:	Parameter 'valorBooleano' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:129:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:133:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:137:	Parameter 'encuesta' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:137:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:141:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:145:	Parameter 'pregunta' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Respuesta.java:145:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Rol.java:19:	Avoid short class names like Rol
+ejbModule/ec/gob/acess/esamyn/modelo/Rol.java:19:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/modelo/Rol.java:26:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Rol.java:28:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Rol.java:30:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Rol.java:34:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Rol.java:34:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Rol.java:38:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Rol.java:42:	Parameter 'nombre' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Rol.java:42:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/TipoGrupoParametro.java:26:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/TipoGrupoParametro.java:28:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/TipoGrupoParametro.java:30:	Avoid unnecessary constructors - the compiler will generate these for you
+ejbModule/ec/gob/acess/esamyn/modelo/TipoGrupoParametro.java:30:	Document empty constructor
+ejbModule/ec/gob/acess/esamyn/modelo/TipoGrupoParametro.java:30:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/TipoGrupoParametro.java:33:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/TipoGrupoParametro.java:37:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/TipoGrupoParametro.java:37:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/TipoGrupoParametro.java:41:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/TipoGrupoParametro.java:45:	Parameter 'texto' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/TipoGrupoParametro.java:45:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/TipoPregunta.java:19:	Each class should declare at least one constructor
+ejbModule/ec/gob/acess/esamyn/modelo/TipoPregunta.java:26:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/TipoPregunta.java:28:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/TipoPregunta.java:30:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/TipoPregunta.java:32:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/TipoPregunta.java:36:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/TipoPregunta.java:36:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/TipoPregunta.java:40:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/TipoPregunta.java:44:	Parameter 'clave' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/TipoPregunta.java:44:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/TipoPregunta.java:48:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/TipoPregunta.java:52:	Parameter 'etiqueta' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/TipoPregunta.java:52:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:36:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:40:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:44:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:46:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:48:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:50:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:52:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:55:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:57:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:59:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:61:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:63:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:66:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:68:	Avoid unnecessary constructors - the compiler will generate these for you
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:68:	Document empty constructor
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:68:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:71:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:75:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:75:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:79:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:83:	Parameter 'creado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:83:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:87:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:91:	Parameter 'modificado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:91:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:95:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:99:	Parameter 'nombres' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:99:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:103:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:107:	Parameter 'apellidos' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:107:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:111:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:115:	Parameter 'username' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:115:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:119:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:123:	Parameter 'password' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:123:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:127:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:131:	Parameter 'bloqueado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:131:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:135:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:139:	Parameter 'cedula' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:139:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:143:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:147:	Parameter 'telefono' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:147:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:151:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:155:	Parameter 'correoEletronico' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:155:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:159:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:163:	Parameter 'rol' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:163:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:167:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:171:	Parameter 'token' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Usuario.java:171:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:31:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:35:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:39:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:42:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:45:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:48:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:51:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:54:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:57:	Avoid excessively long variable names like verCumpleCondicionNoAplica
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:57:	fieldCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:59:	Avoid unnecessary constructors - the compiler will generate these for you
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:59:	Document empty constructor
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:59:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:62:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:66:	Parameter 'codigo' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:66:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:70:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:74:	Parameter 'creado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:74:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:78:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:82:	Parameter 'modificado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:82:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:86:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:90:	Parameter 'cumple' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:90:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:94:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:98:	Parameter 'noAplica' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:98:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:102:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:106:	Parameter 'cantidadMedidas' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:106:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:110:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:114:	Parameter 'evaluacion' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:114:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:118:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:122:	Parameter 'parametro' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:122:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:126:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:130:	Avoid excessively long variable names like verCumpleCondicionNoAplica
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:130:	Parameter 'verCumpleCondicionNoAplica' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/modelo/Verificador.java:130:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:26:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:37:	Parameter 'llave' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:37:	Parameter 'texto' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:39:	Avoid excessively long variable names like base64EncryptedString
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:39:	Found 'DD'-anomaly for variable 'base64EncryptedString' (lines '39'-'52').
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:43:	Avoid variables with short names like md
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:43:	Local variable 'md' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:44:	Local variable 'digestOfPassword' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:44:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:44:	The String literal "utf-8" appears 4 times in this file; the first occurrence is on line 44
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:45:	Local variable 'keyBytes' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:46:	Local variable 'key' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:46:	The String literal "DESede" appears 4 times in this file; the first occurrence is on line 46
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:47:	Local variable 'cipher' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:48:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:49:	Local variable 'plainTextBytes' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:50:	Local variable 'buf' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:50:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:51:	Local variable 'base64Bytes' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:52:	Found 'DU'-anomaly for variable 'base64EncryptedString' (lines '52'-'69').
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:55:	Avoid throwing raw exception types.
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:57:	Avoid throwing raw exception types.
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:59:	Avoid throwing raw exception types.
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:61:	Avoid throwing raw exception types.
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:63:	Avoid throwing raw exception types.
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:65:	Avoid throwing raw exception types.
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:71:	A method/constructor shouldnt explicitly throw java.lang.Exception
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:71:	Parameter 'llave' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:71:	Parameter 'textoEncriptado' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:71:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:73:	Avoid excessively long variable names like base64EncryptedString
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:73:	Found 'DD'-anomaly for variable 'base64EncryptedString' (lines '73'-'89').
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:78:	Local variable 'message' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:79:	Avoid variables with short names like md
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:79:	Local variable 'md' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:80:	Local variable 'digestOfPassword' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:80:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:81:	Local variable 'keyBytes' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:82:	Local variable 'key' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:84:	Local variable 'decipher' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:85:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:87:	Local variable 'plainText' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:87:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:89:	Found 'DU'-anomaly for variable 'base64EncryptedString' (lines '89'-'106').
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:92:	Avoid throwing raw exception types.
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:94:	Avoid throwing raw exception types.
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:96:	Avoid throwing raw exception types.
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:98:	Avoid throwing raw exception types.
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:100:	Avoid throwing raw exception types.
+ejbModule/ec/gob/acess/esamyn/util/CifradoUtil.java:102:	Avoid throwing raw exception types.
+ejbModule/ec/gob/acess/esamyn/util/Md5.java:14:	A class which only has private constructors should be final
+ejbModule/ec/gob/acess/esamyn/util/Md5.java:14:	Avoid short class names like Md5
+ejbModule/ec/gob/acess/esamyn/util/Md5.java:26:	Parameter 'cadenaACodificar' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/util/Md5.java:28:	Avoid variables with short names like m
+ejbModule/ec/gob/acess/esamyn/util/Md5.java:30:	Local variable 'messageDigest' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/Md5.java:30:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/util/Md5.java:32:	Local variable 'hexString' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/Md5.java:34:	Local variable 'hex' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/Md5.java:34:	Potential violation of Law of Demeter (method chain calls)
+ejbModule/ec/gob/acess/esamyn/util/Md5.java:35:	Avoid using Literals in Conditional Statements
+ejbModule/ec/gob/acess/esamyn/util/Md5.java:35:	Avoid using if statements without curly braces
+ejbModule/ec/gob/acess/esamyn/util/Md5.java:35:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/util/PasswordUtil.java:13:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+ejbModule/ec/gob/acess/esamyn/util/PasswordUtil.java:16:	Parameter 'longitud' is not assigned and could be declared final
+ejbModule/ec/gob/acess/esamyn/util/PasswordUtil.java:16:	publicMethodCommentRequirement Required
+ejbModule/ec/gob/acess/esamyn/util/PasswordUtil.java:18:	Local variable 'milis' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/PasswordUtil.java:19:	Avoid variables with short names like r
+ejbModule/ec/gob/acess/esamyn/util/PasswordUtil.java:19:	Found 'DU'-anomaly for variable 'r' (lines '19'-'29').
+ejbModule/ec/gob/acess/esamyn/util/PasswordUtil.java:19:	Local variable 'r' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/PasswordUtil.java:20:	Avoid variables with short names like i
+ejbModule/ec/gob/acess/esamyn/util/PasswordUtil.java:22:	Avoid variables with short names like c
+ejbModule/ec/gob/acess/esamyn/util/PasswordUtil.java:22:	Local variable 'c' could be declared final
+ejbModule/ec/gob/acess/esamyn/util/PasswordUtil.java:23:	Useless parentheses.
+ejbModule/ec/gob/acess/esamyn/util/PasswordUtil.java:23:	Useless parentheses.
+ejbModule/ec/gob/acess/esamyn/util/PasswordUtil.java:24:	Prefer StringBuffer over += for concatenating strings
+ejbModule/ec/gob/acess/esamyn/util/PasswordUtil.java:28:	Potential violation of Law of Demeter (object not created locally)
+ejbModule/ec/gob/acess/esamyn/util/PasswordUtil.java:28:	When doing a String.toLowerCase()/toUpperCase() call, use a Locale

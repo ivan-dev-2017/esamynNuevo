@@ -3,14 +3,12 @@ package ec.gob.acess.esamyn.ws;
 import java.util.List;
 
 import javax.ejb.EJB;
-import javax.ejb.LocalBean;
-import javax.ejb.Stateless;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.HttpHeaders;
@@ -26,12 +24,10 @@ import ec.gob.acess.esamyn.modelo.Canton;
  * 
  * Clase CantonWebService.java que publica servicios web objeto Canton
  * 
- * @author Duval Barragan Fecha: Aug 25, 2017
+ * @author Duval Barragan @date Aug 25, 2017
  * @version 1.0
  *
  */
-@Stateless
-@LocalBean
 @Path("/canton")
 public class CantonWebService {
 

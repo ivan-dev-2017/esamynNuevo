@@ -15,13 +15,24 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlType;
 
 /**
+ * 
+ * Entidad que refleja la estructura de tabla esa_respuesta
+ * 
+ * @author Duval Barragan
+ * @date Aug 28, 2017
+ * @version 1.0
  *
- * @author saviasoft3
  */
 @Entity
 @Table(name = "esa_respuesta")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "respuesta")
 public class Respuesta implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -30,19 +41,8 @@ public class Respuesta implements Serializable {
 	@Basic(optional = false)
 	@Column(name = "res_id")
 	private Long codigo;
-	@Basic(optional = false)
-	@Column(name = "res_creado")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date creado;
-	@Basic(optional = false)
-	@Column(name = "res_modificado")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date modificado;
-	@Column(name = "res_creado_por")
-	private String creadoPor;
-	@Column(name = "res_modificado_por")
-	private String modificadoPor;
 	@Column(name = "res_valor_numero")
+	@XmlTransient
 	private BigInteger valorNumero;
 	@Column(name = "res_valor_texto")
 	private String valorTexto;
@@ -64,46 +64,6 @@ public class Respuesta implements Serializable {
 
 	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
-	}
-
-	public Date getCreado() {
-		return creado;
-	}
-
-	public void setCreado(Date creado) {
-		this.creado = creado;
-	}
-
-	public Date getModificado() {
-		return modificado;
-	}
-
-	public void setModificado(Date modificado) {
-		this.modificado = modificado;
-	}
-
-	public String getCreadoPor() {
-		return creadoPor;
-	}
-
-	public void setCreadoPor(String creadoPor) {
-		this.creadoPor = creadoPor;
-	}
-
-	public String getModificadoPor() {
-		return modificadoPor;
-	}
-
-	public void setModificadoPor(String modificadoPor) {
-		this.modificadoPor = modificadoPor;
-	}
-
-	public BigInteger getValorNumero() {
-		return valorNumero;
-	}
-
-	public void setValorNumero(BigInteger valorNumero) {
-		this.valorNumero = valorNumero;
 	}
 
 	public String getValorTexto() {

@@ -10,6 +10,9 @@ import javax.ejb.EJB;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
+import com.saviasoft.persistence.util.dao.GenericDao;
+import com.saviasoft.persistence.util.service.impl.GenericServiceImpl;
+
 import ec.gob.acess.esamyn.dao.RespuestaDAO;
 import ec.gob.acess.esamyn.dto.MensajeDto;
 import ec.gob.acess.esamyn.exception.EvaluacionException;
@@ -21,14 +24,15 @@ import ec.gob.acess.esamyn.modelo.Respuesta;
 /**
  * 
  * Clase: EvaluacionBean.java
+ * 
  * @author Juan Ochoa
- * Fecha: Aug 25, 2017
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */
 @Stateless
 @LocalBean
-public class EvaluacionBean {
+public class EvaluacionBean extends GenericServiceImpl<Evaluacion, Long> {
 
 	@EJB
 	private RespuestaDAO respuestaDAO;
@@ -46,8 +50,6 @@ public class EvaluacionBean {
 
 		// 0. Se crea el objeto evaluacion
 		Evaluacion evaluacion = new Evaluacion();
-		evaluacion.setCreado(new Date());
-		evaluacion.setCreadoPor(usuario);
 		evaluacion.setEstablecimientoSalud(establecimiento);
 		evaluacion.setFechaInicio(new Date());
 
@@ -71,5 +73,11 @@ public class EvaluacionBean {
 
 		// 4. Actualizar las encuestas con el ID de la evaluacion que se crea
 
+	}
+
+	@Override
+	public GenericDao<Evaluacion, Long> getDao() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
