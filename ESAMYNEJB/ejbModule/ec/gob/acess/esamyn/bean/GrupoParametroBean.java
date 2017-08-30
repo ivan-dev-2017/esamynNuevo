@@ -16,7 +16,8 @@ import ec.gob.acess.esamyn.modelo.GrupoParametro;
  * 
  * Clase que maneja la logica de clase GrupoParametro
  * 
- * @author Duval Barragan @date Aug 25, 2017
+ * @author Duval Barragan
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */
@@ -24,41 +25,41 @@ import ec.gob.acess.esamyn.modelo.GrupoParametro;
 @LocalBean
 public class GrupoParametroBean extends GenericServiceImpl<GrupoParametro, Long> {
 
-    @EJB
-    private GrupoParametroDAO grupoParametroDAO;
+	@EJB
+	private GrupoParametroDAO grupoParametroDAO;
 
-    @Override
-    public GenericDao<GrupoParametro, Long> getDao() {
-	return grupoParametroDAO;
-    }
-
-    public MensajeDto guardar(GrupoParametro grupoParametro) {
-
-	MensajeDto mensajeDto = new MensajeDto();
-
-	try {
-
-	    if (grupoParametro.getCodigo() == null) {
-
-		mensajeDto.setError(false);
-		mensajeDto.setMensaje("GrupoParametro Guardado");
-		create(grupoParametro);
-		mensajeDto.setObjeto(grupoParametro);
-	    } else {
-		mensajeDto.setError(false);
-		mensajeDto.setMensaje("Actualiza Objeto");
-		update(grupoParametro);
-				mensajeDto.setObjeto(grupoParametro);
-	    }
-
-	} catch (Exception e) {
-	    mensajeDto.setError(true);
-	    mensajeDto.setMensaje("Error al guardar: " + e.getMessage());
-	    mensajeDto.setObjeto(null);
+	@Override
+	public GenericDao<GrupoParametro, Long> getDao() {
+		return grupoParametroDAO;
 	}
 
-	return mensajeDto;
+	public MensajeDto guardar(GrupoParametro grupoParametro) {
 
-    }
+		MensajeDto mensajeDto = new MensajeDto();
+
+		try {
+
+			if (grupoParametro.getCodigo() == null) {
+
+				mensajeDto.setError(false);
+				mensajeDto.setMensaje("GrupoParametro Guardado");
+				create(grupoParametro);
+				mensajeDto.setObjeto(grupoParametro);
+			} else {
+				mensajeDto.setError(false);
+				mensajeDto.setMensaje("Actualiza Objeto");
+				update(grupoParametro);
+				mensajeDto.setObjeto(grupoParametro);
+			}
+
+		} catch (Exception e) {
+			mensajeDto.setError(true);
+			mensajeDto.setMensaje("Error al guardar: " + e.getMessage());
+			mensajeDto.setObjeto(null);
+		}
+
+		return mensajeDto;
+
+	}
 
 }

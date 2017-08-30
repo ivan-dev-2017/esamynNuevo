@@ -12,14 +12,12 @@ export class FoesamnComponent implements OnInit {
   preguntacero={};
     
   constructor( private coreesamynService:CoreesamynService ) { 
-      
       this.getPreguntas();
   }
 
   ngOnInit() {
       
   }
-  
   public getPreguntas(){
       this.coreesamynService.getPreguntasList().subscribe(data=>{
           //console.log("retorno preguntas servicio " + JSON.stringify(data));
@@ -28,7 +26,7 @@ export class FoesamnComponent implements OnInit {
           this.preguntacero= this.preguntas[0];
       });
   }
-  
+
   public saveEncuesta(){
       console.log("entrassdd " );
       console.log("enviando preguntas " + JSON.stringify( this.preguntas));

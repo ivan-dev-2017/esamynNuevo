@@ -1,14 +1,13 @@
 package ec.gob.acess.esamyn.dao;
 
 import javax.ejb.Local;
-
 import com.saviasoft.persistence.util.dao.GenericDao;
-
 import ec.gob.acess.esamyn.modelo.Pregunta;
 
 /**
  * 
- * Clase: PreguntaDAO.java
+ * Interfaz PreguntaDAO para clase Pregunta
+ * 
  * @author Duval Barragan
  * @date Aug 25, 2017
  * @version 1.0
