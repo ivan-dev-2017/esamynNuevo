@@ -21,7 +21,7 @@ export const appRoutes: Routes = [
 	{ path: 'home', component: HomeComponent },
 	//{ path: 'foesamn', component: FoesamnComponent },
     // otherwise redirect to home
-	{ path: 'form_component', component: FormComponent },
+	{ path: 'form_component/:id', component: FormComponent },
 	{ path: 'formulario_list', component: FoesamnComponent },
 	{ path: 'formularioListComponent', component: FormularioListComponent },
 	{ path: 'evaluacionlist', component: EvaluacionlistComponent },
