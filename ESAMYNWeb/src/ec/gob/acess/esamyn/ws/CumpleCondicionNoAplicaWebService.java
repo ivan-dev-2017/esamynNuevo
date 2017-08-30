@@ -27,7 +27,8 @@ import ec.gob.acess.esamyn.modelo.CumpleCondicionNoAplica;
  * Clase CumpleCondicionNoAplicaWebService.java que publica servicios web objeto
  * CumpleCondicionNoAplica
  * 
- * @author Duval Barragan @date Aug 25, 2017
+ * @author Duval Barragan
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */
