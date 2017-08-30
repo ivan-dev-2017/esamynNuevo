@@ -161,7 +161,7 @@ export class CoreesamynService extends BaseService {
       });
     }
     
-    getEncuestaVacia(data){
+    getEncuestaVacia(){
         return this.http.get('./app/mock/encuestavacia.json').map((response)=>{
           let paginatedListx=response.json();
           return paginatedListx.objeto;
