@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {  CoreesamynService } from '../service/coreesamyn.service';
+import { FormBuilder,Validators,FormControl,FormGroup } from '@angular/forms';
+import { MessageComponent } from '../comp/message/message.component';
+
+
+
 
 @Component({
   selector: 'app-establecimiento-salud',
@@ -7,26 +13,58 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EstablecimientoSaludComponent implements OnInit {
 
-  establecimientoSalud={
-          "ess_id":null,
-          "ess_creado":null,
-          "ess_modificado":null,
-          "ess_canton":null,
-          "ess_persona_juridica":null,
-          "ess_nombre":null,
-          "ess_unicodigo":null,
-          "ess_direccion":null,
-          "ess_latitud":null,
-          "ess_longitud":null,
-          "ess_telefono":null,
-          "ess_correo_electronico":null,
-          "ess_nombre_responsable":null,
-          "ess_zona":null,
-          "ess_distrito":null
-  };
-  constructor() { }
+  messages:string = "Invalido";
+  personasJuridicas = [];
+  provincias = [];
+  cantones = [];
+  establecimientoSalud = {};
+  provincia={"id":null,"codigo":null,"nombre":null,"cantonList":null};
+  loadingIndicator: boolean = true;
+  form = FormBuilder;
+    
+  constructor(private coreesamyn:CoreesamynService) { 
+    console.log("<<<<< ENTRO EN ESTABLECIMIENTO SALUD  >>>>>");
+    
+    //OBTENER PROVINCIAS DESDE JSON
+    this.coreesamyn.getProvinciasList().subscribe(
+    data=>{
+        console.log("<<<<<  retorno: "+JSON.stringify(data));
+        this.provincias=data;
+        setTimeout(() => {this.loadingIndicator = false; }, 1500);
+    });
+      
+    //OBTENER PERSONAS JURIDICAS DESDE JSON
+    this.coreesamyn.getPersonaJuridicaList().subscribe(
+    data=>{
+        console.log("<<<<<  retorno: "+JSON.stringify(data));
+        this.personasJuridicas=data;
+        setTimeout(() => {this.loadingIndicator = false; }, 1500);
+    });
+      
+    //OBTENER FORMULARIO DE ESTABLECIMIENTO SALUD DESDE JSON
+    this.coreesamyn.getEstablecimientoSaludList().subscribe(
+    data=>{
+        console.log("<<<<<  retorno: "+JSON.stringify(data));
+        this.establecimientoSalud=data;
+        setTimeout(() => {this.loadingIndicator = false; }, 1500);
+    });
+  }
 
   ngOnInit() {
+  }
+    
+  save(){
+      console.log(JSON.stringify(this.establecimientoSalud));
+  }
+    
+  cambiarCantones(){
+      //OBTENER CANTONES DESDE JSON
+      this.coreesamyn.getCantonesList(this.provincia.id).subscribe(
+      data=>{
+          console.log("<<<<<  retorno: "+JSON.stringify(data));
+          this.cantones=data;
+          setTimeout(() => {this.loadingIndicator = false; }, 1500);
+      });
   }
 
 }

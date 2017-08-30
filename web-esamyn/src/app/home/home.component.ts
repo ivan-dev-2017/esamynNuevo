@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   constructor(		  private globalEventsManager: GlobaleventsmanagerService, 
 	      private alertService: AlertService,
 	      private dialogService:DialogService) { 
-	  console.log("===> ingresa a inicializar CONSYRUCTOR HOME");
+	  console.log("===> ingresa a inicializar CONSTRUCTOR HOME");
 	  this.page.pageNumber = 0;
 	  this.page.size = 3;
 	  this.globalEventsManager.showNavBarEmitter.subscribe((mode)=>{
@@ -61,14 +61,12 @@ export class HomeComponent implements OnInit {
   }
   
   showPrompt() {
-	    this.dialogService.addDialog(ModalpromptComponent, {
-	      title:'MODAL PRUEBA',
-	      question:'What is your name?: '})
-	      .subscribe((message)=>{
-	        //We get dialog result
-	        this.promptMessage = message;
-	      });
-	  }
-
-
+    this.dialogService.addDialog(ModalpromptComponent, {
+      title:'MODAL PRUEBA',
+      question:'What is your name?: '})
+      .subscribe((message)=>{
+        //We get dialog result
+        this.promptMessage = message;
+      });
+  }
 }

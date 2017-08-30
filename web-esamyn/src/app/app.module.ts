@@ -40,7 +40,6 @@ import { EstablecimientoSaludComponent } from './establecimiento-salud/estableci
 import { FoesamnComponent } from './encuesta/foesamn/foesamn.component';
 
 
-
 /**
  * COMPONENTES DE LA SOLUCION 
  */
@@ -48,6 +47,7 @@ import { AlertComponent } from './comp/alert/alert.component';
 import {SafeHtmlPipe} from "./comp/pipe/safehtml.pipe";
 import { ModalpromptComponent } from './comp/modalprompt/modalprompt.component';
 import { MessageComponent } from './comp/message/message.component';
+
 
 @NgModule({
   declarations: [
