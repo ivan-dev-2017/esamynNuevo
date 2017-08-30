@@ -13,6 +13,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * 
@@ -25,6 +29,8 @@ import javax.persistence.Transient;
  */
 @Entity
 @Table(name = "esa_parametro")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "catalogo")
 public class Parametro implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -52,8 +58,10 @@ public class Parametro implements Serializable {
 	@JoinColumn(name = "par_grupo_parametro", referencedColumnName = "gpa_id")
 	@ManyToOne
 	private GrupoParametro grupoParametro;
+	@XmlTransient
 	@Transient
 	private List<Verificador> verificadorList;
+	@XmlTransient
 	@Transient
 	private List<ParametroPregunta> parametroPreguntaList;
 
