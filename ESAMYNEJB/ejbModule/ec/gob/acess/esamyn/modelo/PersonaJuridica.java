@@ -31,53 +31,53 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "persona jurdidica")
 public class PersonaJuridica implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Basic(optional = false)
-	@Column(name = "pju_id")
-	private Long codigo;
-	@Column(name = "pju_razon_social")
-	@XmlTransient
-	private String razonSocial;
-	@Column(name = "pju_ruc")
-	private String ruc;
-	@Transient
-	private List<EstablecimientoSalud> establecimientoSaludLista;
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "pju_id")
+    private Long codigo;
+    @Column(name = "pju_razon_social")
+    private String razonSocial;
+    @Column(name = "pju_ruc")
+    private String ruc;
+    @Transient
+    @XmlTransient
+    private List<EstablecimientoSalud> establecimientoSaludLista;
 
-	public PersonaJuridica() {
-	}
+    public PersonaJuridica() {
+    }
 
-	public Long getCodigo() {
-		return codigo;
-	}
+    public Long getCodigo() {
+	return codigo;
+    }
 
-	public void setCodigo(Long codigo) {
-		this.codigo = codigo;
-	}
+    public void setCodigo(Long codigo) {
+	this.codigo = codigo;
+    }
 
-	public String getRazonSocial() {
-		return razonSocial;
-	}
+    public String getRazonSocial() {
+	return razonSocial;
+    }
 
-	public void setRazonSocial(String razonSocial) {
-		this.razonSocial = razonSocial;
-	}
+    public void setRazonSocial(String razonSocial) {
+	this.razonSocial = razonSocial;
+    }
 
-	public String getRuc() {
-		return ruc;
-	}
+    public String getRuc() {
+	return ruc;
+    }
 
-	public void setRuc(String ruc) {
-		this.ruc = ruc;
-	}
+    public void setRuc(String ruc) {
+	this.ruc = ruc;
+    }
 
-	public List<EstablecimientoSalud> getEstablecimientoSaludLista() {
-		return establecimientoSaludLista;
-	}
+    public List<EstablecimientoSalud> getEstablecimientoSaludLista() {
+	return establecimientoSaludLista;
+    }
 
-	public void setEstablecimientoSaludLista(List<EstablecimientoSalud> establecimientoSaludLista) {
-		this.establecimientoSaludLista = establecimientoSaludLista;
-	}
+    public void setEstablecimientoSaludLista(List<EstablecimientoSalud> establecimientoSaludLista) {
+	this.establecimientoSaludLista = establecimientoSaludLista;
+    }
 
 }

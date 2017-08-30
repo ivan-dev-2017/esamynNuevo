@@ -13,6 +13,7 @@ import org.jboss.logging.Logger;
 import ec.gob.acess.esamyn.bean.MailBean;
 import ec.gob.acess.esamyn.cliente.QueueMailServicio;
 import ec.gob.acess.esamyn.dto.MailMessage;
+import ec.gob.acess.esamyn.exception.MailException;
 
 /**
  * 
@@ -32,9 +33,7 @@ public class QueueMailListener implements MessageListener {
 	@EJB
 	private MailBean mailBean;
 
-	/**
-	 * @see javax.jms.MessageListener#onMessage(javax.jms.Message)
-	 */
+	
 	@Override
 	public void onMessage(Message message) {
 
@@ -46,6 +45,8 @@ public class QueueMailListener implements MessageListener {
 				mailBean.sender(mm);
 			} catch (JMSException e) {
 				e.printStackTrace();
+			} catch (MailException e) {
+			    e.printStackTrace();
 			}
 		}
 
