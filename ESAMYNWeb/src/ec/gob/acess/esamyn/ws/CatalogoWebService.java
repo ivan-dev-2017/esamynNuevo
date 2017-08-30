@@ -30,8 +30,6 @@ import ec.gob.acess.esamyn.modelo.Catalogo;
  * @version 1.0
  *
  */
-@Stateless
-@LocalBean
 @Path("/catalogo")
 public class CatalogoWebService {
 

@@ -42,7 +42,10 @@ public class QueueMailServicio {
 	@Resource(mappedName = "java:/jms/queue/MailESAMYN")
 	private Queue queue;
 
-	
+	/**
+	 * Metodo encola correo
+	 * @param mmessage
+	 */
 	public void encolarMail(MailMessage mmessage) {
 
 		LOG.info("ENCOLANDO MAIL...");

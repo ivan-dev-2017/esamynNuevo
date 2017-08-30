@@ -1,8 +1,6 @@
 package ec.gob.acess.esamyn.ws;
 
 import javax.ejb.EJB;
-import javax.ejb.LocalBean;
-import javax.ejb.Stateless;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -25,8 +23,6 @@ import ec.gob.acess.esamyn.dto.PreguntaWsDto;
  * @version 1.0
  *
  */
-@Stateless
-@LocalBean
 @Path("/pregunta")
 public class PreguntaWebService {
 
