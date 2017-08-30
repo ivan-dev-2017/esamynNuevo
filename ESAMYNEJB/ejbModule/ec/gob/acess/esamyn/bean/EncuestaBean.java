@@ -19,7 +19,8 @@ import ec.gob.acess.esamyn.modelo.Usuario;
  * 
  * Clase que maneja la logica de clase Encuesta
  * 
- * @author Duval Barragan @date Aug 25, 2017
+ * @author Duval Barragan
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */

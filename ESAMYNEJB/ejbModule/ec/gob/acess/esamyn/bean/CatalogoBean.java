@@ -21,7 +21,8 @@ import ec.gob.acess.esamyn.modelo.Catalogo;
  * 
  * Clase que maneja la logica de clase Catalago
  * 
- * @author Duval Barragan @date Aug 25, 2017
+ * @author Duval Barragan
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */
@@ -29,58 +30,58 @@ import ec.gob.acess.esamyn.modelo.Catalogo;
 @LocalBean
 public class CatalogoBean extends GenericServiceImpl<Catalogo, Long> {
 
-    @EJB
-    private CatalogoDAO catalogoDAO;
+	@EJB
+	private CatalogoDAO catalogoDAO;
 
-    @Override
-    public GenericDao<Catalogo, Long> getDao() {
-	return catalogoDAO;
-
-    }
-
-    public MensajeDto guardar(Catalogo catalogo) {
-	MensajeDto mensajeDto = new MensajeDto();
-
-	try {
-
-	    if (catalogo.getCodigo() == null) {
-
-		mensajeDto.setError(false);
-		mensajeDto.setMensaje("Catalago Guardado");
-		create(catalogo);
-		mensajeDto.setObjeto(catalogo);
-	    } else {
-		mensajeDto.setError(false);
-		mensajeDto.setMensaje("Actualiza Objeto");
-		update(catalogo);
-		mensajeDto.setObjeto(catalogo);
-	    }
-
-	} catch (Exception e) {
-	    mensajeDto.setError(true);
-	    mensajeDto.setMensaje("Error al guardar: " + e.getMessage());
-	    mensajeDto.setObjeto(null);
+	@Override
+	public GenericDao<Catalogo, Long> getDao() {
+		return catalogoDAO;
 
 	}
-	return mensajeDto;
 
-    }
+	public MensajeDto guardar(Catalogo catalogo) {
+		MensajeDto mensajeDto = new MensajeDto();
 
-    public Catalogo buscarPorIdentificador(CatalogoEnum catalogoEnum) {
+		try {
 
-	String[] ands = { "identificador" };
-	CriteriaTypeEnum[] operator = { CriteriaTypeEnum.STRING_EQUALS };
-	Object[] valores = { catalogoEnum.toString() };
+			if (catalogo.getCodigo() == null) {
 
-	Criteria criteria = new Criteria(ands, operator, valores);
-	
-	List<Catalogo> lista = findByCriterias(criteria);
-	
-	if(lista != null && !lista.isEmpty()) {
-	    return lista.get(0);
+				mensajeDto.setError(false);
+				mensajeDto.setMensaje("Catalago Guardado");
+				create(catalogo);
+				mensajeDto.setObjeto(catalogo);
+			} else {
+				mensajeDto.setError(false);
+				mensajeDto.setMensaje("Actualiza Objeto");
+				update(catalogo);
+				mensajeDto.setObjeto(catalogo);
+			}
+
+		} catch (Exception e) {
+			mensajeDto.setError(true);
+			mensajeDto.setMensaje("Error al guardar: " + e.getMessage());
+			mensajeDto.setObjeto(null);
+
+		}
+		return mensajeDto;
+
 	}
 
-	return null;
-    }
+	public Catalogo buscarPorIdentificador(CatalogoEnum catalogoEnum) {
+
+		String[] ands = { "identificador" };
+		CriteriaTypeEnum[] operator = { CriteriaTypeEnum.STRING_EQUALS };
+		Object[] valores = { catalogoEnum.toString() };
+
+		Criteria criteria = new Criteria(ands, operator, valores);
+
+		List<Catalogo> lista = findByCriterias(criteria);
+
+		if (lista != null && !lista.isEmpty()) {
+			return lista.get(0);
+		}
+
+		return null;
+	}
 
 }

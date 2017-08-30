@@ -1,14 +1,13 @@
 package ec.gob.acess.esamyn.dao;
 
 import javax.ejb.Local;
-
 import com.saviasoft.persistence.util.dao.GenericDao;
-
 import ec.gob.acess.esamyn.modelo.Evaluacion;
 
 /**
  * 
- * Clase: EvaluacionDAO.java
+ * Interfaz EvaluacionDAO para clase Evaluacion
+ * 
  * @author Duval Barragan
  * @date Aug 25, 2017
  * @version 1.0
@@ -16,6 +15,5 @@ import ec.gob.acess.esamyn.modelo.Evaluacion;
  */
 @Local
 public interface EvaluacionDAO extends GenericDao<Evaluacion, Long> {
-	
-}
 
+}
