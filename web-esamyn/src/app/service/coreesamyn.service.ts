@@ -13,6 +13,8 @@ export class CoreesamynService extends BaseService {
       this.config =this._config;
   }
   
+  
+  
   getFormulariosList(){ 
       console.log( "==Entra en CoreesamynService getFormulariosList" );
       //return this.getAllPaginated(null, 'formulario.crud.findall');
