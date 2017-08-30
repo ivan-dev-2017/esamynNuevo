@@ -85,6 +85,84 @@
             ]
           }
         ]
+      },
+      {
+        "codigo": 7390,
+        "texto": "2. El ES cuenta con infraestructura y equipamiento mínimo requerido para el trabajo de parto. El espacio adecuado será el siguiente<br>1. Paredes pintadas con colores cálidos (claros del rojo, naranja o amarillo), sin azulejo.<br>2.Iluminación indirecta (luz cálida aplique en las paredes) <br>3. Climatización automatizado o portátil que permita ajustar la temperatura en 25°<br>4. Debe permitir el libre movimiento de la embarazada El equipamiento mínimo será el siguiente:<br>1. Pelota de dilatación<br>2. Cobija <br>Si deberá cumplir con todas las características indicadas para marcar“sí”.",
+        "ayuda": null,
+        "prefijo": null,
+        "subfijo": null,
+        "validacion": null,
+        "orden": 2,
+        "codigoTipoPregunta": null,
+        "etiquetaTipoPregunta": null,
+        "codigoRespuesta": null,
+        "codigoEncuesta": null,
+        "valorNumero": null,
+        "valorTexto": null,
+        "valorFecha": null,
+        "valorBooleano": null,
+        "preguntaLista": [
+          {
+            "codigo": 7391,
+            "texto": "SI",
+            "ayuda": null,
+            "prefijo": null,
+            "subfijo": null,
+            "validacion": null,
+            "orden": 1,
+            "codigoTipoPregunta": null,
+            "etiquetaTipoPregunta": null,
+            "codigoRespuesta": null,
+            "codigoEncuesta": null,
+            "valorNumero": null,
+            "valorTexto": null,
+            "valorFecha": null,
+            "valorBooleano": null,
+            "preguntaLista": [
+            ]
+          },
+          {
+            "codigo": 7391,
+            "texto": "NO",
+            "ayuda": null,
+            "prefijo": null,
+            "subfijo": null,
+            "validacion": null,
+            "orden": 2,
+            "codigoTipoPregunta": null,
+            "etiquetaTipoPregunta": null,
+            "codigoRespuesta": null,
+            "codigoEncuesta": null,
+            "valorNumero": null,
+            "valorTexto": null,
+            "valorFecha": null,
+            "valorBooleano": null,
+            "preguntaLista": [
+              
+            ]
+          },
+          {
+            "codigo": 7391,
+            "texto": "Observaciones:",
+            "ayuda": null,
+            "prefijo": null,
+            "subfijo": null,
+            "validacion": null,
+            "orden": 2,
+            "codigoTipoPregunta": null,
+            "etiquetaTipoPregunta": null,
+            "codigoRespuesta": null,
+            "codigoEncuesta": null,
+            "valorNumero": null,
+            "valorTexto": null,
+            "valorFecha": null,
+            "valorBooleano": null,
+            "preguntaLista": [
+              
+            ]
+          }
+        ]
       }
     ]
   }

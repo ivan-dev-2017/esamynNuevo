@@ -1,30 +1,30 @@
 <div class="row bg-blue">
 	<div class="col-md-2 ">ZONA</div><div class="col-md-1" style="background-color:white; color:black;">bb</div>
 	<div class="col-md-2">DISTRITO</div><div class="col-md-1" style="background-color:white; color:black;">dd</div>
-	<div class="col-md-4">NOMBRE ESTABLECIMIENTO DE SALUD</div><div class="col-md-4" style="background-color:white; color:black;">ff</div>
+	<div class="col-md-3">NOMBRE ESTABLECIMIENTO DE SALUD</div><div class="col-md-3" style="background-color:white; color:black;">ff</div>
 </div>
 <div class="row bg-blue">
 	<div class="col-md-4">NOMBRE RESPONSABLE ES</div><div class="col-md-4" style="background-color:white; color:black;">ff</div>
-	<div class="col-md-4">CARGO</div><div class="col-md-4" style="background-color:white; color:black;">ff</div>
+	<div class="col-md-3">CARGO</div><div class="col-md-3" style="background-color:white; color:black;">ff</div>
 </div>
 <div class="row bg-blue">
 	<div class="col-md-4">UNICODE</div><div class="col-md-4" style="background-color:white; color:black;">ff</div>
-	<div class="col-md-4">NOMBRE EVALUADOR/A</div><div class="col-md-4" style="background-color:white; color:black;">ff</div>
+	<div class="col-md-3">NOMBRE EVALUADOR/A</div><div class="col-md-3" style="background-color:white; color:black;">ff</div>
 </div>
 <div class="row bg-blue">
 	<div class="col-md-4">FECHA</div>
 	<div class="col-md-1" style="background-color:white; color:black;">dd</div>
 	<div class="col-md-1" style="background-color:white; color:black;">mm</div>
 	<div class="col-md-1" style="background-color:white; color:black;">yyyy</div>
-	<div class="col-md-4">NUMERO DE PERSONAL QUE TRABAJA EN EL ES</div>
-	<div class="col-md-4" style="background-color:white; color:black;">xx</div>
+	<div class="col-md-3">NUMERO DE PERSONAL QUE TRABAJA EN EL ES</div>
+	<div class="col-md-3" style="background-color:white; color:black;">xx</div>
 </div>
 <div class="row bg-navy">
-	<div class="col-md-16">A. DATOS DEL ESTABLECIMIENTO DE SALUD</div>
+	<div class="col-md-14">A. DATOS DEL ESTABLECIMIENTO DE SALUD</div>
 </div>
 <div class="row bg-blue">
 	<div class="col-md-4">Tipo de establecimiento</div>
-	<div class="col-md-12" style="background-color:white; color:black;"> xx</div>
+	<div class="col-md-10" style="background-color:white; color:black;"> xx</div>
 </div>
 <div class="row bg-navy">
 	<div class="col-md-16">B. OBSERVACIONES</div>
@@ -32,17 +32,17 @@
 <div class="row bg-blue">
 	<div class="col-md-1">VERIF</div>
 	<div class="col-md-5">PREGUNTAS</div>
-	<div class="col-md-8">RESPUESTAS</div>
+	<div class="col-md-6">RESPUESTAS</div>
 </div>
-	<div *ngIf="preguntas?.length && preguntas[0].orden==1" id="pregunta1" class="row">
-		<div class="col-md-1 bg-lime"></div>
-		<div class="col-md-5  bg-lime" [innerHTML]="preguntas[0].texto"></div>
-		<div class="col-md-4" *ngIf="preguntas[0].preguntaLista?.length">
+	<div *ngIf="preguntas?.length  && preguntas?.length > 0 && preguntas[0].orden==1" id="pregunta1" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[0].texto"></div>
+		<div class="col-md-3" *ngIf="preguntas[0].preguntaLista?.length">
 			<div class="row" *ngIf="preguntas[0].preguntaLista[0].orden==1">
 				<div class="col-md-2">
 					{{preguntas[0].preguntaLista[0].texto}}
 				</div>
-				<div class="col-md-2">
+				<div class="col-md-1" *ngIf="!preguntas[0].preguntaLista[1].valorBooleano">
 					<input type="checkbox" [(ngModel)]="preguntas[0].preguntaLista[0].valorBooleano" />
 				</div>
 			</div>	
@@ -50,137 +50,137 @@
 				<div class="col-md-2">
 					{{preguntas[0].preguntaLista[0].preguntaLista[0].texto}}
 				</div>
-				<div class="col-md-2">
+				<div class="col-md-1">
 					<input type="text" [(ngModel)]="preguntas[0].preguntaLista[0].preguntaLista[0].valorTexto" />
 				</div>
 			</div>	
 		</div>
-		<div class="col-md-4" *ngIf="preguntas[0].preguntaLista?.length && preguntas[0].preguntaLista[1].orden==2">
+		<div class="col-md-2" *ngIf="preguntas[0].preguntaLista?.length && preguntas[0].preguntaLista[1].orden==2">
 			{{preguntas[0].preguntaLista[1].texto}}
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-1" *ngIf="!preguntas[0].preguntaLista[0].valorBooleano">
 			<input type="checkbox"  [(ngModel)]="preguntas[0].preguntaLista[1].valorBooleano" />
 		</div>
 	</div>
-	<div id="pregunta2" class="row">
-		<div class="col-md-1 bg-lime"></div>
-		<div class="col-md-5  bg-lime">PREGUNTA 2</div>
-		<div class="col-md-8">
+	<div *ngIf="preguntas?.length && preguntas?.length > 1 && preguntas[1].orden==2"  id="pregunta2" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[1].texto"></div>
+		<div class="col-md-6">
 			<div class="row">
 				<div class="col-md-2">
-					SI
+					{{preguntas[1].preguntaLista[0].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[1].preguntaLista[1].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[1].preguntaLista[0].valorBooleano" />
 				</div>
 				<div class="col-md-2">
-					<input type="checkbox"/>
+					{{preguntas[1].preguntaLista[1].texto}}
 				</div>
-				<div class="col-md-2">
-					NO
-				</div>
-				<div class="col-md-2">
-					<input type="checkbox"/>
+				<div class="col-md-1" *ngIf="!preguntas[1].preguntaLista[0].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[1].preguntaLista[1].valorBooleano" />
 				</div>
 			</div>	
 			<div class="row">
-				<div class="col-md-4">
-					Observaciones
+				<div class="col-md-3">
+					{{preguntas[1].preguntaLista[2].texto}}
 				</div>
-				<div class="col-md-4">
-					<textarea rows="4" cols="50"></textarea>
-				</div>
-			</div>	
-		</div>
-	</div>
-	<div id="pregunta3" class="row">
-		<div class="col-md-1 bg-lime"></div>
-		<div class="col-md-5  bg-lime">PREGUNTA 3</div>
-		<div class="col-md-8">
-			<div class="row">
-				<div class="col-md-2">
-					SI
-				</div>
-				<div class="col-md-2">
-					<input type="checkbox"/>
-				</div>
-				<div class="col-md-2">
-					NO
-				</div>
-				<div class="col-md-2">
-					<input type="checkbox"/>
-				</div>
-			</div>	
-			<div class="row">
-				<div class="col-md-4">
-					Observaciones
-				</div>
-				<div class="col-md-4">
-					<textarea rows="4" cols="50"></textarea>
+				<div class="col-md-3">
+					<textarea rows="4" cols="50" [(ngModel)]="preguntas[1].preguntaLista[2].valorTexto" ></textarea>
 				</div>
 			</div>	
 		</div>
 	</div>
-	<div id="pregunta4" class="row">
-		<div class="col-md-1 bg-lime"></div>
-		<div class="col-md-5  bg-lime">PREGUNTA 4</div>
-		<div class="col-md-8">
+	<div *ngIf="preguntas?.length && preguntas?.length > 2 && preguntas[2].orden!=null && preguntas[2].orden==2" id="pregunta3" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[2].texto"></div>
+		<div class="col-md-6">
 			<div class="row">
 				<div class="col-md-2">
-					SI
+					{{preguntas[2].preguntaLista[0].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[2].preguntaLista[1].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[2].preguntaLista[0].valorBooleano" />
 				</div>
 				<div class="col-md-2">
-					<input type="checkbox"/>
+					{{preguntas[2].preguntaLista[1].texto}}
 				</div>
-				<div class="col-md-2">
-					NO
-				</div>
-				<div class="col-md-2">
-					<input type="checkbox"/>
+				<div class="col-md-1" *ngIf="!preguntas[2].preguntaLista[0].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[2].preguntaLista[1].valorBooleano" />
 				</div>
 			</div>	
 			<div class="row">
-				<div class="col-md-4">
-					Observaciones
+				<div class="col-md-3">
+					{{preguntas[2].preguntaLista[2].texto}}
 				</div>
-				<div class="col-md-4">
-					<textarea rows="4" cols="50"></textarea>
+				<div class="col-md-3">
+					<textarea rows="4" cols="50" [(ngModel)]="preguntas[2].preguntaLista[2].valorTexto" ></textarea>
 				</div>
 			</div>	
 		</div>
 	</div>
-	<div id="pregunta5" class="row">
-		<div class="col-md-1 bg-lime"></div>
-		<div class="col-md-5  bg-lime">PREGUNTA 5</div>
-		<div class="col-md-8">
+	<div *ngIf="preguntas?.length && preguntas?.length > 3 && preguntas[3].orden!=null && preguntas[3].orden==3"  id="pregunta4" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[3].texto"></div>
+		<div class="col-md-6">
 			<div class="row">
 				<div class="col-md-2">
-					SI
+					{{preguntas[3].preguntaLista[0].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[3].preguntaLista[1].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[3].preguntaLista[0].valorBooleano" />
 				</div>
 				<div class="col-md-2">
-					<input type="checkbox"/>
+					{{preguntas[3].preguntaLista[1].texto}}
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-1" *ngIf="!preguntas[3].preguntaLista[0].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[3].preguntaLista[1].valorBooleano" />
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col-md-3">
+					{{preguntas[3].preguntaLista[2].texto}}
+				</div>
+				<div class="col-md-3">
+					<textarea rows="4" cols="50" [(ngModel)]="preguntas[3].preguntaLista[2].valorTexto" ></textarea>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div  *ngIf="preguntas?.length && preguntas?.length > 4 && preguntas[4].orden!=null && preguntas[4].orden==4" id="pregunta5" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[4].texto"></div>
+		<div class="col-md-6">
+			<div class="row">
+				<div class="col-md-2">
+					{{preguntas[4].preguntaLista[0].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[4].preguntaLista[1].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[4].preguntaLista[0].valorBooleano" />
+				</div>
+				<div class="col-md-3">
 					<div class="row">
 						<div class="col-md-2">
-							NO
+							{{preguntas[4].preguntaLista[1].texto}}
 						</div>
-						<div class="col-md-2">
-							<input type="checkbox"/>
+						<div class="col-md-1" *ngIf="!preguntas[4].preguntaLista[0].valorBooleano">
+							<input type="checkbox" [(ngModel)]="preguntas[4].preguntaLista[1].valorBooleano" />
 						</div>
 					</div>
-					<div  class="row">
-						<div class="col-md-5  bg-lime">PREGUNTA 5.1</div>
-						<div class="col-md-8">
-							<div class="row">
+					<div class="row" *ngIf="preguntas[4].preguntaLista[1].preguntaLista?.length">
+						<div class="col-md-3" [innerHTML]="preguntas[4].preguntaLista[1].preguntaLista[0].texto"></div>
+						<div class="col-md-3">
+							<div class="row" *ngIf="preguntas[4].preguntaLista[1].valorBooleano">
 								<div class="col-md-2">
-									SI
+									{{preguntas[4].preguntaLista[1].preguntaLista[0].preguntaLista[0].texto}}
+								</div>
+								<div class="col-md-1" *ngIf="!preguntas[4].preguntaLista[1].preguntaLista[0].preguntaLista[1].valorBooleano">
+									<input type="checkbox" [(ngModel)]="preguntas[4].preguntaLista[1].preguntaLista[0].preguntaLista[0].valorBooleano" />
 								</div>
 								<div class="col-md-2">
-									<input type="checkbox"/>
+									{{preguntas[4].preguntaLista[1].preguntaLista[0].preguntaLista[1].texto}}
 								</div>
-								<div class="col-md-2">
-									NO
-								</div>
-								<div class="col-md-2">
-									<input type="checkbox"/>
+								<div class="col-md-1" *ngIf="!preguntas[4].preguntaLista[1].preguntaLista[0].preguntaLista[0].valorBooleano">
+									<input type="checkbox" [(ngModel)]="preguntas[4].preguntaLista[1].preguntaLista[0].preguntaLista[1].valorBooleano" />
 								</div>
 							</div>	
 						</div>
@@ -189,41 +189,41 @@
 			</div>	
 		</div>
 	</div>
-	<div id="pregunta6" class="row">
-		<div class="col-md-1 bg-lime"></div>
-		<div class="col-md-5  bg-lime">PREGUNTA 6</div>
-		<div class="col-md-8">
+	<div *ngIf="preguntas?.length && preguntas?.length > 5 && preguntas[5].orden!=null && preguntas[5].orden==5" id="pregunta6" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[5].texto"></div>
+		<div class="col-md-6">
 			<div class="row">
 				<div class="col-md-2">
-					SI
+					{{preguntas[5].preguntaLista[0].texto}}
 				</div>
-				<div class="col-md-2">
-					<input type="checkbox"/>
+				<div class="col-md-1" *ngIf="!preguntas[5].preguntaLista[1].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[5].preguntaLista[0].valorBooleano" />
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<div class="row">
 						<div class="col-md-2">
-							NO
+							{{preguntas[5].preguntaLista[1].texto}}
 						</div>
-						<div class="col-md-2">
-							<input type="checkbox"/>
+						<div class="col-md-1" *ngIf="!preguntas[5].preguntaLista[0].valorBooleano">
+							<input type="checkbox" [(ngModel)]="preguntas[5].preguntaLista[1].valorBooleano" />
 						</div>
 					</div>
-					<div  class="row">
-						<div class="col-md-5  bg-lime">PREGUNTA 6.1</div>
+					<div class="row" *ngIf="preguntas[5].preguntaLista[1].preguntaLista?.length">
+						<div class="col-md-5" [innerHTML]="preguntas[5].preguntaLista[1].preguntaLista[0].texto"></div>
 						<div class="col-md-8">
-							<div class="row">
+							<div class="row" *ngIf="preguntas[5].preguntaLista[1].valorBooleano">
 								<div class="col-md-2">
-									SI
+									{{preguntas[5].preguntaLista[1].preguntaLista[0].preguntaLista[0].texto}}
+								</div>
+								<div class="col-md-2" *ngIf="!preguntas[5].preguntaLista[1].preguntaLista[0].preguntaLista[1].valorBooleano">
+									<input type="checkbox" [(ngModel)]="preguntas[5].preguntaLista[1].preguntaLista[0].preguntaLista[0].valorBooleano" />
 								</div>
 								<div class="col-md-2">
-									<input type="checkbox"/>
+									{{preguntas[5].preguntaLista[1].preguntaLista[0].preguntaLista[1].texto}}
 								</div>
-								<div class="col-md-2">
-									NO
-								</div>
-								<div class="col-md-2">
-									<input type="checkbox"/>
+								<div class="col-md-2" *ngIf="!preguntas[5].preguntaLista[1].preguntaLista[0].preguntaLista[0].valorBooleano">
+									<input type="checkbox" [(ngModel)]="preguntas[5].preguntaLista[1].preguntaLista[0].preguntaLista[1].valorBooleano" />
 								</div>
 							</div>	
 						</div>
@@ -232,174 +232,409 @@
 			</div>	
 			<div class="row">
 				<div class="col-md-2">
-					OBSERVACIONES
+					{{preguntas[5].preguntaLista[1].texto}}
 				</div>
 				<div class="col-md-6">
-					<input type="text"/>
+					<input type="text" [(ngModel)]="preguntas[5].preguntaLista[1].valorTexto"/>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="pregunta7" class="row">
-		<div class="col-md-1 bg-lime"></div>
-		<div class="col-md-5  bg-lime">PREGUNTA 7</div>
-		<div class="col-md-8">
+	<div *ngIf="preguntas?.length && preguntas?.length > 6 && preguntas[6].orden!=null && preguntas[6].orden==6" id="pregunta7" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[6].texto"></div>
+		<div class="col-md-6">
 			<div class="row">
 				<div class="col-md-2">
-					PREGUNTA 7.1<br>
-					<input type="text"/>
+					{{preguntas[6].preguntaLista[0].texto}}<br>
+					<input type="text" [(ngModel)]="preguntas[6].preguntaLista[0].valorNumero"/>
+				</div>
+				<div class="col-md-1">
+					{{preguntas[6].preguntaLista[1].texto}}<br>
+					<input type="text" [(ngModel)]="preguntas[6].preguntaLista[1].valorNumero"/>
 				</div>
 				<div class="col-md-3">
-					PREGUNTA 7.2<br>
-					<input type="text"/>
+					{{preguntas[6].preguntaLista[2].texto}}<br>
+					<input type="text" [(ngModel)]="preguntas[6].preguntaLista[2].valorNumero"/>
 				</div>
-				<div class="col-md-3">
-					PREGUNTA 7.3<br>
-					<input type="text"/>
-				</div>	
 			</div>	
 			<div class="row">
 				<div class="col-md-2">
-					OBSERVACIONES
+					{{preguntas[6].preguntaLista[3].texto}}
 				</div>
-				<div class="col-md-6">
-					<textarea rows="4" cols="50"></textarea>
+				<div class="col-md-4">
+					<textarea rows="4" cols="50" [(ngModel)]="preguntas[6].preguntaLista[3].valorTexto"></textarea>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="pregunta8" class="row">
-		<div class="col-md-1 bg-lime"></div>
-		<div class="col-md-5  bg-lime">PREGUNTA 8</div>
-		<div class="col-md-8">
+	<div *ngIf="preguntas?.length && preguntas?.length > 7 && preguntas[7].orden!=null && preguntas[7].orden==7" id="pregunta8" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[7].texto"></div>
+		<div class="col-md-6">
 			<div class="row">
 				<div class="col-md-2">
-					PREGUNTA 8.1<br>
-					<input type="text"/>
+					{{preguntas[7].preguntaLista[0].texto}}<br>
+					<input type="text" [(ngModel)]="preguntas[7].preguntaLista[0].valorNumero"/>
+				</div>
+				<div class="col-md-1">
+					{{preguntas[7].preguntaLista[1].texto}}<br>
+					<input type="text" [(ngModel)]="preguntas[7].preguntaLista[1].valorNumero"/>
 				</div>
 				<div class="col-md-2">
-					PREGUNTA 8.2<br>
-					<input type="text"/>
+					{{preguntas[7].preguntaLista[2].texto}}<br>
+					<input type="text" [(ngModel)]="preguntas[7].preguntaLista[2].valorNumero"/>
 				</div>
-				<div class="col-md-2">
-					PREGUNTA 8.3<br>
-					<input type="text"/>
-				</div>	
-				<div class="col-md-2">
-					PREGUNTA 8.3<br>
-					<input type="text"/>
-				</div>	
+				<div class="col-md-1">
+					{{preguntas[7].preguntaLista[3].texto}}<br>
+					<input type="text" [(ngModel)]="preguntas[7].preguntaLista[3].valorNumero"/>
+				</div>
 			</div>	
 			<div class="row">
 				<div class="col-md-2">
-					OBSERVACIONES
+					{{preguntas[7].preguntaLista[3].texto}}
 				</div>
-				<div class="col-md-6">
-					<textarea rows="4" cols="50"></textarea>
+				<div class="col-md-4">
+					<textarea rows="4" cols="50" [(ngModel)]="preguntas[7].preguntaLista[4].valorTexto"></textarea>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="pregunta9" class="row">
-		<div class="col-md-1 bg-lime"></div>
-		<div class="col-md-5  bg-lime">PREGUNTA 9</div>
-		<div class="col-md-8">
+	<div *ngIf="preguntas?.length && preguntas?.length > 8 && preguntas[8].orden!=null && preguntas[8].orden==8" id="pregunta9" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[8].texto"></div>
+		<div class="col-md-6">
 			<div class="row">
 				<div class="col-md-2">
-					PREGUNTA 9.1<br>
-					<input type="text"/>
+					{{preguntas[8].preguntaLista[0].texto}}<br>
+					<input type="text" [(ngModel)]="preguntas[8].preguntaLista[0].valorNumero"/>
 				</div>
-				<div class="col-md-3">
-					PREGUNTA 9.2<br>
-					<input type="text"/>
+				<div class="col-md-2">
+					{{preguntas[8].preguntaLista[1].texto}}<br>
+					<input type="text" [(ngModel)]="preguntas[8].preguntaLista[1].valorNumero"/>
 				</div>
-				<div class="col-md-3">
-					PREGUNTA 9.3<br>
-					<input type="text"/>
-				</div>	
+				<div class="col-md-2">
+					{{preguntas[8].preguntaLista[2].texto}}<br>
+					<input type="text" [(ngModel)]="preguntas[8].preguntaLista[2].valorNumero"/>
+				</div>
 			</div>	
 			<div class="row">
 				<div class="col-md-2">
-					OBSERVACIONES
+					{{preguntas[8].preguntaLista[3].texto}}
 				</div>
-				<div class="col-md-6">
-					<textarea rows="4" cols="50"></textarea>
+				<div class="col-md-4">
+					<textarea rows="4" cols="50" [(ngModel)]="preguntas[8].preguntaLista[3].valorTexto"></textarea>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="pregunta10" class="row">
-		<div class="col-md-1 bg-lime"></div>
-		<div class="col-md-5  bg-lime">PREGUNTA 10</div>
-		<div class="col-md-8">
-			<div class="row">
+	<div *ngIf="preguntas?.length && preguntas?.length > 9 && preguntas[9].orden!=null && preguntas[9].orden==9" id="pregunta10" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[9].texto"></div>
+		<div class="col-md-3" *ngIf="preguntas[9].preguntaLista?.length">
+			<div class="row" *ngIf="preguntas[9].preguntaLista[0].orden==1">
 				<div class="col-md-2">
-					SI
+					{{preguntas[9].preguntaLista[0].texto}}
 				</div>
-				<div class="col-md-2">
-					<input type="checkbox"/>
+				<div class="col-md-1" *ngIf="!preguntas[9].preguntaLista[1].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[9].preguntaLista[0].valorBooleano" />
 				</div>
 			</div>	
-			<div class="row">
+			<div class="row" *ngIf="preguntas[9].preguntaLista[0].preguntaLista?.length && preguntas[9].preguntaLista[0].valorBooleano">
 				<div class="col-md-2">
-					Cuantos elementos observo
+					{{preguntas[9].preguntaLista[0].preguntaLista[0].texto}}
 				</div>
-				<div class="col-md-2">
-					<input type="text"/>
+				<div class="col-md-1">
+					<input type="text" [(ngModel)]="preguntas[9].preguntaLista[0].preguntaLista[0].valorTexto" />
 				</div>
 			</div>	
 		</div>
-		<div class="col-md-4">
-			NO
+		<div class="col-md-2" *ngIf="preguntas[9].preguntaLista?.length && preguntas[0].preguntaLista[1].orden==2">
+			{{preguntas[9].preguntaLista[1].texto}}
 		</div>
-		<div class="col-md-4">
-			<input type="checkbox"/>
+		<div class="col-md-1" *ngIf="!preguntas[9].preguntaLista[0].valorBooleano">
+			<input type="checkbox"  [(ngModel)]="preguntas[9].preguntaLista[1].valorBooleano" />
 		</div>
 	</div>
-	<div id="pregunta11" class="row">
-		<div class="col-md-1 bg-lime"></div>
-		<div class="col-md-5  bg-lime">PREGUNTA 11</div>
-		<div class="col-md-8">
-			<div class="row">
+	<div *ngIf="preguntas?.length && preguntas?.length > 10 && preguntas[10].orden!=null && preguntas[10].orden==10" id="pregunta11" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[10].texto"></div>
+		<div class="col-md-3" *ngIf="preguntas[10].preguntaLista?.length">
+			<div class="row" *ngIf="preguntas[10].preguntaLista[0].orden==1">
 				<div class="col-md-2">
-					SI
+					{{preguntas[10].preguntaLista[0].texto}}
 				</div>
-				<div class="col-md-2">
-					<input type="checkbox"/>
+				<div class="col-md-1" *ngIf="!preguntas[10].preguntaLista[1].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[10].preguntaLista[0].valorBooleano" />
 				</div>
 			</div>	
-			<div class="row">
+			<div class="row" *ngIf="preguntas[10].preguntaLista[0].preguntaLista?.length && preguntas[10].preguntaLista[0].valorBooleano">
 				<div class="col-md-2">
-					¿Qué tipo de patrocinio o material
-					de promoción de la industria de sucedáneos
-					de la leche materna?
+					{{preguntas[10].preguntaLista[0].preguntaLista[0].texto}}
 				</div>
-				<div class="col-md-2">
-					<textarea rows="4" cols="50"></textarea>
-				</div>
-	    </div>
-	    <div class="row">  
-				<div class="col-md-2">
-					Nombre de empresas
-				</div>
-				<div class="col-md-2">
-					<textarea rows="4" cols="50"></textarea>
+				<div class="col-md-1">
+					<input type="text" [(ngModel)]="preguntas[10].preguntaLista[10].preguntaLista[0].valorTexto" />
 				</div>
 			</div>	
 		</div>
-		<div class="col-md-4">
-			NO
+		<div class="col-md-2" *ngIf="preguntas[10].preguntaLista?.length && preguntas[10].preguntaLista[1].orden==2">
+			{{preguntas[10].preguntaLista[1].texto}}
 		</div>
-		<div class="col-md-4">
-			<input type="checkbox"/>
-		</div>
-	</div>
-	<div id="pregunta12" class="row">
-		<div class="col-md-1 bg-lime"></div>
-		<div class="col-md-5  bg-lime">PREGUNTA 12</div>
-		<div class="col-md-8">
-			<textarea rows="4" cols="50"></textarea>
+		<div class="col-md-1" *ngIf="!preguntas[10].preguntaLista[0].valorBooleano">
+			<input type="checkbox"  [(ngModel)]="preguntas[10].preguntaLista[1].valorBooleano" />
 		</div>
 	</div>
-
-	<button id="envio" (click)="saveEncuesta()"></button>
+	<div *ngIf="preguntas?.length && preguntas?.length > 11 && preguntas[11].orden!=null && preguntas[11].orden==11" id="pregunta12" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[11].texto"></div>
+		<div class="col-md-6">
+			<textarea rows="4" cols="50" [(ngModel)]="preguntas[11].preguntaLista[0].valorTexto"></textarea>
+		</div>
+	</div>
+<div class="row bg-navy">
+	<div class="col-md-16">C. DOCUMENTOS A REVISAR</div>
+</div>
+<div class="row bg-blue">
+	<div class="col-md-1">VERIF</div>
+	<div class="col-md-5">DOCUMENTO</div>
+	<div class="col-md-8">NIVEL DE CUMPLIMIENTO</div>
+</div>
+	<div *ngIf="preguntas?.length && preguntas?.length > 12 && preguntas[12].orden!=null && preguntas[12].orden==12" id="pregunta13" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[12].texto"></div>
+		<div class="col-md-3" *ngIf="preguntas[12].preguntaLista?.length">
+			<div class="row" *ngIf="preguntas[12].preguntaLista[0].orden==1">
+				<div class="col-md-2">
+					{{preguntas[12].preguntaLista[0].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[12].preguntaLista[1].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[12].preguntaLista[0].valorBooleano" />
+				</div>
+			</div>	
+			<div class="row" *ngIf="preguntas[12].preguntaLista[0].preguntaLista?.length && preguntas[12].preguntaLista[0].valorBooleano">
+				<div class="col-md-2">
+					{{preguntas[12].preguntaLista[0].preguntaLista[0].texto}}
+				</div>
+				<div class="col-md-1">
+					<input type="text" [(ngModel)]="preguntas[12].preguntaLista[0].preguntaLista[0].valorTexto" />
+				</div>
+			</div>	
+			<div class="row" *ngIf="preguntas[12].preguntaLista[0].preguntaLista?.length && preguntas[12].preguntaLista[0].valorBooleano">
+				<div class="col-md-2">
+					{{preguntas[12].preguntaLista[0].preguntaLista[1].texto}}
+				</div>
+				<div class="col-md-1">
+          			{{preguntas[12].preguntaLista[0].preguntaLista[1].preguntaLista[0].texto}}  
+					<input type="checkbox" [(ngModel)]="preguntas[12].preguntaLista[0].preguntaLista[1].preguntaLista[0].valorBooleano" />
+          			{{preguntas[12].preguntaLista[0].preguntaLista[1].preguntaLista[1].texto}}  
+					<input type="checkbox" [(ngModel)]="preguntas[12].preguntaLista[0].preguntaLista[1].preguntaLista[1].valorBooleano" />
+				</div>
+			</div>	
+		</div>
+		<div class="col-md-2" *ngIf="preguntas[12].preguntaLista?.length && preguntas[12].preguntaLista[1].orden==2">
+			{{preguntas[10].preguntaLista[1].texto}}
+		</div>
+		<div class="col-md-1" *ngIf="!preguntas[12].preguntaLista[0].valorBooleano">
+			<input type="checkbox"  [(ngModel)]="preguntas[12].preguntaLista[1].valorBooleano" />
+		</div>
+	</div>
+	<div *ngIf="preguntas?.length && preguntas?.length > 13 && preguntas[13].orden!=null && preguntas[13].orden==13" id="pregunta14" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[13].texto"></div>
+		<div class="col-md-3" *ngIf="preguntas[13].preguntaLista?.length">
+			<div class="row" *ngIf="preguntas[13].preguntaLista[0].orden==1">
+				<div class="col-md-2">
+					{{preguntas[13].preguntaLista[0].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[13].preguntaLista[1].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[13].preguntaLista[0].valorBooleano" />
+				</div>
+			</div>
+			<div class="row" *ngIf="preguntas[13].preguntaLista[0].preguntaLista?.length && preguntas[13].preguntaLista[0].valorBooleano">
+				<div class="col-md-2">
+					{{preguntas[13].preguntaLista[0].preguntaLista[1].texto}}
+				</div>
+				<div class="col-md-1">
+          			{{preguntas[13].preguntaLista[0].preguntaLista[1].preguntaLista[0].texto}}  
+					<input type="checkbox" [(ngModel)]="preguntas[13].preguntaLista[0].preguntaLista[1].preguntaLista[0].valorBooleano" /><br>
+          			{{preguntas[13].preguntaLista[0].preguntaLista[1].preguntaLista[1].texto}}  
+					<input type="checkbox" [(ngModel)]="preguntas[13].preguntaLista[0].preguntaLista[1].preguntaLista[1].valorBooleano" /><br>
+					{{preguntas[13].preguntaLista[0].preguntaLista[1].preguntaLista[2].texto}}  
+					<input type="checkbox" [(ngModel)]="preguntas[13].preguntaLista[0].preguntaLista[1].preguntaLista[2].valorBooleano" /><br>
+					{{preguntas[13].preguntaLista[0].preguntaLista[1].preguntaLista[3].texto}}  
+					<input type="checkbox" [(ngModel)]="preguntas[13].preguntaLista[0].preguntaLista[1].preguntaLista[3].valorBooleano" /><br>
+					{{preguntas[13].preguntaLista[0].preguntaLista[1].preguntaLista[4].texto}}  
+					<input type="checkbox" [(ngModel)]="preguntas[13].preguntaLista[0].preguntaLista[1].preguntaLista[4].valorBooleano" /><br>
+					{{preguntas[13].preguntaLista[0].preguntaLista[1].preguntaLista[5].texto}}  
+					<input type="checkbox" [(ngModel)]="preguntas[13].preguntaLista[0].preguntaLista[1].preguntaLista[5].valorBooleano" /><br>
+					{{preguntas[13].preguntaLista[0].preguntaLista[1].preguntaLista[6].texto}}  
+					<input type="checkbox" [(ngModel)]="preguntas[13].preguntaLista[0].preguntaLista[1].preguntaLista[6].valorBooleano" /><br>
+					{{preguntas[13].preguntaLista[0].preguntaLista[1].preguntaLista[7].texto}}  
+					<input type="checkbox" [(ngModel)]="preguntas[13].preguntaLista[0].preguntaLista[1].preguntaLista[7].valorBooleano" /><br>
+				</div>
+			</div>		
+			<div class="row" *ngIf="preguntas[12].preguntaLista[0].preguntaLista?.length && preguntas[12].preguntaLista[0].valorBooleano">
+				<div class="col-md-2">
+					{{preguntas[12].preguntaLista[0].preguntaLista[2].texto}}
+				</div>
+				<div class="col-md-1">
+					<input type="text" [(ngModel)]="preguntas[12].preguntaLista[0].preguntaLista[2].valorTexto" />
+				</div>
+			</div>	
+		</div>
+		<div class="col-md-2" *ngIf="preguntas[12].preguntaLista?.length && preguntas[12].preguntaLista[1].orden==2">
+			{{preguntas[10].preguntaLista[1].texto}}
+		</div>
+		<div class="col-md-1" *ngIf="!preguntas[12].preguntaLista[0].valorBooleano">
+			<input type="checkbox"  [(ngModel)]="preguntas[12].preguntaLista[1].valorBooleano" />
+		</div>
+	</div>
+	<div *ngIf="preguntas?.length && preguntas?.length > 14 && preguntas[14].orden!=null && preguntas[14].orden==14" id="pregunta15" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[14].texto"></div>
+		<div class="col-md-6" *ngIf="preguntas[14].preguntaLista?.length">
+			<div class="row" *ngIf="preguntas[14].preguntaLista[0].orden==1">
+				<div class="col-md-2">
+					{{preguntas[14].preguntaLista[0].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[14].preguntaLista[1].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[14].preguntaLista[0].valorBooleano" />
+				</div>
+				<div class="col-md-2" *ngIf="!preguntas[14].preguntaLista[0].valorBooleano">
+					{{preguntas[14].preguntaLista[1].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[14].preguntaLista[0].valorBooleano">
+					<input type="checkbox"  [(ngModel)]="preguntas[14].preguntaLista[1].valorBooleano" />
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div *ngIf="preguntas?.length && preguntas?.length > 15 && preguntas[15].orden!=null && preguntas[15].orden==15" id="pregunta16" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[15].texto"></div>
+		<div class="col-md-6" *ngIf="preguntas[15].preguntaLista?.length">
+			<div class="row" *ngIf="preguntas[15].preguntaLista[0].orden==1">
+				<div class="col-md-2">
+					{{preguntas[15].preguntaLista[0].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[15].preguntaLista[1].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[15].preguntaLista[0].valorBooleano" />
+				</div>
+				<div class="col-md-2" *ngIf="!preguntas[15].preguntaLista[0].valorBooleano">
+					{{preguntas[15].preguntaLista[1].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[15].preguntaLista[0].valorBooleano">
+					<input type="checkbox"  [(ngModel)]="preguntas[15].preguntaLista[1].valorBooleano" />
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div *ngIf="preguntas?.length && preguntas?.length > 16 && preguntas[16].orden!=null && preguntas[16].orden==16" id="pregunta17" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[16].texto"></div>
+		<div class="col-md-6" *ngIf="preguntas[16].preguntaLista?.length">
+			<div class="row" *ngIf="preguntas[16].preguntaLista[0].orden==1">
+				<div class="col-md-2">
+					{{preguntas[16].preguntaLista[0].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[16].preguntaLista[1].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[16].preguntaLista[0].valorBooleano" />
+				</div>
+				<div class="col-md-2" *ngIf="!preguntas[16].preguntaLista[0].valorBooleano">
+					{{preguntas[16].preguntaLista[1].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[16].preguntaLista[0].valorBooleano">
+					<input type="checkbox"  [(ngModel)]="preguntas[16].preguntaLista[1].valorBooleano" />
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div *ngIf="preguntas?.length && preguntas?.length > 17 && preguntas[17].orden!=null && preguntas[17].orden==17" id="pregunta18" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[17].texto"></div>
+		<div class="col-md-6" *ngIf="preguntas[17].preguntaLista?.length">
+			<div class="row" *ngIf="preguntas[17].preguntaLista[0].orden==1">
+				<div class="col-md-2">
+					{{preguntas[17].preguntaLista[0].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[17].preguntaLista[1].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[17].preguntaLista[0].valorBooleano" />
+				</div>
+				<div class="col-md-2" *ngIf="!preguntas[17].preguntaLista[0].valorBooleano">
+					{{preguntas[17].preguntaLista[1].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[17].preguntaLista[0].valorBooleano">
+					<input type="checkbox"  [(ngModel)]="preguntas[17].preguntaLista[1].valorBooleano" />
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div *ngIf="preguntas?.length && preguntas?.length > 18 && preguntas[18].orden!=null && preguntas[18].orden==18" id="pregunta19" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[18].texto"></div>
+		<div class="col-md-6" *ngIf="preguntas[18].preguntaLista?.length">
+			<div class="row" *ngIf="preguntas[18].preguntaLista[0].orden==1">
+				<div class="col-md-2">
+					{{preguntas[18].preguntaLista[0].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[18].preguntaLista[1].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[18].preguntaLista[0].valorBooleano" />
+				</div>
+				<div class="col-md-2" *ngIf="!preguntas[18].preguntaLista[0].valorBooleano">
+					{{preguntas[18].preguntaLista[1].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[18].preguntaLista[0].valorBooleano">
+					<input type="checkbox"  [(ngModel)]="preguntas[18].preguntaLista[1].valorBooleano" />
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div *ngIf="preguntas?.length && preguntas?.length > 19 && preguntas[19].orden!=null && preguntas[19].orden==19" id="pregunta20" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[19].texto"></div>
+		<div class="col-md-6" *ngIf="preguntas[19].preguntaLista?.length">
+			<div class="row" *ngIf="preguntas[19].preguntaLista[0].orden==1">
+				<div class="col-md-2">
+					{{preguntas[19].preguntaLista[0].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[19].preguntaLista[1].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[19].preguntaLista[0].valorBooleano" />
+				</div>
+				<div class="col-md-2" *ngIf="!preguntas[19].preguntaLista[0].valorBooleano">
+					{{preguntas[19].preguntaLista[1].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[19].preguntaLista[0].valorBooleano">
+					<input type="checkbox"  [(ngModel)]="preguntas[19].preguntaLista[1].valorBooleano" />
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div *ngIf="preguntas?.length && preguntas?.length > 20 && preguntas[20].orden!=null && preguntas[20].orden==20" id="pregunta21" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[20].texto"></div>
+		<div class="col-md-6" *ngIf="preguntas[20].preguntaLista?.length">
+			<div class="row" *ngIf="preguntas[20].preguntaLista[0].orden==1">
+				<div class="col-md-2">
+					{{preguntas[20].preguntaLista[0].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[20].preguntaLista[1].valorBooleano">
+					<input type="checkbox" [(ngModel)]="preguntas[20].preguntaLista[0].valorBooleano" />
+				</div>
+				<div class="col-md-2" *ngIf="!preguntas[20].preguntaLista[0].valorBooleano">
+					{{preguntas[20].preguntaLista[1].texto}}
+				</div>
+				<div class="col-md-1" *ngIf="!preguntas[20].preguntaLista[0].valorBooleano">
+					<input type="checkbox"  [(ngModel)]="preguntas[20].preguntaLista[1].valorBooleano" />
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div *ngIf="preguntas?.length && preguntas?.length > 21 && preguntas[21].orden!=null && preguntas[21].orden==21" id="pregunta22" class="row">
+		<div class="col-md-1 bg-aqua"></div>
+		<div class="col-md-5  bg-aqua" [innerHTML]="preguntas[21].texto"></div>
+		<div class="col-md-6">
+			<textarea  [(ngModel)]="preguntas[21].preguntaLista[0].valorTexto"></textarea> 
+		</div>
+	</div>
+	
+	<a id="envio" href="javascript:void(0);" (click)="saveEncuesta()"><span class="fa fa-floppy-o" aria-hidden="true"></span></a>
