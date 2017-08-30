@@ -21,7 +21,7 @@ import ec.gob.acess.esamyn.dto.PreguntaWsDto;
  * 
  * Clase: PreguntaWebService.java
  * 
- * @author Duval Barragan Fecha: Aug 25, 2017
+ * @author Duval Barragan @date Aug 25, 2017
  * @version 1.0
  *
  */
@@ -49,8 +49,6 @@ public class PreguntaWebService {
     public MensajeDto buscarPreguntas(PreguntaWsDto pregunta, @Context HttpHeaders headers) {
 
 	String token = headers.getRequestHeader("ApiToken").get(0);
-
-	System.out.println("entra+" + token);
 
 	MensajeDto mensajeDto;
 	try {

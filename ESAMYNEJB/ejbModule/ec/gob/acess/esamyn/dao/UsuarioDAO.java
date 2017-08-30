@@ -10,7 +10,7 @@ import ec.gob.acess.esamyn.modelo.Usuario;
  * 
  * Clase: UsuarioDAO.java
  * @author Duval Barragan
- * Fecha: Aug 25, 2017
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */

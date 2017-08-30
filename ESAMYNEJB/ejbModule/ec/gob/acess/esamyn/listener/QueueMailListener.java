@@ -18,7 +18,7 @@ import ec.gob.acess.esamyn.dto.MailMessage;
  * 
  * Clase: QueueMailListener.java
  * @author Duval Barragan
- * Fecha: Aug 25, 2017
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */

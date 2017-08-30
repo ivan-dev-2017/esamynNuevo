@@ -1,7 +1,7 @@
 package ec.gob.acess.esamyn.modelo;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -10,15 +10,27 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlType;
+
+import ec.gob.acess.esamyn.dto.FormularioDto;
 
 /**
+ * 
+ * Entidad que refleja la estructura de tabla esa_formulario
+ * 
+ * @author Duval Barragan
+ * @date Aug 28, 2017
+ * @version 1.0
  *
- * @author saviasoft3
  */
 @Entity
 @Table(name = "esa_formulario")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "formulario")
 public class Formulario implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -27,15 +39,8 @@ public class Formulario implements Serializable {
 	@Basic(optional = false)
 	@Column(name = "frm_id")
 	private Long codigo;
-	@Basic(optional = false)
-	@Column(name = "frm_creado")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date creado;
-	@Basic(optional = false)
-	@Column(name = "frm_modificado")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date modificado;
 	@Column(name = "frm_nombre")
+	@XmlTransient
 	private String nombre;
 	@Column(name = "frm_titulo")
 	private String titulo;
@@ -45,6 +50,8 @@ public class Formulario implements Serializable {
 	private String ayuda;
 	@Column(name = "frm_clave")
 	private String clave;
+	@Transient
+	private List<FormularioDto> contestadosLista;
 
 	public Formulario() {
 	}
@@ -55,22 +62,6 @@ public class Formulario implements Serializable {
 
 	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
-	}
-
-	public Date getCreado() {
-		return creado;
-	}
-
-	public void setCreado(Date creado) {
-		this.creado = creado;
-	}
-
-	public Date getModificado() {
-		return modificado;
-	}
-
-	public void setModificado(Date modificado) {
-		this.modificado = modificado;
 	}
 
 	public String getNombre() {
@@ -111,6 +102,14 @@ public class Formulario implements Serializable {
 
 	public void setClave(String clave) {
 		this.clave = clave;
+	}
+
+	public List<FormularioDto> getContestadosLista() {
+		return contestadosLista;
+	}
+
+	public void setContestadosLista(List<FormularioDto> contestadosLista) {
+		this.contestadosLista = contestadosLista;
 	}
 
 }

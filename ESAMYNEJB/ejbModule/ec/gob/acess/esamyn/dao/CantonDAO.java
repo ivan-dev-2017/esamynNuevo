@@ -9,9 +9,9 @@ import ec.gob.acess.esamyn.modelo.Canton;
 
 /**
  * 
- * Clase: CantonDAO.java
+ * Interfaz CantonDao para clase Canton
  * @author Duval Barragan
- * Fecha: Aug 25, 2017
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */

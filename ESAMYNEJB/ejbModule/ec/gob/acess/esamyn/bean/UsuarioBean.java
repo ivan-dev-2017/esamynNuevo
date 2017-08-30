@@ -2,7 +2,6 @@ package ec.gob.acess.esamyn.bean;
 
 import java.security.NoSuchAlgorithmException;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import javax.ejb.EJB;
@@ -25,7 +24,7 @@ import ec.gob.acess.esamyn.util.PasswordUtil;
  * 
  * Clase: UsuarioBean.java
  * 
- * @author Duval Barragan Fecha: Aug 25, 2017 Version: 1.0
+ * @author Duval Barragan @date Aug 25, 2017 Version: 1.0
  *
  */
 @Stateless
@@ -60,19 +59,18 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 	List<Usuario> lista = findByCriterias(criteria);
 	if (lista != null && !lista.isEmpty()) {
 	    // validar contrasena
-	    Usuario u = lista.get(0);
-	    if (u.getPassword().equals(contrasenia)) {
+	    Usuario usuarioObjeto = lista.get(0);
+	    if (usuarioObjeto.getPassword().equals(contrasenia)) {
 
 		// generamos token
 		Calendar c = Calendar.getInstance();
-		String token = CifradoUtil.encriptar(u.getCodigo() + "-" + u.getUsername() + "-" + c.getTimeInMillis(),
+		String token = CifradoUtil.encriptar(usuarioObjeto.getCodigo() + "-" + usuarioObjeto.getUsername() + "-" + c.getTimeInMillis(),
 			"esamyn");
-		System.out.println("token: " + token);
-		u.setToken(token);
+		usuarioObjeto.setToken(token);
 
-		update(u);
+		update(usuarioObjeto);
 
-		mensajeDto = new MensajeDto(false, "", u);
+		mensajeDto = new MensajeDto(false, "", usuarioObjeto);
 	    } else {
 		mensajeDto = new MensajeDto(true, "Contraseña incorrecta", null);
 	    }
@@ -102,14 +100,11 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 
 		mensajeDto.setError(false);
 		mensajeDto.setMensaje("Usuario Guardado");
-		usuario.setCreado(new Date());
-		usuario.setModificado(new Date());
 		create(usuario);
 		mensajeDto.setObjeto(usuario);
 	    } else {
 		mensajeDto.setError(false);
 		mensajeDto.setMensaje("Usuario Actualizado");
-		usuario.setModificado(new Date());
 		update(usuario);
 		mensajeDto.setObjeto(usuario);
 	    }
@@ -169,25 +164,26 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
      * @param passNueva
      * @return
      */
-    public MensajeDto cambiarPassword(String token, String passAntigua, String passNueva) {
+    public MensajeDto cambiarPassword(Long idUsuario, String passAntigua, String passNueva) {
 
 	MensajeDto mensajeDto = null;
 
-	if (passAntigua.equals(passNueva)) {
+	
 
 	    try {
 		String clave1 = Md5.aplicarHash(passAntigua);
 
 		String clave2 = Md5.aplicarHash(passNueva);
 
-		Usuario usuario = buscarPorToken(token);
+		Usuario usuario = findByPk(idUsuario);
 
 		if (usuario != null) {
 
-		    if (clave1.equals(clave1)) {
+		    if (clave1.equals(usuario.getPassword())) {
 
 			usuario.setPassword(clave2);
 			update(usuario);
+			mensajeDto = new MensajeDto(false, "Contraseña cambiada", null);
 
 		    } else {
 			mensajeDto = new MensajeDto(true, "La contraseña ingresada no es igual a su contraseña actual",
@@ -195,19 +191,14 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 		    }
 
 		} else {
-		    mensajeDto = new MensajeDto(true, "Token invalido", null);
+		    mensajeDto = new MensajeDto(true, "No existe el usuario", null);
 		}
 
 	    } catch (NoSuchAlgorithmException e) {
-		mensajeDto = new MensajeDto(true, e.getMessage(), null);
-	    } catch (Exception e) {
-		mensajeDto = new MensajeDto(true, e.getMessage(), null);
+		mensajeDto = new MensajeDto(true, "Error al encriptar " + e.getMessage(), null);
 	    }
 
-	} else {
-
-	    mensajeDto = new MensajeDto(true, "Las contraseñas no son iguales", null);
-	}
+	
 
 	return mensajeDto;
 
@@ -235,10 +226,10 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 		usuario.setPassword(pass);
 
 		update(usuario);
-		
-		//TODO enviar correo
-		
-		//TODO buscar texto cooreo
+
+		// TODO enviar correo
+
+		// TODO buscar texto cooreo
 
 		mensajeDto = new MensajeDto(false, "Cambio de contraseña", null);
 

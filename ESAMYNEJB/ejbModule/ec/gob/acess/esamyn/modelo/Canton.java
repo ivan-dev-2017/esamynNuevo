@@ -13,8 +13,12 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
+ * 
+ * Entidad que refleja la estructura de tabla esa_canton
+ * @author Duval Barragan
+ * @date Aug 28, 2017
+ * @version 1.0
  *
- * @author saviasoft3
  */
 @Entity
 @Table(name = "esa_canton")

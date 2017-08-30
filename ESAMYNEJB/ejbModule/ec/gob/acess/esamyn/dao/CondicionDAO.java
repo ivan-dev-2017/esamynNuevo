@@ -5,18 +5,18 @@ import javax.ejb.Local;
 
 import com.saviasoft.persistence.util.dao.GenericDao;
 
-import ec.gob.acess.esamyn.modelo.CondicionNa;
+import ec.gob.acess.esamyn.modelo.CondicionNoAplica;
 
 /**
  * 
  * Clase: CondicionDAO.java
  * @author Duval Barragan
- * Fecha: Aug 25, 2017
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */
 @Local
-public interface CondicionDAO extends GenericDao<CondicionNa, Long> {
+public interface CondicionDAO extends GenericDao<CondicionNoAplica, Long> {
 	
 }
 

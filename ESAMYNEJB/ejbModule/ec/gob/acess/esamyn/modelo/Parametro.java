@@ -15,8 +15,13 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 /**
+ * 
+ * Entidad que refleja la estructura de tabla esa_parametro
+ * 
+ * @author Duval Barragan
+ * @date Aug 28, 2017
+ * @version 1.0
  *
- * @author saviasoft3
  */
 @Entity
 @Table(name = "esa_parametro")
@@ -41,9 +46,9 @@ public class Parametro implements Serializable {
 	@Basic(optional = false)
 	@Column(name = "par_cantidad_minima")
 	private int cantidadMinima;
-	@JoinColumn(name = "par_condicion_na", referencedColumnName = "cna_id")
+	@JoinColumn(name = "par_condicion_no_aplica", referencedColumnName = "cna_id")
 	@ManyToOne
-	private CondicionNa condicionNa;
+	private CondicionNoAplica condicionNoAplica;
 	@JoinColumn(name = "par_grupo_parametro", referencedColumnName = "gpa_id")
 	@ManyToOne
 	private GrupoParametro grupoParametro;
@@ -100,12 +105,12 @@ public class Parametro implements Serializable {
 		this.cantidadMinima = cantidadMinima;
 	}
 
-	public CondicionNa getCondicionNa() {
-		return condicionNa;
+	public CondicionNoAplica getCondicionNoAplica() {
+		return condicionNoAplica;
 	}
 
-	public void setCondicionNa(CondicionNa condicionNa) {
-		this.condicionNa = condicionNa;
+	public void setCondicionNoAplica(CondicionNoAplica condicionNoAplica) {
+		this.condicionNoAplica = condicionNoAplica;
 	}
 
 	public GrupoParametro getGrupoParametro() {

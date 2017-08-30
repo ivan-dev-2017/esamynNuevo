@@ -7,13 +7,16 @@ import javax.ejb.ApplicationException;
  * 
  * Clase: EvaluacionException.java
  * @author Juan Ochoa
- * Fecha: Aug 25, 2017
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */
 @ApplicationException(rollback = true)
-@SuppressWarnings(value = "serial")
 public class EvaluacionException extends Exception {
+	/**
+     * 
+     */
+    private static final long serialVersionUID = 4866001732056489950L;
 	private String summary;
 	private Throwable cause;
 

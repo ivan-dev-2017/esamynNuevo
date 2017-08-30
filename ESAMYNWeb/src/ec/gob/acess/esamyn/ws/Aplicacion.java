@@ -9,8 +9,9 @@ import javax.ws.rs.core.Application;
 /**
  * 
  * Clase: Aplicacion.java
+ * 
  * @author Duval Barragan
- * Fecha: Aug 25, 2017
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */
@@ -24,7 +25,11 @@ public class Aplicacion extends Application {
 		classes.add(UsuarioWebService.class);
 		classes.add(PreguntaWebService.class);
 		classes.add(FormularioWebService.class);
-
+		classes.add(EstablecimientoSaludWebService.class);
+		classes.add(CantonWebService.class);
+		classes.add(CatalogoWebService.class);
+		classes.add(EncuestaWebService.class);
+		classes.add(CondicionNoAplicaWebService.class);
 		return classes;
 	}
 

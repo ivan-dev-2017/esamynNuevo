@@ -11,8 +11,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
+ * 
+ * Entidad que refleja la estructura de tabla esa_tipo_pregunta
+ * 
+ * @author Duval Barragan
+ * @date Aug 28, 2017
+ * @version 1.0
  *
- * @author saviasoft3
  */
 @Entity
 @Table(name = "esa_tipo_pregunta")
