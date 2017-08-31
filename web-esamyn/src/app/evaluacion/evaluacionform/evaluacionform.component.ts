@@ -8,11 +8,13 @@ import { CoreesamynService } from '../../service/coreesamyn.service';
 })
 export class EvaluacionformComponent implements OnInit {
 evaluacion=[];
+id="";
   constructor(private coreesamynService:CoreesamynService) {
       console.log( "==Entra en evaluacion evento" );
       this.coreesamynService.getEvaluacion().subscribe( data=>{
           console.log("==retorno: " + JSON.stringify(data));
         this.evaluacion=data;})
+
   }
 
   ngOnInit() {

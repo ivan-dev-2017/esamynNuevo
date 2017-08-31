@@ -1,3 +1,216 @@
-<p>
-  evaluacionform works!
-</p>
+<div class="box box-success">
+	<div class="box-header">
+		<i class="fa fa-user-o"></i>
+
+		<h3 class="box-title">FORMULARIO ENCUESTA</h3>
+	</div>
+	<div class="row"></div>
+	<div class="box-body chat" id="chat-box">
+		<div class="form-group form-group-sm">
+			<form #standardForm="ngForm" (ngSubmit)="save()">
+
+				<div class="row">
+					<div class="col-sm-5">
+						<div class="input-group" >
+							<span class="input-group-addon"><i
+								class="fa fa-text-width" aria-hidden="true"></i></span> <input
+								class="form-control" type="text" placeholder="ejemplo"
+								*ngFor="let x of evaluacion"
+								class="{invalid: (invalid | async)}" name="enc_fecha_final" />
+						</div>
+					</div>
+					<div class="col-sm-1">
+						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
+							[messages]="failures | async"> </app-message>
+
+					</div>
+          <div class="col-sm-2">
+            <div class="input-group">
+              <span class="input-group-addon"><i
+                class="fa fa-text-width" aria-hidden="true"></i></span><input
+                class="form-control" type="label" placeholder="ejemplo"
+                [(ngModel)]="enc_fecha_final"
+                class="{invalid: (invalid | async)}" name="enc_fecha_final">
+
+            </div>
+          </div>
+          <div class="col-sm-1">
+            <app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
+              [messages]="failures | async"> </app-message>
+
+          </div>
+
+
+				</div>
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="input-group" >
+              <span class="input-group-addon"><i
+                class="fa fa-text-width" aria-hidden="true"></i></span> <input
+                class="form-control" type="text" placeholder="ejemplo"
+                [(ngModel)]="enc_fecha_final"
+                class="{invalid: (invalid | async)}" name="enc_fecha_final" />
+            </div>
+          </div>
+          <div class="col-sm-1">
+            <app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
+              [messages]="failures | async"> </app-message>
+
+          </div>
+          <div class="col-sm-2">
+            <div class="input-group">
+              <span class="input-group-addon"><i
+                class="fa fa-text-width" aria-hidden="true"></i></span> <input
+                class="form-control" type="text" placeholder="ejemplo"
+                [(ngModel)]="enc_fecha_final"
+                class="{invalid: (invalid | async)}" name="enc_fecha_final" />
+            </div>
+          </div>
+          <div class="col-sm-1">
+            <app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
+              [messages]="failures | async"> </app-message>
+
+          </div>
+
+
+        </div>
+
+        <div class="row">
+					<div class="col-sm-5">
+						<div class="input-group" >
+							<span class="input-group-addon"><i
+								class="fa fa-text-width" aria-hidden="true"></i></span> <input
+								class="form-control" type="text" placeholder="ejemplo"
+								[(ngModel)]="enc_fecha_final"
+								class="{invalid: (invalid | async)}" name="enc_fecha_final" />
+						</div>
+					</div>
+					<div class="col-sm-1">
+						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
+							[messages]="failures | async"> </app-message>
+
+					</div>
+          <div class="col-sm-2">
+            <div class="input-group">
+              <span class="input-group-addon"><i
+                class="fa fa-text-width" aria-hidden="true"></i></span> <input
+                class="form-control" type="text" placeholder="ejemplo"
+                [(ngModel)]="enc_fecha_final"
+                class="{invalid: (invalid | async)}" name="enc_fecha_final" />
+            </div>
+          </div>
+          <div class="col-sm-1">
+            <app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
+              [messages]="failures | async"> </app-message>
+
+          </div>
+
+
+				</div>
+
+        <div class="row">
+					<div class="col-sm-5">
+						<div class="input-group" >
+							<span class="input-group-addon"><i
+								class="fa fa-text-width" aria-hidden="true"></i></span> <input
+								class="form-control" type="text" placeholder="ejemplo"
+								[(ngModel)]="enc_fecha_final"
+								class="{invalid: (invalid | async)}" name="enc_fecha_final" />
+						</div>
+					</div>
+					<div class="col-sm-1">
+						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
+							[messages]="failures | async"> </app-message>
+
+					</div>
+          <div class="col-sm-2">
+            <div class="input-group">
+              <span class="input-group-addon"><i
+                class="fa fa-text-width" aria-hidden="true"></i></span> <input
+                class="form-control" type="text" placeholder="ejemplo"
+                [(ngModel)]="enc_fecha_final"
+                class="{invalid: (invalid | async)}" name="enc_fecha_final" />
+            </div>
+          </div>
+          <div class="col-sm-1">
+            <app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
+              [messages]="failures | async"> </app-message>
+
+          </div>
+
+
+				</div>
+
+        <div class="row">
+					<div class="col-sm-5">
+						<div class="input-group" >
+							<span class="input-group-addon"><i
+								class="fa fa-text-width" aria-hidden="true"></i></span> <input
+								class="form-control" type="text" placeholder="ejemplo"
+								[(ngModel)]="enc_fecha_final"
+								class="{invalid: (invalid | async)}" name="enc_fecha_final" />
+						</div>
+					</div>
+					<div class="col-sm-1">
+						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
+							[messages]="failures | async"> </app-message>
+
+					</div>
+          <div class="col-sm-2">
+            <div class="input-group">
+              <span class="input-group-addon"><i
+                class="fa fa-text-width" aria-hidden="true"></i></span> <input
+                class="form-control" type="text" placeholder="ejemplo"
+                [(ngModel)]="enc_fecha_final"
+                class="{invalid: (invalid | async)}" name="enc_fecha_final" />
+            </div>
+          </div>
+          <div class="col-sm-1">
+            <app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
+              [messages]="failures | async"> </app-message>
+
+          </div>
+
+
+				</div>
+
+        <div class="row">
+					<div class="col-sm-5">
+						<div class="input-group" >
+							<span class="input-group-addon"><i
+								class="fa fa-text-width" aria-hidden="true"></i></span> <input
+								class="form-control" type="text" placeholder="ejemplo"
+								[(ngModel)]="enc_fecha_final"
+								class="{invalid: (invalid | async)}" name="enc_fecha_final" />
+						</div>
+					</div>
+					<div class="col-sm-1">
+						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
+							[messages]="failures | async"> </app-message>
+
+					</div>
+          <div class="col-sm-2">
+            <div class="input-group">
+              <span class="input-group-addon"><i
+                class="fa fa-text-width" aria-hidden="true"></i></span> <input
+                class="form-control" type="text" placeholder="ejemplo"
+                [(ngModel)]="enc_fecha_final"
+                class="{invalid: (invalid | async)}" name="enc_fecha_final" />
+            </div>
+          </div>
+          <div class="col-sm-1">
+            <app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
+              [messages]="failures | async"> </app-message>
+
+          </div>
+
+
+				</div>
+
+
+      </form>
+    </div>
+  </div>
+
+  <div class="box-footer"></div>
+  </div>

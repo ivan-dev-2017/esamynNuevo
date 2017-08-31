@@ -12,9 +12,8 @@
 				<div class="row">
 					<div class="col-sm-5">
 						<div class="input-group" >
-							<span class="input-group-addon"><i
-								class="fa fa-text-width" aria-hidden="true">EVALUACION</i></span>
-								<select id="evaluacion">
+							<span class="input-group-addon"><i class="fa fa-caret-down" aria-hidden="true"> EVALUACION</i></span>
+								<select id="evaluacionvar">
 									<option>Seleccione un valor...</option>
 									<option *ngFor="let x of evaluacion" [ngValue]="x">{{x.id}}</option>
 								</select>
@@ -23,28 +22,8 @@
 					<div class="col-sm-1">
 						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
 							[messages]="failures | async"> </app-message>
-
-					</div>
-
-					<div class="col-sm-5">
-						<div class="input-group">
-							<span class="input-group-addon"><i
-								class="fa fa-text-width" aria-hidden="true"></i></span> Encuesta Finalizada
-								<select>
-									<option>Seleccione un valor...</option>
-									<option [ngValue]=1>si</option>
-									<option [ngValue]=2>no</option>
-								</select>
-
-						</div>
-					</div>
-					<div class="col-sm-1">
-						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
-							[messages]="failures | async"> </app-message>
-
 					</div>
 				</div>
-
 				<div class="row">
 					<div class="col-sm-5">
 						<div class="input-group">
@@ -58,31 +37,26 @@
 					<div class="col-sm-1">
 						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
 							[messages]="failures | async"> </app-message>
-
 					</div>
-
 					<div class="col-sm-5">
 						<div class="input-group" >
 							<span class="input-group-addon"><i
 								class="fa fa-text-width" aria-hidden="true"></i></span> <input
 								class="form-control" type="text" placeholder="fecha final"
-								[(ngModel)]="enc_fecha_final"
+								[(ngModel)]="fecha_final"
 								class="{invalid: (invalid | async)}" name="enc_fecha_final" />
 						</div>
 					</div>
 					<div class="col-sm-1">
 						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
 							[messages]="failures | async"> </app-message>
-
 					</div>
 				</div>
-
 				<div class="row">
 					<div class="col-sm-5">
 						<div class="input-group">
-							<span class="input-group-addon"><i
-								class="fa fa-text-width" aria-hidden="true"> ESTABLECIMIENTO</i></span>
-								<select id="encuestas">
+							<span class="input-group-addon"><i class="fa fa-caret-down" aria-hidden="true"> ESTABLECIMIENTO</i></span>
+								<select id="establecimiento_saludvar">
 									<option>Seleccione un valor...</option>
 									<option *ngFor="let x of establecimiento_salud" [ngValue]="x">{{x.nombre}}</option>
 								</select>
@@ -92,24 +66,20 @@
 						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
 							[messages]="failures | async"> </app-message>
 					</div>
-
 					<div class="col-sm-5">
 						<div class="input-group" >
 							<span class="input-group-addon"><i
 								class="fa fa-text-width" aria-hidden="true"></i></span> <input
 								class="form-control" type="text" placeholder="responsable"
-								[(ngModel)]="enc_responsable"
+								[(ngModel)]="responsable"
 								class="{invalid: (invalid | async)}" name="enc_responsable" />
 						</div>
 					</div>
 					<div class="col-sm-1">
 						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
 							[messages]="failures | async"> </app-message>
-
 					</div>
 				</div>
-
-
 				<div class="row">
 					<div class="col-sm-5">
 						<div class="input-group">
@@ -123,25 +93,21 @@
 					<div class="col-sm-1">
 						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
 							[messages]="failures | async"> </app-message>
-
 					</div>
-
 					<div class="col-sm-5">
 						<div class="input-group">
 							<span class="input-group-addon"><i
 								class="fa fa-text-width" aria-hidden="true"></i></span> <input
 								class="form-control" type="text" placeholder="enc_extra"
-								[(ngModel)]="nombre"
+								[(ngModel)]="extra"
 								class="{invalid: (invalid | async)}" name="enc_extra" />
 						</div>
 					</div>
 					<div class="col-sm-1">
 						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
 							[messages]="failures | async"> </app-message>
-
 					</div>
 				</div>
-
 				<div class="form-group">
 					<button type="submit"  [disabled]="standardForm.invalid"
 						class="btn btn-success">
@@ -151,11 +117,9 @@
 						(click)="clear()"> <i class="fa fa-eraser" aria-hidden="true"></i>
 					</a>
 				</div>
-
 			</form>
 		</div>
 	</div>
 
 	<div class="box-footer"></div>
 </div>
-.

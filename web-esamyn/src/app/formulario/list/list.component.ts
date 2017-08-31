@@ -12,33 +12,30 @@ export class FormularioListComponent implements OnInit {
     selected = [];
     loadingIndicator: boolean = true;
     reorderable: boolean = true;
-    
-  constructor( private coreesamyn:CoreesamynService ) { 
+
+  constructor( private coreesamyn:CoreesamynService ) {
       console.log( "==Entra en FormularioListComponent" );
       this.coreesamyn.getFormulariosList().subscribe( data=>{
           console.log("==retorno: " + JSON.stringify(data));
           this.rows=data;
           setTimeout(() => { this.loadingIndicator = false; }, 1500);
       } );
-      
+
   }
-  
-  
   ngOnInit() {
-      
   }
-  
+
   onSelect({ selected }) {
       console.log('Select Event', JSON.stringify(selected));
     }
-  
+
   onActivate(event) {
       //console.log('Activate Event', event);
     }
-  
+
   selectItem(item){
       console.log('eliminar item dato ', item);
-      
+
   }
 
 }
