@@ -15,47 +15,23 @@
 
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="assets/img/user.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">{{usuario.nombre}}</span>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="../../assets/img/user.jpg" class="img-circle" alt="User Image">
-                <p>
-                  {{usuario.nombreCompleto}}
-                  <small>Miembro desde {{usuario.fechaCreacion}}</small>
-                </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Link 1</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Link 2</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Link 3</a>
-                  </div>
-                </div>
-                <!-- /.row -->
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a class="dropdown-item" href="javascript:void(0)" (click)="logOut()" class="btn btn-default btn-flat"> Salir</a>
-                </div>
-              </li>
-            </ul>
-          </li>
+     		<li class="dropdown">
+		        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+		        <span class="glyphicon glyphicon-user"></span> {{usuario.nombre}}<span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+		          <li>
+		          	<a class="dropdown-item" href="javascript:void(0)" (click)="logOut()">
+		          		<span class="glyphicon glyphicon-log-out"></span> Logout
+		          	</a>
+		          </li>
+		          <li>
+		          	<a class="dropdown-item" href="javascript:void(0)"><span class="glyphicon glyphicon-pencil"> </span>Cambio Password</a>
+		          </li>
+		          <li>
+		          	<a class="dropdown-item" href="#"><span class="glyphicon glyphicon-question-sign"></span>Ayuda</a>
+		          </li>
+		        </ul>
+		     </li>
         </ul>
       </div>
     </nav>

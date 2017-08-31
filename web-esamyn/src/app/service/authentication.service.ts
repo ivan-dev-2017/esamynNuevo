@@ -43,25 +43,7 @@ export class AuthenticationService {
         			return user;
         		});
     	
-    	/*let usuario= new User();
-        usuario.nombre=usuarioAuth.name;
-        usuario.password=usuarioAuth.password;
-        usuarioAuth.usuario=usuario;
-        return this.http.post(  this.config.apiUrl+ 'resources/loginExtendedRestController/login',
-                usuarioAuth)
-            .map((response: Response) => {
-                console.log("===>respondiod ");
-                //console.log("===>respuesta "+ JSON.stringify(response));
-                let loginWrapper = response.json();
-                console.log("===>retorno login wrapper "+ JSON.stringify(loginWrapper));
-                let user = loginWrapper.usuario;
-                if (user && user.token) {
-                    localStorage.setItem('currentUser', JSON.stringify(user));
-                    localStorage.setItem('menu', JSON.stringify(loginWrapper.menuWrapper.panelMenuAppList));
-                    localStorage.setItem('defaultPageSize', loginWrapper.defaultPageSize);
-                    localStorage.setItem('services', JSON.stringify(loginWrapper.servicios));
-                }
-            });*/
+    	
     }
 
     logout(usuarioAuth: User) {
