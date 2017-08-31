@@ -1,0 +1,41 @@
+{
+    "error": false,
+    "mensaje": "",
+    "objeto": [
+        {
+          "id":1,
+          "nombre":"PICHINCHA",
+          "codigo":"PIC",
+          "cantonList":null
+        },
+        {
+          "id":2,
+          "nombre":"GUAYAS",
+          "codigo":"GUA",
+          "cantonList":null
+        },{
+          "id":3,
+          "nombre":"ESMERALDAS",
+          "codigo":"ESM",
+          "cantonList":null
+        },
+        {
+          "id":4,
+          "nombre":"MANABI",
+          "codigo":"MAN",
+          "cantonList":null
+        },
+        {
+          "id":5,
+          "nombre":"COTOPAXI",
+          "codigo":"COT",
+          "cantonList":null
+        },
+        {
+          "id":6,
+          "nombre":"NAPO",
+          "codigo":"NAP",
+          "cantonList":null
+        }
+    ]
+}

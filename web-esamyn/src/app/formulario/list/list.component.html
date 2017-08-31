@@ -1,37 +1,83 @@
-<div class="col-md-13">
-		<div  id="principal" [hidden]="isVisible" >
-			<ngx-datatable
-		        class="dark"
-		        [rows]="rows"
-		        [loadingIndicator]="loadingIndicator"
-		        [columnMode]="'force'"
-		        [headerHeight]="50"
-		        [footerHeight]="50"
-		        [rowHeight]="'auto'"
-		        [selected]="selected"
-	            [selectionType]="'single'"
-	            (activate)="onActivate($event)"
-	            (select)='onSelect($event)'
-		        >
-		        <ngx-datatable-column name="Nombre" prop="nombre" [width]="10">
-		          <ng-template let-column="column" ngx-datatable-header-template>
-		            {{column.creado}}
-		          </ng-template>
-		          <ng-template let-value="value" ngx-datatable-cell-template>
-		            <strong>{{value}}</strong>
-		          </ng-template>
-		        </ngx-datatable-column>
-		        <ngx-datatable-column name="Accion"  prop="nombreUsuario" [width]="10">
-		          <ng-template let-column="column" ngx-datatable-header-template>
-		            {{column.name}}
-		          </ng-template>
-		          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-		            <a href="javascript:void(0);"  (click)="selectItem(value)">
-				        	<i class="fa fa-eraser" aria-hidden="true"></i>
-				        </a>
-		          </ng-template>
-		        </ngx-datatable-column>
-		      </ngx-datatable>
+<div class="col-lg-6 col-xs-12 col-md-6" style="margin: 10px 0px;">	
+    <div  id="principal" [hidden]="isVisible" >
+        <ngx-datatable
+            class="dark"
+            [rows]="rows"
+            [loadingIndicator]="loadingIndicator"
+            [columnMode]="'force'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="'auto'"
+            [selected]="selected"
+            [selectionType]="'single'"
+            (activate)="onActivate($event)"
+            (select)='onSelect($event)'>
+            <ngx-datatable-column name="Nombre" prop="nombre" [width]="10">
+              <ng-template let-column="column" ngx-datatable-header-template>
+                {{column.name}}
+              </ng-template>
+              <ng-template let-value="value" ngx-datatable-cell-template>
+                <strong>{{value}}</strong>
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Accion"  prop="id" [width]="10">
+              <ng-template let-column="column" ngx-datatable-header-template>
+                {{column.name}}
+              </ng-template>
+              <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                <a [routerLink]="['/form_component',value]">
+                    <i class="fa fa-plus-square" aria-hidden="true"></i>
+                </a>
+              </ng-template>
+            </ngx-datatable-column>
+          </ngx-datatable>
 
-		</div>
-	</div>
+    </div>
+</div>	
+
+<div class="col-lg-6 col-xs-12 col-md-6" style="margin: 10px 0px;">	
+    <div  id="secundario" *ngIf="encuestas.length" >
+        <ngx-datatable
+            class="dark"
+            [rows]="encuestas"
+            [loadingIndicator]="loadingIndicatorEncuesta"
+            [columnMode]="'force'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="'auto'"
+            [selectionType]="'single'"
+            (activate)="onActivateEncuesta($event)"
+            (select)='onSelectEncuesta($event)'>
+            <ngx-datatable-column name="Codigo" prop="codigo" [width]="10">
+              <ng-template let-column="column" ngx-datatable-header-template>
+                {{column.name}}
+              </ng-template>
+              <ng-template let-value="value" ngx-datatable-cell-template>
+                <strong>{{value}}</strong>
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Fecha Modificacion" prop="modificado" [width]="10">
+              <ng-template let-column="column" ngx-datatable-header-template>
+                {{column.name}}
+              </ng-template>
+              <ng-template let-value="value" ngx-datatable-cell-template>
+                <strong>{{value}}</strong>
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Acciones"  prop="nombreUsuario" [width]="10">
+              <ng-template let-column="column" ngx-datatable-header-template>
+                {{column.name}}
+              </ng-template>
+              <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                <a [routerLink]="['/form_component',value]" style="margin: 5px">
+                    <i class="fa fa-plus-square" aria-hidden="true"></i>
+                </a>
+                <a href="javascript:void(0);"  (click)="modificarEncuesta()" style="margin: 5px">
+                    <i class="fa fa-edit" aria-hidden="true"></i>
+                </a>
+              </ng-template>
+            </ngx-datatable-column>
+          </ngx-datatable>
+
+    </div>
+</div>	

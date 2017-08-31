@@ -36,10 +36,9 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { MenuComponent } from './layout/menu/menu.component';
 import { EmailvalidatorDirective,NumbervalidatorDirective } from './validator/index';
 import { FormularioListComponent } from './formulario/list/list.component';
+import { EstablecimientoSaludComponent } from './establecimiento-salud/establecimiento-salud.component';
 import { FoesamnComponent } from './encuesta/foesamn/foesamn.component';
 import {FormComponent} from './encuesta/form/form.component';
-
-
 
 
 /**
@@ -51,6 +50,7 @@ import { ModalpromptComponent } from './comp/modalprompt/modalprompt.component';
 import { MessageComponent } from './comp/message/message.component';
 import { EvaluacionlistComponent } from './evaluacion/evaluacionlist/evaluacionlist.component';
 import { EvaluacionformComponent } from './evaluacion/evaluacionform/evaluacionform.component';
+
 
 @NgModule({
   declarations: [
@@ -68,6 +68,7 @@ import { EvaluacionformComponent } from './evaluacion/evaluacionform/evaluacionf
     NumbervalidatorDirective,
     MessageComponent,
     FormularioListComponent,
+    EstablecimientoSaludComponent,
     FoesamnComponent,
     FormComponent,
     EvaluacionlistComponent,

@@ -1,0 +1,46 @@
+{
+    "error": false,
+    "mensaje": "",
+    "objeto": [
+        {
+          "id":1,
+          "creado":"2017-08-29",      
+          "modificado":"2017-08-29",  
+          "razonSocial":"Relative Engine", 
+          "ruc":"4564156",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":2,
+          "creado":"2017-08-29",      
+          "modificado":"2017-08-29", 
+          "razonSocial":"Leventi Corp", 
+          "ruc":"655216511",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":3,
+          "creado":"2017-08-29",      
+          "modificado":"2017-08-29",  
+          "razonSocial":"Procesadora Nacional De Alimentos", 
+          "ruc":"875416512",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":4,
+          "creado":"2017-08-29",      
+          "modificado":"2017-08-29",  
+          "razonSocial":"Corporacion El Rosado", 
+          "ruc":"138546845",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":5,
+          "creado":"2017-08-29",      
+          "modificado":"2017-08-29", 
+          "razonSocial":"Industrias Ales", 
+          "ruc":"3462341564",
+          "establecimientoSaludList": null
+        }
+    ]
+}

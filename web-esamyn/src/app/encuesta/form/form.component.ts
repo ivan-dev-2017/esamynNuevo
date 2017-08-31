@@ -7,7 +7,6 @@ import { CoreesamynService } from '../../service/coreesamyn.service';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-
     encuesta=[];
     formulario=[];
     usuario=[];
@@ -54,7 +53,4 @@ export class FormComponent implements OnInit {
        console.log(JSON.stringify(this.encuesta));
 
   }
-
-
-
 }
