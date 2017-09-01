@@ -7,11 +7,55 @@ import { CoreesamynService } from '../../service/coreesamyn.service';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-    encuesta=[];
+    encuesta={
+            "error": false,
+            "mensaje": "",
+            "objeto": {
+              "codigo": null,
+              "responsable": null,
+              "cargo": null,
+              "extra": null,
+              "establecimientoSalud": {
+                "codigo": null,
+                "unicodigo": "22222",
+                "direccion": "Direccion",
+                "latitud": "12",
+                "longitud": "12",
+                "telefono": "222333",
+                "correoElectronico": "ccc@correo.com",
+                "nombreResponsable": "responsable 2",
+                "zona": "CENTRO",
+                "distrito": "Distrito",
+                "canton": {
+                  "codigo": 1,
+                  "nombre": "QUITO",
+                  "codigoINEN": "UIO",
+                  "provincia": {
+                    "codigo": 1,
+                    "nombre": "PICHINCHA",
+                    "codigoInen": "PHC"
+                  }
+                },
+                "personaJuridica": {
+                  "codigo": 1,
+                  "ruc": "17654798001"
+                },
+                "evaluacionList": null
+              },
+              "formulario": {
+                "codigo": 1,
+                "titulo": "Formulario de InformaciÃ³n del Establecimiento",
+                "subtitulo": null,
+                "ayuda": null,
+                "clave": "1",
+                "contestadosLista": null
+              }
+            }
+          };
     formulario=[];
     usuario=[];
     evaluacion=[];
-    establecimiento_salud=[];
+    establecimientosSalud=[];
     loadingIndicator: boolean = true;
     reorderable: boolean = true;
     evaluacionvar="";
@@ -24,38 +68,17 @@ export class FormComponent implements OnInit {
     id="";
   constructor(private coreesamynService:CoreesamynService) {
       this.coreesamynService.getEstablecimientoSalud().subscribe(data=>{
-        this.establecimiento_salud=data;})
+        this.establecimientosSalud=data;})
         this.coreesamynService.getEvaluacion().subscribe(data=>{
-          this.evaluacion=data;})
-      this.coreesamynService.getEncuestaVacia().subscribe(data=>{
-        this.encuesta=data;})
-        this.establecimiento_saludvar;
+          this.evaluacion=data;});
   }
+  
   ngOnInit() {
   }
 
   save(){
-    this.encuesta["id"]=this.id;
-    this.encuesta["creado"]=null;
-    this.encuesta["modificado"]=null;
-    this.encuesta["creado_por"]=null;
-    this.encuesta["modificado_por"]=null;
-    this.encuesta["formulario"]=null;
-    this.encuesta["usuario"]=null;
-    this.encuesta["evalacion"]=null;
-    this.encuesta["finalizada"]=null;
-    this.encuesta["fecha_inicial"]=this.fecha_inicial;
-    this.encuesta["fecha_final"]=this.fecha_final;
-    this.encuesta["establecimiento_salud"]=this.establecimiento_saludvar;
-    this.encuesta["responsable"]=this.responsable;
-    this.encuesta["cargo"]=this.cargo;
-    this.encuesta["extra"]=this.extra;
-    console.log(this.encuesta);
-       console.log(JSON.stringify(this.encuesta));
-
-  }
-
-  ejemplo(cargo){
-    console.log(cargo);
+      console.log(JSON.stringify(this.encuesta));
+      this.coreesamynService.createEncuesta(this.encuesta).subscribe(data=>{
+          this.evaluacion=data;});
   }
 }

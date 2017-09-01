@@ -1,0 +1,120 @@
+[
+	{
+		"grupo": "B. INFORMACIÓN SOBRE EL COMPONENTE GENERAL"
+		"hijos" : [
+			{
+				"paso": "1. Implementar y asegurar el efectivo cumplimiento de la norma ESAMyN"
+				"hijos" : [
+					{
+						"directriz": "a) Difundir la Norma ESAMyN;"
+						"hijos" : [
+							{
+								"parametro": "Al menos una actividad de difusión de la norma ESAMyN",
+								"verificador": "G.1.a informe",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 1238,
+
+							},
+							{
+								"parametro": "80% del personal conoce de la norma ESAMyN",
+								"verificador": "G.1.a EP",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 491,
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Contar con material educomunicacional en áreas visibles"
+						"hijos" : [
+							{
+								"parametro": "Al menos una pieza edu-comunicacional sobre la norma ESAMyN disponible y visible.",
+								"verificador": "G.1.b Ob",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 1924,
+
+							}
+						]
+					}
+				]
+			},
+			{
+				"paso": "2.Cumplir con la Norma de Educación Prenatal (NEP)"
+				"hijos" : [
+					{
+						"directriz": "a) Capacitación del personal en la NEP"
+						"hijos" : [
+							{
+								"parametro": "80% del personal de atención perinatal capacitado en la norma de Educación Prenatal",
+								"verificador": "R.1.a Informe",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 1543,
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Aplicación de la norma"
+						"hijos" : [
+							{
+								"parametro": "80% de puérperas asistieron al programa completo de educación prenatal",
+								"verificador": "R.1.b 051",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 834,
+
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"grupo": "C. INFORMACIÓN SOBRE SERVICIOS PRENATALES"
+		"hijos" : [
+			{
+				"paso": "2.Cumplir con la Norma de Educación Prenatal (NEP)"
+				"hijos" : [
+					{
+						"directriz": "a) Capacitación del personal en la NEP"
+						"hijos" : [
+							{
+								"parametro": "80% del personal de atención perinatal capacitado en la norma de Educación Prenatal",
+								"verificador": "R.1.a Informe",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 748,
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Aplicación de la norma"
+						"hijos" : [
+							{
+								"parametro": "80% de puérperas asistieron al programa completo de educación prenatal",
+								"verificador": "R.1.b 051",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848,
+
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

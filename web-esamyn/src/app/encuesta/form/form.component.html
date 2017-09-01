@@ -63,10 +63,13 @@
 				<div class="row">
 					<div class="col-sm-5">
 						<div class="input-group">
-							<span class="input-group-addon"><i class="fa fa-caret-down" aria-hidden="true"> ESTABLECIMIENTO</i></span>
-								<select id="establecimiento_saludvar">
-									<option>Seleccione un valor...</option>
-									<option *ngFor="let x of establecimiento_salud" [ngValue]="x">{{x.nombre}}</option>
+							<span class="input-group-addon"><i
+								class="fa fa-text-width" aria-hidden="true"> ESTABLECIMIENTO</i></span>
+								<select class="form-control" [(ngModel)]="encuesta.establecimientoSalud"
+								    class="bg-green"
+								    id="ddEstablecimientos">
+								  <option value="" disabled selected>--SELECCIONE--</option>
+								  <option *ngFor="let establecimiento of establecimientosSalud" [ngValue]="establecimiento">{{establecimiento.nombre}}</option>
 								</select>
 						</div>
 					</div>
