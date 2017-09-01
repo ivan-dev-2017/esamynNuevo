@@ -32,6 +32,11 @@ public class CantonBean extends GenericServiceImpl<Canton, Long> {
 	return cantonDAO;
     }
 
+    /**
+     * Metodo guardar
+     * @param canton
+     * @return
+     */
     public MensajeDto guardar(Canton canton) {
 
 	MensajeDto mensajeDto = new MensajeDto();
