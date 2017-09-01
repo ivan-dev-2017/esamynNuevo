@@ -1,0 +1,32 @@
+{
+"error": false,
+"mensaje": "",
+"objeto":
+[
+   {
+"codigo": 1,
+"creado": 1510376400000,
+"modificado": 1500561382557,
+"nombre": "Hospital ",
+"unicodigo": "111111",
+"direccion": "Direccion",
+"latitud": "12",
+"longitud": "12",
+"telefono": "222333",
+"correoElectronico": "h@correo.com",
+"nombreResponsable": "responsable",
+"zona": "CENTRO",
+"distrito": "Distrito",
+"canton": {
+"codigo": 1,
+"nombre": "QUITO",
+"codigoINEN": "UIO",
+"provincia": {
+"codigo": 1,
+"nombre": "PICHINCHA",
+"codigoInen": "PHC"
+}
+}
+}
+]
+}

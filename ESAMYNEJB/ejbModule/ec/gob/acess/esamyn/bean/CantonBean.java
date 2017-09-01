@@ -16,7 +16,8 @@ import ec.gob.acess.esamyn.modelo.Canton;
  * 
  * Clase que maneja la logica de clase Canton
  * 
- * @author Duval Barragan @date Aug 25, 2017
+ * @author Duval Barragan
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */
@@ -34,6 +35,7 @@ public class CantonBean extends GenericServiceImpl<Canton, Long> {
 
     /**
      * Metodo guardar
+     * 
      * @param canton
      * @return
      */
@@ -60,10 +62,9 @@ public class CantonBean extends GenericServiceImpl<Canton, Long> {
 	    mensajeDto.setError(true);
 	    mensajeDto.setMensaje("Error al guardar: " + e.getMessage());
 	    mensajeDto.setObjeto(null);
+
 	}
-
 	return mensajeDto;
-
     }
 
 }

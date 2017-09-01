@@ -16,7 +16,8 @@ import ec.gob.acess.esamyn.modelo.PersonaJuridica;
  * 
  * Clase que maneja la logica de clase PersonaJuridica
  * 
- * @author Duval Barragan @date Aug 25, 2017
+ * @author Duval Barragan
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */
@@ -24,13 +25,14 @@ import ec.gob.acess.esamyn.modelo.PersonaJuridica;
 @LocalBean
 public class PersonaJuridicaBean extends GenericServiceImpl<PersonaJuridica, Long> {
 
-    @EJB
-    private PersonaJuridicaDAO personaJuridicaDAO;
+	@EJB
+	private PersonaJuridicaDAO personaJuridicaDAO;
 
-    @Override
-    public GenericDao<PersonaJuridica, Long> getDao() {
-	return personaJuridicaDAO;
-    }
+	@Override
+	public GenericDao<PersonaJuridica, Long> getDao() {
+		return personaJuridicaDAO;
+	}
+
 
     /**
      * Guardar Objeto
@@ -65,5 +67,5 @@ public class PersonaJuridicaBean extends GenericServiceImpl<PersonaJuridica, Lon
 	return mensajeDto;
 
     }
- 
+
 }

@@ -1,0 +1,19 @@
+{
+   "error": false,
+   "mensaje": "",
+   "objeto":    {
+      "codigo": 8,
+      "responsable": null,
+      "cargo": null,
+      "extra": null,
+      "establecimientoSalud": null,
+      "formulario":       {
+         "codigo": 1,
+         "titulo": "Formulario de Información del Establecimiento",
+         "subtitulo": null,
+         "ayuda": null,
+         "clave": "1",
+         "contestadosLista": null
+      }
+   }
+}

@@ -16,7 +16,7 @@ export class BaseService {
 		if( localStorage.getItem('currentUser') ){
 			//console.log("===ingresa si esta logeado");
 			let u = JSON.parse( localStorage.getItem('currentUser') );
-			this.headers= new Headers({ 'Content-Type': 'application/json','Accept':'application/json', 'Authorization': 'Bearer' + u.token });
+			this.headers= new Headers({ 'Content-Type': 'application/json','Accept':'application/json', 'ApiToken': u.token });
 		}
 		console.log("===previo a valdar servicios");
 		if( localStorage.getItem('services') ){
@@ -77,6 +77,7 @@ export class BaseService {
 	manage(entidad, serviceName:string ) {
           //console.log("==> parametros obtenidos " +  this.params.toString() );
           this.options = new RequestOptions({ headers: this.headers });
+          let wrapper ={ "error": false, "mensaje": "Actualiza Objeto", "objeto": entidad };
           return this.http.post(this.config.apiUrl + this.services[serviceName], 
                   {"entidad":entidad}
                   ,this.options)
@@ -89,5 +90,22 @@ export class BaseService {
                 return error;
               });
       }
+	
+	manageWithMessage(entidad, serviceName:string, mensaje:string ) {
+        //console.log("==> parametros obtenidos " +  this.params.toString() );
+        this.options = new RequestOptions({ headers: this.headers });
+        let wrapper ={ "error": false, "mensaje": mensaje, "objeto": entidad };
+        return this.http.post(this.config.apiUrl + this.services[serviceName], 
+                wrapper
+                ,this.options)
+            .map((response: Response) => {
+                  let entidad = response.json();
+                  return entidad;
+              },
+            error => {
+              console.log("==>despues de buscar usuario error  " + JSON.stringify(error));
+              return error;
+            });
+    }
 	
 }

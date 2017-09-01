@@ -1,0 +1,222 @@
+{
+    "error": false,
+    "mensaje": "",
+    "objeto": [
+        {
+          "id":1,
+          "provincia":{
+              "id":1,
+              "nombre":"PICHINCHA",
+              "codigo":"PIC",
+              "cantonList":null
+          },
+          "nombre":"QUITO",
+          "codigo":"QUI",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":2,
+          "provincia":{
+              "id":1,
+              "nombre":"PICHINCHA",
+              "codigo":"PIC",
+              "cantonList":null
+          },
+          "nombre":"CAYAMBE",
+          "codigo":"CAY",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":3,
+          "provincia":{
+              "id":1,
+              "nombre":"PICHINCHA",
+              "codigo":"PIC",
+              "cantonList":null
+          },
+          "nombre":"MEJIA",
+          "codigo":"MEJIA",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":4,
+          "provincia":{
+              "id":2,
+              "nombre":"GUAYAS",
+              "codigo":"GUA",
+              "cantonList":null
+          },
+          "nombre":"GUAYAQUIL",
+          "codigo":"GUA",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":5,
+          "provincia":{
+              "id":2,
+              "nombre":"GUAYAS",
+              "codigo":"GUA",
+              "cantonList":null
+          },
+          "nombre":"ALFREDO BAQUERIZO",
+          "codigo":"AL-BA",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":6,
+          "provincia":{
+              "id":2,
+              "nombre":"GUAYAS",
+              "codigo":"GUA",
+              "cantonList":null
+          },
+          "nombre":"BALAO",
+          "codigo":"BAL",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":7,
+          "provincia":{
+              "id":3,
+              "nombre":"ESMERALDAS",
+              "codigo":"ESM",
+              "cantonList":null
+          },
+          "nombre":"ESMERALDAS",
+          "codigo":"ESM",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":8,
+          "provincia":{
+              "id":3,
+              "nombre":"ESMERALDAS",
+              "codigo":"ESM",
+              "cantonList":null
+          },
+          "nombre":"ATACAMES",
+          "codigo":"ATA",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":9,
+          "provincia":{
+              "id":3,
+              "nombre":"ESMERALDAS",
+              "codigo":"ESM",
+              "cantonList":null
+          },
+          "nombre":"ELOY ALFARO",
+          "codigo":"EL-AL",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":10,
+          "provincia":{
+              "id":4,
+              "nombre":"MANABI",
+              "codigo":"MAN",
+              "cantonList":null
+          },
+          "nombre":"PORTOVIEJO",
+          "codigo":"POR",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":11,
+          "provincia":{
+              "id":4,
+              "nombre":"MANABI",
+              "codigo":"MAN",
+              "cantonList":null
+          },
+          "nombre":"MANTA",
+          "codigo":"MAN",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":12,
+          "provincia":{
+              "id":4,
+              "nombre":"MANABI",
+              "codigo":"MAN",
+              "cantonList":null
+          },
+          "nombre":"OLMEDO",
+          "codigo":"OLM",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":13,
+          "provincia":{
+              "id":5,
+              "nombre":"COTOPAXI",
+              "codigo":"COT",
+              "cantonList":null
+          },
+          "nombre":"LATACUNGA",
+          "codigo":"LAT",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":14,
+          "provincia":{
+              "id":5,
+              "nombre":"COTOPAXI",
+              "codigo":"COT",
+              "cantonList":null
+          },
+          "nombre":"PANGUA",
+          "codigo":"PAN",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":15,
+          "provincia":{
+              "id":5,
+              "nombre":"COTOPAXI",
+              "codigo":"COT",
+              "cantonList":null
+          },
+          "nombre":"SALCEDO",
+          "codigo":"SAL",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":16,
+          "provincia":{
+              "id":6,
+              "nombre":"NAPO",
+              "codigo":"NAP",
+              "cantonList":null
+          },
+          "nombre":"TENA",
+          "codigo":"TEN",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":17,
+          "provincia":{
+              "id":6,
+              "nombre":"NAPO",
+              "codigo":"NAP",
+              "cantonList":null
+          },
+          "nombre":"ARCHIDONA",
+          "codigo":"ARC",
+          "establecimientoSaludList": null
+        },
+        {
+          "id":18,
+          "provincia":{
+              "id":6,
+              "nombre":"NAPO",
+              "codigo":"NAP",
+              "cantonList":null
+          },
+          "nombre":"QUIJOS",
+          "codigo":"QUI",
+          "establecimientoSaludList": null
+        }
+    ]
+}

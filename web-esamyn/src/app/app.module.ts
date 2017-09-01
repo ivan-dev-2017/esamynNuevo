@@ -8,7 +8,7 @@ import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 /**
- * MODULOS BASE DE LA SOLUCION 
+ * MODULOS BASE DE LA SOLUCION
  */
 import { AppComponent } from './app.component';
 import { routing } from './app.router';
@@ -23,7 +23,7 @@ import { AlertModule } from 'ngx-bootstrap';
 import 'hammerjs';
 
 /**
- * MODULOS PROPIOS DE LA SOLUCION 
+ * MODULOS PROPIOS DE LA SOLUCION
  */
 import { AuthGuard } from './guard/index';
 import { AlertService, AuthenticationService,UserService,GlobalService, MessageService,GlobaleventsmanagerService,
@@ -36,17 +36,23 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { MenuComponent } from './layout/menu/menu.component';
 import { EmailvalidatorDirective,NumbervalidatorDirective } from './validator/index';
 import { FormularioListComponent } from './formulario/list/list.component';
+import { EstablecimientoSaludComponent } from './establecimiento-salud/establecimiento-salud.component';
 import { FoesamnComponent } from './encuesta/foesamn/foesamn.component';
-
+import { ForgetpasswordComponent } from './login/forgetpassword/forgetpassword.component';
+import { ChangepasswordComponent } from './login/changepassword/changepassword.component';
+import {FormComponent} from './encuesta/form/form.component';
 
 
 /**
- * COMPONENTES DE LA SOLUCION 
+ * COMPONENTES DE LA SOLUCION
  */
 import { AlertComponent } from './comp/alert/alert.component';
 import {SafeHtmlPipe} from "./comp/pipe/safehtml.pipe";
 import { ModalpromptComponent } from './comp/modalprompt/modalprompt.component';
 import { MessageComponent } from './comp/message/message.component';
+import { EvaluacionlistComponent } from './evaluacion/evaluacionlist/evaluacionlist.component';
+import { EvaluacionformComponent } from './evaluacion/evaluacionform/evaluacionform.component';
+
 
 @NgModule({
   declarations: [
@@ -64,7 +70,13 @@ import { MessageComponent } from './comp/message/message.component';
     NumbervalidatorDirective,
     MessageComponent,
     FormularioListComponent,
-    FoesamnComponent
+    EstablecimientoSaludComponent,
+    FoesamnComponent,
+    FormComponent,
+    EvaluacionlistComponent,
+    EvaluacionformComponent,
+    ForgetpasswordComponent,
+    ChangepasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -91,8 +103,8 @@ import { MessageComponent } from './comp/message/message.component';
 		CoreesamynService
               ],
   entryComponents: [
-                    ModalpromptComponent
-                  ],            
+                    ModalpromptComponent,ForgetpasswordComponent,ChangepasswordComponent
+                  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

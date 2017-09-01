@@ -34,6 +34,7 @@ public class Aplicacion extends Application {
 		classes.add(GrupoParametroWebService.class);
 		classes.add(ParametroWebSservice.class);
 		classes.add(PersonaJuridicaWebService.class);
+		classes.add(EvaluacionWebService.class);
 		return classes;
 	}
 

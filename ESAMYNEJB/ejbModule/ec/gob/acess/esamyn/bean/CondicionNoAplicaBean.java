@@ -16,7 +16,8 @@ import ec.gob.acess.esamyn.modelo.CondicionNoAplica;
  * 
  * Clase que maneja la logica de clase CondicionNoAplica
  * 
- * @author Duval Barragan @date Aug 25, 2017
+ * @author Duval Barragan
+ * @date Aug 25, 2017
  * @version 1.0
  *
  */
