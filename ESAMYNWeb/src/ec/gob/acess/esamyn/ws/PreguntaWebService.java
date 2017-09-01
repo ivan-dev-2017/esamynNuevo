@@ -44,6 +44,32 @@ public class PreguntaWebService {
     }
 
     @POST
+    @Path("guardar")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public MensajeDto guardar(EncuestaDto encuestaDto, @Context HttpHeaders headers) {
+
+	String token = headers.getRequestHeader("ApiToken").get(0);
+
+	MensajeDto mensajeDto;
+	try {
+	    boolean valida = usuarioBean.validaToken(token);
+
+	    if (valida) {
+
+		mensajeDto = preguntaBean.guardarEncuesta(encuestaDto);
+
+	    } else {
+		mensajeDto = new MensajeDto(true, "Token invalido", null);
+	    }
+
+	} catch (Exception e) {
+	    mensajeDto = new MensajeDto(true, "Error token " + e.getMessage(), null);
+	}
+	return mensajeDto;
+    }
+
+    @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public MensajeDto buscarPreguntas(PreguntaWsDto pregunta, @Context HttpHeaders headers) {
