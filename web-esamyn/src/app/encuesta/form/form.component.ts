@@ -21,6 +21,7 @@ export class FormComponent implements OnInit {
     responsable="";
     cargo="";
     extra="";
+    id="";
   constructor(private coreesamynService:CoreesamynService) {
       this.coreesamynService.getEstablecimientoSalud().subscribe(data=>{
         this.establecimiento_salud=data;})
@@ -34,7 +35,7 @@ export class FormComponent implements OnInit {
   }
 
   save(){
-    this.encuesta["id"]=null;
+    this.encuesta["id"]=this.id;
     this.encuesta["creado"]=null;
     this.encuesta["modificado"]=null;
     this.encuesta["creado_por"]=null;
@@ -52,5 +53,9 @@ export class FormComponent implements OnInit {
     console.log(this.encuesta);
        console.log(JSON.stringify(this.encuesta));
 
+  }
+
+  ejemplo(cargo){
+    console.log(cargo);
   }
 }

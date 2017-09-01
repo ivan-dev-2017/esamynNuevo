@@ -4,7 +4,7 @@
 	"objeto": [{
 			"codigo": 9,
 			"responsable": null,
-			"cargo": null,
+			"cargo": "cargo1",
 			"extra": null,
 			"establecimientoSalud": {
 				"codigo": 1,
@@ -47,7 +47,7 @@
 		{
 			"codigo": 10,
 			"responsable": null,
-			"cargo": null,
+			"cargo": "cargo2",
 			"extra": null,
 			"establecimientoSalud": {
 				"codigo": 1,

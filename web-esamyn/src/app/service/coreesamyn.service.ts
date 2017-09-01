@@ -7,14 +7,14 @@ import { AppConfig } from '../app.config';
 @Injectable()
 export class CoreesamynService extends BaseService {
 
-    
-  constructor(private _http: Http, private _config: AppConfig) { 
+
+  constructor(private _http: Http, private _config: AppConfig) {
       super();
       this.http=this._http;
       this.config =this._config;
   }
-  
-  getFormulariosList(){ 
+
+  getFormulariosList(){
       console.log( "==Entra en CoreesamynService getFormulariosList" );
       //return this.getAllPaginated(null, 'formulario.crud.findall');
       return this.http.get('./app/mock/formularios.json').map((response) =>{
@@ -29,8 +29,8 @@ export class CoreesamynService extends BaseService {
           }
        );
   }
-  
-  getPreguntasList(){ 
+
+  getPreguntasList(){
       console.log( "==Entra en CoreesamynService getFormulariosList" );
       //return this.getAllPaginated(null, 'formulario.crud.findall');
       return this.http.get('./app/mock/preguntas.json').map((response) =>{
@@ -43,8 +43,8 @@ export class CoreesamynService extends BaseService {
           }
        );
   }
-    
-  getProvinciasList(){ 
+
+  getProvinciasList(){
       console.log( "==Entra en CoreesamynService getProvinciasList" );
       //return this.getAllPaginated(null, 'formulario.crud.findall');
       return this.http.get('./app/mock/provincias.json').map((response) =>{
@@ -57,8 +57,8 @@ export class CoreesamynService extends BaseService {
           }
        );
   }
-    
-  getCantonesList(idProvincia:number){ 
+
+  getCantonesList(idProvincia:number){
       console.log( "==Entra en CoreesamynService getCantonesList" );
       //return this.getAllPaginated(null, 'formulario.crud.findall');
       return this.http.get('./app/mock/cantones.json').map((response) =>{
@@ -72,8 +72,8 @@ export class CoreesamynService extends BaseService {
           }
        );
   }
-    
-  getPersonaJuridicaList(){ 
+
+  getPersonaJuridicaList(){
       console.log( "==Entra en CoreesamynService getPersonaJuridicaList" );
       //return this.getAllPaginated(null, 'formulario.crud.findall');
       return this.http.get('./app/mock/personaJuridica.json').map((response) =>{
@@ -86,9 +86,9 @@ export class CoreesamynService extends BaseService {
           }
        );
   }
-    
-    
-  getEstablecimientoSaludList(){ 
+
+
+  getEstablecimientoSaludList(){
       console.log( "==Entra en CoreesamynService getEstablecimientoSaludList" );
       //return this.getAllPaginated(null, 'formulario.crud.findall');
       return this.http.get('./app/mock/establecimientoSalud.json').map((response) =>{
@@ -101,8 +101,8 @@ export class CoreesamynService extends BaseService {
           }
        );
   }
-    
-  getEncuestasPorFormularioList(codigoFormulario:number){ 
+
+  getEncuestasPorFormularioList(codigoFormulario:number){
       console.log( "==Entra en CoreesamynService getEncuestaPorFormularioList" );
       //return this.getAllPaginated(null, 'formulario.crud.findall');
       return this.http.get('./app/mock/encuestas.json').map((response) =>{
@@ -117,7 +117,7 @@ export class CoreesamynService extends BaseService {
           }
        );
   }
-  
+
   getEncuesta(){
       console.log( "==Entra en CoreesamynService getEncuesta" );
       //return this.getAllPaginated(null, 'formulario.crud.findall');
@@ -153,18 +153,26 @@ export class CoreesamynService extends BaseService {
         return paginatedListx.objeto;
       });
     }
-    
+
     getEstablecimientoSalud(){
       return this.http.get('./app/mock/establecimiento_salud.json').map((response)=>{
         let paginatedListx=response.json();
         return paginatedListx.objeto;
       });
     }
-    
+
     getEncuestaVacia(){
         return this.http.get('./app/mock/encuestavacia.json').map((response)=>{
           let paginatedListx=response.json();
           return paginatedListx.objeto;
         });
     }
+
+    getEncuestauna(){
+        return this.http.get('./app/mock/encuestauna.json').map((response)=>{
+          let paginatedListx=response.json();
+          return paginatedListx.objeto;
+        });
+    }
+
 }

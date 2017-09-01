@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CoreesamynService } from '../../service/coreesamyn.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-foesamn',
@@ -7,16 +8,34 @@ import { CoreesamynService } from '../../service/coreesamyn.service';
   styleUrls: ['./foesamn.component.css']
 })
 export class FoesamnComponent implements OnInit {
-    
+
   preguntas=[];
   preguntacero={};
-    
-  constructor( private coreesamynService:CoreesamynService ) { 
+  encuesta=[];
+  id_encuesta="";
+  zona:String;
+  distrito="";
+  establecimiento_saludVar=[];
+  responsable="";
+  cargo="";
+  unicode="";
+  evaluador="";
+  fecha="";
+  constructor( private coreesamynService:CoreesamynService,private route: ActivatedRoute ) {
       this.getPreguntas();
-  }
+      this.coreesamynService.getEncuestauna().subscribe(data=>{
+        console.log("se suscribio"+JSON.stringify(data));
+        this.encuesta=data;
 
+    });
+  }
   ngOnInit() {
-      
+    console.log("-----------------");
+    this.route.params.subscribe(params => {
+            const _id = params["id"].toString();
+            this.id_encuesta= params["id"].toString();
+          });
+console.log(this.id_encuesta);
   }
   public getPreguntas(){
       this.coreesamynService.getPreguntasList().subscribe(data=>{
@@ -25,11 +44,14 @@ export class FoesamnComponent implements OnInit {
           //console.log("elemento 0 " + this.preguntas[0].texto);
           this.preguntacero= this.preguntas[0];
       });
+
   }
 
   public saveEncuesta(){
       console.log("entrassdd " );
       console.log("enviando preguntas " + JSON.stringify( this.preguntas));
+
   }
+
 
 }

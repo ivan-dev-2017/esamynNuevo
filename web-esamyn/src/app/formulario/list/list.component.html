@@ -1,4 +1,4 @@
-<div class="col-lg-6 col-xs-12 col-md-6" style="margin: 10px 0px;">	
+<div class="col-lg-6 col-xs-12 col-md-6" style="margin: 10px 0px;">
     <div  id="principal" [hidden]="isVisible" >
         <ngx-datatable
             class="dark"
@@ -33,9 +33,9 @@
           </ngx-datatable>
 
     </div>
-</div>	
+</div>
 
-<div class="col-lg-6 col-xs-12 col-md-6" style="margin: 10px 0px;">	
+<div class="col-lg-6 col-xs-12 col-md-6" style="margin: 10px 0px;">
     <div  id="secundario" *ngIf="encuestas.length" >
         <ngx-datatable
             class="dark"
@@ -69,10 +69,10 @@
                 {{column.name}}
               </ng-template>
               <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-                <a [routerLink]="['/form_component',value]" style="margin: 5px">
+                <a [routerLink]="'/form_component/'+value" style="margin: 5px">
                     <i class="fa fa-plus-square" aria-hidden="true"></i>
                 </a>
-                <a href="javascript:void(0);"  (click)="modificarEncuesta()" style="margin: 5px">
+                <a href="javascript:void(0);"  (click)="modificarEncuesta()" style="margin: 5px" >
                     <i class="fa fa-edit" aria-hidden="true"></i>
                 </a>
               </ng-template>
@@ -80,4 +80,4 @@
           </ngx-datatable>
 
     </div>
-</div>	
+</div>
