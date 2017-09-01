@@ -1,23 +1,19 @@
 {
-"error": false,
-"mensaje": "",
-"objeto": [
-{
-"id":,
-"creado":"",
-"modificado":"",
-"creado_por":"",
-"modificado_por":"",
-"formulario":"",
-"usuario":"",
-"evaluacion":"",
-"finalizada":,
-"fecha_inicial":"",
-"fecha_final":"",
-"establecimiento_salud":"",
-"responsable":"",
-"cargo":" ",
-"extra":""
-}
-]
+   "error": false,
+   "mensaje": "",
+   "objeto":    {
+      "codigo": 8,
+      "responsable": null,
+      "cargo": null,
+      "extra": null,
+      "establecimientoSalud": null,
+      "formulario":       {
+         "codigo": 1,
+         "titulo": "Formulario de Información del Establecimiento",
+         "subtitulo": null,
+         "ayuda": null,
+         "clave": "1",
+         "contestadosLista": null
+      }
+   }
 }

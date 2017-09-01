@@ -134,8 +134,8 @@ export class CoreesamynService extends BaseService {
 
     getUsuarios(){
       console.log( "==Entra en CoreesamynService getUsuario" );
-      //return this.getAllPaginated(null, 'formulario.crud.findall');
-      return this.http.get('./app/mock/userdata.json').map((response) =>{
+      return this.getAllPaginated(null, 'formulario.crud.findall');
+      /*return this.http.get('./app/mock/userdata.json').map((response) =>{
           let paginatedListx = response.json();
           return paginatedListx.list;
           },
@@ -143,7 +143,7 @@ export class CoreesamynService extends BaseService {
               console.log("==>despues de buscar usuario error  " + JSON.stringify(error));
               return error;
           }
-       );
+       );*/
 
     }
 
@@ -167,4 +167,10 @@ export class CoreesamynService extends BaseService {
           return paginatedListx.objeto;
         });
     }
+    
+    createEncuesta( entidad ){
+        return this.manageWithMessage(entidad, "encuesta.crud.create", "CREACION DE ENCUESTA");
+    }
+    
+    
 }
