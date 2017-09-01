@@ -12,7 +12,7 @@ import { MessageComponent } from '../comp/message/message.component';
   styleUrls: ['./establecimiento-salud.component.css']
 })
 export class EstablecimientoSaludComponent implements OnInit {
-
+    standardForm : FormGroup;
   messages:string = "Invalido";
   personasJuridicas = [];
   provincias = [];
@@ -66,5 +66,10 @@ export class EstablecimientoSaludComponent implements OnInit {
           setTimeout(() => {this.loadingIndicator = false; }, 1500);
       });
   }
+  
+  clear(){
+      this.standardForm.reset();
+  }
+  
 
 }

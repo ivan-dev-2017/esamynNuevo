@@ -67,4 +67,12 @@ export class AuthenticationService {
 			return loginWrapper;
 		});
     }
+    
+    changePassword(usuario:string){
+        console.log("cambuo contrasena");
+    }
+    
+    recoverPassword(usuario:string){
+        console.log("reupenadno contrasena");
+    }
 }

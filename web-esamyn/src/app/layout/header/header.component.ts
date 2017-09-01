@@ -3,6 +3,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 import {  User,Login } from '../../model/index';
 import {GlobaleventsmanagerService,AlertService,AuthenticationService} from "../../service/index";
 
+import {ChangepasswordComponent} from "../../login/changepassword/changepassword.component";
+import { DialogService } from "ng2-bootstrap-modal";
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -33,7 +36,9 @@ export class HeaderComponent implements OnInit {
   constructor(private globalEventsManager: GlobaleventsmanagerService, 
 		      private alertService: AlertService,
 		      private authenticationService: AuthenticationService,
-		      private router: Router) { 
+		      private route: ActivatedRoute,
+		      private router: Router,
+		      private dialogService:DialogService) { 
 	  
 	  this.globalEventsManager.showNavBarEmitter.subscribe((mode)=>{
 	        // mode will be null the first time it is created, so you need to igonore it when null
@@ -96,5 +101,17 @@ export class HeaderComponent implements OnInit {
   console.log("cambia estado");
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
   }
+  
+  
+  showPrompt() {
+      let userLoc = new User(); 
+      console.log("====> showPrompt");
+      this.dialogService.addDialog(ChangepasswordComponent, {
+        title:'RECUPERACION CONTRASENA USUARIO',
+        usuario:userLoc })
+        .subscribe((usuarioRet)=>{
+          this.usuario = usuarioRet;
+        });
+    }
 
 }

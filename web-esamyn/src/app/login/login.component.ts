@@ -6,6 +6,9 @@ import { AlertService, AuthenticationService } from '../service/index';
 import { GlobaleventsmanagerService } from '../service/globaleventsmanager.service';
 import { User,Login } from '../model/index';
 
+import {ForgetpasswordComponent} from "../login/forgetpassword/forgetpassword.component";
+import { DialogService } from "ng2-bootstrap-modal";
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -16,13 +19,15 @@ export class LoginComponent implements OnInit {
 	model: Login = new Login();
     loading = false;
     returnUrl: string=null;
-
+    usuario: User;
+    
     constructor(
         private route: ActivatedRoute,
         private router: Router,
         private authenticationService: AuthenticationService,
         private alertService: AlertService,
-        private globaleventsmanagerService: GlobaleventsmanagerService) { }
+        private globaleventsmanagerService: GlobaleventsmanagerService,
+        private dialogService:DialogService) { }
 
     ngOnInit() {
         // reset login status
@@ -63,5 +68,16 @@ export class LoginComponent implements OnInit {
                     this.loading = false;
                 });
     }
+    
+    showPrompt() {
+        let userLoc = new User(); 
+        console.log("====> showPrompt");
+        this.dialogService.addDialog(ForgetpasswordComponent, {
+          title:'RECUPERACION CONTRASENA USUARIO',
+          usuario:userLoc })
+          .subscribe((usuarioRet)=>{
+            this.usuario = usuarioRet;
+          });
+      }
 
 }
