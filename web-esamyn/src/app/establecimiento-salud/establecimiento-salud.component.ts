@@ -5,7 +5,6 @@ import { MessageComponent } from '../comp/message/message.component';
 
 
 
-
 @Component({
   selector: 'app-establecimiento-salud',
   templateUrl: './establecimiento-salud.component.html',
@@ -13,18 +12,17 @@ import { MessageComponent } from '../comp/message/message.component';
 })
 export class EstablecimientoSaludComponent implements OnInit {
 
-  messages:string = "Invalido";
+  failures:Array<string> = new Array;
   personasJuridicas = [];
   provincias = [];
   cantones = [];
   establecimientoSalud = {};
   provincia={"id":null,"codigo":null,"nombre":null,"cantonList":null};
   loadingIndicator: boolean = true;
-  form = FormBuilder;
     
   constructor(private coreesamyn:CoreesamynService) { 
     console.log("<<<<< ENTRO EN ESTABLECIMIENTO SALUD  >>>>>");
-    
+    this.failures.push("InvalidoArray");
     //OBTENER PROVINCIAS DESDE JSON
     this.coreesamyn.getProvinciasList().subscribe(
     data=>{

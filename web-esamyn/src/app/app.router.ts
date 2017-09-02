@@ -19,13 +19,13 @@ export const appRoutes: Routes = [
     { path: 'establecimientoSalud', component: EstablecimientoSaludComponent },
 	{ path: 'login', component: LoginComponent },
 	{ path: 'home', component: HomeComponent },
-	//{ path: 'foesamn', component: FoesamnComponent },
+	{ path: 'foesamn', component: FoesamnComponent },
     // otherwise redirect to home
 	{ path: 'form_component/:id', component: FormComponent },
 	{ path: 'formulario_list', component: FoesamnComponent },
 	{ path: 'formularioListComponent', component: FormularioListComponent },
-	{ path: 'evaluacionlist', component: EvaluacionlistComponent },
-	{ path: 'evaluacionform', component: EvaluacionformComponent },
+	{ path: 'evaluacionList', component: EvaluacionlistComponent },
+	{ path: 'evaluacionForm/:idEvaluacion', component: EvaluacionformComponent },
     { path: '**', redirectTo: '/login' }
 ];
 

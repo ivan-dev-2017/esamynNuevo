@@ -1,0 +1,76 @@
+.camposBase{
+    height: 40px;
+}
+
+.altoPadre{
+    height: inherit;
+    text-align: center;
+    padding: 1%;
+}
+
+.borde-T-R{
+    border-top: solid 1px #000000;
+    border-right: solid 1px #000000;
+}
+
+.borde-L-T-R{
+    border-left: solid 1px #000000;
+    border-top: solid 1px #000000;
+    border-right: solid 1px #000000;
+}
+
+.borde-L-R{
+    border-left: solid 1px #000000;
+    border-right: solid 1px #000000;
+}
+
+.borde-L-T-R-B{
+    border-left: solid 1px #000000;
+    border-top: solid 1px #000000;
+    border-right: solid 1px #000000;
+    border-bottom: solid 1px #000000;
+}
+
+.titulos{
+    font-weight:bolder;
+    margin: 10px 0px !important;
+}
+
+.subTitulos{
+    margin: 5px 0px !important;
+}
+
+.cajaTexto{
+    padding: 1%;
+    min-height: 100px;
+}
+
+.margenesPeq{
+    margin: 2px;
+}
+
+label, input, li, table, span{
+    font-size: 10px;
+}
+
+input[type="text"]{
+    margin-left: 10px;
+    display: inline-block;
+    width: 65%;
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px #000000;
+    height: 24px;
+}
+
+table, tbody, thead, th, td, tr{
+    border-color: #000000 !important;
+}
+
+th{
+    background: #d2d2d2;
+}
+
+output{
+    padding: 0px;
+}

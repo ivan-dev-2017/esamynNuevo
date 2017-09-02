@@ -44,6 +44,20 @@ export class CoreesamynService extends BaseService {
        );
   }
     
+  getPreguntasPorFormularioList(){ 
+      console.log( "==Entra en CoreesamynService getFormulariosList" );
+      //return this.getAllPaginated(null, 'formulario.crud.findall');
+      return this.http.get('./app/mock/preguntasEstablecimientoSalud.json').map((response) =>{
+          let paginatedListx = response.json();
+          return paginatedListx.objeto;
+          },
+          error => {
+              console.log("==>despues de buscar usuario error  " + JSON.stringify(error));
+              return error;
+          }
+       );
+  }
+    
   getProvinciasList(){ 
       console.log( "==Entra en CoreesamynService getProvinciasList" );
       //return this.getAllPaginated(null, 'formulario.crud.findall');
@@ -151,6 +165,14 @@ export class CoreesamynService extends BaseService {
       return this.http.get('./app/mock/evaluacion.json').map((response)=>{
         let paginatedListx=response.json();
         return paginatedListx.objeto;
+      });
+    }
+    
+    getEvaluacionPorId(id:number){
+      return this.http.get('./app/mock/evaluacion.json').map((response)=>{
+        let paginatedListx=response.json();
+        let x = paginatedListx.objeto;
+        return x.filter(evaluacion => evaluacion.id == id);
       });
     }
     

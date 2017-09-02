@@ -45,15 +45,15 @@
              "evaluacionList": null
          }, 
          "formulario": { 
-                "id": 2,   
-                "codigo": 2,
+                "id": 1,
+                "codigo": 1,
                 "creado": 1500561382557,
                 "modificado": 1500561382557,
-                "nombre": "Formulario de Observación",
-                "titulo": "Formulario de Observación",
+                "nombre": "Formulario de Información del Establecimiento",
+                "titulo": "Formulario de Información del Establecimiento",
                 "subtitulo": null,
                 "ayuda": null,
-                "clave": "2",
+                "clave": "1",
                 "evaluacionList": null
          } 
     }, 

@@ -14,6 +14,7 @@ export class FormularioListComponent implements OnInit {
     loadingIndicator: boolean = true;
     loadingIndicatorEncuesta: boolean = true;
     reorderable: boolean = true;
+    @Output() bandera:EventEmitter<boolean> = new EventEmitter();
     
   constructor( private coreesamyn:CoreesamynService ) { 
       console.log( "==Entra en FormularioListComponent" );
@@ -35,6 +36,11 @@ export class FormularioListComponent implements OnInit {
       this.coreesamyn.getEncuestasPorFormularioList(selected[0].codigo).subscribe( data=>{
           console.log("==retorno: " + JSON.stringify(data));
           this.encuestas=data;
+          if(this.encuestas.length){
+             this.bandera.emit(true);
+          }else{
+             this.bandera.emit(false);
+          }
           setTimeout(() => { this.loadingIndicatorEncuesta = false; }, 1500);
       } );
     }
