@@ -61,12 +61,12 @@ psql -p 6543 -h 200.7.213.18 -U esamyn_user -W acess
 ```
 
 ### WildFly de pruebas
-```
+
 [http://200.7.213.18:8080](http://200.7.213.18:8080)
-```
+
 
 
 ### Angular de pruebas
-```
+
 [http://200.7.213.18:4200](http://200.7.213.18:4200)
-```
+
