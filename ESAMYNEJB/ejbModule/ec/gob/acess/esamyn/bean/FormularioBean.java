@@ -8,6 +8,7 @@ import com.saviasoft.persistence.util.dao.GenericDao;
 import com.saviasoft.persistence.util.service.impl.GenericServiceImpl;
 
 import ec.gob.acess.esamyn.dao.FormularioDAO;
+import ec.gob.acess.esamyn.dto.MensajeDto;
 import ec.gob.acess.esamyn.modelo.Formulario;
 
 
@@ -31,6 +32,24 @@ public class FormularioBean extends GenericServiceImpl<Formulario, Long> {
 		return formularioDAO;
 	}
 	
-	
+  public MensajeDto editar(Long codigo, String textoFormulario) {
+      
+      MensajeDto mensajeDto;
+
+	Formulario formulario = findByPk(codigo);
+
+	if (formulario != null) {
+
+	    formulario.setTitulo(textoFormulario);
+	    update(formulario);
+
+	    mensajeDto = new MensajeDto(false, "Actualiza Objeto", formulario);
+
+	} else {
+	    mensajeDto = new MensajeDto(true, "No existe pregunta para el id: " + codigo, null);
+	}
+
+	return mensajeDto;
+  }
 
 }

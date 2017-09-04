@@ -25,41 +25,46 @@ import ec.gob.acess.esamyn.modelo.Canton;
 @LocalBean
 public class CantonBean extends GenericServiceImpl<Canton, Long> {
 
-	@EJB
-	private CantonDAO cantonDAO;
+    @EJB
+    private CantonDAO cantonDAO;
 
-	@Override
-	public GenericDao<Canton, Long> getDao() {
-		return cantonDAO;
+    @Override
+    public GenericDao<Canton, Long> getDao() {
+	return cantonDAO;
+    }
+
+    /**
+     * Metodo guardar
+     * 
+     * @param canton
+     * @return
+     */
+    public MensajeDto guardar(Canton canton) {
+
+	MensajeDto mensajeDto = new MensajeDto();
+
+	try {
+
+	    if (canton.getCodigo() == null) {
+
+		mensajeDto.setError(false);
+		mensajeDto.setMensaje("Canton Guardado");
+		create(canton);
+		mensajeDto.setObjeto(canton);
+	    } else {
+		mensajeDto.setError(false);
+		mensajeDto.setMensaje("Actualiza Objeto");
+		update(canton);
+		mensajeDto.setObjeto(canton);
+	    }
+
+	} catch (Exception e) {
+	    mensajeDto.setError(true);
+	    mensajeDto.setMensaje("Error al guardar: " + e.getMessage());
+	    mensajeDto.setObjeto(null);
+
 	}
-
-	public MensajeDto guardar(Canton canton) {
-
-		MensajeDto mensajeDto = new MensajeDto();
-
-		try {
-
-			if (canton.getCodigo() == null) {
-
-				mensajeDto.setError(false);
-				mensajeDto.setMensaje("Canton Guardado");
-				create(canton);
-				mensajeDto.setObjeto(canton);
-			} else {
-				mensajeDto.setError(false);
-				mensajeDto.setMensaje("Actualiza Objeto");
-				update(canton);
-				mensajeDto.setObjeto(canton);
-			}
-
-		} catch (Exception e) {
-			mensajeDto.setError(true);
-			mensajeDto.setMensaje("Error al guardar: " + e.getMessage());
-			mensajeDto.setObjeto(null);
-		}
-
-		return mensajeDto;
-
-	}
+	return mensajeDto;
+    }
 
 }
