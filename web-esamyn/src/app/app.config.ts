@@ -6,5 +6,8 @@ export class AppConfig {
                                   'encuesta.crud.findall':'rest/encuesta/todos',
                                   'encuesta.crud.create':'rest/catalogo/guardar',
                                   'encuesta.crud.update':'rest/catalogo/guardar',
-                                  'encuesta.crud.read':'rest/encuesta/buscar/'};
+                                  'encuesta.crud.read':'rest/encuesta/buscar/',
+                                  'usuario.crud.cambiar':'rest/usuario/cambiar/',
+                                  'usuario.crud.olvido':'rest/usuario/olvido/',
+                                  };
 };

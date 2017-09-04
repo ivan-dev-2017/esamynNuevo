@@ -34,10 +34,24 @@ export class ChangepasswordComponent extends DialogComponent<PromptUserModel, Us
   }
   
   apply(){
-      this.authenticationService.recoverPassword(this.usuario.nombre);
-      this.mensaje="PASSWORD ACTUALIZADO";
-      this.returnUrl="/login";
-      this.router.navigate([this.returnUrl]);
+      console.log("====> cambiando password de usuario: " + JSON.stringify(this.usuario));
+      if( this.usuario.contrasenia && this.usuario.passwordConfirm &&    
+              this.usuario.contrasenia == this.usuario.passwordConfirm){
+          this.authenticationService.changePassword(this.usuario).subscribe(data=>{
+              console.log("Retnono cambio: " + JSON.stringify( data ));
+          });
+          //this.result = this.usuario;
+          //this.close();
+          this.mensaje="CONTRASE&Ntilde;A ACTUALIZADA";
+          this.returnUrl="/login";
+          this.router.navigate([this.returnUrl]);
+      } else {
+          if( !this.usuario.passwordConfirm || !this.usuario.contrasenia   ){
+              this.mensaje="INGRESE CONTRASE&Ntilde;A";
+          } 
+      }
+      
+      
   }
 
 }
