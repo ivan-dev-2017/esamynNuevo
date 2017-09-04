@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CoreesamynService } from '../../service/coreesamyn.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'encuesta-form',
@@ -13,13 +14,13 @@ export class FormComponent implements OnInit {
        "cargo": null,
         "establecimientoSalud": null
 };
-    formulario=[];
+    idForm="";
     usuario=[];
     evaluacion=[];
     establecimientosSalud=[];
     loadingIndicator: boolean = true;
     reorderable: boolean = true;
-  constructor(private coreesamynService:CoreesamynService) {
+  constructor(private coreesamynService:CoreesamynService, private route: ActivatedRoute) {
       this.coreesamynService.getEstablecimientoSaludList().subscribe(data=>{
         this.establecimientosSalud=data;
       })
@@ -28,6 +29,18 @@ export class FormComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log("-----------------");
+    this.route.params.subscribe(params => {
+            const _id = params["id"].toString();
+            this.idForm= params["id"].toString();
+            this.coreesamynService.getEncuestabyId(params["id"]).subscribe(data=>{
+              this.encuesta=data;
+              console.log("a buscar "+JSON.stringify(data));
+  })
+          });
+  console.log(this.idForm);
+
+
   }
 
   save(){
@@ -38,7 +51,11 @@ export class FormComponent implements OnInit {
   createEncuesta(){
     console.log("encuesta a crear"+JSON.stringify(this.encuesta));
     this.coreesamynService.createEncuesta(this.encuesta);
-
+    let parametro ={
+"idFormulario":this.idForm,
+"idEncuesta": this.encuesta.codigo
+};
+console.log(parametro);
   }
 
 }

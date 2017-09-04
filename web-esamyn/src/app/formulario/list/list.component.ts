@@ -44,7 +44,7 @@ export class FormularioListComponent implements OnInit {
     }
 
   onSelectEncuesta({ selected }) {
-      console.log('Select Event Encuesta', selected[0].codigo);
+      console.log('Select Event Encuesta==>>', selected[0].codigo);
    }
 
   onActivateEncuesta(event) {
@@ -62,6 +62,11 @@ export class FormularioListComponent implements OnInit {
 
   modificarEncuesta(){
       console.log("modificar encuesta");
+      let parametro ={
+  "idFormulario":this.selected[0].codigo,
+  "idEncuesta": this.encuestas[0].codigo
+  };
+  console.log(parametro);
   }
 
 }

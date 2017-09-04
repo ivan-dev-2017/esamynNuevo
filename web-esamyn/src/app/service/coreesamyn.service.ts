@@ -172,9 +172,8 @@ export class CoreesamynService extends BaseService {
     }
 
     getEncuestabyId(idEncuesta:number){
-    //  return this.findByPk(null,'encuesta.crud.read'+"/"+idEncuesta).map((response)=>{
-        return this.findByPk(idEncuesta.toString(),'encuesta.crud.read').map((response)=>{
-    //  return this.http.get('./app/mock/encuesta.json').map((response)=>{
+        //return this.findByPkUrl(idEncuesta.toString(),'encuesta.crud.read').map((response)=>{
+     return this.http.get('./app/mock/encuesta.json').map((response)=>{
           let paginatedListx=response.json();
           let encuesta = paginatedListx.objeto;
           return encuesta.filter(encuesta=>encuesta.codigo==idEncuesta);
@@ -203,6 +202,15 @@ export class CoreesamynService extends BaseService {
               return error;
           }
        );
+    }
+
+    getPreguntasFormulario(parametro:string){
+//return this.findByPk(parametro,'rest/pregunta/').map((response)=>{
+  return this.http.get('./app/mock/preguntas.json').map((response)=>{
+  let paginatedListx=response.json();
+  return paginatedListx.objeto;
+})
+
     }
 
 }
