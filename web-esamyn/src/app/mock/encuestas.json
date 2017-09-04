@@ -1,116 +1,36 @@
-{ 
-    "error": false, 
-    "mensaje": "", 
-    "objeto": [ { 
-         "id":null,
-         "creado":null,
-         "modificado":"2017-08-30",
-         "creado_por":null,
-         "modificado_por":null,
-         "codigo": 9,
+{
+   "error": false,
+   "mensaje": "",
+   "objeto":    [
+            {
+         "codigo": 7,
          "responsable": null,
          "cargo": null,
          "extra": null,
-         "establecimientoSalud": { 
-             "codigo": 1,
-             "unicodigo": "111111",
-             "direccion": "Direccion",
-             "latitud": "12",
-             "longitud": "12",
-             "telefono": "222333",
-             "correoElectronico": "h@correo.com",
-             "nombreResponsable": "responsable",
-             "zona": "CENTRO",
-             "distrito": "Distrito",
-             "canton": { 
-                  "id":1,
-                  "provincia":{
-                      "id":1,
-                      "nombre":"PICHINCHA",
-                      "codigo":"PIC",
-                      "cantonList":null
-                  },
-                  "nombre":"QUITO",
-                  "codigo":"QUI",
-                  "establecimientoSaludList": null
-             },
-             "personaJuridica": { 
-                  "id":1,
-                  "creado":"2017-08-29",      
-                  "modificado":"2017-08-29",  
-                  "razonSocial":"Relative Engine", 
-                  "ruc":"4564156",
-                  "establecimientoSaludList": null 
-             }, 
-             "evaluacionList": null
-         }, 
-         "formulario": { 
-                "id": 2,   
-                "codigo": 2,
-                "creado": 1500561382557,
-                "modificado": 1500561382557,
-                "nombre": "Formulario de Observación",
-                "titulo": "Formulario de Observación",
-                "subtitulo": null,
-                "ayuda": null,
-                "clave": "2",
-                "evaluacionList": null
-         } 
-    }, 
-    { 
-        "id":null,
-        "creado":null,
-        "modificado":"2017-08-30",
-        "creado_por":null,
-        "modificado_por":null,
-        "codigo": 10,
-        "responsable": null,
-        "cargo": null,
-        "extra": null,
-        "establecimientoSalud": { 
+         "establecimientoSalud": null,
+         "formulario":          {
             "codigo": 1,
-            "unicodigo": "111111",
-            "direccion": "Direccion",
-            "latitud": "12",
-            "longitud": "12",
-            "telefono": "222333",
-            "correoElectronico": "h@correo.com",
-            "nombreResponsable": "responsable",
-            "zona": "CENTRO",
-            "distrito": "Distrito",
-            "canton": { 
-                  "id":6,
-                  "provincia":{
-                      "id":2,
-                      "nombre":"GUAYAS",
-                      "codigo":"GUA",
-                      "cantonList":null
-                  },
-                  "nombre":"BALAO",
-                  "codigo":"BAL",
-                  "establecimientoSaludList": null
-            }, 
-            "personaJuridica": { 
-                  "id":3,
-                  "creado":"2017-08-29",      
-                  "modificado":"2017-08-29",  
-                  "razonSocial":"Procesadora Nacional De Alimentos", 
-                  "ruc":"875416512",
-                  "establecimientoSaludList": null
-            }, 
-            "evaluacionList": null
-        }, 
-        "formulario": {
-            "id": 5,
-            "codigo": 5,
-            "creado": 1500561382557,
-            "modificado": 1500561382557,
-            "nombre": "Formulario de Encuesta para Personal de Salud en Contacto con la Madre",
-            "titulo": "Formulario de Encuesta para Personal de Salud en Contacto con la Madre",
+            "titulo": "Formulario de InformaciÃ³n del Establecimiento",
             "subtitulo": null,
             "ayuda": null,
-            "clave": "5a",
-            "evaluacionList": null
-        }
-    }] 
+            "clave": "1",
+            "contestadosLista": null
+         }
+      },
+            {
+         "codigo": 8,
+         "responsable": null,
+         "cargo": null,
+         "extra": null,
+         "establecimientoSalud": null,
+         "formulario":          {
+            "codigo": 3,
+            "titulo": "Formulario de InformaciÃ³n del Establecimiento",
+            "subtitulo": null,
+            "ayuda": null,
+            "clave": "1",
+            "contestadosLista": null
+         }
+      }
+   ]
 }

@@ -23,17 +23,21 @@ export class FoesamnComponent implements OnInit {
   fecha="";
   constructor( private coreesamynService:CoreesamynService,private route: ActivatedRoute ) {
       this.getPreguntas();
-      this.coreesamynService.getEncuestauna().subscribe(data=>{
-        console.log("se suscribio"+JSON.stringify(data));
-        this.encuesta=data;
-
-    });
+    //   this.coreesamynService.getEncuestauna().subscribe(data=>{
+    //     console.log("se suscribio"+JSON.stringify(data));
+    //     this.encuesta=data;
+    //
+    // });
   }
   ngOnInit() {
     console.log("-----------------");
     this.route.params.subscribe(params => {
             const _id = params["id"].toString();
             this.id_encuesta= params["id"].toString();
+            this.coreesamynService.getEncuestabyId(params["id"]).subscribe(data=>{
+              this.encuesta=data;
+              console.log("a buscar "+JSON.stringify(data));
+})
           });
 console.log(this.id_encuesta);
   }

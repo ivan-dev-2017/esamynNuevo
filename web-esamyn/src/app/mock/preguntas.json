@@ -10,7 +10,7 @@
     "pregunta": [
       {
         "codigo": 7390,
-        "texto": "1. ¿El establecimiento cuenta con material edu-comunicacional exhibido en areas visibles relacionado a la norma ESAMyN?",
+        "texto": "1. ï¿½El establecimiento cuenta con material edu-comunicacional exhibido en areas visibles relacionado a la norma ESAMyN?",
         "ayuda": null,
         "prefijo": null,
         "subfijo": null,
@@ -44,7 +44,7 @@
             "preguntaLista": [
               {
                 "codigo": 7391,
-                "texto": "¿Cuántos elementos observó?",
+                "texto": "ï¿½Cuï¿½ntos elementos observï¿½?",
                 "ayuda": null,
                 "prefijo": null,
                 "subfijo": null,
@@ -59,7 +59,7 @@
                 "valorFecha": null,
                 "valorBooleano": null,
                 "preguntaLista": [
-                  
+
                 ]
               }
             ]
@@ -81,14 +81,14 @@
             "valorFecha": null,
             "valorBooleano": null,
             "preguntaLista": [
-              
+
             ]
           }
         ]
       },
       {
         "codigo": 7390,
-        "texto": "2. El ES cuenta con infraestructura y equipamiento mínimo requerido para el trabajo de parto. El espacio adecuado será el siguiente<br>1. Paredes pintadas con colores cálidos (claros del rojo, naranja o amarillo), sin azulejo.<br>2.Iluminación indirecta (luz cálida aplique en las paredes) <br>3. Climatización automatizado o portátil que permita ajustar la temperatura en 25°<br>4. Debe permitir el libre movimiento de la embarazada El equipamiento mínimo será el siguiente:<br>1. Pelota de dilatación<br>2. Cobija <br>Si deberá cumplir con todas las características indicadas para marcar“sí”.",
+        "texto": "2. El ES cuenta con infraestructura y equipamiento mï¿½nimo requerido para el trabajo de parto. El espacio adecuado serï¿½ el siguiente<br>1. Paredes pintadas con colores cï¿½lidos (claros del rojo, naranja o amarillo), sin azulejo.<br>2.Iluminaciï¿½n indirecta (luz cï¿½lida aplique en las paredes) <br>3. Climatizaciï¿½n automatizado o portï¿½til que permita ajustar la temperatura en 25ï¿½<br>4. Debe permitir el libre movimiento de la embarazada El equipamiento mï¿½nimo serï¿½ el siguiente:<br>1. Pelota de dilataciï¿½n<br>2. Cobija <br>Si deberï¿½ cumplir con todas las caracterï¿½sticas indicadas para marcarï¿½sï¿½ï¿½.",
         "ayuda": null,
         "prefijo": null,
         "subfijo": null,
@@ -139,29 +139,28 @@
             "valorFecha": null,
             "valorBooleano": null,
             "preguntaLista": [
-              
+
             ]
           },
           {
-            "codigo": 7391,
-            "texto": "Observaciones:",
-            "ayuda": null,
-            "prefijo": null,
-            "subfijo": null,
-            "validacion": null,
-            "orden": 2,
-            "codigoTipoPregunta": null,
-            "etiquetaTipoPregunta": null,
-            "codigoRespuesta": null,
-            "codigoEncuesta": null,
-            "valorNumero": null,
-            "valorTexto": null,
-            "valorFecha": null,
-            "valorBooleano": null,
-            "preguntaLista": [
-              
-            ]
-          }
+      "codigo": 2095,
+      "texto": "SÃƒÂ­",
+      "codigoVerificacion": null,
+      "ayuda": null,
+      "prefijo": null,
+      "subfijo": null,
+      "validacion": null,
+      "orden": 100,
+      "formulario":       {
+         "codigo": 8,
+         "titulo": "Formulario de EvaluaciÃƒÂ³n",
+         "subtitulo": null,
+         "ayuda": null,
+         "clave": "eva",
+         "contestadosLista": null
+      },
+      "tipoPregunta": null
+   }
         ]
       }
     ]

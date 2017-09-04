@@ -7,70 +7,29 @@
 	<div class="box-body chat" id="chat-box">
 		<div class="form-group form-group-sm">
 			<form #standardForm="ngForm" (ngSubmit)="save()">
+					<div class="row">
+					<div class="col-sm-5">
+						<div class="input-group" >
+							<span class="input-group-addon"><i
+								class="fa fa-text-width" aria-hidden="true"></i></span> <input
+								class="form-control" type="text" placeholder="codigo"
+								[(ngModel)]="encuesta.codigo" invalidNumber id="codigo"
+								class="{invalid: (invalid | async)}" name="codigo" />
+						</div>
+					</div>
+				</div>
 
 				<div class="row">
 					<div class="col-sm-5">
-						<div class="input-group" >
-							<span class="input-group-addon"><i class="fa fa-caret-down" aria-hidden="true"> EVALUACION</i></span>
-								<select id="evaluacionvar">
-									<option>Seleccione un valor...</option>
-									<option *ngFor="let x of evaluacion" [ngValue]="x">{{x.id}}</option>
-								</select>
-						</div>
-					</div>
-					<div class="col-sm-1">
-						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
-							[messages]="failures | async"> </app-message>
-					</div>
-					<div class="col-sm-5">
-						<div class="input-group" >
-							<span class="input-group-addon"><i
-								class="fa fa-text-width" aria-hidden="true"></i></span> <input
-								class="form-control" type="text" placeholder="id"
-								[(ngModel)]="id" invalidNumber
-								class="{invalid: (invalid | async)}" name="id" />
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-5">
 						<div class="input-group">
 							<span class="input-group-addon"><i
-								class="fa fa-text-width" aria-hidden="true"></i></span> <input
-								class="form-control" type="text" placeholder="fecha inicial"
-								[(ngModel)]="fecha_inicial"
-								class="{invalid: (invalid | async)}" name="enc_fecha_inicial" />
-						</div>
-					</div>
-					<div class="col-sm-1">
-						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
-							[messages]="failures | async"> </app-message>
-					</div>
-					<div class="col-sm-5">
-						<div class="input-group" >
-							<span class="input-group-addon"><i
-								class="fa fa-text-width" aria-hidden="true"></i></span> <input
-								class="form-control" type="text" placeholder="fecha final"
-								[(ngModel)]="fecha_final"
-								class="{invalid: (invalid | async)}" name="enc_fecha_final" />
-						</div>
-					</div>
-					<div class="col-sm-1">
-						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
-							[messages]="failures | async"> </app-message>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-5">
-						<div class="input-group">
-							<span class="input-group-addon"><i
-								class="fa fa-text-width" aria-hidden="true"> ESTABLECIMIENTO</i></span>
-								<select class="form-control" [(ngModel)]="encuesta.establecimientoSalud"
-								    class="bg-green"
-								    id="ddEstablecimientos">
-								  <option value="" disabled selected>--SELECCIONE--</option>
-								  <option *ngFor="let establecimiento of establecimientosSalud" [ngValue]="establecimiento">{{establecimiento.nombre}}</option>
-								</select>
+								class="fa fa-caret-down" aria-hidden="true"></i></span>
+								<select class="form-control"
+								    class="bg-green" [(ngModel)]="encuesta.establecimientoSalud"
+								    id="establecimientoSalud" name="establecimientoSalud" >
+								  <option value="" disabled selected>-------SELECCIONE------</option>
+								  <option *ngFor="let establecimiento of establecimientosSalud" [ngValue]="establecimiento">{{establecimiento.codigo}}</option>
+								</select >
 						</div>
 					</div>
 					<div class="col-sm-1">
@@ -82,8 +41,8 @@
 							<span class="input-group-addon"><i
 								class="fa fa-text-width" aria-hidden="true"></i></span> <input
 								class="form-control" type="text" placeholder="responsable"
-								[(ngModel)]="responsable"
-								class="{invalid: (invalid | async)}" name="enc_responsable" />
+								[(ngModel)]="encuesta.responsable"
+								class="{invalid: (invalid | async)}" name="responsable" id="responsable" />
 						</div>
 					</div>
 					<div class="col-sm-1">
@@ -97,8 +56,8 @@
 							<span class="input-group-addon"><i
 								class="fa fa-text-width" aria-hidden="true"></i></span> <input
 								class="form-control" type="text" placeholder="cargo"
-								[(ngModel)]="cargo"
-								class="{invalid: (invalid | async)}" name="enc_cargo" />
+								[(ngModel)]="encuesta.cargo" id="cargo"
+								class="{invalid: (invalid | async)}" name="cargo" />
 						</div>
 					</div>
 					<div class="col-sm-1">
@@ -109,9 +68,9 @@
 						<div class="input-group">
 							<span class="input-group-addon"><i
 								class="fa fa-text-width" aria-hidden="true"></i></span> <input
-								class="form-control" type="text" placeholder="enc_extra"
-								[(ngModel)]="extra"
-								class="{invalid: (invalid | async)}" name="enc_extra" />
+								class="form-control" type="text" placeholder="extra"
+								[(ngModel)]="encuesta.extra" id="extra"
+								class="{invalid: (invalid | async)}" name="extra" />
 						</div>
 					</div>
 					<div class="col-sm-1">
@@ -120,17 +79,17 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<button type="submit" [disabled]="standardForm.invalid"
+					<!-- <button type="submit" [disabled]="standardForm.invalid"
 						class="btn btn-success">
 						<i class="fa fa-floppy-o" aria-hidden="true"></i>
-					</button>
+					</button> -->
 					<a href="javascript:void(0);" class="btn btn-primary"
 						(click)="clear()"> <i class="fa fa-eraser" aria-hidden="true"></i>
 					</a>
 
-					<button  type="submit" [disabled]="standardForm.invalid" [routerLink]="'/foesamn/'+id"
-					class="btn btn-primary"
-						(click)="ejemplo(cargo)"> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+					<button  type="submit" [disabled]="standardForm.invalid"
+					class="btn btn-primary" [routerLink]="'/foesamn/'+encuesta.codigo"
+						(click)="createEncuesta()"> <i class="fa fa-arrow-right" aria-hidden="true"></i>
 					</button>
 				</div>
 			</form>

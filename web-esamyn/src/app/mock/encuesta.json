@@ -3,9 +3,9 @@
 	"mensaje": "",
 	"objeto": [{
 			"codigo": 9,
-			"responsable": null,
+			"responsable": "responsable1",
 			"cargo": "cargo1",
-			"extra": null,
+			"extra": "extra1",
 			"establecimientoSalud": {
 				"codigo": 1,
 				"unicodigo": "111111",
@@ -86,6 +86,9 @@
 				"contestadosLista": null
 			}
 		}
+
+	
+
 
 	]
 }
