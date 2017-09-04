@@ -9,6 +9,7 @@ import com.saviasoft.persistence.util.dao.GenericDao;
 import com.saviasoft.persistence.util.service.impl.GenericServiceImpl;
 
 import ec.gob.acess.esamyn.dao.PersonaJuridicaDAO;
+import ec.gob.acess.esamyn.dto.MensajeDto;
 import ec.gob.acess.esamyn.modelo.PersonaJuridica;
 
 /**
@@ -31,5 +32,40 @@ public class PersonaJuridicaBean extends GenericServiceImpl<PersonaJuridica, Lon
 	public GenericDao<PersonaJuridica, Long> getDao() {
 		return personaJuridicaDAO;
 	}
+
+
+    /**
+     * Guardar Objeto
+     * @param personaJuridica
+     * @return
+     */
+    public MensajeDto guardar(PersonaJuridica personaJuridica) {
+
+	MensajeDto mensajeDto = new MensajeDto();
+
+	try {
+
+	    if (personaJuridica.getCodigo() == null) {
+
+		mensajeDto.setError(false);
+		mensajeDto.setMensaje("PersonaJuridica Guardado");
+		create(personaJuridica);
+		mensajeDto.setObjeto(personaJuridica);
+	    } else {
+		mensajeDto.setError(false);
+		mensajeDto.setMensaje("Actualiza Objeto");
+		update(personaJuridica);
+		mensajeDto.setObjeto(personaJuridica);
+	    }
+
+	} catch (Exception e) {
+	    mensajeDto.setError(true);
+	    mensajeDto.setMensaje("Error al guardar: " + e.getMessage());
+	    mensajeDto.setObjeto(null);
+	}
+
+	return mensajeDto;
+
+    }
 
 }

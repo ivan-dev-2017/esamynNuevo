@@ -73,7 +73,21 @@ export class BaseService {
                 return error;
               });
       }
-
+	
+	findByPkUrl(id:string, serviceName:string ) {
+          //console.log("==> parametros obtenidos " +  this.params.toString() );
+          this.options = new RequestOptions({ headers: this.headers });
+          return this.http.get(this.config.apiUrl +this.services[serviceName] + id, this.options)
+              .map((response: Response) => {
+                    let entidad = response.json();
+                    return entidad;
+                },
+              error => {
+                console.log("==>despues de buscar usuario error  " + JSON.stringify(error));
+                return error;
+              });
+      }
+	
 	manage(entidad, serviceName:string ) {
           //console.log("==> parametros obtenidos " +  this.params.toString() );
           this.options = new RequestOptions({ headers: this.headers });
