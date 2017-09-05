@@ -14,13 +14,13 @@ export class MenuComponent implements OnInit {
 	loginWrapper: Login=new Login();
 	isIn = false;   // store state
 	menu:Menu;
-	
+
 	htmlMenu:string;
 	panelMenuAppList:ItemMenu[];
 
-	constructor(private globalEventsManager: GlobaleventsmanagerService, private alertService: AlertService) { 
-		
-		
+	constructor(private globalEventsManager: GlobaleventsmanagerService, private alertService: AlertService) {
+
+
 	    this.globalEventsManager.showNavBarEmitter.subscribe((mode)=>{
 	        // mode will be null the first time it is created, so you need to igonore it when null
 	    	//console.log("==>entra en subscriber menu: " + mode   );
@@ -40,17 +40,13 @@ export class MenuComponent implements OnInit {
         	console.log("==>despues de menu error  " + JSON.stringify(error));
         	this.alertService.error(error._body);
         });
-	    
+
 	}
-	
-	
-	
-	
 	toggleState() { // click handler
 	    let bool = this.isIn;
-	    this.isIn = bool === false ? true : false; 
+	    this.isIn = bool === false ? true : false;
 	}
-	
+
   ngOnInit() {
   }
 

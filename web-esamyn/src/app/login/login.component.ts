@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
     loading = false;
     returnUrl: string=null;
     usuario: User;
-    
     constructor(
         private route: ActivatedRoute,
         private router: Router,
@@ -31,7 +30,6 @@ export class LoginComponent implements OnInit {
 
     ngOnInit() {
         // reset login status
-    	
     	if( this.model.usuario != null ){
     		console.log("==> logourt su usuario es not null");
     		this.model.usuario.loggedIn=false;
@@ -43,7 +41,6 @@ export class LoginComponent implements OnInit {
     	} else {
     		this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
     	}
-        
     }
 
     login() {
@@ -51,7 +48,6 @@ export class LoginComponent implements OnInit {
     	if( this.model ){
     	    this.model.password=Md5.hashStr(this.model.password)  as string ;
     	}
-    	
         this.authenticationService.login(this.model)
             .subscribe(
                 data => {

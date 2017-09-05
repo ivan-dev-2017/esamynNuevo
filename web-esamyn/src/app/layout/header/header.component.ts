@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
 	usuario:User= new User();
 	returnUrl:string;
     establecimientosSalud=[];
-    establecimientoSelected={"codigo": null,"unicodigo": null,"direccion": ""};
+    establecimientoSelected={"codigo": null,"unicodigo": null,"direccion": "","nombre":null};
 	
 	 menuState:string = 'in';
 
@@ -110,7 +110,11 @@ export class HeaderComponent implements OnInit {
   }
   
   onSelectEstablecimiento(){
-      this.globalEventsManager.selectedEtablecimiento(this.establecimientoSelected);
+      if( this.establecimientoSelected ){
+          console.log("===>> establecimientoSelected: " + JSON.stringify(this.establecimientoSelected));
+          this.globalEventsManager.selectedEtablecimiento(this.establecimientoSelected);
+          localStorage.setItem("establecimientoSalud", JSON.stringify( this.establecimientoSelected));
+      }
   }
   
   

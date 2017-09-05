@@ -2,10 +2,10 @@
 	"error": false,
 	"mensaje": "",
 	"objeto": [{
-			"codigo": 9,
-			"responsable": null,
-			"cargo": null,
-			"extra": null,
+			"codigo": 8,
+			"responsable": "responsable1",
+			"cargo": "cargo1",
+			"extra": "extra1",
 			"establecimientoSalud": {
 				"codigo": 1,
 				"unicodigo": "111111",
@@ -47,7 +47,7 @@
 		{
 			"codigo": 10,
 			"responsable": null,
-			"cargo": null,
+			"cargo": "cargo2",
 			"extra": null,
 			"establecimientoSalud": {
 				"codigo": 1,
@@ -86,6 +86,9 @@
 				"contestadosLista": null
 			}
 		}
+
+
+
 
 	]
 }

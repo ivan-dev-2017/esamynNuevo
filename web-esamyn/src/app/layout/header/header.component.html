@@ -18,7 +18,7 @@
      		<select class="dropdown" id="canton" [(ngModel)]="establecimientoSelected" name="canton" 
      		style="width: 155px" (change)="onSelectEstablecimiento()">
                 <option id="0" [ngValue]="" selected>--ESTABLECIMIENTO--</option>
-                <option id="{{estab.codigo}}"  [ngValue]="estab" *ngFor="let estab of establecimientosSalud">{{estab.unicodigo}} - {{estab.direccion}}</option>
+                <option id="{{estab.codigo}}"  [ngValue]="estab" *ngFor="let estab of establecimientosSalud">{{estab.unicodigo}} - {{estab.nombre}}</option>
             </select>
         </ul>
         <ul class="nav navbar-nav">
