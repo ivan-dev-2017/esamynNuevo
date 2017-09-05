@@ -15,6 +15,7 @@ export class AppConfig {
                                   'establecimientoSalud.crud.read':'rest/establecimientoSalud/buscar/1',
                                   'establecimientoSalud.crud.delete':'rest/establecimientoSalud/eliminar',
                                   'evaluacion.crud.findall':'rest/evaluacion/todos',
+                                  'evaluacion.crud.read':'rest/evaluacion/buscar/',
                                   'personaJuridica.crud.findall':'rest/personaJuridica/todos',
                                   'canton.crud.findall':'rest/canton/todos',
                                   'canton.crud.update':'rest/canton/guardar',

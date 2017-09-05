@@ -12,21 +12,19 @@ export class FoesamnComponent implements OnInit {
   preguntas=[];
   preguntacero={};
   encuesta={};
-  idEncuesta={};
-  zona:String;
   distrito="";
-  establecimiento_saludVar=[];
+  establecimientoSaludVar=[];
   responsable="";
   cargo="";
   unicode="";
   evaluador="";
   fecha="";
   parametro={
-    "idFormulario":null,
+    "idform":null,
     "idEncuesta":null
   };
   constructor( private coreesamynService:CoreesamynService,private route: ActivatedRoute ) {
-      //this.getPreguntas();
+      this.getPreguntas();
     //   this.coreesamynService.getEncuestauna().subscribe(data=>{
     //     console.log("se suscribio"+JSON.stringify(data));
     //     this.encuesta=data;
@@ -36,9 +34,9 @@ export class FoesamnComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(
             (params=> {
-              console.log("55555555555555"+JSON.stringify(params.id));
+              console.log("55555555555555"+JSON.stringify(params["id"]));
                // cast to number
-               this.parametro=params.id;
+               this.parametro.idform=params["id['idForm']"];
                console.log(JSON.stringify(this.parametro));
             }
         ));
@@ -56,7 +54,7 @@ this.coreesamynService.getPreguntasFormulario(this.parametro.toString()).subscri
 });
 
   }
-  public getPreguntas(id_encuesta){
+  public getPreguntas(){
       //this.coreesamynService.getPreguntasList().subscribe(data=>{
 
 

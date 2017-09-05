@@ -13,7 +13,7 @@ export class EvaluacionlistComponent implements OnInit {
   reorderable: boolean = true;
   constructor(private coreesamynService:CoreesamynService) {
     console.log( "==Entra en evaluacion evento" );
-    this.coreesamynService.getEvaluacion().subscribe( data=>{
+    this.coreesamynService.getEvaluacionList().subscribe( data=>{
         console.log("==retorno: " + JSON.stringify(data));
       this.rows=data;})
    }

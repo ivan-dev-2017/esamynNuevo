@@ -7,7 +7,7 @@
          "responsable": null,
          "cargo": null,
          "extra": null,
-         "establecimientoSalud": { 
+         "establecimientoSalud": {
              "codigo": 1,
              "unicodigo": "111111",
              "direccion": "Direccion",
@@ -18,7 +18,7 @@
              "nombreResponsable": "responsable",
              "zona": "CENTRO",
              "distrito": "Distrito",
-             "canton": { 
+             "canton": {
                   "id":1,
                   "provincia":{
                       "id":1,
@@ -30,17 +30,17 @@
                   "codigo":"QUI",
                   "establecimientoSaludList": null
              },
-             "personaJuridica": { 
+             "personaJuridica": {
                   "id":1,
-                  "creado":"2017-08-29",      
-                  "modificado":"2017-08-29",  
-                  "razonSocial":"Relative Engine", 
+                  "creado":"2017-08-29",
+                  "modificado":"2017-08-29",
+                  "razonSocial":"Relative Engine",
                   "ruc":"4564156",
-                  "establecimientoSaludList": null 
-             }, 
+                  "establecimientoSaludList":{"codigo":2}
+             },
              "evaluacionList": null
-         }, 
-         "formulario": { 
+         },
+         "formulario": {
                 "id": 1,
                 "codigo": 1,
                 "creado": 1500561382557,
@@ -51,9 +51,9 @@
                 "ayuda": null,
                 "clave": "1",
                 "evaluacionList": null
-         } 
-    }, 
-    { 
+         }
+    },
+    {
         "id":null,
         "creado":null,
         "modificado":"2017-08-30",
@@ -63,14 +63,15 @@
         "responsable": null,
         "cargo": null,
         "extra": null,
-        "establecimientoSalud": { 
+        "establecimientoSalud": {
             "codigo": 1,
             "titulo": "Formulario de InformaciÃ³n del Establecimiento",
             "subtitulo": null,
             "ayuda": null,
             "clave": "1",
             "contestadosLista": null
-         }
+         },
+         "formulario":{"codigo":3}
       },
             {
          "codigo": 8,

@@ -22,7 +22,7 @@ export class EvaluacionformComponent implements OnInit, OnDestroy {
   private id:number= null;
   private route$:Subscription;
   private idFormularioEstablecimiento = 1;
-  
+
   constructor(private coreesamynService:CoreesamynService, private route:ActivatedRoute) {
       this.coreesamynService.getGruposFormularioEvaluacionList().subscribe( data=>{
           console.log("==retorno: " + JSON.stringify(data));
@@ -53,10 +53,10 @@ export class EvaluacionformComponent implements OnInit, OnDestroy {
       }
       this.tablaB = this.tablaB.concat('<tr _ngcontent-c5><td _ngcontent-c5 colspan="6">TOTAL GENERAL (4 verificadores)</td><td _ngcontent-c5><input type="text" class="form-control" style="width: 20% !important;padding: 0px !important;"/><label class="subTitulos" >/10</label></td></tr>');*/
       });
-      
-      
+
+
   }
-    
+
   construirTablaB():string{
       console.log("empezo la construccion");
       console.log(this.tablaB);
@@ -68,7 +68,7 @@ export class EvaluacionformComponent implements OnInit, OnDestroy {
         //      }
         //  }
       }
-      
+
       return this.tablaB;
   }
 
@@ -79,14 +79,14 @@ export class EvaluacionformComponent implements OnInit, OnDestroy {
         }
       );
       console.log( "==Entra en evaluacion evento con id: "+this.id );
-      this.coreesamynService.getEvaluacionPorId(this.id).subscribe( data=>{
+      this.coreesamynService.getEvaluacionById(this.id).subscribe( data=>{
           console.log("==retorno: " + JSON.stringify(data));
       this.evaluacion=data[0];});
       this.coreesamynService.getPreguntasPorFormularioList().subscribe( data=>{
           console.log("==retorno: " + JSON.stringify(data));
       this.preguntas=data.pregunta;});
   }
-    
+
   ngOnDestroy() {
       if(this.route$) this.route$.unsubscribe();
   }
