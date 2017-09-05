@@ -49,14 +49,24 @@ scp -P 2202 /mi/archivo.zip miusuario@200.7.213.18:
 
 ### BDD en el ambiente de pruebas
 
-* IP PostgreSQL: 107.170.105.36 (es un tunel SSH inverso a 200.7.213.18)
-* Puerto PostgreSQL: 6543
+* IP PostgreSQL: 200.7.213.18
+* Puerto PostgreSQL: 5432
 * BDD de mantenimiento: acess
 * Usuario: esamyn_user
 * Clave: esamYn.2017
 
 Para conectarse vía comandos a la base de datos en el ambiente de **pruebas**: 
 ```
-psql -p 6543 -h 107.170.105.36 -U esamyn_user -W acess
+psql -p 6543 -h 200.7.213.18 -U esamyn_user -W acess
 ```
+
+### WildFly de pruebas
+
+[http://200.7.213.18:8080](http://200.7.213.18:8080)
+
+
+
+### Angular de pruebas
+
+[http://200.7.213.18:4200](http://200.7.213.18:4200)
 

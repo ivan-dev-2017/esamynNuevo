@@ -13,6 +13,7 @@ export class GlobaleventsmanagerService {
   showNavBar(user: Login) {
 	  console.log("===> observable " +JSON.stringify(user));
       this._showNavBar.next(user);
+      return user;
   }
 
 }

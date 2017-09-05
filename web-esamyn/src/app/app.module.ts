@@ -38,6 +38,8 @@ import { EmailvalidatorDirective,NumbervalidatorDirective } from './validator/in
 import { FormularioListComponent } from './formulario/list/list.component';
 import { EstablecimientoSaludComponent } from './establecimiento-salud/establecimiento-salud.component';
 import { FoesamnComponent } from './encuesta/foesamn/foesamn.component';
+import { ForgetpasswordComponent } from './login/forgetpassword/forgetpassword.component';
+import { ChangepasswordComponent } from './login/changepassword/changepassword.component';
 import {FormComponent} from './encuesta/form/form.component';
 
 
@@ -72,7 +74,9 @@ import { EvaluacionformComponent } from './evaluacion/evaluacionform/evaluacionf
     FoesamnComponent,
     FormComponent,
     EvaluacionlistComponent,
-    EvaluacionformComponent
+    EvaluacionformComponent,
+    ForgetpasswordComponent,
+    ChangepasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -99,7 +103,7 @@ import { EvaluacionformComponent } from './evaluacion/evaluacionform/evaluacionf
 		CoreesamynService
               ],
   entryComponents: [
-                    ModalpromptComponent
+                    ModalpromptComponent,ForgetpasswordComponent,ChangepasswordComponent
                   ],
   bootstrap: [AppComponent]
 })

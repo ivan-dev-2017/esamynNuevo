@@ -5,6 +5,7 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -15,6 +16,7 @@ import javax.ws.rs.core.MediaType;
 import ec.gob.acess.esamyn.bean.FormularioBean;
 import ec.gob.acess.esamyn.bean.UsuarioBean;
 import ec.gob.acess.esamyn.dto.MensajeDto;
+import ec.gob.acess.esamyn.dto.TextoObjetoDto;
 import ec.gob.acess.esamyn.modelo.Formulario;
 
 /**
@@ -95,6 +97,30 @@ public class FormularioWebService {
 	    mensajeDto = new MensajeDto(true, "Error token " + e.getMessage(), null);
 	}
 
+	return mensajeDto;
+    }
+
+    @POST
+    @Path("editar")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public MensajeDto editar(TextoObjetoDto textoObjeto, @Context HttpHeaders headers) {
+
+	String token = headers.getRequestHeader("ApiToken").get(0);
+	MensajeDto mensajeDto;
+	try {
+	    boolean valida = usuarioBean.validaToken(token);
+
+	    if (valida) {
+
+		mensajeDto = formularioBean.editar(textoObjeto.getCodigo(), textoObjeto.getTexto());
+
+	    } else {
+		mensajeDto = new MensajeDto(true, "Token invalido", null);
+	    }
+	} catch (Exception e) {
+	    mensajeDto = new MensajeDto(true, "Error token " + e.getMessage(), null);
+	}
 	return mensajeDto;
     }
 
