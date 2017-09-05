@@ -323,7 +323,7 @@
         </div>
     </div>
     <div class="row bg-navy camposBase">
-        <div class="col-md-12 altoPadre borde-L-T-R-B">B. INFORMACION SOBRE EL COMPONENTE GENERAL</div>
+        <div class="col-md-12 altoPadre borde-L-T-R-B">{{tablas[0]?.grupo}}</div>
     </div>
     <div class="row">
         <div class="col-md-12 cajaTexto" style="padding: 0px;">
@@ -339,38 +339,39 @@
                         <th style="width: 3.33%">PUNTAJE</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody *ngIf="tablas[0]">
                     <tr>
-                        <td></td>
-                        <td rowspan="4"></td>
-                        <td  rowspan="2"></td>
-                        <td></td>
-                        <td><input type="checkbox"   class="margenesPeq" /></td>
-                        <td><input type="checkbox"   class="margenesPeq" /></td>
-                        <td></td>
+                        <td>{{tablas[0]?.hijos[0].hijos[0].hijos[0].verificador}}</td>
+                        <td rowspan="4">{{tablas[0]?.hijos[0].paso}}</td>
+                        <td  rowspan="2">{{tablas[0]?.hijos[0].hijos[0].directriz}}</td>
+                        <td>{{tablas[0]?.hijos[0].hijos[0].hijos[0].parametro}}</td>
+                        <td><input type="checkbox"   class="margenesPeq" [(ngModel)]="!tablas[0].hijos[0].hijos[0].hijos[0].no_aplica"/></td>
+                        <td><input type="checkbox"   class="margenesPeq"  [(ngModel)]="tablas[0].hijos[0].hijos[0].hijos[0].no_aplica"/></td>
+                        <td>{{tablas[0]?.hijos[0].hijos[0].hijos[0].puntaje}}*</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox"   class="margenesPeq" /></td>
-                        <td><input type="checkbox"   class="margenesPeq" /></td>
-                        <td></td>
+                        <td>{{tablas[0]?.hijos[0].hijos[0].hijos[1].verificador}}</td>
+                        <td>{{tablas[0]?.hijos[0].hijos[0].hijos[1].parametro}}</td>
+                        <td><input type="checkbox"   class="margenesPeq"  [(ngModel)]="!tablas[0].hijos[0].hijos[0].hijos[1].no_aplica"/></td>
+                        <td><input type="checkbox"   class="margenesPeq"  [(ngModel)]="tablas[0].hijos[0].hijos[0].hijos[1].no_aplica"/></td>
+                        <td>{{tablas[0]?.hijos[0].hijos[0].hijos[1].puntaje}}</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox"   class="margenesPeq" /></td>
-                        <td><input type="checkbox"   class="margenesPeq" /></td>
-                        <td></td>
+                        <td>{{tablas[0]?.hijos[0].hijos[1].hijos[0].verificador}}</td>
+                        <td>{{tablas[0]?.hijos[0].hijos[1].directriz}}</td>
+                        <td>{{tablas[0]?.hijos[0].hijos[1].hijos[0].parametro}}</td>
+                        <td><input type="checkbox"   class="margenesPeq"  [(ngModel)]="!tablas[0].hijos[0].hijos[1].hijos[0].no_aplica"/></td>
+                        <td><input type="checkbox"   class="margenesPeq"  [(ngModel)]="tablas[0].hijos[0].hijos[1].hijos[0].no_aplica"/></td>
+                        <td>{{tablas[0]?.hijos[0].hijos[1].hijos[0].puntaje}}</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><input type="checkbox"   class="margenesPeq" /></td>
-                        <td><input type="checkbox"   class="margenesPeq" /></td>
-                        <td></td>
+                        <td>{{tablas[0]?.hijos[0].hijos[2].hijos[0].verificador}}</td>
+                        <td>{{tablas[0]?.hijos[0].hijos[2].directriz}}</td>
+                        <td>{{tablas[0]?.hijos[0].hijos[2].hijos[0].parametro}}</td>
+                        <td><input type="checkbox"   class="margenesPeq"  [(ngModel)]="
+                            !tablas[0].hijos[0].hijos[2].hijos[0].no_aplica"/></td>
+                        <td><input type="checkbox"   class="margenesPeq"  [(ngModel)]="tablas[0].hijos[0].hijos[2].hijos[0].no_aplica"/></td>
+                        <td>{{tablas[0]?.hijos[0].hijos[2].hijos[0].puntaje}}*</td>
                     </tr>
                     <tr>
                         <td colspan="6">TOTAL GENERAL (4 verificadores)</td>

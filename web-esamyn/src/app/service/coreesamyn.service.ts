@@ -58,6 +58,21 @@ export class CoreesamynService extends BaseService {
        );
   }
     
+  getGruposFormularioEvaluacionList(){ 
+      console.log( "==Entra en CoreesamynService getGruposFormularioEvaluacionList" );
+      //return this.getAllPaginated(null, 'formulario.crud.findall');
+      return this.http.get('./app/mock/evaluaciongenerada.json').map((response) =>{
+          let paginatedListx = response.json();
+          console.log(JSON.stringify(paginatedListx));
+          return paginatedListx;
+          },
+          error => {
+              console.log("==>despues de buscar usuario error  " + JSON.stringify(error));
+              return error;
+          }
+       );
+  }
+    
   getProvinciasList(){ 
       console.log( "==Entra en CoreesamynService getProvinciasList" );
       //return this.getAllPaginated(null, 'formulario.crud.findall');
