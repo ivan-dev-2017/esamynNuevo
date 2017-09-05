@@ -14,7 +14,7 @@ export class FormularioListComponent implements OnInit {
     loadingIndicator: boolean = true;
     loadingIndicatorEncuesta: boolean = true;
     reorderable: boolean = true;
-
+    parametroLocal={}
   constructor( private coreesamyn:CoreesamynService ) {
       console.log( "==Entra en FormularioListComponent" );
       this.coreesamyn.getFormulariosList().subscribe( data=>{
@@ -67,6 +67,7 @@ export class FormularioListComponent implements OnInit {
   "idEncuesta": this.encuestas[0].codigo
   };
   console.log(parametro);
+  this.parametroLocal=parametro;
   }
 
 }
