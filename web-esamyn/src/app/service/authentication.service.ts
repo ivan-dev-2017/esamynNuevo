@@ -35,6 +35,7 @@ export class AuthenticationService {
         			    usuario.nombreUsuario=user.username;
         		        usuario.password=user.password;
         		        usuario.loggedIn=true;
+        		        usuario.token=user.token;
         				localStorage.setItem('currentUser', JSON.stringify(usuario));
 						//localStorage.setItem('menu', JSON.stringify(loginWrapper.menuWrapper.panelMenuAppList));
 						localStorage.setItem('defaultPageSize', loginWrapper.defaultPageSize);

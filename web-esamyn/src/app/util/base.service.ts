@@ -12,12 +12,9 @@ export class BaseService {
 	public config: AppConfig;
 
 	constructor( ){
+	    console.log("===entra a bas eservice: " );
 		this.params = new URLSearchParams();
-		if( localStorage.getItem('currentUser') ){
-			//console.log("===ingresa si esta logeado");
-			let u = JSON.parse( localStorage.getItem('currentUser') );
-			this.headers= new Headers({ 'Content-Type': 'application/json','Accept':'application/json', 'ApiToken': u.token });
-		}
+		this.instaceHeader()
 		console.log("===previo a valdar servicios");
 		if( localStorage.getItem('services') ){
 			//console.log("===ingresa si existe servicios " + localStorage.getItem('services'));
@@ -25,6 +22,15 @@ export class BaseService {
 			
 		}
 		
+	}
+	
+	protected instaceHeader(){
+	    console.log("Instance header base serviec "+ localStorage.getItem('currentUser') );
+	    if( localStorage.getItem('currentUser') ){
+            let u = JSON.parse( localStorage.getItem('currentUser') );
+            console.log("===ingresa si esta logeado con tokrn: " + u.token);
+            this.headers= new Headers({ 'Content-Type': 'application/json','Accept':'application/json', 'ApiToken': u.token });
+        }
 	}
 	
 	setSearchParams(page:Page){

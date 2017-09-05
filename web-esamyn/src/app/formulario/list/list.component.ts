@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Input, Output} from '@angular/core';
-import {  CoreesamynService } from '../../service/coreesamyn.service';
+import {  CoreesamynService,GlobaleventsmanagerService } from '../../service/index';
 
 @Component({
   selector: 'formulario-list',
@@ -14,14 +14,26 @@ export class FormularioListComponent implements OnInit {
     loadingIndicator: boolean = true;
     loadingIndicatorEncuesta: boolean = true;
     reorderable: boolean = true;
+    establecimientoSelected={"codigo": null,"unicodigo": null,"direccion": ""};
     
-  constructor( private coreesamyn:CoreesamynService ) { 
+  constructor( private coreesamyn:CoreesamynService, private globalEventsManager:GlobaleventsmanagerService ) { 
       console.log( "==Entra en FormularioListComponent" );
-      this.coreesamyn.getFormulariosList().subscribe( data=>{
-          console.log("==retorno: " + JSON.stringify(data));
-          this.rows=data;
-          setTimeout(() => { this.loadingIndicator = false; }, 1500);
-      } );
+      this.globalEventsManager.selectedEtablecimientoEmitter.subscribe((mode)=>{
+          console.log("==>en formulario list  selectedEtablecimientoEmitter " + JSON.stringify(mode));
+          this.establecimientoSelected=mode;
+          console.log("==>EXISTE ETABLECIMIENTO SLECCIONADO?  " + JSON.stringify(this.establecimientoSelected));
+          if( this.establecimientoSelected && this.establecimientoSelected.codigo  ){
+              this.coreesamyn.getFormulariosList(this.establecimientoSelected.codigo).subscribe( data=>{
+                  this.rows=data.objeto;
+                  setTimeout(() => { this.loadingIndicator = false; }, 1500);
+              } );
+          } else {
+              this.rows=[];
+          }
+      },error => {
+          console.log("==>despues de menu error  " + JSON.stringify(error));
+      });
+      
       
   }
   

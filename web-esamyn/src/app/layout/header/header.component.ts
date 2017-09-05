@@ -1,7 +1,7 @@
 import { Component, OnInit, trigger, state, style, transition, animate } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import {  User,Login } from '../../model/index';
-import {GlobaleventsmanagerService,AlertService,AuthenticationService} from "../../service/index";
+import {GlobaleventsmanagerService,AlertService,AuthenticationService,CoreesamynService} from "../../service/index";
 
 import {ChangepasswordComponent} from "../../login/changepassword/changepassword.component";
 import { DialogService } from "ng2-bootstrap-modal";
@@ -28,6 +28,8 @@ export class HeaderComponent implements OnInit {
 
 	usuario:User= new User();
 	returnUrl:string;
+    establecimientosSalud=[];
+    establecimientoSelected={"codigo": null,"unicodigo": null,"direccion": ""};
 	
 	 menuState:string = 'in';
 
@@ -36,23 +38,28 @@ export class HeaderComponent implements OnInit {
   constructor(private globalEventsManager: GlobaleventsmanagerService, 
 		      private alertService: AlertService,
 		      private authenticationService: AuthenticationService,
+		      private coreesamynService: CoreesamynService,
 		      private route: ActivatedRoute,
 		      private router: Router,
 		      private dialogService:DialogService) { 
 	  
 	  this.globalEventsManager.showNavBarEmitter.subscribe((mode)=>{
 	        // mode will be null the first time it is created, so you need to igonore it when null
-	    	console.log("==>entra en subscriber HeaderComponent: "    );
+	    	console.log("==>ENTRA A HEADER SUBSCRIBER HeaderComponent: "    );
 	        if (mode !== null && mode.loggedIn) {
 	          console.log("==>cambio usuaerio: " + localStorage.getItem('currentUser'));
 	          this.usuario = JSON.parse(localStorage.getItem('currentUser'));
 	          if( this.usuario && this.usuario.loggedIn==false ){
-	          	console.log("==>cdesloge y oculta hamburger ");
+	          	//console.log("==>cdesloge y oculta hamburger ");
 	          	this.menuState='in';
 	          } else if( !this.usuario  ){
-	          	console.log("==>cdesloge y oculta hamburger cuando null usuario");
+	          	//console.log("==>cdesloge y oculta hamburger cuando null usuario");
 	          	this.menuState='in';
 	          }
+	          this.coreesamynService.getEstablecimientoSaludList().subscribe(data=>{
+	              console.log("retorna estableciumientos: " + JSON.stringify(data));
+	              this.establecimientosSalud=data.objeto;
+	          });
 	        } else {
 	        	//console.log("==>no cambio usuaerio: ");
 	        	this.usuario.loggedIn=false;
@@ -100,6 +107,10 @@ export class HeaderComponent implements OnInit {
   toggleMenu() {
   console.log("cambia estado");
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
+  }
+  
+  onSelectEstablecimiento(){
+      this.globalEventsManager.selectedEtablecimiento(this.establecimientoSelected);
   }
   
   

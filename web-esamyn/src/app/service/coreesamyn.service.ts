@@ -10,24 +10,26 @@ export class CoreesamynService extends BaseService {
     
   constructor(private _http: Http, private _config: AppConfig) { 
       super();
+      console.log("inicializa eCoreesamynService");
       this.http=this._http;
       this.config =this._config;
   }
   
-  getFormulariosList(){ 
+  getFormulariosList(codigoEstablecimiento:string){ 
       console.log( "==Entra en CoreesamynService getFormulariosList" );
-      //return this.getAllPaginated(null, 'formulario.crud.findall');
-      return this.http.get('./app/mock/formularios.json').map((response) =>{
-          console.log("==>despues de for,ulario " + JSON.stringify(response));
+      return this.findByPkUrl(codigoEstablecimiento, 'formulario.crud.findall');
+      /*return this.http.get('./app/mock/formularios.json').map((response) =>{
+          //console.log("==>despues
+           de for,ulario " + JSON.stringify(response));
           let paginatedListx = response.json();
-          console.log("==>despues de for,ulario " + JSON.stringify(paginatedListx.objeto));
+          //console.log("==>despues de for,ulario " + JSON.stringify(paginatedListx.objeto));
           return paginatedListx.objeto;
           },
           error => {
               console.log("==>despues de buscar usuario error  " + JSON.stringify(error));
               return error;
           }
-       );
+       );*/
   }
   
   getPreguntasList(){ 
@@ -88,10 +90,10 @@ export class CoreesamynService extends BaseService {
   }
     
     
-  getEstablecimientoSaludList(){ 
+  getEstablecimientoSalud(){ 
       console.log( "==Entra en CoreesamynService getEstablecimientoSaludList" );
-      //return this.getAllPaginated(null, 'formulario.crud.findall');
-      return this.http.get('./app/mock/establecimientoSalud.json').map((response) =>{
+      return this.getAllPaginated(null, 'estsal.crud.findall');
+      /*return this.http.get('./app/mock/establecimientoSalud.json').map((response) =>{
           let paginatedListx = response.json();
           return paginatedListx.objeto;
           },
@@ -99,7 +101,7 @@ export class CoreesamynService extends BaseService {
               console.log("==>despues de buscar usuario error  " + JSON.stringify(error));
               return error;
           }
-       );
+       );*/
   }
     
   getEncuestasPorFormularioList(codigoFormulario:number){ 
@@ -154,11 +156,18 @@ export class CoreesamynService extends BaseService {
       });
     }
     
-    getEstablecimientoSalud(){
-      return this.http.get('./app/mock/establecimiento_salud.json').map((response)=>{
+    getEstablecimientoSaludList(  ){
+        console.log( "==Entra en CoreesamynService getEstablecimientoSaludList header: " + this.headers );
+        if( !this.headers ){
+            this.instaceHeader();
+        } else {
+            console.log("==header es: " + JSON.stringify(this.headers));
+        }
+        return this.getAllPaginated(null, "estsal.crud.findall");
+     /* return this.http.get('./app/mock/establecimiento_salud.json').map((response)=>{
         let paginatedListx=response.json();
-        return paginatedListx.objeto;
-      });
+        return paginatedListx;
+      });*/
     }
     
     getEncuestaVacia(){

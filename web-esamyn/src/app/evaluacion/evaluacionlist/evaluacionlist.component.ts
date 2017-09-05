@@ -14,7 +14,7 @@ export class EvaluacionlistComponent implements OnInit {
   constructor(private coreesamynService:CoreesamynService) {
     console.log( "==Entra en evaluacion evento" );
     this.coreesamynService.getEvaluacion().subscribe( data=>{
-        console.log("==retorno: " + JSON.stringify(data));
+        //console.log("==retorno: " + JSON.stringify(data));
       this.rows=data;})
    }
 
