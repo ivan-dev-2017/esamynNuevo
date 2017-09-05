@@ -104,7 +104,7 @@ export class HeaderComponent implements OnInit {
   
   
   showPrompt() {
-      let userLoc = new User(); 
+      let userLoc = JSON.parse(localStorage.getItem('currentUser'));
       console.log("====> showPrompt");
       this.dialogService.addDialog(ChangepasswordComponent, {
         title:'RECUPERACION CONTRASENA USUARIO',
