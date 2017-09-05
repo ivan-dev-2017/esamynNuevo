@@ -1,216 +1,1177 @@
-<div class="box box-success">
-	<div class="box-header">
-		<i class="fa fa-user-o"></i>
-
-		<h3 class="box-title">FORMULARIO ENCUESTA</h3>
-	</div>
-	<div class="row"></div>
-	<div class="box-body chat" id="chat-box">
-		<div class="form-group form-group-sm">
-			<form #standardForm="ngForm" (ngSubmit)="save()">
-
-				<div class="row">
-					<div class="col-sm-5">
-						<div class="input-group" >
-							<span class="input-group-addon"><i
-								class="fa fa-text-width" aria-hidden="true"></i></span> <input
-								class="form-control" type="text" placeholder="ejemplo"
-								*ngFor="let x of evaluacion"
-								class="{invalid: (invalid | async)}" name="enc_fecha_final" />
-						</div>
-					</div>
-					<div class="col-sm-1">
-						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
-							[messages]="failures | async"> </app-message>
-
-					</div>
-          <div class="col-sm-2">
-            <div class="input-group">
-              <span class="input-group-addon"><i
-                class="fa fa-text-width" aria-hidden="true"></i></span><input
-                class="form-control" type="label" placeholder="ejemplo"
-                [(ngModel)]="enc_fecha_final"
-                class="{invalid: (invalid | async)}" name="enc_fecha_final">
-
-            </div>
-          </div>
-          <div class="col-sm-1">
-            <app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
-              [messages]="failures | async"> </app-message>
-
-          </div>
-
-
-				</div>
-        <div class="row">
-          <div class="col-sm-5">
-            <div class="input-group" >
-              <span class="input-group-addon"><i
-                class="fa fa-text-width" aria-hidden="true"></i></span> <input
-                class="form-control" type="text" placeholder="ejemplo"
-                [(ngModel)]="enc_fecha_final"
-                class="{invalid: (invalid | async)}" name="enc_fecha_final" />
-            </div>
-          </div>
-          <div class="col-sm-1">
-            <app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
-              [messages]="failures | async"> </app-message>
-
-          </div>
-          <div class="col-sm-2">
-            <div class="input-group">
-              <span class="input-group-addon"><i
-                class="fa fa-text-width" aria-hidden="true"></i></span> <input
-                class="form-control" type="text" placeholder="ejemplo"
-                [(ngModel)]="enc_fecha_final"
-                class="{invalid: (invalid | async)}" name="enc_fecha_final" />
-            </div>
-          </div>
-          <div class="col-sm-1">
-            <app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
-              [messages]="failures | async"> </app-message>
-
-          </div>
-
-
+<div class="container-fluid" style="background: white;">
+    <div class="row bg-blue camposBase">
+        <div class="col-md-2 altoPadre borde-L-T-R">ZONA</div>
+        <div class="col-md-1 altoPadre borde-T-R" style="background-color:white; color:black;">
+            <output name="zona" id="zona">{{evaluacion.establecimientoSalud?.zona}}</output>
         </div>
-
-        <div class="row">
-					<div class="col-sm-5">
-						<div class="input-group" >
-							<span class="input-group-addon"><i
-								class="fa fa-text-width" aria-hidden="true"></i></span> <input
-								class="form-control" type="text" placeholder="ejemplo"
-								[(ngModel)]="enc_fecha_final"
-								class="{invalid: (invalid | async)}" name="enc_fecha_final" />
-						</div>
-					</div>
-					<div class="col-sm-1">
-						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
-							[messages]="failures | async"> </app-message>
-
-					</div>
-          <div class="col-sm-2">
-            <div class="input-group">
-              <span class="input-group-addon"><i
-                class="fa fa-text-width" aria-hidden="true"></i></span> <input
-                class="form-control" type="text" placeholder="ejemplo"
-                [(ngModel)]="enc_fecha_final"
-                class="{invalid: (invalid | async)}" name="enc_fecha_final" />
-            </div>
-          </div>
-          <div class="col-sm-1">
-            <app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
-              [messages]="failures | async"> </app-message>
-
-          </div>
-
-
-				</div>
-
-        <div class="row">
-					<div class="col-sm-5">
-						<div class="input-group" >
-							<span class="input-group-addon"><i
-								class="fa fa-text-width" aria-hidden="true"></i></span> <input
-								class="form-control" type="text" placeholder="ejemplo"
-								[(ngModel)]="enc_fecha_final"
-								class="{invalid: (invalid | async)}" name="enc_fecha_final" />
-						</div>
-					</div>
-					<div class="col-sm-1">
-						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
-							[messages]="failures | async"> </app-message>
-
-					</div>
-          <div class="col-sm-2">
-            <div class="input-group">
-              <span class="input-group-addon"><i
-                class="fa fa-text-width" aria-hidden="true"></i></span> <input
-                class="form-control" type="text" placeholder="ejemplo"
-                [(ngModel)]="enc_fecha_final"
-                class="{invalid: (invalid | async)}" name="enc_fecha_final" />
-            </div>
-          </div>
-          <div class="col-sm-1">
-            <app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
-              [messages]="failures | async"> </app-message>
-
-          </div>
-
-
-				</div>
-
-        <div class="row">
-					<div class="col-sm-5">
-						<div class="input-group" >
-							<span class="input-group-addon"><i
-								class="fa fa-text-width" aria-hidden="true"></i></span> <input
-								class="form-control" type="text" placeholder="ejemplo"
-								[(ngModel)]="enc_fecha_final"
-								class="{invalid: (invalid | async)}" name="enc_fecha_final" />
-						</div>
-					</div>
-					<div class="col-sm-1">
-						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
-							[messages]="failures | async"> </app-message>
-
-					</div>
-          <div class="col-sm-2">
-            <div class="input-group">
-              <span class="input-group-addon"><i
-                class="fa fa-text-width" aria-hidden="true"></i></span> <input
-                class="form-control" type="text" placeholder="ejemplo"
-                [(ngModel)]="enc_fecha_final"
-                class="{invalid: (invalid | async)}" name="enc_fecha_final" />
-            </div>
-          </div>
-          <div class="col-sm-1">
-            <app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
-              [messages]="failures | async"> </app-message>
-
-          </div>
-
-
-				</div>
-
-        <div class="row">
-					<div class="col-sm-5">
-						<div class="input-group" >
-							<span class="input-group-addon"><i
-								class="fa fa-text-width" aria-hidden="true"></i></span> <input
-								class="form-control" type="text" placeholder="ejemplo"
-								[(ngModel)]="enc_fecha_final"
-								class="{invalid: (invalid | async)}" name="enc_fecha_final" />
-						</div>
-					</div>
-					<div class="col-sm-1">
-						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
-							[messages]="failures | async"> </app-message>
-
-					</div>
-          <div class="col-sm-2">
-            <div class="input-group">
-              <span class="input-group-addon"><i
-                class="fa fa-text-width" aria-hidden="true"></i></span> <input
-                class="form-control" type="text" placeholder="ejemplo"
-                [(ngModel)]="enc_fecha_final"
-                class="{invalid: (invalid | async)}" name="enc_fecha_final" />
-            </div>
-          </div>
-          <div class="col-sm-1">
-            <app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
-              [messages]="failures | async"> </app-message>
-
-          </div>
-
-
-				</div>
-
-
-      </form>
+        <div class="col-md-2 altoPadre borde-T-R" >DISTRITO</div>
+        <div class="col-md-1 altoPadre borde-T-R" style="background-color:white; color:black;">
+            <output name="distrito" id="distrito">{{evaluacion.establecimientoSalud?.distrito}}</output>
+        </div>
+        <div class="col-md-3 altoPadre borde-T-R" >NOMBRE ESTABLECIMIENTO DE SALUD</div>
+        <div class="col-md-3 altoPadre borde-T-R" style="background-color:white; color:black;">
+            <output name="nombre" id="nombre">{{evaluacion.establecimientoSalud?.nombre}}</output>
+        </div>
     </div>
-  </div>
+    <div class="row bg-blue camposBase">
+        <div class="col-md-2 altoPadre borde-L-T-R" >NOMBRE RESPONSABLE</div>
+        <div class="col-md-3 altoPadre borde-T-R" style="background-color:white; color:black;">
+            <output name="nombreResponsable" id="nombreResponsable">{{evaluacion.establecimientoSalud?.nombre_responsable}}</output>
+        </div>
+        <div class="col-md-4 altoPadre borde-T-R" >UNICODE</div>
+        <div class="col-md-3 altoPadre borde-T-R" style="background-color:white; color:black;">
+            <output name="unicode" id="unicode">{{evaluacion.establecimientoSalud?.unicodigo}}</output>
+        </div>
+    </div>
+    <div class="row bg-blue camposBase">
+        <div class="col-md-2 altoPadre borde-L-T-R" >FECHA</div>
+        <div class="col-md-1 altoPadre borde-T-R" style="background-color:white; color:black;">dd</div>
+        <div class="col-md-2 altoPadre borde-T-R" style="background-color:white; color:black;">mm</div>
+        <div class="col-md-1 altoPadre borde-T-R" style="background-color:white; color:black;">yyyy</div>
+        <div class="col-md-3 altoPadre borde-T-R" >NOMBRE EVALUADOR/A</div>
+        <div class="col-md-3 altoPadre borde-T-R" style="background-color:white; color:black;">
+            <output name="modificadoPor" id="modificadoPor">{{evaluacion.modificado_por}}</output>
+        </div>
+    </div>
+    <div class="row bg-navy camposBase">
+        <div class="col-md-12 altoPadre borde-L-T-R-B">A. DATOS DEL ESTABLECIMIENTO DE SALUD</div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 borde-L-T-R" style="padding: 0px">
+            <div class="col-md-6 cajaTexto">
+                <label class="titulos">{{preguntas[0]?.texto}}</label>
+                <div class="col-md-12">
+                    <div *ngFor="let respuesta of preguntas[0]?.preguntaLista">
+                        <div class="col-md-8 margenesPeq">
+                            <label class="subTitulos">{{respuesta.texto}}</label>
+                        </div>
+                        <div class="col-md-2 margenesPeq">
+                            <input type="checkbox"  [(ngModel)]="respuesta.valorBooleano" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 cajaTexto" style="border-left: solid 1px #000000;">
+                <label class="titulos">Si en la pregunta anterior responde 1, indicar el tipo de establecimientos del
+                    MSP</label>
+                <div class="col-md-12">
+                    <div *ngFor="let respuesta of preguntas[0]?.preguntaLista[0]?.preguntaLista">
+                        <div class="col-md-8 margenesPeq">
+                            <label class="subTitulos">{{respuesta.texto}}</label>
+                        </div>
+                        <div class="col-md-2 margenesPeq">
+                            <input type="checkbox"   [(ngModel)]="respuesta.valorBooleano"/>
+                        </div>
+                    </div>
+                    <div class="col-md-12 form-group" style="margin: 35px 0px 0px 0px">
+                        <label class="subTitulos">Nivel de complejidad</label>
+                        <input type="text" class="form-control" name="nivelComplejidad" [(ngModel)]="preguntas[0]?.preguntaLista[0].valorTexto"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 borde-L-T-R" style="padding: 0px">
+            <div class="col-md-6 cajaTexto">
+                <div class="col-md-12 form-group">
+                    <label class="subTitulos">{{preguntas[1]?.texto}}</label>
+                    <input type="text" class="form-control" id="pregunta2" name="pregunta2" [(ngModel)]="preguntas[1].valorNumero" *ngIf="preguntas[1]" />
+                </div>
+                <div class="col-md-12  form-group">
+                    <label class="subTitulos">{{preguntas[1]?.preguntaLista[0].texto}}</label>
+                    <input type="text" class="form-control" id="pregunta2.1" name="pregunta2.1" [(ngModel)]="preguntas[1]?.preguntaLista[0].valorNumero"/>
+                </div>
 
-  <div class="box-footer"></div>
-  </div>
+
+            </div>
+            <div class="col-md-6 cajaTexto" style="border-left: solid 1px #000000;">
+                <div class="col-md-12">
+                    <div *ngFor="let respuesta of preguntas[1]?.preguntaLista | slice:1">
+                        <div class="col-md-12  form-group">
+                            <label class="subTitulos" >{{respuesta.texto}}</label>
+                            <input type="text" class="form-control" style="width: 20%" name="pregunta2.2" [(ngModel)]="respuesta.valorNumero"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 borde-L-T-R" style="padding: 0px">
+            <div class="col-md-6 cajaTexto">
+                <div class="col-md-12  form-group">
+                    <label class="subTitulos" >{{preguntas[2]?.texto}}</label>
+                    <input type="text" class="form-control" name="pregunta3" *ngIf="preguntas[2]" [(ngModel)]="preguntas[2].valorTexto"/>
+                </div>
+            </div>
+            <div class="col-md-6 cajaTexto" style="border-left: solid 1px #000000;">
+                <div *ngFor="let respuesta of preguntas[2]?.preguntaLista">
+                    <div class="col-md-12  form-group">
+                        <label class="subTitulos" >{{respuesta.texto}}</label>
+                        <input type="text" class="form-control" name="pregunta3.1" [(ngModel)]="respuesta.valorTexto"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 borde-L-T-R" style="padding: 0px">
+            <div class="col-md-6 cajaTexto">
+                <div class="col-md-12  form-group">
+                    <label class="subTitulos" >{{preguntas[3]?.texto}}</label>
+                    <!--<input type="text" class="form-control"/>-->
+                </div>
+
+            </div>
+            <div class="col-md-4 cajaTexto borde-L-R">
+                <div class="col-md-12 margenesPeq">
+                    <label class="titulos">SI</label>
+                    <input type="checkbox" class="margenesPeq" *ngIf="preguntas[3]"  [(ngModel)]="preguntas[3].valorBooleano"/>
+                </div>
+                <div class="col-md-12 margenesPeq" *ngIf="preguntas[3]?.valorBooleano">
+                    <div class="col-md-7">
+                        <label class="subTitulos">{{preguntas[3]?.preguntaLista[0].texto}}</label>
+                    </div>
+                    <div class="col-md-4" style="padding: 0px !important;">
+                        <input type="text" class="form-control" name="pregunta4.1" [(ngModel)]="preguntas[3].preguntaLista[0].valorNumero" *ngIf="preguntas[3]"/>
+                    </div>
+                    <div class="col-md-7">
+                        <label class="subTitulos">{{preguntas[3]?.preguntaLista[1].texto}}</label>
+                    </div>
+                    <div class="col-md-4" style="padding: 0px !important;">
+                        <input type="text" class="form-control" name="pregunta4.2" [(ngModel)]="preguntas[3].preguntaLista[1].valorNumero" *ngIf="preguntas[3]"/>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="subTitulos">{{preguntas[3]?.preguntaLista[2].texto}}</label>
+                        <input type="text" class="form-control" name="pregunta4.3" [(ngModel)]="preguntas[3].preguntaLista[2].valorTexto" *ngIf="preguntas[3]"/>
+                    </div>
+                    <div class="col-md-12" style="padding: 0px !important;">
+                        <label class="titulos">Tiene cuidados del reciÃ©n nacido:</label>
+                        <div *ngFor="let respuesta of preguntas[3]?.preguntaLista | slice:3">
+                            <div class="col-md-12" style="padding: 0px !important;">
+                                <label class="subTitulos" style="margin-right: 10px !important; min-width: 20%">{{respuesta.texto}}</label>
+                                <label class="subTitulos">SI</label>
+                                <input type="checkbox"   class="margenesPeq" [(ngModel)]="respuesta.valorBooleano"/>
+                                <label class="subTitulos">NO</label>
+                                <input type="checkbox"   class="margenesPeq"  [(ngModel)]="!respuesta.valorBooleano"/>
+                                <label class="subTitulos">NÂ° de cunas/camas</label>
+                                <input type="text" class="form-control" style="width: 10% !important;padding: 0px !important;" name="pregunta4.4" [(ngModel)]="respuesta.valorNumero"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 cajaTexto">
+                <div class="col-md-12 margenesPeq">
+                    <label class="titulos">NO</label>
+                    <input type="checkbox"   class="margenesPeq" *ngIf="preguntas[3]"  [(ngModel)]="!preguntas[3].valorBooleano"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12" style="padding: 0px">
+            <div class="col-md-6 cajaTexto" style="border-top: solid 1px #000000;">
+                <div class="col-md-12  form-group">
+                    <label class="subTitulos" >{{preguntas[4]?.texto}}</label>
+                    <ul>
+                      <li>lactancia materna (LM)</li>
+                      <li>alimentaciÃ³n con sucedÃ¡neos de la leche (SLM)</li>
+                      <li>brindar consejerÃ­a en VIH y alimentaciÃ³n infantil
+                        (VIH)</li>
+                      <li>educaciÃ³n prenatal (EP)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 cajaTexto" style="padding: 0px;">
+                <table class="table table-bordered" style="margin: 0px !important;">
+                    <thead>
+                        <tr>
+                            <th style="width: 40%">PROFESIONAL</th>
+                            <th style="width: 15%">LM</th>
+                            <th style="width: 15%">SLM</th>
+                            <th style="width: 15%">VIH</th>
+                            <th style="width: 15%">EP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let respuesta of preguntas[4]?.preguntaLista">
+                            <td>{{respuesta.texto}}</td>
+                            <td *ngFor="let respuesta2 of respuesta.preguntaLista">{{respuesta2.valorTexto}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-12 borde-L-T-R" style="padding: 0px">
+            <div class="col-md-6 cajaTexto">
+                <div class="col-md-12  form-group">
+                    <label class="subTitulos" >{{preguntas[5]?.texto}}</label>
+                </div>
+            </div>
+            <div class="col-md-4 cajaTexto borde-L-R">
+                <div class="col-md-12 margenesPeq">
+                    <label class="titulos">SI</label>
+                    <input type="checkbox" class="margenesPeq"  *ngIf="preguntas[5]" [(ngModel)]="preguntas[5].valorBooleano"/>
+                </div>
+                <div class="col-md-12 margenesPeq" *ngIf="preguntas[5]?.valorBooleano">
+                    <div class="col-md-12">
+                        <label class="subTitulos">CuÃ¡ndo se conformÃ³:</label>
+                        <input type="text" class="form-control" style="width: 100%" name="pregunta6" [(ngModel)]="preguntas[5].valorFecha" *ngIf="preguntas[5]"/>
+                        <div style="text-align: center;">
+                            <span>(dd/mm/aaaa)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 cajaTexto">
+                <div class="col-md-12 margenesPeq">
+                    <label class="titulos">NO</label>
+                    <input type="checkbox"   class="margenesPeq" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 borde-L-T-R" style="padding: 0px">
+            <div class="col-md-6 cajaTexto">
+                <div class="col-md-12  form-group">
+                    <label class="titulos" >{{preguntas[6]?.texto}}</label>
+                </div>
+                <div class="col-md-12  form-group">
+                    <label class="subTitulos" >{{preguntas[6]?.preguntaLista[0].texto}}</label>
+                    <input type="text" class="form-control" style="width: 30%" [(ngModel)]="preguntas[6].preguntaLista[0].valorNumero" *ngIf="preguntas[6]" name="pregunta7"/>
+                </div>
+            </div>
+            <div class="col-md-6 cajaTexto" style="border-left: solid 1px #000000;">
+                <div class="col-md-12  form-group">
+                    <label class="titulos" >De los nacimientos:</label>
+                </div>
+                <div class="col-md-12  form-group">
+                    <label class="subTitulos" >(NÂº)</label>
+                    <input type="text" class="form-control" style="width: 20%" [(ngModel)]="preguntas[6].preguntaLista[1].valorNumero" *ngIf="preguntas[6]" name="pregunta7.1"/>
+                    <label class="subTitulos" >{{preguntas[6]?.preguntaLista[1].texto}}</label>
+                </div>
+                <div class="col-md-12  form-group">
+                    <label class="subTitulos" >De los cuales (NÂº)</label>
+                    <input type="text" class="form-control" style="width: 20%" [(ngModel)]="preguntas[6].preguntaLista[2].valorNumero" *ngIf="preguntas[6]" name="pregunta7.2"/>
+                    <label class="subTitulos" >{{preguntas[6]?.preguntaLista[2].texto}}</label>
+                </div>
+                <div class="col-md-12  form-group">
+                    <label class="subTitulos" >(NÂº)</label>
+                    <input type="text" class="form-control" style="width: 20%" [(ngModel)]="preguntas[6].preguntaLista[3].valorNumero" *ngIf="preguntas[6]" name="pregunta7.3"/>
+                    <label class="subTitulos" >{{preguntas[6]?.preguntaLista[3].texto}}</label>
+                </div>
+                <div class="col-md-12  form-group">
+                    <label class="subTitulos" >De los cuales (NÂº)</label>
+                    <input type="text" class="form-control" style="width: 20%" [(ngModel)]="preguntas[6].preguntaLista[4].valorNumero" *ngIf="preguntas[6]" name="pregunta7.4"/>
+                    <label class="subTitulos" >{{preguntas[6]?.preguntaLista[4].texto}}</label>
+                </div>
+                <div class="col-md-12  form-group">
+                    <label class="subTitulos" >(NÂº)</label>
+                    <input type="text" class="form-control" style="width: 20%" [(ngModel)]="preguntas[6].preguntaLista[5].valorNumero" *ngIf="preguntas[6]" name="pregunta7.5"/>
+                    <label class="subTitulos" >{{preguntas[6]?.preguntaLista[5].texto}}</label>
+                </div>
+                <div class="col-md-12  form-group">
+                    <label class="subTitulos" >(NÂº)</label>
+                    <input type="text" class="form-control" style="width: 20%" [(ngModel)]="preguntas[6].preguntaLista[6].valorNumero" *ngIf="preguntas[6]" name="pregunta7.6"/>
+                    <label class="subTitulos" >{{preguntas[6]?.preguntaLista[6].texto}}</label>
+                </div>
+                <div class="col-md-12  form-group">
+                    <label class="subTitulos" >(NÂº)</label>
+                    <input type="text" class="form-control" style="width: 20%" [(ngModel)]="preguntas[6].preguntaLista[7].valorNumero" *ngIf="preguntas[6]" name="pregunta7.7"/>
+                    <label class="subTitulos" >{{preguntas[6]?.preguntaLista[7].texto}}</label>
+                </div>
+                <div class="col-md-12  form-group">
+                    <label class="subTitulos" >De los cuales (NÂº)</label>
+                    <input type="text" class="form-control" style="width: 20%" [(ngModel)]="preguntas[6].preguntaLista[8].valorNumero" *ngIf="preguntas[6]" name="pregunta7.8"/>
+                    <label class="subTitulos" >{{preguntas[6]?.preguntaLista[8].texto}}</label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 borde-L-T-R" style="padding: 0px">
+            <div class="col-md-6 cajaTexto">
+                <div class="col-md-12  form-group">
+                    <label class="titulos" >{{preguntas[7]?.texto}}</label>
+                </div>
+            </div>
+            <div class="col-md-6 cajaTexto" style="border-left: solid 1px #000000;">
+                <div *ngFor="let respuesta of preguntas[7]?.preguntaLista">
+                    <div class="col-md-12  form-group">
+                        <label class="subTitulos" >{{respuesta.texto}}</label>
+                        <input type="text" class="form-control" style="width: 20%" [(ngModel)]="respuesta.valorNumero" name="pregunta8"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 borde-L-T-R" style="padding: 0px">
+            <div class="col-md-6 cajaTexto">
+                <div class="col-md-12  form-group">
+                    <label class="titulos" >{{preguntas[8]?.texto}}</label>
+                </div>
+            </div>
+            <div class="col-md-6 cajaTexto" style="border-left: solid 1px #000000;">
+               <div *ngFor="let respuesta of preguntas[8]?.preguntaLista">
+                    <div class="col-md-12  form-group">
+                        <label class="subTitulos" >{{respuesta.texto}}</label>
+                        <input type="text" class="form-control" style="width: 20%" [(ngModel)]="respuesta.valorNumero" name="pregunta9"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 borde-L-T-R-B" style="padding: 0px">
+            <div class="col-md-6 cajaTexto">
+                <div class="col-md-12  form-group">
+                    <label class="subTitulos" >{{preguntas[9]?.texto}}</label>
+                    <input type="text" class="form-control" [(ngModel)]="preguntas[9].valorTexto" *ngIf="preguntas[9]" name="pregunta10"/>
+                </div>
+            </div>
+            <div class="col-md-6 cajaTexto" style="border-left: solid 1px #000000;">
+
+            </div>
+        </div>
+    </div>
+    <div class="row bg-navy camposBase">
+        <div class="col-md-12 altoPadre borde-L-T-R-B">{{tablas[0]?.grupo}}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 cajaTexto" style="padding: 0px;">
+            <table class="table table-bordered" style="margin: 0px !important;">
+                <thead>
+                    <tr>
+                        <th style="width: 5%">VERIF</th>
+                        <th style="width: 15%">PASO</th>
+                        <th style="width: 35%">DIRECTRIZ</th>
+                        <th style="width: 35%">PARÃ�METRO DE CUMPLIMIENTO</th>
+                        <th style="width: 3.33%">SI</th>
+                        <th style="width: 3.33%">NO</th>
+                        <th style="width: 3.33%">PUNTAJE</th>
+                    </tr>
+                </thead>
+                <tbody *ngIf="tablas[0]">
+                    <tr>
+                        <td>{{tablas[0]?.hijos[0].hijos[0].hijos[0].verificador}}</td>
+                        <td rowspan="4">{{tablas[0]?.hijos[0].paso}}</td>
+                        <td  rowspan="2">{{tablas[0]?.hijos[0].hijos[0].directriz}}</td>
+                        <td>{{tablas[0]?.hijos[0].hijos[0].hijos[0].parametro}}</td>
+                        <td><input type="checkbox"   class="margenesPeq" [(ngModel)]="!tablas[0].hijos[0].hijos[0].hijos[0].no_aplica"/></td>
+                        <td><input type="checkbox"   class="margenesPeq"  [(ngModel)]="tablas[0].hijos[0].hijos[0].hijos[0].no_aplica"/></td>
+                        <td>{{tablas[0]?.hijos[0].hijos[0].hijos[0].puntaje}}*</td>
+                    </tr>
+                    <tr>
+                        <td>{{tablas[0]?.hijos[0].hijos[0].hijos[1].verificador}}</td>
+                        <td>{{tablas[0]?.hijos[0].hijos[0].hijos[1].parametro}}</td>
+                        <td><input type="checkbox"   class="margenesPeq"  [(ngModel)]="!tablas[0].hijos[0].hijos[0].hijos[1].no_aplica"/></td>
+                        <td><input type="checkbox"   class="margenesPeq"  [(ngModel)]="tablas[0].hijos[0].hijos[0].hijos[1].no_aplica"/></td>
+                        <td>{{tablas[0]?.hijos[0].hijos[0].hijos[1].puntaje}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{tablas[0]?.hijos[0].hijos[1].hijos[0].verificador}}</td>
+                        <td>{{tablas[0]?.hijos[0].hijos[1].directriz}}</td>
+                        <td>{{tablas[0]?.hijos[0].hijos[1].hijos[0].parametro}}</td>
+                        <td><input type="checkbox"   class="margenesPeq"  [(ngModel)]="!tablas[0].hijos[0].hijos[1].hijos[0].no_aplica"/></td>
+                        <td><input type="checkbox"   class="margenesPeq"  [(ngModel)]="tablas[0].hijos[0].hijos[1].hijos[0].no_aplica"/></td>
+                        <td>{{tablas[0]?.hijos[0].hijos[1].hijos[0].puntaje}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{tablas[0]?.hijos[0].hijos[2].hijos[0].verificador}}</td>
+                        <td>{{tablas[0]?.hijos[0].hijos[2].directriz}}</td>
+                        <td>{{tablas[0]?.hijos[0].hijos[2].hijos[0].parametro}}</td>
+                        <td><input type="checkbox"   class="margenesPeq"  [(ngModel)]="
+                            !tablas[0].hijos[0].hijos[2].hijos[0].no_aplica"/></td>
+                        <td><input type="checkbox"   class="margenesPeq"  [(ngModel)]="tablas[0].hijos[0].hijos[2].hijos[0].no_aplica"/></td>
+                        <td>{{tablas[0]?.hijos[0].hijos[2].hijos[0].puntaje}}*</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">TOTAL GENERAL (4 verificadores)</td>
+                        <td>
+                            <input type="text" class="form-control" style="width: 20% !important;padding: 0px !important;"/>
+                            <label class="subTitulos" >/10</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row bg-navy camposBase">
+        <div class="col-md-12 altoPadre borde-L-T-R-B">C. INFORMACIÃ“N SOBRE SERVICIOS PRENATALES</div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 cajaTexto" style="padding: 0px;">
+            <table class="table table-bordered" style="margin: 0px !important;">
+                <thead>
+                    <tr>
+                        <th style="width: 5%">VERIF</th>
+                        <th style="width: 15%">PASO</th>
+                        <th style="width: 35%">DIRECTRIZ</th>
+                        <th style="width: 35%">PARÃ�METRO DE CUMPLIMIENTO</th>
+                        <th style="width: 3.33%">SI</th>
+                        <th style="width: 3.33%">NO</th>
+                        <th style="width: 3.33%">PUNTAJE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td rowspan="3"></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="8"></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="4"></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="4"></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">TOTAL PRENATAL (16 verificadores)</td>
+                        <td>
+                            <input type="text" class="form-control" style="width: 20% !important;padding: 0px !important;"/>
+                            <label class="subTitulos" >/30</label>
+                            <label class="subTitulos" >(el puntaje puede ser menor,
+                                dependiendo del NÂª de N/A)</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row bg-navy camposBase">
+        <div class="col-md-12 altoPadre borde-L-T-R-B">D. COMPONENTE PARTO Y PUERPERIO</div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 cajaTexto" style="padding: 0px;">
+            <table class="table table-bordered" style="margin: 0px !important;">
+                <thead>
+                    <tr>
+                        <th style="width: 5%">VERIF</th>
+                        <th style="width: 15%">PASO</th>
+                        <th style="width: 35%">DIRECTRIZ</th>
+                        <th style="width: 35%">PARÃ�METRO DE CUMPLIMIENTO</th>
+                        <th style="width: 3.33%">SI</th>
+                        <th style="width: 3.33%">NO</th>
+                        <th style="width: 3.33%">PUNTAJE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td rowspan="4"></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="5"></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="7"></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="3"></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="5"></td>
+                        <td rowspan="3"></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="7"></td>
+                        <td rowspan="4"></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="3"></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="6"></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="3"></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">TOTAL PARTO Y PUERPERIO (44 verificadores)</td>
+                        <td>
+                            <input type="text" class="form-control" style="width: 20% !important;padding: 0px !important;"/>
+                            <label class="subTitulos" >/80</label>
+                            <label class="subTitulos" >el puntaje puede ser menor,
+                                dependiendo del NÂª de N/A)</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row bg-navy camposBase">
+        <div class="col-md-12 altoPadre borde-L-T-R-B">E. COMPONENTE LACTANCIA MATERNA</div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 cajaTexto" style="padding: 0px;">
+            <table class="table table-bordered" style="margin: 0px !important;">
+                <thead>
+                    <tr>
+                        <th style="width: 5%">VERIF</th>
+                        <th style="width: 15%">PASO</th>
+                        <th style="width: 35%">DIRECTRIZ</th>
+                        <th style="width: 35%">PARÃ�METRO DE CUMPLIMIENTO</th>
+                        <th style="width: 3.33%">SI</th>
+                        <th style="width: 3.33%">NO</th>
+                        <th style="width: 3.33%">PUNTAJE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td  rowspan="6"></td>
+                        <td  rowspan="2"></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td  rowspan="2"></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="3"></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td rowspan="3"></td>
+                        <td  rowspan="2"></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td  rowspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td  rowspan="4"></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td><input type="checkbox"   class="margenesPeq" /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">TOTAL LACTANCIA MATERNA (24 verificadores)</td>
+                        <td>
+                            <input type="text" class="form-control" style="width: 20% !important;padding: 0px !important;"/>
+                            <label class="subTitulos" >/64</label>
+                            <label class="subTitulos" >(el puntaje puede ser menor,
+                                dependiendo del NÂª de N/A)</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">TOTAL (79 indicadores)</td>
+                        <td>
+                            <input type="text" class="form-control" style="width: 20% !important;padding: 0px !important;"/>
+                            <label class="subTitulos" >/184</label>
+                            <label class="subTitulos" >(el puntaje puede ser menor,
+                                dependiendo del NÂª de N/A)</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">PORCENTAJE</td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="7">*El establecimiento que no cumpla con este indicador, no podrÃ¡ ser certificado aÃºn si cumple con el puntaje mÃ­nimo requerido N/A: este indicador permite la opciÃ³n â€œno aplicaâ€�</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

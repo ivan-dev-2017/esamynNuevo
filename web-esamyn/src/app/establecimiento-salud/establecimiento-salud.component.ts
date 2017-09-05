@@ -5,13 +5,13 @@ import { MessageComponent } from '../comp/message/message.component';
 
 
 
-
 @Component({
   selector: 'app-establecimiento-salud',
   templateUrl: './establecimiento-salud.component.html',
   styleUrls: ['./establecimiento-salud.component.css']
 })
 export class EstablecimientoSaludComponent implements OnInit {
+  failures:Array<string> = new Array;
     standardForm : FormGroup;
   messages:string = "Invalido";
   personasJuridicas = [];
@@ -20,11 +20,10 @@ export class EstablecimientoSaludComponent implements OnInit {
   establecimientoSalud = {};
   provincia={"id":null,"codigo":null,"nombre":null,"cantonList":null};
   loadingIndicator: boolean = true;
-  form = FormBuilder;
-
-  constructor(private coreesamyn:CoreesamynService) {
+    
+  constructor(private coreesamyn:CoreesamynService) { 
     console.log("<<<<< ENTRO EN ESTABLECIMIENTO SALUD  >>>>>");
-
+    this.failures.push("InvalidoArray");
     //OBTENER PROVINCIAS DESDE JSON
     this.coreesamyn.getProvinciasList().subscribe(
     data=>{
@@ -32,7 +31,6 @@ export class EstablecimientoSaludComponent implements OnInit {
         this.provincias=data;
         setTimeout(() => {this.loadingIndicator = false; }, 1500);
     });
-
     //OBTENER PERSONAS JURIDICAS DESDE JSON
     this.coreesamyn.getPersonaJuridicaList().subscribe(
     data=>{
@@ -40,7 +38,6 @@ export class EstablecimientoSaludComponent implements OnInit {
         this.personasJuridicas=data;
         setTimeout(() => {this.loadingIndicator = false; }, 1500);
     });
-
     //OBTENER FORMULARIO DE ESTABLECIMIENTO SALUD DESDE JSON
     this.coreesamyn.getEstablecimientoSaludList().subscribe(
     data=>{
@@ -52,11 +49,11 @@ export class EstablecimientoSaludComponent implements OnInit {
 
   ngOnInit() {
   }
-
+    
   save(){
       console.log(JSON.stringify(this.establecimientoSalud));
   }
-
+    
   cambiarCantones(){
       //OBTENER CANTONES DESDE JSON
       this.coreesamyn.getCantonesList(this.provincia.id).subscribe(
@@ -66,10 +63,10 @@ export class EstablecimientoSaludComponent implements OnInit {
           setTimeout(() => {this.loadingIndicator = false; }, 1500);
       });
   }
-
+  
   clear(){
       this.standardForm.reset();
   }
-
+  
 
 }

@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
 	
 	private page = new PaginatedList<User>();
 	private rows = new Array<User>();
+    bandera:boolean = false;
 	panelMenuAppList:ItemMenu[];
 	
 	confirmResult:boolean = null;
@@ -69,4 +70,8 @@ export class HomeComponent implements OnInit {
         this.promptMessage = message;
       });
   }
+    
+   recibeBandera(event){
+       this.bandera=event;
+   }
 }

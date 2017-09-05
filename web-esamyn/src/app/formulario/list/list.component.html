@@ -1,10 +1,10 @@
-<div class="col-lg-6 col-xs-12 col-md-6" style="margin: 10px 0px;">
-    <div  id="principal" [hidden]="isVisible" >
+<div  style="margin: 10px 0px;" [ngClass]="{'col-lg-12 col-sm-12 col-md-12' : !encuestas.length, 'col-lg-6 col-sm-6 col-md-6' : encuestas.length}">	
+    <div  id="principal" [hidden]="isVisible">
         <ngx-datatable
             class="dark"
             [rows]="rows"
             [loadingIndicator]="loadingIndicator"
-            [columnMode]="'force'"
+            [columnMode]="'flex'"
             [headerHeight]="50"
             [footerHeight]="50"
             [rowHeight]="'auto'"
@@ -12,7 +12,7 @@
             [selectionType]="'single'"
             (activate)="onActivate($event)"
             (select)='onSelect($event)'>
-            <ngx-datatable-column name="Nombre" prop="nombre" [width]="10">
+            <ngx-datatable-column name="Nombre" prop="nombre" [flexGrow]="5">
               <ng-template let-column="column" ngx-datatable-header-template>
                 {{column.name}}
               </ng-template>
@@ -20,7 +20,7 @@
                 <strong>{{value}}</strong>
               </ng-template>
             </ngx-datatable-column>
-            <ngx-datatable-column name="Accion"  prop="id" [width]="10">
+            <ngx-datatable-column name="Accion"  prop="id" [flexGrow]="1">
               <ng-template let-column="column" ngx-datatable-header-template>
                 {{column.name}}
               </ng-template>
@@ -35,8 +35,8 @@
     </div>
 </div>
 
-<div class="col-lg-6 col-xs-12 col-md-6" style="margin: 10px 0px;">
-    <div  id="secundario" *ngIf="encuestas.length" >
+<div class="col-lg-6 col-sm-6 col-md-6" style="margin: 10px 0px;" *ngIf="encuestas.length">	
+    <div  id="secundario"  >
         <ngx-datatable
             class="dark"
             [rows]="encuestas"
@@ -64,7 +64,7 @@
                 <strong>{{value}}</strong>
               </ng-template>
             </ngx-datatable-column>
-            <ngx-datatable-column name="Acciones"  prop="nombreUsuario" [width]="10">
+            <ngx-datatable-column name="Acciones"  prop="formulario.id" [width]="10">
               <ng-template let-column="column" ngx-datatable-header-template>
                 {{column.name}}
               </ng-template>

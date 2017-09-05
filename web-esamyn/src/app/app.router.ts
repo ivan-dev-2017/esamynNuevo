@@ -26,8 +26,8 @@ export const appRoutes: Routes = [
   { path: 'form_component/:id', component: FormComponent },
 	{ path: 'formulario_list', component: FoesamnComponent },
 	{ path: 'formularioListComponent', component: FormularioListComponent },
-	{ path: 'evaluacionlist', component: EvaluacionlistComponent },
-	{ path: 'evaluacionform', component: EvaluacionformComponent },
+	{ path: 'evaluacionList', component: EvaluacionlistComponent },
+	{ path: 'evaluacionForm/:idEvaluacion', component: EvaluacionformComponent },
     { path: '**', redirectTo: '/login' }
 ];
 
