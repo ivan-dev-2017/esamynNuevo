@@ -103,9 +103,8 @@ export class BaseService {
     findByParams( params, serviceName: string ) {
         this.options = new RequestOptions( { headers: this.headers } );
         return this.http.post( this.config.apiUrl + this.services[serviceName],
-                params
-            , this.options )
-            .map(( response: Response ) => {
+                params, this.options ).map(( response: Response ) => {
+                    console.log("==>service findByParams " + JSON.stringify(response));
                 let entidad = response.json();
                 return entidad;
             },

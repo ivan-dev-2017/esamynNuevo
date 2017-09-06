@@ -3,7 +3,6 @@ export class AppConfig {
     public readonly apiUrl = 'http://localhost:8080/esamyn/';
     public readonly keyFirstLogin = 'xxxx.xxxx';
     public readonly servicios = {'formulario.crud.findall':'rest/formulario/lista/',
-                                  'estsal.crud.findall':'rest/establecimientoSalud/todos',
                                   'encuesta.crud.findall':'rest/encuesta/todos',
                                   'encuesta.crud.create':'rest/encuesta/guardar',
                                   'encuesta.crud.update':'rest/encuesta/guardar',
@@ -15,7 +14,7 @@ export class AppConfig {
                                   'pregunta.crud.findall':'rest/pregunta/',
                                   'establecimientoSalud.crud.findall':'rest/establecimientoSalud/todos',
                                   'establecimientoSalud.crud.update':'rest/establecimientoSalud/guardar',
-                                  'establecimientoSalud.crud.read':'rest/establecimientoSalud/buscar/1',
+                                  'establecimientoSalud.crud.read':'rest/establecimientoSalud/buscar/',
                                   'establecimientoSalud.crud.delete':'rest/establecimientoSalud/eliminar',
                                   'evaluacion.crud.findall':'rest/evaluacion/todos',
                                   'evaluacion.crud.read':'rest/evaluacion/buscar/',

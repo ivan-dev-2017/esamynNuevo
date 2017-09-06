@@ -20,7 +20,7 @@ export const appRoutes: Routes = [
     { path: 'login',component: LoginComponent },
     { path: 'home', component: HomeComponent },
     { path: 'foesamn', component: FoesamnComponent },
-    { path: 'foesamn/:id', component: FoesamnComponent },
+    //{ path: 'foesamn/:id', component: FoesamnComponent },
     { path: 'encuestaformcomponent', component: EncuestaFormComponent },
     { path: 'encuestaformcomponent/:id', component: EncuestaFormComponent },
     { path: 'foesamlist', component: FoesamnComponent },

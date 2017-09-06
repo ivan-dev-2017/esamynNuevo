@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router,NavigationExtras } from '@angular/router';
 import { CoreesamynService, GlobaleventsmanagerService } from '../../service/index';
 
 @Component( {
@@ -92,8 +92,14 @@ export class FormularioListComponent implements OnInit {
             "idFormulario": this.idFormulario,
             "idEncuesta": this.encuestas[0].codigo
         };
-        console.log("parmetro direccion: " + JSON.stringify( parametro ) );
-        this.router.navigate(['/foesamn', { queryParams: parametro }]);
+        let navigationExtras: NavigationExtras = {
+                queryParams: {
+                    "idFormulario": this.idFormulario,
+                    "idEncuesta": this.encuestas[0].codigo
+                }
+            };
+        console.log("parmetro direccion: " + JSON.stringify( navigationExtras ) );
+        this.router.navigate(['/foesamn'],navigationExtras);
     }
 
 }

@@ -145,9 +145,9 @@ export class CoreesamynService extends BaseService {
     /**
      * Metodo que lista los establecimientos de salud parametrizados
      */
-    getEstablecimientoSalud() {
+    getEstablecimientoSaludById( id:string ) {
         console.log( "==Entra en CoreesamynService getEstablecimientoSaludList" );
-        return this.getAllPaginated( null, 'estsal.crud.findall' );
+        return this.findByPkUrl(id, 'establecimientoSalud.crud.read' );
         /*return this.http.get('./app/mock/establecimientoSalud.json').map((response) =>{
             let paginatedListx = response.json();
             return paginatedListx.objeto;
@@ -201,12 +201,13 @@ export class CoreesamynService extends BaseService {
      * @param idEncuesta id de la encuesta
      */
     getEncuestabyId( idEncuesta: number ) {
-        //return this.findByPkUrl(idEncuesta.toString(),'encuesta.crud.read').map((response)=>{
-        return this.http.get( './app/mock/encuesta.json' ).map(( response ) => {
+        console.log("==> getEncuestabyId " + idEncuesta );
+        return this.findByPkUrl(idEncuesta.toString(),'encuesta.crud.read');
+        /*return this.http.get( './app/mock/encuesta.json' ).map(( response ) => {
             let paginatedListx = response.json();
             return paginatedListx.objeto;
             //return encuesta.filter(encuesta=>encuesta.codigo==idEncuesta);
-        } );
+        } );*/
     }
 
     /**
@@ -288,7 +289,7 @@ export class CoreesamynService extends BaseService {
         } else {
             console.log( "==header es: " + JSON.stringify( this.headers ) );
         }
-        return this.getAllPaginated( null, "estsal.crud.findall" );
+        return this.getAllPaginated( null, "establecimientoSalud.crud.findall" );
         /* return this.http.get('./app/mock/establecimiento_salud.json').map((response)=>{
            let paginatedListx=response.json();
            return paginatedListx;
@@ -311,6 +312,8 @@ export class CoreesamynService extends BaseService {
      * @param idEncuesta encuesta asociada
      */
     getEncuestaByFormularioAndEncuesta( parametro ) {
+        //console.log("x entra a getEncuestaByFormularioAndEncuesta " );
+        //console.log("y entra a getEncuestaByFormularioAndEncuesta " + JSON.stringify(parametro));
         return this.findByParams(parametro,'pregunta.crud.findall');
         /*return this.http.get( './app/mock/preguntas.json' ).map(( response ) => {
             let paginatedListx = response.json();
