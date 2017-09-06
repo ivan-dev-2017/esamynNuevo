@@ -53,6 +53,8 @@ export class LoginComponent implements OnInit {
                 data => {
                 	console.log("=?????=>despues de login success  " + JSON.stringify(data));
                 	this.model.loggedIn=true;
+                	this.model.role= ""+data.rol.codigo;
+                	this.model.roleDescripcion=data.rol.descripcion;
                 	this.globaleventsmanagerService.showNavBar(this.model);
                     this.returnUrl="/home";
                     this.router.navigate([this.returnUrl]);

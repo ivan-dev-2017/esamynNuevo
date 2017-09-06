@@ -27,6 +27,7 @@ export class MenuComponent implements OnInit {
 	    	console.log("==>entra en subscriber menu string : " + JSON.stringify(mode)   );
 	        if (mode !== null && mode.loggedIn) {
 	          this.usuario = JSON.parse( localStorage.getItem('currentUser'));
+	          this.loginWrapper=mode;
 	          //console.log("==>usuario logeado: "  +JSON.stringify(this.usuario)  );
 	          //let menu=JSON.parse(localStorage.getItem('menu'));
 	          //this.panelMenuAppList=menu;
