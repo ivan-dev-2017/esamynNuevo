@@ -111,17 +111,19 @@ export class CoreesamynService extends BaseService {
      */
     getCantonesList( idProvincia: number ) {
         console.log( "==Entra en CoreesamynService getCantonesList" );
-        //return this.getAllPaginated(null, 'formulario.crud.findall');
-        return this.http.get( './app/mock/cantones.json' ).map(( response ) => {
-            let paginatedListx = response.json();
-            let x = paginatedListx.objeto;
-            return x.filter( canton => canton.provincia.id == idProvincia );
-        },
-            error => {
-                console.log( "==>despues de buscar usuario error  " + JSON.stringify( error ) );
-                return error;
-            }
-        );
+        let cantones= this.getAllPaginated(null, 'canton.crud.findall');
+        console.log("cantones obtenidos"+JSON.stringify(cantones));
+        return cantones;
+        //return this.http.get( './app/mock/cantones.json' ).map(( response ) => {
+        //     let paginatedListx = response.json();
+        //     let x = paginatedListx.objeto;
+        //     return x.filter( canton => canton.provincia.id == idProvincia );
+        // },
+        //     error => {
+        //         console.log( "==>despues de buscar usuario error  " + JSON.stringify( error ) );
+        //         return error;
+        //     }
+        // );
     }
 
     /**
@@ -129,16 +131,16 @@ export class CoreesamynService extends BaseService {
      */
     getPersonaJuridicaList() {
         console.log( "==Entra en CoreesamynService getPersonaJuridicaList" );
-        //return this.getAllPaginated(null, 'formulario.crud.findall');
-        return this.http.get( './app/mock/personaJuridica.json' ).map(( response ) => {
-            let paginatedListx = response.json();
-            return paginatedListx.objeto;
-        },
-            error => {
-                console.log( "==>despues de buscar usuario error  " + JSON.stringify( error ) );
-                return error;
-            }
-        );
+        return this.getAllPaginated(null, 'personaJuridica.crud.findall');
+        //return this.http.get( './app/mock/personaJuridica.json' ).map(( response ) => {
+        //     let paginatedListx = response.json();
+        //     return paginatedListx.objeto;
+        // },
+        //     error => {
+        //         console.log( "==>despues de buscar usuario error  " + JSON.stringify( error ) );
+        //         return error;
+        //     }
+        // );
     }
 
 
@@ -184,8 +186,8 @@ export class CoreesamynService extends BaseService {
      */
     getEncuestaList() {
         console.log( "==Entra en CoreesamynService getEncuesta" );
-        //return this.getAllPaginated('encuesta.crud.findall').map((response) =>{
-        return this.http.get( './app/mock/encuesta.json' ).map(( response ) => {
+        return this.getAllPaginated(null,'encuesta.crud.findall').map((response) =>{
+        //return this.http.get( './app/mock/encuesta.json' ).map(( response ) => {
             let paginatedListx = response.json();
             return paginatedListx.objeto;
         },
@@ -217,7 +219,6 @@ export class CoreesamynService extends BaseService {
     getPreguntaById( codigoPregunta: number ) {
         console.log( "==Entra en CoreesamynService findPregunta" );
         //return this.findByPkUrl(codigoPregunta.toString(), 'pregunta.crud.read').map((response) =>{
-        //return this.findByPk(codigoFormulario.toString(), 'encuesta.crud.findall').map((response) =>{
         return this.http.get( './app/mock/encuestas.json' ).map(( response ) => {
             let paginatedListx = response.json();
             let x = paginatedListx.objeto;
@@ -253,21 +254,22 @@ export class CoreesamynService extends BaseService {
      * Metodo que lista las evaluaciones mock
      */
     getEvaluacionList() {
-        return this.http.get( './app/mock/evaluacion.json' ).map(( response ) => {
+      return this.getAllPaginated(null,'evaluacion.crud.findall').map(( response ) => {
+        //return this.http.get( './app/mock/evaluacion.json' ).map(( response ) => {
             let paginatedListx = response.json();
             return paginatedListx.objeto;
         } );
     }
-    
+
     /**
      * Metodo que obtiene la evaluacion por identificador
      * @param id id de la evaluacion
      */
     getEvaluacionById(id:number){
 
-        //return this.findByPkUrl(id.toString(),'evaluacion.crud.read').map((response)=>{
+        return this.findByPkUrl(id.toString(),'evaluacion.crud.read').map((response)=>{
 
-        return this.http.get('./app/mock/evaluacion.json').map((response)=>{
+        //return this.http.get('./app/mock/evaluacion.json').map((response)=>{
 
           let paginatedListx=response.json();
 
@@ -289,7 +291,8 @@ export class CoreesamynService extends BaseService {
         } else {
             console.log( "==header es: " + JSON.stringify( this.headers ) );
         }
-        return this.getAllPaginated( null, "establecimientoSalud.crud.findall" );
+        console.log("entra a buscar establecimiento salud")
+        return this.getAllPaginated( null, 'establecimientoSalud.crud.findall');
         /* return this.http.get('./app/mock/establecimiento_salud.json').map((response)=>{
            let paginatedListx=response.json();
            return paginatedListx;
@@ -298,10 +301,13 @@ export class CoreesamynService extends BaseService {
 
     /**
      * Metodo que registra la encuesta
-     * @param entidad
+     * @param entidad a guardar
      */
     createEncuesta( entidad ) {
-        return this.manageWithMessage( entidad, "encuesta.crud.create", "CREACION DE ENCUESTA" );
+      console.log("Entidad a crear en coresamyn"+JSON.stringify(entidad))
+        return this.manageWithMessage( entidad, 'encuesta.crud.create', "CREACION DE ENCUESTA" );
+        //  return this.manage(JSON.stringify(entidad),'encuesta.crud.create');
+
     }
 
     /**
@@ -322,5 +328,13 @@ export class CoreesamynService extends BaseService {
 
     }
 
+    /**
+     * Metodo que registra el establecimiento salud
+     * @param entidad entidad a gaurdar
+     */
+    createEstablecimientoSalud( entidad ){
+      console.log("Entidad a crear en coresamyn"+JSON.stringify(entidad))
+      return this.manageWithMessage(entidad,'establecimientoSalud.crud.create',"CREACION ESTABLECIMIENTO SALUD");
+    }
 
 }

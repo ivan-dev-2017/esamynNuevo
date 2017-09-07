@@ -13,9 +13,9 @@
 	            (activate)="onActivate($event)"
 	            (select)='onSelect($event)'
 		        >
-		        <ngx-datatable-column name="Modificado" prop="modificado"  [flexGrow]="5">
+		        <ngx-datatable-column name="NOMBRE" prop="nombre"  [flexGrow]="5">
 		          <ng-template let-column="column" ngx-datatable-header-template>
-		            {{column.name}}
+		            {{column.nombre}}
 		          </ng-template>
 		          <ng-template let-value="value" ngx-datatable-cell-template>
 		            <strong>{{value}}</strong>

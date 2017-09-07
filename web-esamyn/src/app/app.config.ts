@@ -1,6 +1,7 @@
 export class AppConfig {
     //public readonly apiUrl = 'http://localhost:8080/core-general-web/';
     public readonly apiUrl = 'http://localhost:8080/esamyn/';
+    //public readonly apiUrl = 'http://200.7.213.18:8080/esamyn/';
     public readonly keyFirstLogin = 'xxxx.xxxx';
     public readonly servicios = {'formulario.crud.findall':'rest/formulario/lista/',
                                   'encuesta.crud.findall':'rest/encuesta/todos',
@@ -13,6 +14,7 @@ export class AppConfig {
                                   'pregunta.crud.update':'rest/pregunta/editar/',
                                   'pregunta.crud.findall':'rest/pregunta/',
                                   'establecimientoSalud.crud.findall':'rest/establecimientoSalud/todos',
+                                  'establecimientoSalud.crud.create':'rest/establecimientoSalud/guardar',
                                   'establecimientoSalud.crud.update':'rest/establecimientoSalud/guardar',
                                   'establecimientoSalud.crud.read':'rest/establecimientoSalud/buscar/',
                                   'establecimientoSalud.crud.delete':'rest/establecimientoSalud/eliminar',
@@ -21,6 +23,6 @@ export class AppConfig {
                                   'personaJuridica.crud.findall':'rest/personaJuridica/todos',
                                   'canton.crud.findall':'rest/canton/todos',
                                   'canton.crud.update':'rest/canton/guardar',
-                                  'canton.crud.read':'rest/canton/buscar/2',
+                                  'canton.crud.read':'rest/canton/buscar/',
                                   'canton.crud.delete':'rest/canton/eliminar/'};
 };

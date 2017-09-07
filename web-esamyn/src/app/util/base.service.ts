@@ -94,7 +94,7 @@ export class BaseService {
                 return error;
             } );
     }
-    
+
    /**
     * Metodo que realiza la busqueda por parametrsoe enviados como json usando post
     * @param params objeto json de parametros
@@ -131,13 +131,31 @@ export class BaseService {
             } );
     }
 
-    manageWithMessage( entidad, serviceName: string, mensaje: string ) {
+    manageWithMessageWrapper( entidad, serviceName: string, mensaje: string ) {
         console.log( "==> manageWithMessage " + serviceName );
         console.log( "==> manageWithMessage " + this.services[serviceName] );
         this.options = new RequestOptions( { headers: this.headers } );
         let wrapper = { "error": false, "mensaje": mensaje, "objeto": entidad };
         return this.http.post( this.config.apiUrl + this.services[serviceName],
             wrapper
+            , this.options )
+            .map(( response: Response ) => {
+                let entidad = response.json();
+                return entidad;
+            },
+            error => {
+                console.log( "==>despues de buscar usuario error  " + JSON.stringify( error ) );
+                return error;
+            } );
+    }
+
+    manageWithMessage ( entidad, serviceName: string, mensaje: string ) {
+        console.log( "==> manageWithMessage " + serviceName );
+        console.log( "==> manageWithMessage " + this.services[serviceName] );
+        this.options = new RequestOptions( { headers: this.headers } );
+        let wrapper = { "error": false, "mensaje": mensaje, "objeto": entidad };
+        return this.http.post( this.config.apiUrl + this.services[serviceName],
+            entidad
             , this.options )
             .map(( response: Response ) => {
                 let entidad = response.json();

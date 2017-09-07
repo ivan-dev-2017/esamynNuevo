@@ -1,7 +1,7 @@
 <div class="box box-success">
 	<div class="box-header">
 		<i class="fa fa-user-o"></i>
-		<h3 class="box-title">FORMULARIO ENCUESTA</h3>
+		<h3 class="box-title">ENCUESTA</h3>
 	</div>
 	<div class="row"></div>
 	<div class="box-body chat" id="chat-box">
@@ -12,35 +12,19 @@
 						<div class="input-group" >
 							<span class="input-group-addon"><i
 								class="fa fa-text-width" aria-hidden="true"></i></span> <input
-								class="form-control" type="text" placeholder="codigo"
+								class="form-control" type="text" placeholder="CODIGO"
 								[(ngModel)]="encuesta.codigo" invalidNumber id="codigo"
 								class="{invalid: (invalid | async)}" name="codigo" />
 						</div>
 					</div>
 				</div>
-
+<div>{{establecimientoSelected.nombre}}</div>
 				<div class="row">
-					<div class="col-sm-5">
-						<div class="input-group">
-							<span class="input-group-addon"><i
-								class="fa fa-caret-down" aria-hidden="true"></i></span>
-								<select class="form-control"
-								    class="bg-green" [(ngModel)]="encuesta.establecimientoSalud"
-								    id="establecimientoSalud" name="establecimientoSalud" >
-								  <option value="" disabled selected>-------SELECCIONE------</option>
-								  <option *ngFor="let establecimiento of establecimientosSalud" [ngValue]="establecimiento">{{establecimiento.codigo}}</option>
-								</select >
-						</div>
-					</div>
-					<div class="col-sm-1">
-						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
-							[messages]="failures | async"> </app-message>
-					</div>
 					<div class="col-sm-5">
 						<div class="input-group" >
 							<span class="input-group-addon"><i
 								class="fa fa-text-width" aria-hidden="true"></i></span> <input
-								class="form-control" type="text" placeholder="responsable"
+								class="form-control" type="text" placeholder="RESPONSABLE"
 								[(ngModel)]="encuesta.responsable"
 								class="{invalid: (invalid | async)}" name="responsable" id="responsable" />
 						</div>
@@ -55,7 +39,7 @@
 						<div class="input-group">
 							<span class="input-group-addon"><i
 								class="fa fa-text-width" aria-hidden="true"></i></span> <input
-								class="form-control" type="text" placeholder="cargo"
+								class="form-control" type="text" placeholder="CARGO"
 								[(ngModel)]="encuesta.cargo" id="cargo"
 								class="{invalid: (invalid | async)}" name="cargo" />
 						</div>
@@ -64,11 +48,13 @@
 						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
 							[messages]="failures | async"> </app-message>
 					</div>
+				</div>
+				<div class="row">
 					<div class="col-sm-5">
 						<div class="input-group">
 							<span class="input-group-addon"><i
 								class="fa fa-text-width" aria-hidden="true"></i></span> <input
-								class="form-control" type="text" placeholder="extra"
+								class="form-control" type="text" placeholder="EXTRA"
 								[(ngModel)]="encuesta.extra" id="extra"
 								class="{invalid: (invalid | async)}" name="extra" />
 						</div>
@@ -88,7 +74,7 @@
 					</a>
 
 					<button  type="submit" [disabled]="standardForm.invalid"
-					class="btn btn-primary" [routerLink]="'/foesamn/'+parametro"
+					class="btn btn-primary"
 						(click)="save()"> <i class="fa fa-arrow-right" aria-hidden="true"></i>
 					</button>
 				</div>

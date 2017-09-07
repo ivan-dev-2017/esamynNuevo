@@ -52,6 +52,19 @@
 					</li>
 				</ul>
 			</li>
+
+			<li class="treeview"  *ngIf="loginWrapper.role==1 || loginWrapper.role==2">
+				<a href="#"> <i class="fa fa-file-text"></i>
+					<span>EVALUACIONES</span> <span class="pull-right-container"> <i
+						class="fa fa-angle-left pull-right"></i>
+					</span>
+				</a>
+				<ul class="treeview-menu">
+					<li class="active">
+						<a [routerLink]="'/establecimientoSaludList'"> <i class="fa fa-circle-o"></i> LISTADO establecimientoSalud</a>
+					</li>
+				</ul>
+			</li>
 		</ul>
 	</section>
 	<!-- /.sidebar -->

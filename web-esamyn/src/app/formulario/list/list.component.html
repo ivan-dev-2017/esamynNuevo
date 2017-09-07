@@ -1,4 +1,4 @@
-<div  style="margin: 10px 0px;" [ngClass]="{'col-lg-12 col-sm-12 col-md-12' : !encuestas.length, 'col-lg-6 col-sm-6 col-md-6' : encuestas.length}">	
+<div  style="margin: 10px 0px;" [ngClass]="{'col-lg-12 col-sm-12 col-md-12' : !encuestas.length, 'col-lg-6 col-sm-6 col-md-6' : encuestas.length}">
     <div  id="principal" [hidden]="isVisible">
         <ngx-datatable
             class="dark"
@@ -35,7 +35,7 @@
     </div>
 </div>
 
-<div class="col-lg-6 col-sm-6 col-md-6" style="margin: 10px 0px;" *ngIf="encuestas.length">	
+<div class="col-lg-6 col-sm-6 col-md-6" style="margin: 10px 0px;" *ngIf="encuestas.length">
     <div  id="secundario"  >
         <ngx-datatable
             class="dark"
@@ -72,7 +72,7 @@
                 <a style="margin: 5px">
                     <i class="fa fa-plus-square" aria-hidden="true"></i>
                 </a>
-                <a href="javascript:void(0);" (click)="modificarEncuesta()" 
+                <a href="javascript:void(0);" (click)="modificarEncuesta()"
                 style="margin: 5px" >
                     <i class="fa fa-edit" aria-hidden="true"></i>
                 </a>

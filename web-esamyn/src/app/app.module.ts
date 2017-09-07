@@ -34,9 +34,10 @@ import { HeaderComponent } from './layout/header/header.component';
 import { LeftpanelComponent } from './layout/leftpanel/leftpanel.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { MenuComponent } from './layout/menu/menu.component';
-import { EmailvalidatorDirective,NumbervalidatorDirective } from './validator/index';
+import { EmailvalidatorDirective,NumbervalidatorDirective,DropdownvalidatorDirective } from './validator/index';
 import { FormularioListComponent } from './formulario/list/list.component';
 import { EstablecimientoSaludComponent } from './establecimiento-salud/form/form.component';
+import { EstablecimientoSaludList } from './establecimiento-salud/list/list.component';
 import { FoesamnComponent } from './encuesta/foesamn/foesamn.component';
 import { ForgetpasswordComponent } from './login/forgetpassword/forgetpassword.component';
 import { ChangepasswordComponent } from './login/changepassword/changepassword.component';
@@ -54,6 +55,7 @@ import { EvaluacionlistComponent } from './evaluacion/list/list.component';
 import { EvaluacionformComponent } from './evaluacion/form/form.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +70,7 @@ import { EvaluacionformComponent } from './evaluacion/form/form.component';
     ModalpromptComponent,
     EmailvalidatorDirective,
     NumbervalidatorDirective,
+		DropdownvalidatorDirective,
     MessageComponent,
     FormularioListComponent,
     EstablecimientoSaludComponent,
@@ -76,7 +79,8 @@ import { EvaluacionformComponent } from './evaluacion/form/form.component';
     EvaluacionlistComponent,
     EvaluacionformComponent,
     ForgetpasswordComponent,
-    ChangepasswordComponent
+    ChangepasswordComponent,
+    EstablecimientoSaludList
   ],
   imports: [
     BrowserModule,

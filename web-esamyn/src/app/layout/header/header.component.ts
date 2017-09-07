@@ -30,19 +30,19 @@ export class HeaderComponent implements OnInit {
 	returnUrl:string;
     establecimientosSalud=[];
     establecimientoSelected={"codigo": null,"unicodigo": null,"direccion": "","nombre":null};
-	
+
 	 menuState:string = 'in';
 
     private LOGO:string = "../../img/user.jpg";
 
-  constructor(private globalEventsManager: GlobaleventsmanagerService, 
+  constructor(private globalEventsManager: GlobaleventsmanagerService,
 		      private alertService: AlertService,
 		      private authenticationService: AuthenticationService,
 		      private coreesamynService: CoreesamynService,
 		      private route: ActivatedRoute,
 		      private router: Router,
-		      private dialogService:DialogService) { 
-	  
+		      private dialogService:DialogService) {
+
 	  this.globalEventsManager.showNavBarEmitter.subscribe((mode)=>{
 	        // mode will be null the first time it is created, so you need to igonore it when null
 	    	console.log("==>ENTRA A HEADER SUBSCRIBER HeaderComponent: "    );
@@ -61,7 +61,7 @@ export class HeaderComponent implements OnInit {
 	              this.establecimientosSalud=data.objeto;
 	          });
 	        } else {
-	        	//console.log("==>no cambio usuaerio: ");
+	        	console.log("==>no cambio usuaerio: ");
 	        	this.usuario.loggedIn=false;
 	        	this.menuState='in';
 	        }
@@ -74,11 +74,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+
   logOut() {
 	  console.log("==>entra en logoutt con usuario: "  +JSON.stringify(this.usuario)  );
 	  this.usuario.loggedIn=false;
-      let loginWrapper = new Login(); 
+      let loginWrapper = new Login();
       loginWrapper.usuario=this.usuario;
       this.globalEventsManager.showNavBar(loginWrapper);
       localStorage.removeItem('currentUser');
@@ -86,12 +86,12 @@ export class HeaderComponent implements OnInit {
       this.returnUrl="/login";
       this.router.navigate([this.returnUrl]);
       this.returnUrl = null;
-      
+
       /*this.authenticationService.logout(this.usuario)
           .subscribe(
               data => {
             	  this.usuario.loggedIn=false;
-            	  let loginWrapper = new Login(); 
+            	  let loginWrapper = new Login();
             	  loginWrapper.usuario=this.usuario;
               	this.globalEventsManager.showNavBar(loginWrapper);
                   this.returnUrl="/login";
@@ -103,12 +103,12 @@ export class HeaderComponent implements OnInit {
                   this.alertService.error(error._body);
               });*/
   }
-  
+
   toggleMenu() {
   console.log("cambia estado");
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
   }
-  
+
   onSelectEstablecimiento(){
       if( this.establecimientoSelected ){
           console.log("===>> establecimientoSelected: " + JSON.stringify(this.establecimientoSelected));
@@ -116,8 +116,8 @@ export class HeaderComponent implements OnInit {
           localStorage.setItem("establecimientoSalud", JSON.stringify( this.establecimientoSelected));
       }
   }
-  
-  
+
+
   showPrompt() {
       let userLoc = JSON.parse(localStorage.getItem('currentUser'));
       console.log("====> showPrompt");

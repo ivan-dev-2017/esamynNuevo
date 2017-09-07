@@ -13,16 +13,6 @@
 					<span  class="label bg-primary">Formulario</span>
 				</div>
 				<div class="row"  style="border:solid 2px #337ab7; margin: 0px !important">
-                    <div class="col-sm-5"  style="margin: 10px 0px;">
-						<div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-text-height"
-								aria-hidden="true"></i></span>
-                            <select id="provincia" (change)="cambiarCantones()" class="form-control"  [(ngModel)]="provincia" name="provincia">
-                                <option id="0" [ngValue]="provincia">Seleccione una Provincia...</option>
-                                <option id="{{provincia.id}}"  [ngValue]="provincia" *ngFor="let provincia of provincias">{{provincia.codigo}} - {{provincia.nombre}}</option>
-                            </select>
-						</div>
-					</div>
 					<div class="col-sm-5"  style="margin: 10px 0px;">
 						<div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-text-height"
@@ -37,7 +27,7 @@
 						<div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-text-height"
 								aria-hidden="true"></i></span>
-                            <select id="personaJuridica" [(ngModel)]="establecimientoSalud.persona_juridica" name="personaJuridica" class="form-control">
+                            <select id="personaJuridica" [(ngModel)]="establecimientoSalud.personaJuridica" name="personaJuridica" class="form-control">
                                 <option id="0" [ngValue]="establecimientoSalud.persona_juridica">Seleccione una Persona Juridica...</option>
                                 <option id="{{personaJuridica.id}}"  [ngValue]="personaJuridica" *ngFor="let personaJuridica of personasJuridicas">{{personaJuridica.razonSocial}}</option>
                             </select>
@@ -46,25 +36,26 @@
 					<div class="col-sm-5"  style="margin: 10px 0px;">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-text-width"
-								aria-hidden="true"></i></span> 
+								aria-hidden="true"></i></span>
 								<input class="form-control" type="text"
-								placeholder="NOMBRE" [(ngModel)]="establecimientoSalud.nombre"
+								placeholder="NOMBRE"
+								[(ngModel)]="establecimientoSalud.nombre"
 								class="{invalid: (invalid | async)} form-control" name="nombreFormulario" />
 						</div>
 					</div>
 					<div class="col-sm-5"  style="margin: 10px 0px;">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-text-width"
-								aria-hidden="true"></i></span> 
+								aria-hidden="true"></i></span>
 								<input class="form-control" type="text"
-								placeholder="UNICODE" [(ngModel)]="establecimientoSalud.unicode"
+								placeholder="UNICODE" [(ngModel)]="establecimientoSalud.unicodigo"
 								class="{invalid: (invalid | async)} form-control" name="unicodeFormulario" />
 						</div>
 					</div>
 					<div class="col-sm-5"  style="margin: 10px 0px;">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-text-width"
-								aria-hidden="true"></i></span> 
+								aria-hidden="true"></i></span>
 								<input class="form-control" type="text"
 								placeholder="DIRECCION" [(ngModel)]="establecimientoSalud.direccion"
 								class="{invalid: (invalid | async)} form-control" name="direccionFormulario" />
@@ -73,7 +64,7 @@
 					<div class="col-sm-5"  style="margin: 10px 0px;">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-text-width"
-								aria-hidden="true"></i></span> 
+								aria-hidden="true"></i></span>
 								<input class="form-control" type="text" invalidNumber
 								placeholder="LATITUD" [(ngModel)]="establecimientoSalud.latitud"
 								class="{invalid: (invalid | async)} form-control" name="latitudFormulario" />
@@ -82,7 +73,7 @@
 					<div class="col-sm-5"  style="margin: 10px 0px;">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-text-width"
-								aria-hidden="true"></i></span> 
+								aria-hidden="true"></i></span>
 								<input class="form-control" type="text" invalidNumber
 								placeholder="LONGITUD" [(ngModel)]="establecimientoSalud.longitud"
 								class="{invalid: (invalid | async)} form-control" name="longitudFormulario" />
@@ -91,7 +82,7 @@
 					<div class="col-sm-5"  style="margin: 10px 0px;">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-text-width"
-								aria-hidden="true"></i></span> 
+								aria-hidden="true"></i></span>
 								<input class="form-control" type="text" invalidNumber
 								placeholder="TELEFONO" [(ngModel)]="establecimientoSalud.telefono"
 								class="{invalid: (invalid | async)} form-control" name="telefonoFormulario" />
@@ -100,9 +91,9 @@
 					<div class="col-sm-5"  style="margin: 10px 0px;">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-text-width"
-								aria-hidden="true"></i></span> 
+								aria-hidden="true"></i></span>
 								<input class="form-control" type="text" invalidEmailAddress
-								placeholder="CORREO ELECTRONICO" [(ngModel)]="establecimientoSalud.correo_electronico"
+								placeholder="CORREO ELECTRONICO" [(ngModel)]="establecimientoSalud.correoElectronico"
 								class="form-control" name="correoElectronicoFormulario"
                                 [ngClass]="{'alert-danger alert' : standardForm.invalid}"/>
 						</div>
@@ -110,16 +101,16 @@
 					<div class="col-sm-5"  style="margin: 10px 0px;">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-text-width"
-								aria-hidden="true"></i></span> 
+								aria-hidden="true"></i></span>
 								<input class="form-control" type="text"
-								placeholder="NOMBRE RESPONSABLE" [(ngModel)]="establecimientoSalud.nombre_responsable"
+								placeholder="NOMBRE RESPONSABLE" [(ngModel)]="establecimientoSalud.nombreResponsable"
 								class="{invalid: (invalid | async) form-control} form-control" name="nombreResponsableFormulario" />
 						</div>
 					</div>
 					<div class="col-sm-5"  style="margin: 10px 0px;">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-text-width"
-								aria-hidden="true"></i></span> 
+								aria-hidden="true"></i></span>
 								<input class="form-control" type="text"
 								placeholder="ZONA" [(ngModel)]="establecimientoSalud.zona"
 								class="{invalid: (invalid | async)} form-control" name="zonaFormulario" />
@@ -128,7 +119,7 @@
 					<div class="col-sm-5"  style="margin: 10px 0px;">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-text-width"
-								aria-hidden="true"></i></span> 
+								aria-hidden="true"></i></span>
 								<input class="form-control" type="text"
 								placeholder="DISTRITO" [(ngModel)]="establecimientoSalud.distrito"
 								class="{invalid: (invalid | async)} form-control" name="distritoFormulario" />
@@ -137,7 +128,7 @@
 <!--                    <div class="col-sm-1">
 						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
 							[messages]="failures | async"> </app-message>
-				
+
 					</div>-->
 				</div>
                 <div style="margin:10px 0px;">
@@ -147,7 +138,7 @@
                 </div>
 				<div class="form-group" style="margin: 20px 0px;">
 					<button type="submit" [disabled]="standardForm.invalid"
-						class="btn btn-success">
+						class="btn btn-success" >
 						<i class="fa fa-floppy-o" aria-hidden="true"></i>
 					</button>
 					<a href="javascript:void(0);" class="btn btn-primary"
@@ -159,8 +150,6 @@
 		</div>
 	</div>
 	<div class="box-footer">
-		
+
 	</div>
 </div>
-
-

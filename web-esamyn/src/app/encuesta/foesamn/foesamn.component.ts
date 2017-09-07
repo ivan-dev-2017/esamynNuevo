@@ -82,7 +82,7 @@ export class FoesamnComponent implements OnInit {
     month = null; //months from 1-12
     day = null;
     year = null;
-    
+
     constructor( private coreesamynService: CoreesamynService, private route: ActivatedRoute ) {
         this.dateObj = new Date();
         this.month = this.dateObj.getUTCMonth() + 1; //months from 1-12
@@ -91,9 +91,8 @@ export class FoesamnComponent implements OnInit {
         this.getEncuestaAndPreguntas();
     }
 
-
     ngOnInit() {
-       
+
     }
 
     public getEncuestaAndPreguntas() {
@@ -116,13 +115,13 @@ export class FoesamnComponent implements OnInit {
                 this.establecimientoSalud= JSON.parse( localStorage.getItem("establecimientoSalud") );
             }
         });
-        
+
         this.coreesamynService.getEncuestaByFormularioAndEncuesta(this.parametro ).subscribe( data => {
             //console.log( "PREGUNTAS CONSULTADAS: " + JSON.stringify(data ) );
             this.preguntas = data.objeto.pregunta;
-            
+
             console.log( "PREGUNTAS CONSULTADAS: " + JSON.stringify(this.preguntas ) );
-            
+
             if( this.preguntas && this.preguntas.length>2 ){
                 this.observaciones=this.preguntas[2];
                 console.log( "observaciones CONSULTADAS aness: " + JSON.stringify(this.observaciones ) );
@@ -132,10 +131,10 @@ export class FoesamnComponent implements OnInit {
                 console.log( "observaciones CONSULTADAS: " + JSON.stringify(this.observaciones ) );
                 console.log( "documentos CONSULTADAS: " + JSON.stringify(this.documentos ) );
             }
-            
+
         } );
-        
-        
+
+
 
     }
 
