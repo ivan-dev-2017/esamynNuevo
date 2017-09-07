@@ -12,7 +12,7 @@
             [selectionType]="'single'"
             (activate)="onActivate($event)"
             (select)='onSelect($event)'>
-            <ngx-datatable-column name="Nombre" prop="nombre" [flexGrow]="5">
+            <ngx-datatable-column name="Nombre" prop="titulo" [flexGrow]="5">
               <ng-template let-column="column" ngx-datatable-header-template>
                 {{column.name}}
               </ng-template>
@@ -20,12 +20,12 @@
                 <strong>{{value}}</strong>
               </ng-template>
             </ngx-datatable-column>
-            <ngx-datatable-column name="Accion"  prop="id" [flexGrow]="1">
+            <ngx-datatable-column name="Accion"  prop="codigo" [flexGrow]="1">
               <ng-template let-column="column" ngx-datatable-header-template>
                 {{column.name}}
               </ng-template>
               <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-                <a [routerLink]="['/form_component/'+value]">
+                <a [routerLink]="['/encuestaformcomponent/'+value]">
                     <i class="fa fa-plus-square" aria-hidden="true"></i>
                 </a>
               </ng-template>
@@ -64,7 +64,7 @@
                 <strong>{{value}}</strong>
               </ng-template>
             </ngx-datatable-column>
-            <ngx-datatable-column name="Acciones"  prop="formulario.id" [width]="10">
+            <ngx-datatable-column name="Acciones"  prop="codigo" [width]="10">
               <ng-template let-column="column" ngx-datatable-header-template>
                 {{column.name}}
               </ng-template>
@@ -72,7 +72,7 @@
                 <a style="margin: 5px">
                     <i class="fa fa-plus-square" aria-hidden="true"></i>
                 </a>
-                <a href="javascript:void(0);" (click)="modificarEncuesta()" [routerLink]="'/foesamn/'+parametroLocal"
+                <a href="javascript:void(0);" (click)="modificarEncuesta()" 
                 style="margin: 5px" >
                     <i class="fa fa-edit" aria-hidden="true"></i>
                 </a>

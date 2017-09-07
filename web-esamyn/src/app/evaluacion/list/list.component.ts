@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CoreesamynService } from '../../service/coreesamyn.service';
 
 @Component({
-  selector: 'app-evaluacionlist',
-  templateUrl: './evaluacionlist.component.html',
-  styleUrls: ['./evaluacionlist.component.css']
+  selector: 'evaluacion-list',
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.css']
 })
 export class EvaluacionlistComponent implements OnInit {
   rows=[];

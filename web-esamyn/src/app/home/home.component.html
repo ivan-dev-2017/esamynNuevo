@@ -1,27 +1,31 @@
 <!--  HOME PARA EVALUADOR  -->
-<div class="container-fluid">
-    <div class="row">
-        <div [ngClass]="{'col-lg-12 col-sm-12 col-md-12' : bandera, 'col-lg-6 col-sm-6 col-md-6' : !bandera}">
-            <div class="small-box bg-aqua col-lg-12 col-sm-12 col-md-12">
-                <div class="inner col-lg-12 col-sm-12 col-md-12">
-                    <h3>FORMULARIOS</h3>
-                    <formulario-list (bandera)="recibeBandera($event)"></formulario-list>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-6 col-sm-6 col-md-6">
-            <div class="small-box bg-green col-lg-12 col-sm-12 col-md-12">
-                <div class="inner col-lg-12 col-sm-12 col-md-12">
-                    <h3>EVALUACION<sup style="font-size: 20px"></sup></h3>
-                    <app-evaluacionlist></app-evaluacionlist>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="row">
+		<div
+			[ngClass]="{'col-lg-12 col-sm-12 col-md-12' : bandera, 'col-lg-6 col-sm-6 col-md-6' : !bandera}">
+			<div class="small-box bg-aqua col-lg-12 col-sm-12 col-md-12">
+				<div class="inner col-lg-12 col-sm-12 col-md-12">
+					<h3>FORMULARIOS</h3>
+					<formulario-list (bandera)="recibeBandera($event)"></formulario-list>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6 col-sm-6 col-md-6">
+			<div class="small-box bg-green col-lg-12 col-sm-12 col-md-12">
+				<div class="inner col-lg-12 col-sm-12 col-md-12">
+					<h3>
+						EVALUACION<sup style="font-size: 20px"></sup>
+					</h3>
+					<evaluacion-list></evaluacion-list>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </div>
+
+
 

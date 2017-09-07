@@ -57,39 +57,6 @@
 						]
 					}
 				]
-			},
-			{
-				"paso": "2.Cumplir con la Norma de Educación Prenatal (NEP)",
-				"hijos" : [
-					{
-						"directriz": "a) Capacitación del personal en la NEP",
-						"hijos" : [
-							{
-								"parametro": "80% del personal de atención perinatal capacitado en la norma de Educación Prenatal",
-								"verificador": "R.1.a Informe",
-								"no_aplica": false,
-								"obligatorio": true,
-								"puntaje" : 3,
-								"par_id": 1543
-
-							}
-						]
-					},
-					{
-						"directriz": "b) Aplicación de la norma",
-						"hijos" : [
-							{
-								"parametro": "80% de puérperas asistieron al programa completo de educación prenatal",
-								"verificador": "R.1.b 051",
-								"no_aplica": false,
-								"obligatorio": false,
-								"puntaje" : 1,
-								"par_id": 834
-
-							}
-						]
-					}
-				]
 			}
 		]
 	},
@@ -122,6 +89,1168 @@
 								"no_aplica": false,
 								"obligatorio": false,
 								"puntaje" : 1,
+								"par_id": 848
+
+							}
+						]
+					},
+					{
+						"directriz": " c) Garantizar asesoría e información sobre métodos anticonceptivos a la madre y pareja.",
+						"hijos" : [
+							{
+								"parametro":" 80% de gestantes de 34 semanas o más recibió asesoría sobre planificación familiar",
+								"verificador": "R.1.c EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "3. Garantizar la cobertura, concentración, calidad y oportunidad de controles prenatales en su ámbito y nivel de responsabilidad",
+				"hijos" : [
+					{
+						"directriz": "a) Implementar adecuadamente los instrumentos de registro estandarizados (Formulario 051);",
+						"hijos" : [
+							{
+								"parametro": "80% de formularios 051 llenos adecuadamente",
+								"verificador": "R.2.a 051",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Asegurar la captación oportuna en el primer nivel de atención de salud;",
+						"hijos" : [
+							{
+								"parametro": "80% de madres asistieron a al menos un control en el primer trimestre",
+								"verificador": "R.2.b 051",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 3,
+								"par_id": 848
+
+							}
+						]
+					},
+					{
+						"directriz": "c) Las gestantes recibirán controles prenatales según los documentos normativos del MSP vigentes;",
+						"hijos" : [
+							{
+								"parametro":" 80% de gestantes asisten a 5 controles",
+								"verificador": "R.2.c1 EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							},
+                            {
+								"parametro":"80% de gestantes son asistidas en el plan de parto y de transporte",
+								"verificador": "R.2.c2 EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							},
+                            {
+								"parametro":"80% ha sido informada y conoce los signos de alarma durante el embarazo",
+								"verificador": "R.2.c3 EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							},
+                            {
+								"parametro":"80% de gestantes manifiestan haber sido vacunadas durante la gestación",
+								"verificador": "R.2.c4 EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							}
+						]
+					},
+                    {
+						"directriz": "d) Garantizar la detección y tratamiento de las gestantes en riesgo aplicando herramientas estandarizadas del MSP de acuerdo a su nivel de complejidad.",
+						"hijos" : [
+							{
+								"parametro": "80% de gestantes bajo responsabilidad de establecimiento son controladas según norma con variables completas del formulario 051",
+								"verificador": "R.2.d 051",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 748
+
+							},
+                            {
+								"parametro": "100% de historias clínicas de embarazadas con diagnóstico de riesgo tienen un tratamiento según normas del MSP.",
+								"verificador": "R.2.d HC",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 748
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "4.Garantizar la cobertura del tamizaje y tratamiento de VIH y sífilis a todas las gestantes",
+				"hijos" : [
+					{
+						"directriz": "a) Ofrecer asesoría sobre riesgos de ITS y VIH durante el embarazo;",
+						"hijos" : [
+							{
+								"parametro": "90% de embarazadas asesoradas en prevención de ITS durante el embarazo y se les dio una charla específica sobre VIH/Sida.",
+								"verificador": "R.3.a EM",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Tamizar para sífilis y VIH según la normativa vigente del MSP al menos en el primer control;",
+						"hijos" : [
+							{
+								"parametro": "90% de las gestantes que acudieron al primer control pre natal y fueron tamizadas para sífilis y VIH.",
+								"verificador": "R.3.b 051",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 848
+
+							},
+                            {
+								"parametro": "90% de las gestantes manifiestan que se les realizó la prueba para VIH.",
+								"verificador": "R.3.b EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							}
+						]
+					},
+                    {
+						"directriz": "c) Toda mujer tamizada VIH y/o sífilis positivo recibe el tratamiento correspondiente.",
+						"hijos" : [
+							{
+								"parametro": "100% de madres VIH y/o sífilis positivo reciben tratamiento",
+								"verificador": "R.3.c 051",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 3,
+								"par_id": 748
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "5. Fomentar la articulación con agentes de la medicina tradicional para el cuidado del embarazo, parto y puerperio.",
+				"hijos" : [
+					{
+						"directriz": "a) Disponer de un mapeo de actores y agentes de medicina ancestral",
+						"hijos" : [
+							{
+								"parametro": "Mapeo de agentes de la medicina ancestral legitimados por la comunidad en el Análisis Situacional Integral de Salud (ASIS). En el caso de no contar con un ASIS, los establecimientos incluirán dicho mapeo en un informe.",
+								"verificador": "R.4.a ASIS",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Establecer mecanismos de articulación entre agentes de medicina ancestral y los ES.",
+						"hijos" : [
+							{
+								"parametro": "Cada establecimiento de salud deberá  contar con un mecanismo de articulación acordado entre las partes.",
+								"verificador": "R.4.b Informe",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"grupo": "D. COMPONENTE PARTO Y PUERPERIO",
+		"hijos" : [
+			{
+				"paso": "6. Promover y garantizar el acompañamiento de la gestante durante la labor del parto, parto y puerperio por la persona de su elección.",
+				"hijos" : [
+					{
+						"directriz": "a) Permitir el acompañamiento a la madre, por una persona de su elección, en el trabajo de parto a menos de que esté clínicamente justificado y sea informado;",
+						"hijos" : [
+							{
+								"parametro": "80% de madres informan que el personal de salud les dijo que pueden tener acompañantes de su elección durante el trabajo de parto y les informaron por qué es beneficioso",
+								"verificador": "P.1.a EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Permitir el acompañamiento a la madre, por una persona de su elección, durante el parto a menos de que esté clínicamente justificado y sea informado;",
+						"hijos" : [
+							{
+								"parametro": "80% de madres informan que el personal les dijo que pueden tener acompañantes de su elección durante el parto e informaron su beneficio.",
+								"verificador": "P.1.b EM",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 848
+
+							},
+                            {
+								"parametro": "80% de partos atendidos en el establecimiento registran acompañamiento durante el parto.",
+								"verificador": "P.1.b 051",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 848
+
+							}
+						]
+					},
+					{
+						"directriz": "c) Permitir el acompañamiento a la, por una persona de su elección, en el puerperio, a menos de que esté justificado.",
+						"hijos" : [
+							{
+								"parametro":" 80% de madres encuestadas informan que le personal de salud le permitió estar acompañada por la persona de su elección durante el post parto",
+								"verificador": "P.1.c EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "7.Garantizar un ambiente acogedor y el respeto del prácticas interculturales",
+				"hijos" : [
+					{
+						"directriz": "a) Sensibilizar al personal de salud en interculturalidad y prácticas culturalmente adecuadas.",
+						"hijos" : [
+							{
+								"parametro": "80% del personal de salud del ES deberá estar sensibilizado en interculturalidad y prácticas culturales.",
+								"verificador": "P.2.a Informe",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Las madres pueden usar la vestimenta que deseen, permitir la ingesta de líquidos o alimentos ligeros a menos de que esté clínicamente justificado y sea informado;",
+						"hijos" : [
+							{
+								"parametro": "80% de madres encuestadas se le consultó sobre el uso de vestimenta deseada, la ingesta de líquidos y/o alimentos ligeros.",
+								"verificador": "P.2.b EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							},
+                            {
+								"parametro": "80% de madres registradas en vestimenta de su elección.",
+								"verificador": "P.2.b 051",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							}
+						]
+					},
+					{
+						"directriz": "c) Ofrecer a la madre la opción de disponer de la placenta a menos de que esté clínicamente justificado y sea informado;",
+						"hijos" : [
+							{
+								"parametro":" 80% de madres se les ofreció disponer de la placenta",
+								"verificador": "P.2.c EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							},
+                            {
+								"parametro":"80% de madres se les registró en disposición de placenta.",
+								"verificador": "P.2.c 051",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "8. Alentar a las mujeres a caminar y movilizarse durante el trabajo de parto y asistirla para que asuma posición a su elección.",
+				"hijos" : [
+					{
+						"directriz": "a) Garantizar espacios adecuados y equipamiento de acuerdo al licenciamiento del MSP",
+						"hijos" : [
+							{
+								"parametro": "Disponibilidad de al menos un espacio adecuado con equipamiento según licenciamiento del MSP para el trabajo de parto",
+								"verificador": "P.3.a1 Ob",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 748
+
+							},
+                            {
+								"parametro": "Disponibilidad de al menos un espacio adecuado con equipamiento según licenciamiento del MSP para el parto",
+								"verificador": "P.3.a2 Ob",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Socializar los beneficios y permitir la movilización durante la labor de parto, a no ser que exista una restricción especifica.",
+						"hijos" : [
+							{
+								"parametro": "80% de madres informan que personal les alentó la movilizarse durante la labor de parto.",
+								"verificador": "P.3.b1 EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							},
+                            {
+								"parametro": "80% de madres pueden explicar al menos 2 beneficios de la movilización durante la labor de parto.",
+								"verificador": "P.3.b2 EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							}
+						]
+					},
+                    {
+						"directriz": "c) Ofrecer y permitir que las mujeres asuman la posición de su elección para dar a luz a no ser que exista una restricción específica y se le explique la razón.",
+						"hijos" : [
+							{
+								"parametro": "80% de madres a quienes se les ofreció elegir la posición de su elección durante el parto.",
+								"verificador": "P.3.c1 EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 748
+
+							},
+                            {
+								"parametro": "80% de madres a quienes se les ofreció y manifestaron su deseo de elegir la posición de su elección durante el parto manifiestan que se les permitió adoptar dicha posición.",
+								"verificador": "P.3.c2 EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 748
+
+							}
+						]
+					},
+                    {
+						"directriz": "d) Capacitar al personal de salud para que atienda partos en libre posición.",
+						"hijos" : [
+							{
+								"parametro": "80% del personal que atiende partos ha sido capacitados para atender partos en libre  posición",
+								"verificador": "P.3.d EP",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" :2,
+								"par_id": 748
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "9. Proporcionar métodos para la comodidad de la gestante y alivio del dolor durante el trabajo de parto considerando el uso de métodos no farmacológicos",
+				"hijos" : [
+					{
+						"directriz": "a) Ofrecer métodos no farmacológicos para el manejo del dolor según la normativa vigente de educación prenatal;",
+						"hijos" : [
+							{
+								"parametro": "80% de las madres informan que el personal les mencionó al menos una forma de calmar el dolor y estar más cómodas durante el trabajo de parto y se respetó su decisión.",
+								"verificador": "P.4.a EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Garantizar que el personal que atiende partos debe estar capacitado en manejo del dolor con métodos no farmacológicos",
+						"hijos" : [
+							{
+								"parametro": "80% del personal de salud del área obstétrica describe dos métodos no farmacológicos para manejo del dolor.",
+								"verificador": "P.4.b EP",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							},
+                            {
+								"parametro": "80% del personal de salud sensibilizado en manejo del dolor con métodos no farmacológicos.",
+								"verificador": "P.4.b Informe",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "10. Evitar procedimientos invasivos y cesáreas innecesarias.",
+				"hijos" : [
+					{
+						"directriz": "a) Evitar procedimientos invasivos a no ser que estén clínicamente indicadas por la complicación de la madre y/o del niño y se le explique la razón.",
+						"hijos" : [
+							{
+								"parametro": "80% del personal de salud cita 3 procedimientos que no deben utilizarse en el parto a menos que se requiera debido a complicaciones.",
+								"verificador": "P.5.a EP",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 748
+
+							},
+                            {
+								"parametro": "100% de los procedimientos invasivos tienen justificación médica.",
+								"verificador": "P.5.a HC",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 748
+
+							},
+                            {
+								"parametro": "80% de madres manifiesta que no se les realizó procedimientos invasivos innecesarios a menos de que haya existido una justificación clínica.",
+								"verificador": "P.5.a EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Asegurar el cumplimiento de los lineamientos para la racionalización de cesáreas",
+						"hijos" : [
+							{
+								"parametro": "100% de cesáreas son realizadas con pertinencia.",
+								"verificador": "P.5.b HC",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 3,
+								"par_id": 848
+
+							}
+						]
+					},
+					{
+						"directriz": "c) En caso de gestante VIH positiva, garantizar el parto por cesárea según norma",
+						"hijos" : [
+							{
+								"parametro": "100% de madres VIH positivo con parto por cesárea a excepción de las madres que lleguen en fase expulsiva.",
+								"verificador": "P.5.c HC",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 3,
+								"par_id": 848
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "11.Garantizar las prácticas integradas a la atención del parto",
+				"hijos" : [
+					{
+						"directriz": "a) Garantizar el contacto piel a piel inmediato de las madres con sus hijos para proporcionar abrigo y apego, salvo restricción especifica por el estado de salud de la madre y/o el recién nacido. Los partos por cesárea con anestesia local o general no son una restricción para esta práctica.",
+						"hijos" : [
+							{
+								"parametro": "80% de madres con parto vaginal informa que colocaron a su bebé en contacto hasta en los cinco minutos después del nacimiento por al menos una hora salvo que la madre no lo desee.",
+								"verificador": "P.6.a EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 3,
+								"par_id": 748
+
+							},
+                            {
+								"parametro": "80% de partos vaginales, se observa que los bebés son colocados en contacto piel a piel con las madres en los 5 minutos después del nacimiento salvo que la madre no lo desee.",
+								"verificador": "P.6.a Ob",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 748
+
+							},
+                            {
+								"parametro": "80% de madres con cesárea sin anestesia general, informa que colocaron a su bebé en contacto piel a piel, hasta 5 minutos después del parto y por lo menos una hora salvo razones médicamente justificadas para retrasar el contacto o la madre no lo desee.",
+								"verificador": "P.6.a1 EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 3,
+								"par_id": 748
+
+							},
+                            {
+								"parametro": "80% de madres con parto por cesárea con anestesia general informa que colocaron a su bebé en contacto piel a piel tan pronto las madres despertaron y estuvieron alertas, salvo razones médicamente justificadas para retrasar el contacto o la madre no lo desee.",
+								"verificador": "P.6.a2 EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 3,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Garantizar la puesta al pecho en la primera media hora a no ser que exista una restricción por el estado de salud de la madre y/o el recién nacido;",
+						"hijos" : [
+							{
+								"parametro": "80% madres informan que iniciaron la lactancia materna en la primera hora posterior al nacimiento, salvo que exista contraindicación para la lactancia o la madre no lo desee",
+								"verificador": "P.6.b EM",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 848
+
+							}
+						]
+					},
+					{
+						"directriz": "c) Garantizar el pinzamiento y corte oportuno del cordón umbilical, a no ser que exista una restricción especifica por el estado de salud de la madre y/o el recién nacido y se informen las razones",
+						"hijos" : [
+							{
+								"parametro": "100% de partos que registran pinzamiento oportuno del cordón umbilical a no ser que exista una restricción específica.",
+								"verificador": "P.6.c 051",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 848
+
+							},
+                            {
+								"parametro": "100% del personal de salud del área obstétrica describe los fundamentos y el procedimiento del pinzamiento oportuno del cordón umbilical.",
+								"verificador": "P.6.c 051",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "12.Realizar los procedimientos habituales del recién nacido frente a la madre",
+				"hijos" : [
+					{
+						"directriz": "a) Informar a la madre sobre los procedimientos a realizar al recién nacido;",
+						"hijos" : [
+							{
+								"parametro": "80% de las madres informan que el personal de salud le explicó sobre los procedimientos que le realizaron al recién nacido.",
+								"verificador": "P.7.a EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Realizar procedimientos como antropometría, profilaxis ocular y administración de vitamina K frente a la madre.",
+						"hijos" : [
+							{
+								"parametro": "80% de las madres informan que el personal realizó la antropometría, profilaxis ocular, y administración de vitamina K, después de la primera hora y frente a ella madre.",
+								"verificador": "P.7.b EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "13.Aplicar los instrumentos estandarizados para la estratificación de riesgos y cumplir con el manejo estandarizado de complicaciones que amenazan la vida de la madre y del recién nacido",
+				"hijos" : [
+					{
+						"directriz": "a) Capacitar e implementar los instrumentos estandarizados para la estratificación de riesgos y de complicaciones que amenazan la vida de la madre y del recién nacido; 80% del personal de salud del área obstétrica capacitado en el manejo estandarizado de complicaciones que amenazan la vida de la madre y del recién nacido.",
+						"hijos" : [
+							{
+								"parametro": " 80% del personal de salud del área obstétrica capacitado en el manejo estandarizado de complicaciones que amenazan la vida de la madre y del recién nacido.",
+                                "verificador": "P.8.a Informe",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 3,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Asegurar que el personal tenga el entrenamiento adecuado y continuo en destrezas de emergencias obstétricas y neonatales.",
+						"hijos" : [
+							{
+								"parametro": "80% del personal de salud del área obstétrica conoce el manejo estandarizado de complicaciones que amenazan la vida de la madre y del recién nacido.",
+								"verificador": "P.8.b EP",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 848
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "14.Permitir y promover el contacto de la madre y padre con el recién nacido, así como proveer la información sobre la evolución de recién nacidos que requieran internación",
+				"hijos" : [
+					{
+						"directriz": "a) Garantizar el libre acceso de la madre y/o padre a neonatología a excepción de que se realicen procedimientos médicos;",
+						"hijos" : [
+							{
+								"parametro": "80% de las madres refieren tener libre acceso al servicio de neonatología.",
+                                "verificador": "P.9.a EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Promover y facilitar la alimentación del recién nacido con leche materna;",
+						"hijos" : [
+							{
+								"parametro": "80% de recién nacidos hospitalizados son alimentados exclusivamente con leche materna.",
+								"verificador": "P.9.b HC",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 848
+
+							}
+						]
+					},
+					{
+						"directriz": "c) Brindar información sobre la evolución del recién nacido toda vez que padre o madre lorequieran.",
+						"hijos" : [
+							{
+								"parametro": "El 100% de madres refieren haber sido informadas sobre la evolución del recién nacido toda vez que el padre o la madre así lo requieran.",
+								"verificador": "P.9.c EM",
+								"no_aplica": false,
+								"obligatorio":false,
+								"puntaje" : 2,
+								"par_id": 848
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "15.Garantizar el alta de calidad y culturalmente pertinente conforme al estado de salud de la madre y el recién nacido",
+				"hijos" : [
+					{
+						"directriz": "a) Asesorar sobre métodos de planificación familiar, y proveer o garantizar el acceso de acuerdo a la solicitud de la madre.",
+						"hijos" : [
+							{
+								"parametro": "100% de madres informadas sobre métodos anticonceptivos.",
+                                "verificador": "P.10.a 051",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 748
+
+							},
+                            {
+								"parametro": "80% de madres que optan por un método anticonceptivo acceden a él.",
+                                "verificador": "P.10.a EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Informar sobre cuidados y signos de alarma de la madre y del recién nacido;",
+						"hijos" : [
+							{
+								"parametro": "80% de madres reciben información y mencionan al menos dos signos de alarma para ella y su hijo.",
+								"verificador": "P10.b1 EM",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 2,
+								"par_id": 848
+
+							},
+                            {
+								"parametro": "80% del personal de salud mencionan al menos dos signos de alarma para madre e hijo.",
+								"verificador": "P10.b2 EP",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 2,
+								"par_id": 848
+
+							},
+                            {
+								"parametro": "100% de recién nacidos están correctamente identificados por manilla o brazalete",
+								"verificador": "P10.b3 EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							}
+						]
+					},
+					{
+						"directriz": "c) Concertar fecha y hora del primer control de la madre y del recién nacido.",
+						"hijos" : [
+							{
+								"parametro": "80% de las madres que egresan del establecimiento de salud cuentan con una cita en la primera semana del alta para ella y su bebé.",
+								"verificador": "P.10.c EM",
+								"no_aplica": false,
+								"obligatorio":false,
+								"puntaje" : 1,
+								"par_id": 848
+
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+    {
+		"grupo": "E. COMPONENTE LACTANCIA MATERNA",
+		"hijos" : [
+			{
+				"paso": "16. Informar a todas las embarazadas de los beneficios y manejo de la lactancia.",
+				"hijos" : [
+					{
+						"directriz": "a) Brindar asesoría a las madres durante el período prenatal, parto y postparto sobre: lactancia materna y prácticas que la favorecen, apego precoz; alojamiento conjunto, alimentación en caso de VIH, etc.",
+						"hijos" : [
+							{
+								"parametro": "80% de embarazadas en su tercer trimestre o al alta hospitalaria confirma que algún miembro del personal del establecimiento conversó con ellas acerca de los beneficios de la lactancia, y les ofreció una charla con información.",
+								"verificador": "L.1.a EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 3,
+								"par_id": 748
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "17. Ayudar a las madres a iniciar la lactancia durante la hora siguiente al parto.",
+				"hijos" : [
+					{
+						"directriz": "a) El equipo de salud debe promover el amamantamiento en la sala de parto",
+						"hijos" : [
+							{
+								"parametro": "80% de madres manifiestan que le dio el seno por primera vez en la primera hora después del parto.",
+								"verificador": "L.2.a EM",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 848
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "18. Mostrar a las madres cómo amamantar y cómo mantener la lactancia incluso en caso de separación de sus bebés.",
+				"hijos" : [
+					{
+						"directriz": "a) El personal de salud debe mostrar a las madres cómo amamantar;",
+						"hijos" : [
+							{
+								"parametro": "80% del personal clínico, informa que ha enseñado a la madre la manera correcta para colocar al recién nacido al pecho y la técnica de agarre.",
+								"verificador": "L.3.a EP",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 3,
+								"par_id": 748
+
+							},
+                            {
+								"parametro": "80% de madres observadas amamantan según la técnica adecuada.",
+								"verificador": "L.3.a Ob",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) En caso de separación obligatoria del recién nacido/a, se debe mostrar cómo mantener la lactancia enseñando la técnica adecuada de extracción de leche, informar sobre la posibilidad de donar leche humana y los beneficios para incrementar su producción;",
+						"hijos" : [
+							{
+								"parametro": "80% del personal encuestado conoce cómo mantener la lactancia enseñando la técnica adecuada de extracción de leche, informar sobre la posibilidad de donar leche humana y los beneficios para incrementar su producción",
+								"verificador": "L.3.b EP",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 848
+
+							},
+                            {
+								"parametro": "80% de madres que amamantan informa que el personal le brindó apoyo y capacitación en lactancia materna, y las técnicas correctas para una adecuada lactancia.",
+								"verificador": "L.3.b Ob",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 3,
+								"par_id": 848
+
+							}
+						]
+					},
+                    {
+						"directriz": "c) Si la madre decide no amamantar, enseñarle cómo preparar y alimentar correctamente al bebé con sucedáneos de la leche materna;",
+						"hijos" : [
+							{
+								"parametro": "80% de las madres afirma que recibió una demonstración de la preparación de sucedáneos de la leche materna realizada por el personal del establecimiento de salud.",
+								"verificador": "L.3.c EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 748
+
+							}
+						]
+					},
+                    {
+						"directriz": "d) Mostrar a las madres VIHpositivas cómo preparar y dar el alimento, y cesar la producción de leche.",
+						"hijos" : [
+							{
+								"parametro": "80% de madres VIH positivo recibió información o demostración acerca de la correcta preparación de los sucedáneos de la leche materna y afirma ser capaz de preparar el alimento ella misma.",
+								"verificador": "L.3.d EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" :3,
+								"par_id": 748
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "19. No dar al recién nacido/a alimento o líquido que no sea leche materna a no ser que estén médicamente indicados.",
+				"hijos" : [
+					{
+						"directriz": "a) Promover la lactancia materna como único alimento para el recién nacido.",
+						"hijos" : [
+							{
+								"parametro": "80% de las madres informa que el personal de salud no le ha recomendado la alimentación con sucedáneos de la leche para su bebé.",
+								"verificador": "L.4.a EM",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) En caso de que la madre decida no amamantar, analizar con la madre las alternativas de alimentación para ayudar a decidir lo más adecuado a su situación.",
+						"hijos" : [
+							{
+								"parametro": "80% de las madres que decidió no amamantar debe informar que el personal analizó con ellas las distintas alternativas de alimentación y les ayudó a decidir la más adecuada de acuerdo a su situación.",
+								"verificador": "L.4.b EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 848
+
+							}
+						]
+					},
+					{
+						"directriz": "c) Prohibir el uso de agua glucosada, suero oral y sucedáneos de leche materna para probar tolerancia.",
+						"hijos" : [
+							{
+								"parametro": "80% de madres seleccionadas al azar, informa que sus bebés han recibido solamente leche materna. De haber recibido otro tipo de alimento, debe indicarse la razón médica prescrita.",
+								"verificador": "L.4.c EM",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 848
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "20. Practicar alojamiento conjunto, permitiendo a las madres y recién nacidos permanecer juntos las 24 horas de día.",
+				"hijos" : [
+					{
+						"directriz": "a) Favorecer la práctica de alojamiento conjunto las 24 horas del día a menos de que existan razones clínicamente justificadas.",
+						"hijos" : [
+							{
+								"parametro": "80% de madres seleccionadas al azar permaneció con su bebé en la habitación desde el nacimiento.",
+								"verificador": "L.5.a EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 3,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Colocar al niño inmediatamente después del nacimiento con su madre en la misma habitación, incluido madres VIH positivo;",
+						"hijos" : [
+							{
+								"parametro": "90% de madres y bebés practican el alojamiento conjunto, de no hacerlo, deben existir razones justificadas.",
+								"verificador": "L.5.b Ob",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 848
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "21. Fomentar la lactancia a demanda.",
+				"hijos" : [
+					{
+						"directriz": "a) No poner horarios de lactancia, ni restricciones en la duración o frecuencia de succión;",
+						"hijos" : [
+							{
+								"parametro": "90% confirma que se les aconsejó respecto al amamantamiento a libre demanda.",
+								"verificador": "L.6.a EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 3,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Enseñar a las madres a reconocer las señales para amamantar y de saciedad del niño/a;",
+						"hijos" : [
+							{
+								"parametro": "90% de madres informa que se les enseñó a reconocer el momento en que sus bebés están hambrientos, y puede describir por lo menos dos señales para amamantar",
+								"verificador": "L.6.b EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 3,
+								"par_id": 848
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "22. No dar biberones ni chupones a los bebés que amamantan.",
+				"hijos" : [
+					{
+						"directriz": "a) Aplicar este paso tanto para los bebés amamantados como a los alimentados con sucedáneos de leche materna;",
+						"hijos" : [
+							{
+								"parametro": "Mediante observación en salas, al menos el 90% de bebés amamantados no deben recibir ningún tipo de biberón y/o chupón.",
+								"verificador": "L.7.a Ob",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 748
+
+							},
+                            {
+								"parametro": "En las salas de maternidad, el 90% de las madres que están amamantando, elegidas al azar, informa que de su conocimiento sus bebés no han sido alimentados con biberón ni se les ha ofrecido chupones ni chupones.",
+								"verificador": "L.7.a EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) En el caso de que las madres decidan utilizar biberones o chupones, brindar consejería e informar los riesgos de su utilización.",
+						"hijos" : [
+							{
+								"parametro": "90% de madres que alimentan con biberón manifiestan que se les ha informado sobre los riesgos de su utilización y pueden mencionar al menos un riesgo de alimentar con biberón.",
+								"verificador": "L.7.b EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 848
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "23. Fomentar grupos de apoyo a la lactancia materna, referir a las madres a estos grupos al momento del alta del hospital o centro de salud.",
+				"hijos" : [
+					{
+						"directriz": "a) Formar grupos de apoyo a la lactancia materna y/o referir a las madres a estos grupos en el momento del alta.",
+						"hijos" : [
+							{
+								"parametro": " 90% de las madres comunica haber recibido información acerca de cómo obtener ayuda del hospital o cómo contactar grupos de apoyo, asesoría, línea de asesoría en lactancia materna (línea 171) u otro servicio de salud comunitario en caso de tener dudas sobre amamantamiento.",
+                                "verificador": "L.8.a EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) Formar grupos de apoyo exclusivamente para madres que viven con VIH y/o referir a grupos ya existentes.",
+						"hijos" : [
+							{
+								"parametro": "90% de las madres VIH positivo comunica haber recibido información acerca de cómo obtener ayuda del hospital, o cómo contactar grupos de apoyo, asesoría o algún otro servicio de salud comunitario.",
+								"verificador": "L.8.b EM",
+								"no_aplica": false,
+								"obligatorio": false,
+								"puntaje" : 2,
+								"par_id": 848
+
+							}
+						]
+					}
+				]
+			},
+            {
+				"paso": "24. Cumplir con el Código Internacional de Comercialización Sucedáneos de la Leche Materna",
+				"hijos" : [
+					{
+						"directriz": "a) No permitir el contacto directo de representantes de la industria de sucedáneos de leche materna, biberones y chupones (SLM,B,CH), con embarazadas o madres;",
+						"hijos" : [
+							{
+								"parametro": "90% de las madres informan no haber sido contactadas con representantes de la industria de SLM, B, CH.",
+                                "verificador": "L.9.a EM",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 748
+
+							}
+						]
+					},
+					{
+						"directriz": "b) No entregar a ninguna embarazada, madre o familiares material de propaganda, muestras gratis o paquetes de regalo que incluyan SLM,B,CH o cupones;",
+						"hijos" : [
+							{
+								"parametro": "90% de las madres encuestadas informa que no ha recibido material de propaganda, muestras gratis o paquetes de regalo que incluyan SLM, B, CH o cupones.",
+								"verificador": "L.9.b EM",
+								"no_aplica": false,
+								"obligatorio": true,
+								"puntaje" : 3,
+								"par_id": 848
+
+							}
+						]
+					},
+					{
+						"directriz": "c) Prohibir en el establecimientotoda publicidad, patrocinio o promoción de la industria de SLM,B,CH;",
+						"hijos" : [
+							{
+								"parametro": "Por observación, constatar que no existe patrocinio, o promoción de la industria de SLM, B, CH en el establecimiento de salud.",
+								"verificador": "L.9.c Ob",
+								"no_aplica": false,
+								"obligatorio":true,
+								"puntaje" : 3,
+								"par_id": 848
+
+							}
+						]
+					},
+					{
+						"directriz": "d) En caso de alimentación con sucedáneo justificado por razones clínicas, los envases de fórmula y biberones se mantienen fuera de la vista.",
+						"hijos" : [
+							{
+								"parametro": "Por observación, indicar que el establecimiento de salud mantiene fuera de vista envases de fórmula y biberones.",
+								"verificador": "L.9.d Ob",
+								"no_aplica": false,
+								"obligatorio":false,
+								"puntaje" : 3,
 								"par_id": 848
 
 							}
