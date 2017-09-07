@@ -1,16 +1,22 @@
 package ec.gob.acess.esamyn.modelo;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -62,8 +68,12 @@ public class Parametro implements Serializable {
 	@Transient
 	private List<Verificador> verificadorList;
 	@XmlTransient
-	@Transient
+	@OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY, mappedBy = "parametro")
 	private List<ParametroPregunta> parametroPreguntaList;
+
+	@XmlTransient
+	@Transient
+	private List<Long> codigoPreguntaList;
 
 	public Long getCodigo() {
 		return codigo;
@@ -143,6 +153,26 @@ public class Parametro implements Serializable {
 
 	public void setParametroPreguntaList(List<ParametroPregunta> parametroPreguntaList) {
 		this.parametroPreguntaList = parametroPreguntaList;
+	}
+
+	public List<Long> getCodigoPreguntaList() {
+		if (codigoPreguntaList == null) {
+			codigoPreguntaList = new ArrayList<Long>();
+
+			if (this.parametroPreguntaList != null && !this.parametroPreguntaList.isEmpty()) {
+				Set<Long> idPreguntaSet = new HashSet<Long>();
+				for (ParametroPregunta parametroPregunta : this.parametroPreguntaList) {
+					idPreguntaSet.add(parametroPregunta.getPregunta().getCodigo());
+				}
+
+				codigoPreguntaList = new ArrayList<Long>(idPreguntaSet);
+			}
+		}
+		return codigoPreguntaList;
+	}
+
+	public void setCodigoPreguntaList(List<Long> codigoPreguntaList) {
+		this.codigoPreguntaList = codigoPreguntaList;
 	}
 
 }

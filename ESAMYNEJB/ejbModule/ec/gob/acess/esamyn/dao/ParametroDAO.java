@@ -1,7 +1,11 @@
 package ec.gob.acess.esamyn.dao;
 
+import java.util.List;
+
 import javax.ejb.Local;
+
 import com.saviasoft.persistence.util.dao.GenericDao;
+
 import ec.gob.acess.esamyn.modelo.Parametro;
 
 /**
@@ -16,4 +20,10 @@ import ec.gob.acess.esamyn.modelo.Parametro;
 @Local
 public interface ParametroDAO extends GenericDao<Parametro, Long> {
 
+	/**
+	 * Obtiene todos los parametros involucrados en una evaluacion.
+	 * 
+	 * @return
+	 */
+	List<Parametro> getParametrosParaEvaluacion();
 }

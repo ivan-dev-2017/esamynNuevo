@@ -1,8 +1,11 @@
 package ec.gob.acess.esamyn.dao;
 
 import java.util.List;
+
 import javax.ejb.Local;
+
 import com.saviasoft.persistence.util.dao.GenericDao;
+
 import ec.gob.acess.esamyn.modelo.Respuesta;
 
 /**
@@ -18,11 +21,13 @@ import ec.gob.acess.esamyn.modelo.Respuesta;
 public interface RespuestaDAO extends GenericDao<Respuesta, Long> {
 	/**
 	 * Obtiene el listado de respuestas relacionadas a un establecimiento de salud y
-	 * a un parametro.
+	 * a un listado de preguntas.
 	 * 
 	 * @param codigoEstablecimientoSalud
-	 * @param codigoParametro
+	 * @param codigoPreguntaList
+	 * @param anio
 	 * @return
 	 */
-	List<Respuesta> getRespuestasParaEvaluar(Long codigoEstablecimientoSalud, Long codigoParametro);
+	List<Respuesta> getRespuestasParaEvaluar(Long codigoEstablecimientoSalud, List<Long> codigoPreguntaList,
+			Integer anio);
 }
