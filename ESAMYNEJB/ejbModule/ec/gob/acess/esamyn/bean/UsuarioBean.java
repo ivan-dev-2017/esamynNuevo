@@ -238,8 +238,8 @@ public class UsuarioBean extends GenericServiceImpl<Usuario, Long> {
 
 		String textoCorreo = catalogoBean.buscarPorIdentificador(CatalogoEnum.TEXTO_OLVIDO).getValor();
 
-		textoCorreo = textoCorreo.replaceFirst("<<nombre_usuario>>", usuario.getNombres())
-			.replaceAll("<<nueva_clave>>", contrasena);
+		textoCorreo = textoCorreo.replaceAll("<<nombre_usuario>>", usuario.getNombres());
+		textoCorreo = textoCorreo.replaceAll("<<nueva_clave>>", contrasena);
 
 		List<String> listaTo = new ArrayList<>();
 		listaTo.add(usuario.getCorreoEletronico());

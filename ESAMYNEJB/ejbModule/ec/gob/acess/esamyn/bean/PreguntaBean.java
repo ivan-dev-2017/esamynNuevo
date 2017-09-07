@@ -1,7 +1,9 @@
 package ec.gob.acess.esamyn.bean;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.ejb.EJB;
 import javax.ejb.LocalBean;
@@ -57,15 +59,121 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 
 	List<Respuesta> respuestas = respuestaBean.buscarPorEncuesta(encuestaDto.getIdEncuesta());
 
-	for (PreguntaDto preguntaDto : encuestaDto.getPregunta()) {
+	Map<Long, Respuesta> mapaRespuesta = null;
 
-	    
-	    //validar hijos
+	// Se llena mapa de respuestas
+	if (respuestas != null && !respuestas.isEmpty()) {
+	    mapaRespuesta = llenarMapaRespuesta(respuestas);
 	}
 
-	mensajeDto = new MensajeDto(true, "Estamos trabajadno", null);
+	// Consultar encuesta
+
+	Encuesta encuesta = encuestaBean.findByPk(encuestaDto.getIdEncuesta());
+
+	// Guardamos preguntas
+	for (PreguntaDto preguntaDto : encuestaDto.getPregunta()) {
+
+	    guardarPregunta(preguntaDto, mapaRespuesta, encuesta);
+	}
+
+	mensajeDto = new MensajeDto(false, "Objeto Guardado", null);
 
 	return mensajeDto;
+    }
+
+    /**
+     * Crea Mapa de Respuestas
+     * 
+     * @param respuestas
+     * @return
+     */
+    private Map<Long, Respuesta> llenarMapaRespuesta(List<Respuesta> respuestas) {
+
+	Map<Long, Respuesta> mapaRespuesta = new HashMap<>();
+
+	for (Respuesta respuesta : respuestas) {
+
+	    mapaRespuesta.put(respuesta.getCodigo(), respuesta);
+
+	}
+
+	return mapaRespuesta;
+
+    }
+
+    /**
+     * Metodo que recorre el arbol y guarda o actualiza preguntas
+     * 
+     * @param preguntaDto
+     */
+    private void guardarPregunta(PreguntaDto preguntaDto, Map<Long, Respuesta> mapaRespuesta, Encuesta encuesta) {
+
+	if (validaGuardar(preguntaDto)) {
+
+	    if (preguntaDto.getCodigoRespuesta() != null) {
+		// se actualiza valor
+
+		Respuesta respuesta = mapaRespuesta.get(preguntaDto.getCodigoRespuesta());
+		respuesta.setValorBooleano(preguntaDto.getValorBooleano());
+		respuesta.setValorFecha(preguntaDto.getValorFecha());
+		respuesta.setValorNumero(preguntaDto.getValorNumero());
+		respuesta.setValorTexto(preguntaDto.getValorTexto());
+
+		respuestaBean.update(respuesta);
+
+	    } else {
+
+		Pregunta pregunta = findByPk(preguntaDto.getCodigo());
+
+		Respuesta respuesta = new Respuesta();
+		respuesta.setPregunta(pregunta);
+		respuesta.setEncuesta(encuesta);
+		respuesta.setValorBooleano(preguntaDto.getValorBooleano());
+		respuesta.setValorFecha(preguntaDto.getValorFecha());
+		respuesta.setValorNumero(preguntaDto.getValorNumero());
+		respuesta.setValorTexto(preguntaDto.getValorTexto());
+
+		respuestaBean.create(respuesta);
+
+	    }
+	}
+
+	if (preguntaDto.getPreguntaLista() != null && !preguntaDto.getPreguntaLista().isEmpty()) {
+
+	    for (PreguntaDto preguntaHijo : preguntaDto.getPreguntaLista()) {
+		guardarPregunta(preguntaHijo, mapaRespuesta, encuesta);
+	    }
+
+	}
+
+    }
+
+    /**
+     * Valida se se debe guardar respuesta
+     * 
+     * @param preguntaDto
+     * @return
+     */
+    private boolean validaGuardar(PreguntaDto preguntaDto) {
+
+	if (preguntaDto.getValorBooleano() != null) {
+	    return true;
+	}
+
+	if (preguntaDto.getValorFecha() != null) {
+	    return true;
+	}
+
+	if (preguntaDto.getValorNumero() != null) {
+	    return true;
+	}
+
+	if (preguntaDto.getValorTexto() != null) {
+	    return true;
+	}
+
+	return false;
+
     }
 
     /**
@@ -78,14 +186,20 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 
 	Encuesta encuesta = null;
 
+	EncuestaDto encuestaDto = new EncuestaDto();
+
 	if (IdEncuesta != null) {
 	    encuesta = encuestaBean.findByPk(IdEncuesta);
+
 	}
 
 	List<Respuesta> respuestas = null;
 
 	if (encuesta != null) {
 	    respuestas = respuestaBean.buscarPorEncuesta(IdEncuesta);
+	    encuestaDto.setCargo(encuesta.getCargo());
+	    encuestaDto.setResponsable(encuesta.getResponsable());
+	    encuestaDto.setExtra(encuesta.getResponsable());
 	}
 
 	String[] ands = { "formulario.codigo" };
@@ -104,8 +218,6 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 	    for (PreguntaDto pregunta : padres) {
 		pregunta = llenarHijos(lista, pregunta, idFormulario, respuestas);
 	    }
-
-	    EncuestaDto encuestaDto = new EncuestaDto();
 
 	    encuestaDto.setIdEncuesta(IdEncuesta);
 	    encuestaDto.setIdFormulario(idFormulario);
@@ -244,6 +356,35 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 	}
 
 	return mensajeDto;
+    }
+
+    /**
+     * Metodo que valida que todos las hojas del arbol estan contestados
+     * @param preguntas
+     * @return
+     */
+    public boolean verificarParaFinalizarEncuesta(List<PreguntaDto> preguntas) {
+
+	boolean validador = true;
+
+	for (PreguntaDto preguntaDto : preguntas) {
+
+	    if (preguntaDto.getPreguntaLista() != null && !preguntaDto.getPreguntaLista().isEmpty()) {
+
+		validador = verificarParaFinalizarEncuesta(preguntaDto.getPreguntaLista());
+	    } else {
+
+		//Verificamos que la hoja del arbol tenga respuesta
+		validador = validaGuardar(preguntaDto);
+		if(!validador) {
+		    
+		    return validador;
+		}
+	    }
+	}
+	
+	return validador;
+
     }
 
 }

@@ -1,6 +1,7 @@
 package ec.gob.acess.esamyn.modelo;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.List;
 
 import javax.persistence.Basic;
@@ -33,116 +34,123 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "catalogo")
 public class Parametro implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Basic(optional = false)
-	@Column(name = "par_id")
-	private Long codigo;
-	@Column(name = "par_puntaje")
-	private Integer puntaje;
-	@Column(name = "par_texto")
-	private String texto;
-	@Basic(optional = false)
-	@Column(name = "par_obligatorio")
-	private int obligatorio;
-	@Basic(optional = false)
-	@Column(name = "par_umbral")
-	private int umbral;
-	@Basic(optional = false)
-	@Column(name = "par_cantidad_minima")
-	private int cantidadMinima;
-	@JoinColumn(name = "par_condicion_no_aplica", referencedColumnName = "cna_id")
-	@ManyToOne
-	private CondicionNoAplica condicionNoAplica;
-	@JoinColumn(name = "par_grupo_parametro", referencedColumnName = "gpa_id")
-	@ManyToOne
-	private GrupoParametro grupoParametro;
-	@XmlTransient
-	@Transient
-	private List<Verificador> verificadorList;
-	@XmlTransient
-	@Transient
-	private List<ParametroPregunta> parametroPreguntaList;
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "par_id")
+    private Long codigo;
+    @Column(name = "par_puntaje")
+    private Integer puntaje;
+    @Column(name = "par_texto")
+    private String texto;
+    @Basic(optional = false)
+    @Column(name = "par_obligatorio")
+    private int obligatorio;
+    @Basic(optional = false)
+    @Column(name = "par_umbral")
+    private int umbral;
+    @Basic(optional = false)
+    @Column(name = "par_cantidad_minima", columnDefinition = "decimal", precision = 20, scale = 10)
+    private BigDecimal cantidadMinima;
+    @JoinColumn(name = "par_condicion_no_aplica", referencedColumnName = "cna_id")
+    @ManyToOne
+    private CondicionNoAplica condicionNoAplica;
+    @JoinColumn(name = "par_grupo_parametro", referencedColumnName = "gpa_id")
+    @ManyToOne
+    private GrupoParametro grupoParametro;
+    @XmlTransient
+    @Transient
+    private List<Verificador> verificadorList;
+    @XmlTransient
+    @Transient
+    private List<ParametroPregunta> parametroPreguntaList;
 
-	public Long getCodigo() {
-		return codigo;
-	}
+    public Long getCodigo() {
+	return codigo;
+    }
 
-	public void setCodigo(Long codigo) {
-		this.codigo = codigo;
-	}
+    public void setCodigo(Long codigo) {
+	this.codigo = codigo;
+    }
 
-	public Integer getPuntaje() {
-		return puntaje;
-	}
+    public Integer getPuntaje() {
+	return puntaje;
+    }
 
-	public void setPuntaje(Integer puntaje) {
-		this.puntaje = puntaje;
-	}
+    public void setPuntaje(Integer puntaje) {
+	this.puntaje = puntaje;
+    }
 
-	public String getTexto() {
-		return texto;
-	}
+    public String getTexto() {
+	return texto;
+    }
 
-	public void setTexto(String texto) {
-		this.texto = texto;
-	}
+    public void setTexto(String texto) {
+	this.texto = texto;
+    }
 
-	public int getObligatorio() {
-		return obligatorio;
-	}
+    public int getObligatorio() {
+	return obligatorio;
+    }
 
-	public void setObligatorio(int obligatorio) {
-		this.obligatorio = obligatorio;
-	}
+    public void setObligatorio(int obligatorio) {
+	this.obligatorio = obligatorio;
+    }
 
-	public int getUmbral() {
-		return umbral;
-	}
+    public int getUmbral() {
+	return umbral;
+    }
 
-	public void setUmbral(int umbral) {
-		this.umbral = umbral;
-	}
+    public void setUmbral(int umbral) {
+	this.umbral = umbral;
+    }
 
-	public int getCantidadMinima() {
-		return cantidadMinima;
-	}
+    public CondicionNoAplica getCondicionNoAplica() {
+	return condicionNoAplica;
+    }
 
-	public void setCantidadMinima(int cantidadMinima) {
-		this.cantidadMinima = cantidadMinima;
-	}
+    public void setCondicionNoAplica(CondicionNoAplica condicionNoAplica) {
+	this.condicionNoAplica = condicionNoAplica;
+    }
 
-	public CondicionNoAplica getCondicionNoAplica() {
-		return condicionNoAplica;
-	}
+    public GrupoParametro getGrupoParametro() {
+	return grupoParametro;
+    }
 
-	public void setCondicionNoAplica(CondicionNoAplica condicionNoAplica) {
-		this.condicionNoAplica = condicionNoAplica;
-	}
+    public void setGrupoParametro(GrupoParametro grupoParametro) {
+	this.grupoParametro = grupoParametro;
+    }
 
-	public GrupoParametro getGrupoParametro() {
-		return grupoParametro;
-	}
+    public List<Verificador> getVerificadorList() {
+	return verificadorList;
+    }
 
-	public void setGrupoParametro(GrupoParametro grupoParametro) {
-		this.grupoParametro = grupoParametro;
-	}
+    public void setVerificadorList(List<Verificador> verificadorList) {
+	this.verificadorList = verificadorList;
+    }
 
-	public List<Verificador> getVerificadorList() {
-		return verificadorList;
-	}
+    public List<ParametroPregunta> getParametroPreguntaList() {
+	return parametroPreguntaList;
+    }
 
-	public void setVerificadorList(List<Verificador> verificadorList) {
-		this.verificadorList = verificadorList;
-	}
+    public void setParametroPreguntaList(List<ParametroPregunta> parametroPreguntaList) {
+	this.parametroPreguntaList = parametroPreguntaList;
+    }
 
-	public List<ParametroPregunta> getParametroPreguntaList() {
-		return parametroPreguntaList;
-	}
+    /**
+     * @return the cantidadMinima
+     */
+    public BigDecimal getCantidadMinima() {
+        return cantidadMinima;
+    }
 
-	public void setParametroPreguntaList(List<ParametroPregunta> parametroPreguntaList) {
-		this.parametroPreguntaList = parametroPreguntaList;
-	}
+    /**
+     * @param cantidadMinima the cantidadMinima to set
+     */
+    public void setCantidadMinima(BigDecimal cantidadMinima) {
+        this.cantidadMinima = cantidadMinima;
+    }
+
 
 }

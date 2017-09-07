@@ -39,9 +39,7 @@ public class EstablecimientoSalud implements Serializable {
 	@Basic(optional = false)
 	@Column(name = "ess_id")
 	private Long codigo;
-
 	@Column(name = "ess_nombre")
-	@XmlTransient
 	private String nombre;
 	@Column(name = "ess_unicodigo")
 	private String unicodigo;
@@ -69,6 +67,7 @@ public class EstablecimientoSalud implements Serializable {
 	@ManyToOne
 	private PersonaJuridica personaJuridica;
 	@Transient
+	@XmlTransient
 	private List<Evaluacion> evaluacionList;
 
 	public EstablecimientoSalud() {

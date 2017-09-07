@@ -202,31 +202,19 @@ public class UsuarioWebService {
      * @param headers
      * @return
      */
-    @POST
+    @GET
     @Path("olvido/{username}")
     @Produces(MediaType.APPLICATION_JSON)
-    public MensajeDto olvido(@PathParam("username") String userName, @Context HttpHeaders headers) {
-
-	String token = headers.getRequestHeader("ApiToken").get(0);
+    public MensajeDto olvido(@PathParam("username") String userName) {
 
 	MensajeDto mensajeDto;
-	boolean valida;
+
 	try {
-	    valida = usuarioBean.validaToken(token);
-
-	    if (valida) {
-		try {
-		    mensajeDto = usuarioBean.olvidoPassword(userName);
-		} catch (Exception e) {
-		    mensajeDto = new MensajeDto(true, "Error: " + e.getMessage(), null);
-		}
-
-	    } else {
-		mensajeDto = new MensajeDto(true, "Token invalido", null);
-	    }
+	    mensajeDto = usuarioBean.olvidoPassword(userName);
 	} catch (Exception e) {
-	    mensajeDto = new MensajeDto(true, "Error token " + e.getMessage(), null);
+	    mensajeDto = new MensajeDto(true, "Error: " + e.getMessage(), null);
 	}
+
 	return mensajeDto;
     }
 
