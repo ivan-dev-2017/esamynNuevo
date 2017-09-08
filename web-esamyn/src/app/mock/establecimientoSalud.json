@@ -1,39 +1,90 @@
 {
-    "error": false,
-    "mensaje": "",
-    "objeto":  {
-      "id":null,
-      "creado":null,
-      "modificado":null,
-      "canton":{
-          "id":null,
-          "provincia":{
-              "id":null,
-              "nombre":null,
-              "codigo":null,
-              "cantonList":null
-          },
-          "nombre":null,
-          "codigo":null,
-          "establecimientoSaludList": null
+   "error": false,
+   "mensaje": "",
+   "objeto":    [
+            {
+         "codigo": 1,
+         "nombre": "HOSPITAL",
+         "unicodigo": null,
+         "direccion": "DIRECCION1",
+         "latitud": null,
+         "longitud": null,
+         "telefono": null,
+         "correoElectronico": null,
+         "nombreResponsable": null,
+         "zona": null,
+         "distrito": null,
+         "canton":          {
+            "codigo": 1,
+            "nombre": "QUITO",
+            "codigoINEN": "UIO",
+            "provincia":             {
+               "codigo": 1,
+               "nombre": "PICHINCHA",
+               "codigoInen": "PCH"
+            }
+         },
+         "personaJuridica":          {
+            "codigo": 1,
+            "razonSocial": null,
+            "ruc": "11254798001"
+         }
       },
-      "persona_juridica":{
-          "id":null,
-          "creado":null,      
-          "modificado":null,  
-          "razonSocial":null, 
-          "ruc":null,
-          "establecimientoSaludList": null
+            {
+         "codigo": 19,
+         "nombre": null,
+         "unicodigo": null,
+         "direccion": "DIRECCION2",
+         "latitud": null,
+         "longitud": null,
+         "telefono": null,
+         "correoElectronico": null,
+         "nombreResponsable": null,
+         "zona": null,
+         "distrito": null,
+         "canton":          {
+            "codigo": 1,
+            "nombre": "QUITO",
+            "codigoINEN": "UIO",
+            "provincia":             {
+               "codigo": 1,
+               "nombre": "PICHINCHA",
+               "codigoInen": "PCH"
+            }
+         },
+         "personaJuridica":          {
+            "codigo": 1,
+            "razonSocial": null,
+            "ruc": "11254798001"
+         }
       },
-      "nombre":null,
-      "unicodigo":null,
-      "direccion":null,
-      "latitud":null,
-      "longitud":null,
-      "telefono":null,
-      "correo_electronico":null,
-      "nombre_responsable":null,
-      "zona":null,
-      "distrito":null
-    }
+            {
+         "codigo": 22,
+         "nombre": null,
+         "unicodigo": null,
+         "direccion": "DIRECCION3",
+         "latitud": null,
+         "longitud": null,
+         "telefono": null,
+         "correoElectronico": null,
+         "nombreResponsable": null,
+         "zona": null,
+         "distrito": null,
+         "canton":          {
+            "codigo": 1,
+            "nombre": "QUITO",
+            "codigoINEN": "UIO",
+            "provincia":             {
+               "codigo": 1,
+               "nombre": "PICHINCHA",
+               "codigoInen": "PCH"
+            }
+         },
+         "personaJuridica":          {
+            "codigo": 1,
+            "razonSocial": null,
+            "ruc": "11254798001"
+         }
+      }
+   ]
 }

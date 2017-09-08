@@ -1,0 +1,37 @@
+<div class="col-lg-12 col-sm-12 col-md-12"  style="margin: 10px 0px;">
+		<div  id="principal" [hidden]="isVisible" >
+			<ngx-datatable
+		        class="dark"
+		        [rows]="rows"
+		        [loadingIndicator]="loadingIndicator"
+		        [columnMode]="'flex'"
+		        [headerHeight]="50"
+		        [footerHeight]="50"
+		        [rowHeight]="'auto'"
+		        [selected]="selected"
+	            [selectionType]="'single'"
+	            (activate)="onActivate($event)"
+	            (select)='onSelect($event)'
+		        >
+		        <ngx-datatable-column name="NOMBRE" prop="nombre"  [flexGrow]="5">
+		          <ng-template let-column="column" ngx-datatable-header-template>
+		            {{column.nombre}}
+		          </ng-template>
+		          <ng-template let-value="value" ngx-datatable-cell-template>
+		            <strong>{{value}}</strong>
+		          </ng-template>
+		        </ngx-datatable-column>
+		        <ngx-datatable-column name="Accion"  prop="id"  [flexGrow]="1">
+		          <ng-template let-column="column" ngx-datatable-header-template>
+		            {{column.name}}
+		          </ng-template>
+		          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+		            <a [routerLink]="['/evaluacionForm',value]">
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+		          </ng-template>
+		        </ngx-datatable-column>
+		      </ngx-datatable>
+
+		</div>
+	</div>

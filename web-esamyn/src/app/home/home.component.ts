@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
 	
 	private page = new PaginatedList<User>();
 	private rows = new Array<User>();
+    bandera:boolean = false;
 	panelMenuAppList:ItemMenu[];
 	
 	confirmResult:boolean = null;
@@ -22,7 +23,6 @@ export class HomeComponent implements OnInit {
   constructor(		  private globalEventsManager: GlobaleventsmanagerService, 
 	      private alertService: AlertService,
 	      private dialogService:DialogService) { 
-	  console.log("===> ingresa a inicializar CONSTRUCTOR HOME");
 	  this.page.pageNumber = 0;
 	  this.page.size = 3;
 	  this.globalEventsManager.showNavBarEmitter.subscribe((mode)=>{
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
 	    	console.log("==>entra en subscriber HomeComponent: "   );
 	        if (mode !== null) {
 	          //console.log("==>en home menu: " + localStorage.getItem('menu'));
-	          this.panelMenuAppList = JSON.parse(localStorage.getItem('menu'));
+	          //this.panelMenuAppList = JSON.parse(localStorage.getItem('menu'));
 	        } else {
 	        	//console.log("==>no cambio usuaerio: ");
 	        	
@@ -69,4 +69,8 @@ export class HomeComponent implements OnInit {
         this.promptMessage = message;
       });
   }
+    
+   recibeBandera(event){
+       this.bandera=event;
+   }
 }

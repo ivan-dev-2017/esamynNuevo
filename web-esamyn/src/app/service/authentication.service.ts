@@ -35,6 +35,7 @@ export class AuthenticationService {
         			    usuario.nombreUsuario=user.username;
         		        usuario.password=user.password;
         		        usuario.loggedIn=true;
+        		        usuario.token=user.token;
         				localStorage.setItem('currentUser', JSON.stringify(usuario));
 						//localStorage.setItem('menu', JSON.stringify(loginWrapper.menuWrapper.panelMenuAppList));
 						localStorage.setItem('defaultPageSize', loginWrapper.defaultPageSize);
@@ -68,11 +69,34 @@ export class AuthenticationService {
 		});
     }
     
-    changePassword(usuario:string){
-        console.log("cambuo contrasena");
+    changePassword(usuarioAuth: User){
+        console.log("cambuo contrasena de usuario: " + JSON.stringify(usuarioAuth));
+        let headersLoc = new Headers({ 'Content-Type': 'application/json',
+                                       'Accept':'application/json',
+                                       'ApiToken': usuarioAuth.token });
+        let services = JSON.parse( localStorage.getItem('services'));
+        let cambio={
+                "codigoUsuario":usuarioAuth.id,
+                "passwordAntiguo": usuarioAuth.password,
+                "passwordNuevo":usuarioAuth.passwordConfirm
+                };
+        return this.http.post(this.config.apiUrl + services["usuario.crud.cambiar"],
+                             cambio,
+                              new RequestOptions({ headers: headersLoc }))
+        .map((response: Response) => {
+            console.log("===>respondiod " + JSON.stringify(response.json()));
+            return response.json();
+        });
     }
     
-    recoverPassword(usuario:string){
+    recoverPassword(usuarioAuth:User){
         console.log("reupenadno contrasena");
+        let headersLoc = new Headers({ 'Content-Type': 'application/json','Accept':'application/json'});
+        return this.http.post(this.config.apiUrl + "rest/usuario/olvido/"+ usuarioAuth.nombre,
+           new RequestOptions({ headers: headersLoc }))
+            .map((response: Response) => {
+            console.log("===>respondiod " + JSON.stringify(response.json()));
+            return response.json();
+        });
     }
 }

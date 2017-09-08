@@ -1,7 +1,9 @@
 package ec.gob.acess.esamyn.dao;
 
 import javax.ejb.Local;
+
 import com.saviasoft.persistence.util.dao.GenericDao;
+
 import ec.gob.acess.esamyn.modelo.Evaluacion;
 
 /**
@@ -16,4 +18,12 @@ import ec.gob.acess.esamyn.modelo.Evaluacion;
 @Local
 public interface EvaluacionDAO extends GenericDao<Evaluacion, Long> {
 
+	/**
+	 * Obtiene la Evaluación de un establecimiento de un anio.
+	 * 
+	 * @param codigoEstablecimientoSalud
+	 * @param anio
+	 * @return
+	 */
+	Evaluacion getPorEstablecimientoAnio(Long codigoEstablecimientoSalud, Integer anio);
 }

@@ -2,16 +2,23 @@ package ec.gob.acess.esamyn.modelo;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.HashSet;
+//github.com/jybaro/esamyn.git
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -34,41 +41,47 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "catalogo")
 public class Parametro implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "par_id")
-    private Long codigo;
-    @Column(name = "par_puntaje")
-    private Integer puntaje;
-    @Column(name = "par_texto")
-    private String texto;
-    @Basic(optional = false)
-    @Column(name = "par_obligatorio")
-    private int obligatorio;
-    @Basic(optional = false)
-    @Column(name = "par_umbral")
-    private int umbral;
-    @Basic(optional = false)
-    @Column(name = "par_cantidad_minima", columnDefinition = "decimal", precision = 20, scale = 10)
-    private BigDecimal cantidadMinima;
-    @JoinColumn(name = "par_condicion_no_aplica", referencedColumnName = "cna_id")
-    @ManyToOne
-    private CondicionNoAplica condicionNoAplica;
-    @JoinColumn(name = "par_grupo_parametro", referencedColumnName = "gpa_id")
-    @ManyToOne
-    private GrupoParametro grupoParametro;
-    @XmlTransient
-    @Transient
-    private List<Verificador> verificadorList;
-    @XmlTransient
-    @Transient
-    private List<ParametroPregunta> parametroPreguntaList;
 
-    public Long getCodigo() {
-	return codigo;
-    }
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Basic(optional = false)
+	@Column(name = "par_id")
+	private Long codigo;
+	@Column(name = "par_puntaje")
+	private Integer puntaje;
+	@Column(name = "par_texto")
+	private String texto;
+	@Basic(optional = false)
+	@Column(name = "par_obligatorio")
+	private int obligatorio;
+	@Basic(optional = false)
+	@Column(name = "par_umbral")
+	private int umbral;
+	@Basic(optional = false)
+	@Column(name = "par_cantidad_minima")
+	private BigDecimal cantidadMinima;
+	@JoinColumn(name = "par_condicion_no_aplica", referencedColumnName = "cna_id")
+	@ManyToOne
+	private CondicionNoAplica condicionNoAplica;
+	@JoinColumn(name = "par_grupo_parametro", referencedColumnName = "gpa_id")
+	@ManyToOne
+	private GrupoParametro grupoParametro;
+	@XmlTransient
+	@Transient
+	private List<Verificador> verificadorList;
+	@XmlTransient
+	@OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY, mappedBy = "parametro")
+	private List<ParametroPregunta> parametroPreguntaList;
+
+	@XmlTransient
+	@Transient
+	private List<Long> codigoPreguntaList;
+
+	public Long getCodigo() {
+		return codigo;
+	}
+
 
     public void setCodigo(Long codigo) {
 	this.codigo = codigo;
@@ -152,5 +165,25 @@ public class Parametro implements Serializable {
         this.cantidadMinima = cantidadMinima;
     }
 
+
+	public List<Long> getCodigoPreguntaList() {
+		if (codigoPreguntaList == null) {
+			codigoPreguntaList = new ArrayList<Long>();
+
+			if (this.parametroPreguntaList != null && !this.parametroPreguntaList.isEmpty()) {
+				Set<Long> idPreguntaSet = new HashSet<Long>();
+				for (ParametroPregunta parametroPregunta : this.parametroPreguntaList) {
+					idPreguntaSet.add(parametroPregunta.getPregunta().getCodigo());
+				}
+
+				codigoPreguntaList = new ArrayList<Long>(idPreguntaSet);
+			}
+		}
+		return codigoPreguntaList;
+	}
+
+	public void setCodigoPreguntaList(List<Long> codigoPreguntaList) {
+		this.codigoPreguntaList = codigoPreguntaList;
+	}
 
 }

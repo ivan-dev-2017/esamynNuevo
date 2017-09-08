@@ -1,78 +1,67 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute,Router } from '@angular/router';
 import { CoreesamynService } from '../../service/coreesamyn.service';
 
-@Component({
-  selector: 'encuesta-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
-})
-export class FormComponent implements OnInit {
-    encuesta={
-            "error": false,
-            "mensaje": "",
-            "objeto": {
-              "codigo": null,
-              "responsable": null,
-              "cargo": null,
-              "extra": null,
-              "establecimientoSalud": {
-                "codigo": null,
-                "unicodigo": "22222",
-                "direccion": "Direccion",
-                "latitud": "12",
-                "longitud": "12",
-                "telefono": "222333",
-                "correoElectronico": "ccc@correo.com",
-                "nombreResponsable": "responsable 2",
-                "zona": "CENTRO",
-                "distrito": "Distrito",
-                "canton": {
-                  "codigo": 1,
-                  "nombre": "QUITO",
-                  "codigoINEN": "UIO",
-                  "provincia": {
-                    "codigo": 1,
-                    "nombre": "PICHINCHA",
-                    "codigoInen": "PHC"
-                  }
-                },
-                "personaJuridica": {
-                  "codigo": 1,
-                  "ruc": "17654798001"
-                },
-                "evaluacionList": null
-              },
-              "formulario": {
-                "codigo": 1,
-                "titulo": "Formulario de InformaciÃ³n del Establecimiento",
-                "subtitulo": null,
-                "ayuda": null,
-                "clave": "1",
-                "contestadosLista": null
-              }
-            }
-          };
-    formulario=[];
-    usuario=[];
-    evaluacion=[];
-    establecimientosSalud=[];
+
+@Component( {
+    selector: 'encuesta-form',
+    templateUrl: './form.component.html',
+    styleUrls: ['./form.component.css']
+} )
+export class EncuestaFormComponent implements OnInit {
+    encuesta = {
+        "codigo": null,
+        "responsable": null,
+        "cargo": null,
+        "establecimientoSalud": null
+    };
+    idForm = "";
+    usuario = [];
+    evaluacion = [];
+    establecimientosSalud = {};
     loadingIndicator: boolean = true;
     reorderable: boolean = true;
+    establecimientoSelected = { "codigo": null,"nombre":null, "unicodigo": null, "direccion": "" };
+
+    constructor( private coreesamynService: CoreesamynService, private route: ActivatedRoute,
+            private router: Router) {
+        // this.coreesamynService.getEstablecimientoSaludList().subscribe( data => {
+        //     this.establecimientosSalud = data;
+        //     console.log( JSON.stringify( this.establecimientosSalud ) );
+        // } );
 
 
-  constructor(private coreesamynService:CoreesamynService) {
-      this.coreesamynService.getEstablecimientoSalud().subscribe(data=>{
-        this.establecimientosSalud=data;})
-        this.coreesamynService.getEvaluacion().subscribe(data=>{
-          this.evaluacion=data;});
-  }
-  
-  ngOnInit() {
-  }
+    }
 
-  save(){
-      console.log(JSON.stringify(this.encuesta));
-      this.coreesamynService.createEncuesta(this.encuesta).subscribe(data=>{
-          this.evaluacion=data;});
-  }
+    ngOnInit() {
+        console.log( "-----------------" );
+        this.route.params.subscribe( params => {
+            console.log( "==>EncuestaFormComponent enta a router subscriber" );
+            this.idForm = params["id"];
+            console.log( this.idForm );
+            this.establecimientoSelected = JSON.parse(localStorage.getItem("establecimientoSalud"));
+            console.log("===>>init"+JSON.stringify(this.establecimientoSelected));
+        } );
+
+
+
+    }
+
+    save() {
+        console.log( "encuesta a crear" + JSON.stringify( this.encuesta ) );
+        console.log( "id fomrulario" + this.idForm);
+      this.coreesamynService.createEncuesta( this.encuesta ).subscribe(data=>{
+        console.log(""+JSON.stringify(data.objeto));
+            let parametro = {
+                    "idFormulario": this.idForm,
+                    "idEncuesta": data.objeto.codigo
+                };
+                console.log("parametros atrapados "+JSON.stringify(parametro));
+            this.router.navigate(['foesambyid', {id: parametro}]);
+
+        });
+
+
+    }
+
 }

@@ -2,7 +2,7 @@ import {Page} from "./index";
 
 export class PaginatedList<T> extends Page{
     list = new Array<T>();
-    
+
     /*setPageData( page:Page ){
     	this._size= page.size;
     	this._pageSize= page.size;
@@ -15,7 +15,7 @@ export class PaginatedList<T> extends Page{
 		this._end= page.end;
 		this._isPaginated=page.isPaginated;
     }
-    
+
     setPageDataParam( currentPage,pageNumber,pageSize,size,totalResults,totalElements,totalPages,start,end,isPaginated ){
     	this._size= size;
     	this._pageSize= pageSize;
@@ -28,7 +28,7 @@ export class PaginatedList<T> extends Page{
 		this._end= end;
 		this._isPaginated=isPaginated;
     }*/
-    
-    
-    
+
+
+
 }
