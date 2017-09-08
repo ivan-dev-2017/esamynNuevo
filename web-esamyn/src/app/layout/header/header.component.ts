@@ -1,10 +1,10 @@
 import { Component, OnInit, trigger, state, style, transition, animate } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { DialogService } from "ng2-bootstrap-modal";
 import {  User,Login } from '../../model/index';
 import {GlobaleventsmanagerService,AlertService,AuthenticationService,CoreesamynService} from "../../service/index";
-
 import {ChangepasswordComponent} from "../../login/changepassword/changepassword.component";
-import { DialogService } from "ng2-bootstrap-modal";
+
 
 @Component({
   selector: 'app-header',
@@ -45,29 +45,22 @@ export class HeaderComponent implements OnInit {
 
 	  this.globalEventsManager.showNavBarEmitter.subscribe((mode)=>{
 	        // mode will be null the first time it is created, so you need to igonore it when null
-	    	console.log("==>ENTRA A HEADER SUBSCRIBER HeaderComponent: "    );
 	        if (mode !== null && mode.loggedIn) {
-	          console.log("==>cambio usuaerio: " + localStorage.getItem('currentUser'));
 	          this.usuario = JSON.parse(localStorage.getItem('currentUser'));
 	          if( this.usuario && this.usuario.loggedIn==false ){
-	          	//console.log("==>cdesloge y oculta hamburger ");
 	          	this.menuState='in';
 	          } else if( !this.usuario  ){
-	          	//console.log("==>cdesloge y oculta hamburger cuando null usuario");
 	          	this.menuState='in';
 	          }
 	          this.coreesamynService.getEstablecimientoSaludList().subscribe(data=>{
-	              console.log("retorna estableciumientos: " + JSON.stringify(data));
 	              this.establecimientosSalud=data.objeto;
 	          });
 	        } else {
-	        	console.log("==>no cambio usuaerio: ");
 	        	this.usuario.loggedIn=false;
 	        	this.menuState='in';
 	        }
 	    },
       error => {
-      	console.log("==>despues de menu error  " + JSON.stringify(error));
       	this.alertService.error(error._body);
       });
   }
@@ -76,7 +69,6 @@ export class HeaderComponent implements OnInit {
   }
 
   logOut() {
-	  console.log("==>entra en logoutt con usuario: "  +JSON.stringify(this.usuario)  );
 	  this.usuario.loggedIn=false;
       let loginWrapper = new Login();
       loginWrapper.usuario=this.usuario;
@@ -86,32 +78,14 @@ export class HeaderComponent implements OnInit {
       this.returnUrl="/login";
       this.router.navigate([this.returnUrl]);
       this.returnUrl = null;
-
-      /*this.authenticationService.logout(this.usuario)
-          .subscribe(
-              data => {
-            	  this.usuario.loggedIn=false;
-            	  let loginWrapper = new Login();
-            	  loginWrapper.usuario=this.usuario;
-              	this.globalEventsManager.showNavBar(loginWrapper);
-                  this.returnUrl="/login";
-                  this.router.navigate([this.returnUrl]);
-                  this.returnUrl = null;
-              },
-              error => {
-              	console.log("==>despues de login error  " + JSON.stringify(error));
-                  this.alertService.error(error._body);
-              });*/
   }
 
   toggleMenu() {
-  console.log("cambia estado");
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
   }
 
   onSelectEstablecimiento(){
       if( this.establecimientoSelected ){
-          console.log("===>> establecimientoSelected: " + JSON.stringify(this.establecimientoSelected));
           this.globalEventsManager.selectedEtablecimiento(this.establecimientoSelected);
           localStorage.setItem("establecimientoSalud", JSON.stringify( this.establecimientoSelected));
       }
@@ -120,7 +94,6 @@ export class HeaderComponent implements OnInit {
 
   showPrompt() {
       let userLoc = JSON.parse(localStorage.getItem('currentUser'));
-      console.log("====> showPrompt");
       this.dialogService.addDialog(ChangepasswordComponent, {
         title:'RECUPERACION CONTRASENA USUARIO',
         usuario:userLoc })

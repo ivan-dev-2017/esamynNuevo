@@ -17,10 +17,7 @@ export class SecurityService extends BaseService{
   
 
   getUsuariosWithRol(codigoRol:string ) {
-	console.log("====>SecurityService.getUsuariosWithRol " +  codigoRol  );
-	console.log("====>called service from server " +  this.services["usuario.custom.findwithrol"]  );
 	this.params.append("codigoRol",codigoRol); 
-	console.log("==> parametros obtenidos " +  this.params.toString() );
 	this.options = new RequestOptions({ headers: this.headers, search:this.params });
 	return this.http
 	      .get(this.config.apiUrl + this.services["usuario.custom.findwithrol"], this.options)
@@ -29,17 +26,13 @@ export class SecurityService extends BaseService{
 			return paginatedListx;
 		},
 	  error => {
-	  	console.log("==>despues de buscar usuario error  " + JSON.stringify(error));
 	  });
 	}
   
   getAuthenticationItems(codigoRol:string, usuario:string ) {
-		console.log("====>SecurityService.getAuthenticationItems " +  codigoRol  );
-		console.log("====>called service from server " +  this.services["usuario.custom.findwithrol"]  );
 		this.params = new URLSearchParams();
 		this.params.append("codigoRol",codigoRol); 
 		this.params.append("usuario",usuario);
-		console.log("==> parametros obtenidos " +  this.params.toString() );
 		this.options = new RequestOptions({ headers: this.headers, search:this.params });
 		return this.http
 		      .get(this.config.apiUrl + this.services["rol.custom.getAuthorizationItems"], this.options)
@@ -48,13 +41,10 @@ export class SecurityService extends BaseService{
 				return paginatedListx;
 			},
 		  error => {
-		  	console.log("==>despues de buscar usuario error  " + JSON.stringify(error));
 		  });
   }
   
   getAllItems(service:string) {
-		console.log("====>SecurityService.getAllItems " + service   );
-		console.log("====>called service from server " +  this.services[service]  );
 		this.options = new RequestOptions({ headers: this.headers, search:this.params });
 		return this.http
 		      .get(this.config.apiUrl + this.services[service], this.options)
@@ -63,13 +53,10 @@ export class SecurityService extends BaseService{
 				return paginatedListx;
 			},
 		  error => {
-		  	console.log("==>despues de buscar usuario error  " + JSON.stringify(error));
 		  });
   }
   
   actionOnMenu(service:string, codigoRol:string, idLevel:string) {
-		console.log("====>SecurityService.actionOnMenu " + service   );
-		console.log("====>called service from server " +  this.services[service]  );
 		this.params.append("codigoRol",codigoRol); 
 		this.params.append("idLevel",idLevel);
 		this.options = new RequestOptions({ headers: this.headers, search:this.params });
@@ -80,7 +67,6 @@ export class SecurityService extends BaseService{
 				return paginatedListx;
 			},
 		  error => {
-		  	console.log("==>despues de buscar usuario error  " + JSON.stringify(error));
 		  });
 }
   

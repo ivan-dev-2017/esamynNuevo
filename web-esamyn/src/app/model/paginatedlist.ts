@@ -1,4 +1,4 @@
-import {Page} from "./index";
+import {Page} from "./page";
 
 export class PaginatedList<T> extends Page{
     list = new Array<T>();

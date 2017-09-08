@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {Md5} from 'ts-md5/dist/md5';
 import { Router, ActivatedRoute } from '@angular/router';
+import { DialogService } from "ng2-bootstrap-modal";
 
 import { AlertService, AuthenticationService } from '../service/index';
 import { GlobaleventsmanagerService } from '../service/globaleventsmanager.service';
 import { User,Login } from '../model/index';
 
 import {ForgetpasswordComponent} from "../login/forgetpassword/forgetpassword.component";
-import { DialogService } from "ng2-bootstrap-modal";
+
 
 @Component({
   selector: 'app-login',
@@ -31,7 +32,6 @@ export class LoginComponent implements OnInit {
     ngOnInit() {
         // reset login status
     	if( this.model.usuario != null ){
-    		console.log("==> logourt su usuario es not null");
     		this.model.usuario.loggedIn=false;
     		this.authenticationService.logout(this.model.usuario);
     	}
@@ -44,14 +44,12 @@ export class LoginComponent implements OnInit {
     }
 
     login() {
-    	console.log("==> entra a login " );
     	if( this.model ){
     	    this.model.password=Md5.hashStr(this.model.password)  as string ;
     	}
         this.authenticationService.login(this.model)
             .subscribe(
                 data => {
-                	console.log("=?????=>despues de login success  " + JSON.stringify(data));
                 	this.model.loggedIn=true;
                 	this.model.role= ""+data.rol.codigo;
                 	this.model.roleDescripcion=data.rol.descripcion;
@@ -61,7 +59,6 @@ export class LoginComponent implements OnInit {
                     this.returnUrl = null;
                 },
                 error => {
-                	console.log("==>despues de login error  " + JSON.stringify(error));
                     this.alertService.error(error._body);
                     this.loading = false;
                 });
@@ -69,7 +66,6 @@ export class LoginComponent implements OnInit {
     
     showPrompt() {
         let userLoc = new User(); 
-        console.log("====> showPrompt");
         this.dialogService.addDialog(ForgetpasswordComponent, {
           title:'RECUPERACION CONTRASENA USUARIO',
           usuario:userLoc })

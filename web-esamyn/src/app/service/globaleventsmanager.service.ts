@@ -14,14 +14,12 @@ export class GlobaleventsmanagerService {
   constructor() { }
   
   showNavBar(user: Login) {
-	  console.log("===> observable " +JSON.stringify(user));
       this._showNavBar.next(user);
       return user;
       
   }
   
   selectedEtablecimiento(establecimiento: any) {
-      console.log("===> observable selectedEtablecimiento " +JSON.stringify(establecimiento));
       this._selectedEtablecimiento.next(establecimiento);
       return establecimiento;
       

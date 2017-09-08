@@ -23,22 +23,15 @@ export class MenuComponent implements OnInit {
 
 	    this.globalEventsManager.showNavBarEmitter.subscribe((mode)=>{
 	        // mode will be null the first time it is created, so you need to igonore it when null
-	    	//console.log("==>entra en subscriber menu: " + mode   );
-	    	console.log("==>entra en subscriber menu string : " + JSON.stringify(mode)   );
 	        if (mode !== null && mode.loggedIn) {
 	          this.usuario = JSON.parse( localStorage.getItem('currentUser'));
 	          this.loginWrapper=mode;
-	          //console.log("==>usuario logeado: "  +JSON.stringify(this.usuario)  );
-	          //let menu=JSON.parse(localStorage.getItem('menu'));
-	          //this.panelMenuAppList=menu;
 	        } else {
-	        	console.log("==>no cambio usuaerio: ");
 	        	this.loginWrapper.loggedIn=false;
 	        	this.usuario.loggedIn=false;
 	        }
 	    },
         error => {
-        	console.log("==>despues de menu error  " + JSON.stringify(error));
         	this.alertService.error(error._body);
         });
 

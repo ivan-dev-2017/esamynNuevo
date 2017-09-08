@@ -25,7 +25,6 @@ export class AppComponent implements OnDestroy{
 		      private alertService: AlertService) {
 	  //this.subscription = this.messageService.getMessage().subscribe(message => { this.message = message; });
 	  this.globalEventsManager.showNavBarEmitter.subscribe((mode)=>{
-	    	console.log("==>*********************entra en subscriber AppComponent: "    );
 	        if (mode !== null) {
 	        	this.usuario = JSON.parse(localStorage.getItem('currentUser'));
 	        } else {
@@ -34,7 +33,6 @@ export class AppComponent implements OnDestroy{
 	        }
 	    },
     error => {
-    	console.log("==>despues de menu error  " + JSON.stringify(error));
     	this.alertService.error(error._body);
     });
   }

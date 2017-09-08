@@ -2,18 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { CoreesamynService } from '../../service/coreesamyn.service';
 
 @Component({
-  selector: 'evaluacion-list',
+  selector: 'establecimiento-salud-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class EvaluacionlistComponent implements OnInit {
+export class EstablecimientoSaludListComponent implements OnInit {
   rows=[];
   selected = [];
   loadingIndicator: boolean = true;
   reorderable: boolean = true;
   constructor(private coreesamynService:CoreesamynService) {
-    this.coreesamynService.getEvaluacionList().subscribe( data=>{
-      this.rows=data;})
+    this.coreesamynService.getEstablecimientoSaludList().subscribe( data=>{
+      this.rows=data;});
    }
 
   ngOnInit() {

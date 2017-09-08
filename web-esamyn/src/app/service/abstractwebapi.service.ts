@@ -49,7 +49,6 @@ export class WebApiObservableService {
     }
 
     getServiceWithComplexObjectAsQueryString(url: string, param: any): Observable<any> {
-    	console.log("===========> EN WEBAPI getServiceWithComplexObjectAsQueryString ");
         let params: URLSearchParams = new URLSearchParams();
         for (var key in param) {
             if (param.hasOwnProperty(key)) {
@@ -111,9 +110,7 @@ export class WebApiObservableService {
     }
 
     private extractData(res: Response) {
-    	console.log("===========> EN WEBAPI extractData  ");
         let body = res.json();
-        console.log("===========> EN WEBAPI extractData BODY " + JSON.stringify(body));
         return body || {};
     }
 

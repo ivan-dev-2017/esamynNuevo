@@ -17,7 +17,7 @@
 		<ul class="sidebar-menu">
 			<li class="header">MENU NAVEGACION</li>
 			<li class="treeview" *ngIf="loginWrapper.role==1 || loginWrapper.role==3">
-				<a href="#"> <i class="fa fa-file-text"></i>
+				<a href="#"> <i class="fa fa-check-square-o"></i>
 					<span>ENCUESTAS</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i>
 					</span>
 				</a>
@@ -29,7 +29,7 @@
 				</ul>
 			</li>
 			<li class="treeview"  *ngIf="loginWrapper.role==1 || loginWrapper.role==2">
-				<a href="#"> <i class="fa fa-file-text"></i>
+				<a href="#"> <i class="fa fa-line-chart"></i>
 					<span>EVALUACIONES</span> <span class="pull-right-container"> <i
 						class="fa fa-angle-left pull-right"></i>
 					</span>
@@ -41,7 +41,7 @@
 				</ul>
 			</li>
 			<li class="treeview"  *ngIf="loginWrapper.role==1">
-				<a href="#"> <i class="fa fa-file-text"></i>
+				<a href="#"> <i class="fa fa-user-circle"></i>
 					<span>ADMINISTRACION</span> <span class="pull-right-container"> <i
 						class="fa fa-angle-left pull-right"></i>
 					</span>
@@ -53,18 +53,6 @@
 				</ul>
 			</li>
 
-			<li class="treeview"  *ngIf="loginWrapper.role==1 || loginWrapper.role==2">
-				<a href="#"> <i class="fa fa-file-text"></i>
-					<span>EVALUACIONES</span> <span class="pull-right-container"> <i
-						class="fa fa-angle-left pull-right"></i>
-					</span>
-				</a>
-				<ul class="treeview-menu">
-					<li class="active">
-						<a [routerLink]="'/establecimientoSaludList'"> <i class="fa fa-circle-o"></i> LISTADO establecimientoSalud</a>
-					</li>
-				</ul>
-			</li>
 		</ul>
 	</section>
 	<!-- /.sidebar -->

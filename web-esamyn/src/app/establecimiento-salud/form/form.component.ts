@@ -10,7 +10,7 @@ import { MessageComponent } from '../../comp/message/message.component';
     templateUrl: './form.component.html',
     styleUrls: ['./form.component.css']
 } )
-export class EstablecimientoSaludComponent implements OnInit {
+export class EstablecimientoSaludFormComponent implements OnInit {
     failures: Array<string> = new Array;
     standardForm: FormGroup;
     messages: string = "Invalido";
@@ -34,17 +34,14 @@ export class EstablecimientoSaludComponent implements OnInit {
     loadingIndicator: boolean = true;
 
     constructor( private coreesamyn: CoreesamynService ) {
-        console.log( "<<<<< ENTRO EN ESTABLECIMIENTO SALUD  >>>>>" );
         this.failures.push( "InvalidoArray" );
         this.coreesamyn.getCantonesList(1).subscribe(
             data => {
-                console.log( "<<<<<  retorno: " + JSON.stringify( data ) );
                 this.cantones = data.objeto;
                 setTimeout(() => { this.loadingIndicator = false; }, 1500 );
             } );
         this.coreesamyn.getPersonaJuridicaList().subscribe(
             data => {
-                console.log( "<<<<< RETORNO PERSONAS JURIDICAS " + JSON.stringify( data ) );
                 this.personasJuridicas = data.objeto;
                 setTimeout(() => { this.loadingIndicator = false; }, 1500 );
             } );
@@ -54,10 +51,7 @@ export class EstablecimientoSaludComponent implements OnInit {
     }
 
     save() {
-
-        console.log( "establecimiento a crear "+JSON.stringify( this.establecimientoSalud ) );
         this.coreesamyn.createEstablecimientoSalud(this.establecimientoSalud).subscribe(data=>{
-          console.log("establecimiento creado"+JSON.stringify(data.objeto));
         });
     }
 

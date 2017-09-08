@@ -19,16 +19,13 @@ export class AuthenticationService {
     		private globaleventsmanagerService: GlobaleventsmanagerService) { }
 
     login(usuarioAuth: Login) {
-    	console.log("=====.AuthenticationService ingresa a login " + JSON.stringify(usuarioAuth));
     	this.headers = new Headers({ 'Content-Type': 'application/json','Accept':'application/json','Authorization': 'login'+ this.config.keyFirstLogin });
     	let usuarioesamyn={usuario:usuarioAuth.name,password:usuarioAuth.password};
     	//let usuarioesamyn={usuario:"1716187206",password:"81dc9bdb52d04dc20036dbd8313ed055"};
     	return this.http.post(  this.config.apiUrl+ 'rest/usuario',
     	        usuarioesamyn)
         		.map((response: Response) => {
-        			console.log("===>respondiod ");
         			let loginWrapper = response.json();
-        			console.log("===>retorno login wrapper "+ JSON.stringify(loginWrapper));
         			let user = loginWrapper.objeto;
         			if (user && user.token) {
         			    let usuario= new User();
@@ -51,14 +48,11 @@ export class AuthenticationService {
     	let headersLoc = new Headers({ 'Authorization': 'Bearer' + usuarioAuth.token});
     	usuarioAuth.loggedIn=false;
     	let services = JSON.parse( localStorage.getItem('services'));
-    	console.log("===> servicio logout " + services["security.logout"] );
         return this.http.post(services["security.logout"],
         		              {usuario:usuarioAuth},
         		              new RequestOptions({ headers: headersLoc }))
         .map((response: Response) => {
-			console.log("===>respondiod " + JSON.stringify(response.json()));
 			let loginWrapper = response.json();
-			console.log("===>rlogin wrapper "+ JSON.stringify(loginWrapper));
 			let user = loginWrapper.usuario;
 			loginWrapper.usuario =usuarioAuth;
 			if (user && user.token) {
@@ -70,7 +64,6 @@ export class AuthenticationService {
     }
     
     changePassword(usuarioAuth: User){
-        console.log("cambuo contrasena de usuario: " + JSON.stringify(usuarioAuth));
         let headersLoc = new Headers({ 'Content-Type': 'application/json',
                                        'Accept':'application/json',
                                        'ApiToken': usuarioAuth.token });
@@ -84,18 +77,15 @@ export class AuthenticationService {
                              cambio,
                               new RequestOptions({ headers: headersLoc }))
         .map((response: Response) => {
-            console.log("===>respondiod " + JSON.stringify(response.json()));
             return response.json();
         });
     }
     
     recoverPassword(usuarioAuth:User){
-        console.log("reupenadno contrasena");
         let headersLoc = new Headers({ 'Content-Type': 'application/json','Accept':'application/json'});
         return this.http.post(this.config.apiUrl + "rest/usuario/olvido/"+ usuarioAuth.nombre,
            new RequestOptions({ headers: headersLoc }))
             .map((response: Response) => {
-            console.log("===>respondiod " + JSON.stringify(response.json()));
             return response.json();
         });
     }

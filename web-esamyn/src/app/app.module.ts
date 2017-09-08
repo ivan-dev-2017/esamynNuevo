@@ -36,8 +36,9 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { MenuComponent } from './layout/menu/menu.component';
 import { EmailvalidatorDirective,NumbervalidatorDirective,DropdownvalidatorDirective } from './validator/index';
 import { FormularioListComponent } from './formulario/list/list.component';
-import { EstablecimientoSaludComponent } from './establecimiento-salud/form/form.component';
-import { EstablecimientoSaludList } from './establecimiento-salud/list/list.component';
+import { EstablecimientoSaludFormComponent } from './establecimiento-salud/form/form.component';
+import { EstablecimientoSaludListComponent } from './establecimiento-salud/list/list.component';
+import { EstablecimientoSaludComponent } from './establecimiento-salud/establecimiento-salud.component';
 import { FoesamnComponent } from './encuesta/foesamn/foesamn.component';
 import { ForgetpasswordComponent } from './login/forgetpassword/forgetpassword.component';
 import { ChangepasswordComponent } from './login/changepassword/changepassword.component';
@@ -73,14 +74,15 @@ import { EvaluacionformComponent } from './evaluacion/form/form.component';
 		DropdownvalidatorDirective,
     MessageComponent,
     FormularioListComponent,
+    EstablecimientoSaludFormComponent,
+    EstablecimientoSaludListComponent,
     EstablecimientoSaludComponent,
     FoesamnComponent,
     EncuestaFormComponent,
     EvaluacionlistComponent,
     EvaluacionformComponent,
     ForgetpasswordComponent,
-    ChangepasswordComponent,
-    EstablecimientoSaludList
+    ChangepasswordComponent
   ],
   imports: [
     BrowserModule,

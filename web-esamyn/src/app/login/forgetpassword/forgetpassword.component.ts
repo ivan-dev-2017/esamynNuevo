@@ -19,17 +19,14 @@ export class ForgetpasswordComponent extends DialogComponent<PromptUserModel, Us
     mensaje: string;
     constructor(dialogService: DialogService, private authenticationService:AuthenticationService){
         super(dialogService);
-        console.log("====> entra en cl ocntructor de usuari ocomponente");
     }
 
   ngOnInit() {
   }
   
   apply(){
-      console.log("====> cambiando password de usuario: " + JSON.stringify(this.usuario));
       if( this.usuario.nombre){
           this.authenticationService.recoverPassword(this.usuario).subscribe(data=>{
-              console.log("Retnono cambio: " + JSON.stringify( data ));
           });
           this.mensaje="REVISE SU CORREO ELECTRONICO";
       } else {

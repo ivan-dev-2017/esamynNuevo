@@ -27,24 +27,23 @@ export class ChangepasswordComponent extends DialogComponent<PromptUserModel, Us
             private authenticationService:AuthenticationService){
         super(dialogService);
         this.disableButton=false;
-        console.log("====> entra en cl ocntructor de usuari ocomponente");
     }
 
   ngOnInit() {
   }
   
   apply(){
-      console.log("====> cambiando password de usuario: " + JSON.stringify(this.usuario));
-      if( this.usuario.contrasenia && this.usuario.passwordConfirm &&    
-              this.usuario.contrasenia == this.usuario.passwordConfirm){
+      if( this.usuario.contrasenia && this.usuario.passwordConfirm ){
           this.authenticationService.changePassword(this.usuario).subscribe(data=>{
-              console.log("Retnono cambio: " + JSON.stringify( data ));
+              this.disableButton=false;
+              this.mensaje="CONTRASE&Ntilde;A ACTUALIZADA";
+              this.returnUrl="/login";
+              this.router.navigate([this.returnUrl]);
           });
           //this.result = this.usuario;
           //this.close();
-          this.mensaje="CONTRASE&Ntilde;A ACTUALIZADA";
-          this.returnUrl="/login";
-          this.router.navigate([this.returnUrl]);
+          
+          
       } else {
           if( !this.usuario.passwordConfirm || !this.usuario.contrasenia   ){
               this.mensaje="INGRESE CONTRASE&Ntilde;A";

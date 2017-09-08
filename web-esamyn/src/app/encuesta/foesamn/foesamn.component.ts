@@ -10,6 +10,12 @@ import { CoreesamynService } from '../../service/coreesamyn.service';
 } )
 export class FoesamnComponent implements OnInit {
 
+    objetoGlobal={"idEncuesta": null,
+            "idFormulario": null,
+            "responsable": null,
+            "cargo": null,
+            "extra": null,
+            "pregunta":[]};
     preguntas = [];
     observaciones = {
             "codigo": null,
@@ -95,53 +101,54 @@ export class FoesamnComponent implements OnInit {
 
     }
 
+    /**
+     * Metodo que obtiene la informacion de encuesta y preguntas asociadas
+     * 1. Obtiene lis parametros enviados desde la ruta
+     * 2. Obtiene la encuesta por id de encuesta
+     * 3. Obtiene las preguntas asociadas a la encuesta y el formulario
+     */
     public getEncuestaAndPreguntas() {
-        console.log( "==getPreguntas Routa con parametros ");
         this.route.queryParams.subscribe(params => {
-            console.log("===> ingresa a route queryparams con parametros: " + JSON.stringify(params) );
             this.parametro.idFormulario = +params['idFormulario'];
-            console.log("===> kleyo id firmlario: "  );
             this.parametro.idEncuesta = +params['idEncuesta'];
-            console.log("===> kleyo id encuesta: "  );
         });
-        console.log( "==lleno parametros:   " + JSON.stringify(this.parametro));
         this.coreesamynService.getEncuestabyId(this.parametro.idEncuesta).subscribe(data=>{
-            console.log( "==obtvo enceusta:   " + JSON.stringify(data));
             this.encuesta=data.objeto;
             if( this.encuesta && this.encuesta.establecimientoSalud){
                 this.establecimientoSalud=this.encuesta.establecimientoSalud;
             } else if(  localStorage.getItem("establecimientoSalud") ){
-                console.log("foesam ingresa a tomar el establecimiento dememoria " + localStorage.getItem("establecimientoSalud"))
                 this.establecimientoSalud= JSON.parse( localStorage.getItem("establecimientoSalud") );
             }
         });
 
         this.coreesamynService.getEncuestaByFormularioAndEncuesta(this.parametro ).subscribe( data => {
-            //console.log( "PREGUNTAS CONSULTADAS: " + JSON.stringify(data ) );
+            this.objetoGlobal=data.objeto;
             this.preguntas = data.objeto.pregunta;
-
-            console.log( "PREGUNTAS CONSULTADAS: " + JSON.stringify(this.preguntas ) );
 
             if( this.preguntas && this.preguntas.length>2 ){
                 this.observaciones=this.preguntas[2];
-                console.log( "observaciones CONSULTADAS aness: " + JSON.stringify(this.observaciones ) );
-                this.observaciones.preguntaLista=this.observaciones.preguntaLista.filter(item => item.codigoTipoPregunta === 1);
-                console.log( "observaciones CONSULTADAS despyues: " + JSON.stringify(this.observaciones ) );
                 this.documentos=this.preguntas[3];
-                console.log( "observaciones CONSULTADAS: " + JSON.stringify(this.observaciones ) );
-                console.log( "documentos CONSULTADAS: " + JSON.stringify(this.documentos ) );
             }
 
         } );
-
-
-
     }
 
     public saveEncuesta() {
-
-        console.log( "enviando preguntas " + JSON.stringify( this.preguntas ) );
-
+        this.objetoGlobal.idEncuesta=this.parametro.idEncuesta;
+        this.objetoGlobal.idFormulario=this.parametro.idFormulario;
+        this.preguntas[2]=this.observaciones;
+        this.preguntas[3]=this.documentos;
+        this.objetoGlobal.pregunta=this.preguntas;
+        this.coreesamynService.saveEncuesta(this.objetoGlobal);
+    }
+    
+    public endEncuesta(){
+        this.objetoGlobal.idEncuesta=this.parametro.idEncuesta;
+        this.objetoGlobal.idFormulario=this.parametro.idFormulario;
+        this.preguntas[2]=this.observaciones;
+        this.preguntas[3]=this.documentos;
+        this.objetoGlobal.pregunta=this.preguntas;
+        this.coreesamynService.endEncuesta(this.objetoGlobal);
     }
 
 

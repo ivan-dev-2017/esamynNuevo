@@ -7,9 +7,12 @@
 	<div class="box-body chat" id="chat-box">
 		<div class="form-group form-group-sm">
 			<form #standardForm="ngForm" (ngSubmit)="save()">
-					<div class="row">
+				<div class="text-left" style="width: 200px">
+					<span  class="label bg-primary">Encuesta</span>
+				</div>
+				<!--div class="row" >
 					<div class="col-sm-5">
-						<div class="input-group" >
+						<div class="input-group">
 							<span class="input-group-addon"><i
 								class="fa fa-text-width" aria-hidden="true"></i></span> <input
 								class="form-control" type="text" placeholder="CODIGO"
@@ -17,25 +20,32 @@
 								class="{invalid: (invalid | async)}" name="codigo" />
 						</div>
 					</div>
-				</div>
-<div>{{establecimientoSelected.nombre}}</div>
-				<div class="row">
-					<div class="col-sm-5">
-						<div class="input-group" >
+				</div-->
+				
+				<div class="row" style="border:solid 1px #337ab7; margin: 0px !important">
+					<div class="col-sm-2" style="margin: 10px 0px;">
+						<div class="input-group">
 							<span class="input-group-addon"><i
 								class="fa fa-text-width" aria-hidden="true"></i></span> <input
 								class="form-control" type="text" placeholder="RESPONSABLE"
 								[(ngModel)]="encuesta.responsable"
-								class="{invalid: (invalid | async)}" name="responsable" id="responsable" />
+								class="{invalid: (invalid | async)}" name="responsable"
+								id="responsable" />
 						</div>
 					</div>
 					<div class="col-sm-1">
 						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
 							[messages]="failures | async"> </app-message>
 					</div>
+					<div class="col-sm-2 input-group" style="margin: 10px 0px;">
+						ESTABLECIMIENTO
+					</div>
+					<div class="col-sm-3">
+						{{establecimientoSelected.nombre}}
+					</div>	
 				</div>
-				<div class="row">
-					<div class="col-sm-5">
+				<div class="row" style="border:solid 2px #337ab7; margin: 0px !important">
+					<div class="col-sm-3" style="margin: 10px 0px;">
 						<div class="input-group">
 							<span class="input-group-addon"><i
 								class="fa fa-text-width" aria-hidden="true"></i></span> <input
@@ -48,9 +58,7 @@
 						<app-message [@flyInOut]="'in,out'" *ngIf="invalid | async"
 							[messages]="failures | async"> </app-message>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-5">
+					<div class="col-sm-3" style="margin: 10px 0px;">
 						<div class="input-group">
 							<span class="input-group-addon"><i
 								class="fa fa-text-width" aria-hidden="true"></i></span> <input
@@ -65,17 +73,12 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<!-- <button type="submit" [disabled]="standardForm.invalid"
-						class="btn btn-success">
-						<i class="fa fa-floppy-o" aria-hidden="true"></i>
-					</button> -->
 					<a href="javascript:void(0);" class="btn btn-primary"
 						(click)="clear()"> <i class="fa fa-eraser" aria-hidden="true"></i>
 					</a>
-
-					<button  type="submit" [disabled]="standardForm.invalid"
-					class="btn btn-primary"
-						(click)="save()"> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+					<button type="submit" [disabled]="standardForm.invalid"
+						class="btn btn-primary" (click)="save()">
+						<i class="fa fa-arrow-right" aria-hidden="true"></i>
 					</button>
 				</div>
 			</form>
