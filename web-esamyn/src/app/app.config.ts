@@ -25,4 +25,5 @@ export class AppConfig {
                                   'canton.crud.update':'rest/canton/guardar',
                                   'canton.crud.read':'rest/canton/buscar/',
                                   'canton.crud.delete':'rest/canton/eliminar/'};
+    public readonly idPregNumTotPerTrabEs=8238;
 };

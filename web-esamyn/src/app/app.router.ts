@@ -18,7 +18,6 @@ import { EvaluacionformComponent } from './evaluacion/form/form.component';
 
 
 export const appRoutes: Routes = [
-    //{ path: '', component: HomeComponent, canActivate: [AuthGuard] },
     { path: 'establecimientoSaludForm', component: EstablecimientoSaludFormComponent, canActivate: [AuthGuard] },
     { path: 'establecimientoSaludList', component: EstablecimientoSaludListComponent, canActivate: [AuthGuard] },
     { path: 'establecimientoSalud', component: EstablecimientoSaludComponent, canActivate: [AuthGuard] },
@@ -32,7 +31,6 @@ export const appRoutes: Routes = [
     { path: 'formulariolist',component: FormularioListComponent, canActivate: [AuthGuard] },
     { path: 'evaluacionlist', component: EvaluacionlistComponent, canActivate: [AuthGuard] },
     { path: 'evaluacionform/:idEvaluacion', component: EvaluacionformComponent, canActivate: [AuthGuard] },
-    // otherwise redirect to login
     { path: '**', redirectTo: '/login' }
 ];
 

@@ -146,6 +146,18 @@ export class CoreesamynService extends BaseService {
             }
         );
     }
+    
+    /**
+     * Metodo que obtiene la evaluacion por identificador
+     * @param id id de la evaluacion
+     */
+    getPreguntaByIdUrl(id:number){
+        return this.findByPkUrl(id.toString(),'evaluacion.crud.read').map((response)=>{
+          let paginatedListx=response.json();
+          let x = paginatedListx.objeto;
+          return x.filter(evaluacion => evaluacion.id == id);
+        });
+      }
 
     /**
      * Metodo que trae el usuario logeado
@@ -171,19 +183,11 @@ export class CoreesamynService extends BaseService {
      * @param id id de la evaluacion
      */
     getEvaluacionById(id:number){
-
         return this.findByPkUrl(id.toString(),'evaluacion.crud.read').map((response)=>{
-
-        //return this.http.get('./app/mock/evaluacion.json').map((response)=>{
-
           let paginatedListx=response.json();
-
           let x = paginatedListx.objeto;
-
           return x.filter(evaluacion => evaluacion.id == id);
-
         });
-
       }
 
     /**
