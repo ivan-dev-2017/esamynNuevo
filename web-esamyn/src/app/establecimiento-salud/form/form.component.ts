@@ -52,6 +52,8 @@ export class EstablecimientoSaludFormComponent implements OnInit {
 
     save() {
         this.coreesamyn.createEstablecimientoSalud(this.establecimientoSalud).subscribe(data=>{
+            let establecimientoCreado=data;
+            console.log(JSON.stringify(establecimientoCreado));
         });
     }
 
