@@ -35,12 +35,19 @@ export class EncuestaFormComponent implements OnInit {
             console.log( "===>>init" + JSON.stringify( this.establecimientoSelected ) );
         } );
     }
-
+    onSelect( { selected } ) {
+        let establecimiento = JSON.parse(localStorage.getItem("establecimientoSalud"));
+        this.establecimientoSelected = JSON.parse( localStorage.getItem( "establecimientoSalud" ) );
+    }
+    
     save() {
         if ( this.establecimientoSelected ) {
             this.encuesta.establecimientoSalud = this.establecimientoSelected.codigo;
         }
+        console.log("==> recibe "+JSON.stringify(this.encuesta));
         this.coreesamynService.createEncuesta( this.encuesta ).subscribe( data => {
+            let encuestaCreada=data;
+            console.log("<== respuesta "+JSON.stringify(encuestaCreada));
             let parametro = {
                 "idFormulario": this.idForm,
                 "idEncuesta": data.objeto.codigo

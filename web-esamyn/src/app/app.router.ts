@@ -25,7 +25,7 @@ export const appRoutes: Routes = [
     { path: 'login',component: LoginComponent, canActivate: [AuthGuard] },
     { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
     { path: 'foesamn', component: FoesamnComponent, canActivate: [AuthGuard] },
-    { path: 'foesambyid/:id', component: FoesamnComponent, canActivate: [AuthGuard] },
+    { path: 'foesambyid', component: FoesamnComponent, canActivate: [AuthGuard] },
     { path: 'encuestaformcomponent', component: EncuestaFormComponent, canActivate: [AuthGuard] },
     { path: 'encuestaformcomponent/:id', component: EncuestaFormComponent, canActivate: [AuthGuard] },
     { path: 'foesamlist', component: FoesamnComponent, canActivate: [AuthGuard] },
