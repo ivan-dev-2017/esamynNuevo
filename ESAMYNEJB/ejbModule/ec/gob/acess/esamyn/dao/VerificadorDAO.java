@@ -1,7 +1,9 @@
 package ec.gob.acess.esamyn.dao;
 
 import javax.ejb.Local;
+
 import com.saviasoft.persistence.util.dao.GenericDao;
+
 import ec.gob.acess.esamyn.modelo.Verificador;
 
 /**
@@ -16,4 +18,10 @@ import ec.gob.acess.esamyn.modelo.Verificador;
 @Local
 public interface VerificadorDAO extends GenericDao<Verificador, Long> {
 
+	/**
+	 * Elimina las verificaciones relaiconadas a un Evaluacion.
+	 * 
+	 * @param codigoEvaluacion
+	 */
+	void eliminarVerificadorPorEvaluacion(Long codigoEvaluacion);
 }
