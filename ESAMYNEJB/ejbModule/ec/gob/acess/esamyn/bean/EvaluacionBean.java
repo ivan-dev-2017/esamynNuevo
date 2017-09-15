@@ -25,6 +25,10 @@ import ec.gob.acess.esamyn.dao.ParametroDAO;
 import ec.gob.acess.esamyn.dao.RespuestaDAO;
 import ec.gob.acess.esamyn.dao.UsuarioDAO;
 import ec.gob.acess.esamyn.dao.VerificadorDAO;
+import ec.gob.acess.esamyn.dto.DirectrizDto;
+import ec.gob.acess.esamyn.dto.EvaluacionDto;
+import ec.gob.acess.esamyn.dto.ParametroDto;
+import ec.gob.acess.esamyn.dto.PasoDto;
 import ec.gob.acess.esamyn.exception.EvaluacionException;
 import ec.gob.acess.esamyn.modelo.EstablecimientoSalud;
 import ec.gob.acess.esamyn.modelo.Evaluacion;
@@ -63,6 +67,9 @@ public class EvaluacionBean extends GenericServiceImpl<Evaluacion, Long> {
 
 	@EJB
 	private EncuestaDAO encuestaDAO;
+	
+	@EJB
+	private VerificadorBean verificadorBean;
 
 	/**
 	 * Crea la evaluación de un establecimiento de salud.
@@ -302,4 +309,218 @@ public class EvaluacionBean extends GenericServiceImpl<Evaluacion, Long> {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	
+
+
+	 public List<EvaluacionDto> verEvaluacionResumen(Long idEvaluacion) {
+
+		List<Verificador> lista = verificadorBean.listaPorEvaluacion(idEvaluacion);
+
+		List<DirectrizDto> directrices = llenaDirectriz(lista);
+
+		List<PasoDto> pasos = llenarPasos(directrices);
+
+		return llenarGrupo(pasos);
+
+	    }
+
+	    private List<EvaluacionDto> llenarGrupo(List<PasoDto> pasos) {
+
+		List<EvaluacionDto> grupos = new ArrayList<>();
+
+		// Creamos lista de pasos
+		for (PasoDto pasoDto : pasos) {
+
+		    boolean encuetra = false; // Variable busca si ya esta la lista pasos
+
+		    for (EvaluacionDto grupo : grupos) {
+
+			if (grupo.getCodigoGrupo().equals(pasoDto.getGrupoPadre().getCodigo())) {
+
+			    encuetra = true;
+			    break;
+
+			}
+
+		    }
+
+		    if (!encuetra) {
+
+			// agregamos la paso
+
+			EvaluacionDto evaluacionDto = new EvaluacionDto();
+
+			evaluacionDto.setCodigoGrupo(pasoDto.getGrupoPadre().getCodigo());
+
+			evaluacionDto.setGrupo(pasoDto.getGrupoPadre().getTexto());
+
+			grupos.add(evaluacionDto);
+		    }
+
+		}
+
+		// Llenar a pasos para evaluacionDto
+
+		for (EvaluacionDto evaluacionDto : grupos) {
+
+		    List<PasoDto> lista = new ArrayList<>();
+		    for (PasoDto pasoDto : pasos) {
+
+			if (evaluacionDto.getCodigoGrupo().equals(pasoDto.getGrupoPadre().getCodigo())) {
+
+			    lista.add(pasoDto);
+			}
+
+		    }
+
+		    evaluacionDto.setHijos(lista);
+
+		}
+
+		return grupos;
+
+	    }
+
+	    /**
+	     * Llena lista de pasos con lista de directrices
+	     * 
+	     * @param directrices
+	     * @return
+	     */
+	    private List<PasoDto> llenarPasos(List<DirectrizDto> directrices) {
+
+		List<PasoDto> pasos = new ArrayList<>();
+
+		// Creamos lista de pasos
+		for (DirectrizDto directrizDto : directrices) {
+
+		    boolean encuetra = false; // Variable busca si ya esta la lista pasos
+
+		    for (PasoDto pasoDto : pasos) {
+
+			if (pasoDto.getCodigoGrupo().equals(directrizDto.getGrupoPadre().getCodigo())) {
+
+			    encuetra = true;
+			    break;
+
+			}
+
+		    }
+
+		    if (!encuetra) {
+
+			// agregamos la paso
+
+			PasoDto pasoDto = new PasoDto();
+
+			pasoDto.setCodigoGrupo(directrizDto.getGrupoPadre().getCodigo());
+			pasoDto.setPaso(directrizDto.getGrupoPadre().getTexto());
+
+			pasoDto.setGrupoPadre(directrizDto.getGrupoPadre().getPadre());
+
+			pasos.add(pasoDto);
+		    }
+
+		}
+
+		// Llenamos lista de directrices en pasos
+
+		for (PasoDto pasoDto : pasos) {
+
+		    List<DirectrizDto> lista = new ArrayList<>();
+
+		    for (DirectrizDto directrizDto : directrices) {
+
+			if (pasoDto.getCodigoGrupo().equals(directrizDto.getGrupoPadre().getCodigo())) {
+
+			    lista.add(directrizDto);
+
+			}
+		    }
+
+		    pasoDto.setHijos(lista);
+
+		}
+
+		return pasos;
+
+	    }
+
+	    /**
+	     * Llena lista de directrices con lista de parametros
+	     * 
+	     * @param listaEvaluaciones
+	     * @return
+	     */
+	    private List<DirectrizDto> llenaDirectriz(List<Verificador> listaEvaluaciones) {
+
+		List<DirectrizDto> directrices = new ArrayList<>();
+
+		// CREA LISTA de DIRECCTRICES
+		for (Verificador verificador : listaEvaluaciones) {
+
+		    boolean encuetra = false; // Variable busca si ya esta la directriz
+		    for (DirectrizDto directrizDto : directrices) {
+
+			if (directrizDto.getCodigoGrupo().equals(verificador.getParametro().getGrupoParametro().getCodigo())) {
+
+			    encuetra = true;
+			    break;
+			}
+
+		    }
+
+		    if (!encuetra) {
+
+			// agregamos la directriz
+
+			DirectrizDto directrizDto = new DirectrizDto();
+
+			directrizDto.setCodigoGrupo(verificador.getParametro().getGrupoParametro().getCodigo());
+			directrizDto.setDirectriz(verificador.getParametro().getGrupoParametro().getTexto());
+
+			directrizDto.setGrupoPadre(verificador.getParametro().getGrupoParametro().getPadre());
+
+			directrices.add(directrizDto);
+		    }
+
+		}
+
+		// LLENA PARAMETROS POR DIRECTRIZ
+
+		for (DirectrizDto directriz : directrices) {
+
+		    List<ParametroDto> parametros = new ArrayList<>();
+
+		    for (Verificador verificador : listaEvaluaciones) {
+
+			if (directriz.getCodigoGrupo().equals(verificador.getParametro().getGrupoParametro().getCodigo())) {
+
+			    ParametroDto parametro = new ParametroDto();
+
+			    parametro.setParametro(verificador.getParametro().getTexto());
+
+			    parametro.setVerificador(verificador.getParametro().getCodigoParametro());
+
+			    parametro.setNoAplica(verificador.getCumpleCondicionNoAplica().getCumple() == 1 ? true : false);
+
+			    parametro.setObligatorio(verificador.getParametro().getObligatorio() == 1 ? true : false);
+
+			    parametro.setPuntaje(verificador.getParametro().getPuntaje());
+
+			    parametro.setCodigoParametro(verificador.getParametro().getCodigo());
+
+			    parametros.add(parametro);
+			}
+
+		    }
+
+		    directriz.setHijos(parametros);
+
+		}
+
+		return directrices;
+
+	    }
 }
