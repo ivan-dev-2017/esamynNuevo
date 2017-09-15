@@ -35,100 +35,107 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "evaluacion")
 public class Evaluacion implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Basic(optional = false)
-	@Column(name = "eva_id")
-	private Long codigo;
-	@Column(name = "eva_numero")
-	@XmlTransient
-	private Integer numero;
-	@Column(name = "eva_calificacion")
-	private BigInteger calificacion;
-	@Basic(optional = false)
-	@Column(name = "eva_fecha_inicio")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date fechaInicio;
-	@Column(name = "eva_fecha_calificacion")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date fechaCalificacion;
-	@Basic(optional = false)
-	@Column(name = "eva_cantidad_encuestas")
-	private int cantidadEncuestas;
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "eva_id")
+    private Long codigo;
+    @Column(name = "eva_numero")
+    @XmlTransient
+    private Long numero;
+    @Column(name = "eva_calificacion")
+    private BigInteger calificacion;
+    @Basic(optional = false)
+    @Column(name = "eva_fecha_inicio")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date fechaInicio;
+    @Column(name = "eva_fecha_calificacion")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date fechaCalificacion;
+    @Basic(optional = false)
+    @Column(name = "eva_cantidad_encuestas")
+    private int cantidadEncuestas;
 
-	@JoinColumn(name = "eva_establecimiento_salud", referencedColumnName = "ess_id")
-	@ManyToOne
-	private EstablecimientoSalud establecimientoSalud;
-	@JoinColumn(name = "eva_usuario", referencedColumnName = "usu_id")
-	@ManyToOne
-	private Usuario usuario;
+    @JoinColumn(name = "eva_establecimiento_salud", referencedColumnName = "ess_id")
+    @ManyToOne
+    private EstablecimientoSalud establecimientoSalud;
+    @JoinColumn(name = "eva_usuario", referencedColumnName = "usu_id")
+    @ManyToOne
+    private Usuario usuario;
 
-	public Evaluacion() {
-	}
+    public Evaluacion() {
+    }
 
-	public Long getCodigo() {
-		return codigo;
-	}
+    public Long getCodigo() {
+	return codigo;
+    }
 
-	public void setCodigo(Long codigo) {
-		this.codigo = codigo;
-	}
+    public void setCodigo(Long codigo) {
+	this.codigo = codigo;
+    }
 
-	public Integer getNumero() {
-		return numero;
-	}
+    /**
+     * @return the numero
+     */
+    public Long getNumero() {
+	return numero;
+    }
 
-	public void setNumero(Integer numero) {
-		this.numero = numero;
-	}
+    /**
+     * @param numero
+     *            the numero to set
+     */
+    public void setNumero(Long numero) {
+	this.numero = numero;
+    }
 
-	public BigInteger getCalificacion() {
-		return calificacion;
-	}
+    public BigInteger getCalificacion() {
+	return calificacion;
+    }
 
-	public void setCalificacion(BigInteger calificacion) {
-		this.calificacion = calificacion;
-	}
+    public void setCalificacion(BigInteger calificacion) {
+	this.calificacion = calificacion;
+    }
 
-	public Date getFechaInicio() {
-		return fechaInicio;
-	}
+    public Date getFechaInicio() {
+	return fechaInicio;
+    }
 
-	public void setFechaInicio(Date fechaInicio) {
-		this.fechaInicio = fechaInicio;
-	}
+    public void setFechaInicio(Date fechaInicio) {
+	this.fechaInicio = fechaInicio;
+    }
 
-	public Date getFechaCalificacion() {
-		return fechaCalificacion;
-	}
+    public Date getFechaCalificacion() {
+	return fechaCalificacion;
+    }
 
-	public void setFechaCalificacion(Date fechaCalificacion) {
-		this.fechaCalificacion = fechaCalificacion;
-	}
+    public void setFechaCalificacion(Date fechaCalificacion) {
+	this.fechaCalificacion = fechaCalificacion;
+    }
 
-	public int getCantidadEncuestas() {
-		return cantidadEncuestas;
-	}
+    public int getCantidadEncuestas() {
+	return cantidadEncuestas;
+    }
 
-	public void setCantidadEncuestas(int cantidadEncuestas) {
-		this.cantidadEncuestas = cantidadEncuestas;
-	}
+    public void setCantidadEncuestas(int cantidadEncuestas) {
+	this.cantidadEncuestas = cantidadEncuestas;
+    }
 
-	public EstablecimientoSalud getEstablecimientoSalud() {
-		return establecimientoSalud;
-	}
+    public EstablecimientoSalud getEstablecimientoSalud() {
+	return establecimientoSalud;
+    }
 
-	public void setEstablecimientoSalud(EstablecimientoSalud establecimientoSalud) {
-		this.establecimientoSalud = establecimientoSalud;
-	}
+    public void setEstablecimientoSalud(EstablecimientoSalud establecimientoSalud) {
+	this.establecimientoSalud = establecimientoSalud;
+    }
 
-	public Usuario getUsuario() {
-		return usuario;
-	}
+    public Usuario getUsuario() {
+	return usuario;
+    }
 
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
+    public void setUsuario(Usuario usuario) {
+	this.usuario = usuario;
+    }
 
 }

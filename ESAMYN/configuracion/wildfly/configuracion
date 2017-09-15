@@ -41,3 +41,18 @@ Añadir
                 <pooled-connection-factory name="activemq-ra" entries="java:/JmsXA java:jboss/DefaultJMSConnectionFactory" connectors="in-vm" transaction="xa"/>
             </server>
         </subsystem>
+        
+        -MODULOS
+        
+        EN <subsystem xmlns="urn:jboss:domain:ee:4.0">
+        
+        Agregar
+        
+        <module name="org.apache.commons.codec" slot="main"/>
+		<module name="org.apache.poi" slot="main"/>
+        <module name="org.apache.xerces" slot="main"/>
+        
+        
+        Copiar moduilo apache poi en /../wildfly-10.1.0.Final_ESAMyN/modules/system/layers/base/org/apache
+        esta en files redmine
+        

@@ -26,6 +26,8 @@ public class PreguntaWsDto implements Serializable {
 	private Long idFormulario;
 
 	private Long idEncuesta;
+	
+	private Long idPregunta;
 
 	public Long getIdFormulario() {
 		return idFormulario;
@@ -42,5 +44,21 @@ public class PreguntaWsDto implements Serializable {
 	public void setIdEncuesta(Long idEncuesta) {
 		this.idEncuesta = idEncuesta;
 	}
+
+	/**
+	 * @return the idPregunta
+	 */
+	public Long getIdPregunta() {
+	    return idPregunta;
+	}
+
+	/**
+	 * @param idPregunta the idPregunta to set
+	 */
+	public void setIdPregunta(Long idPregunta) {
+	    this.idPregunta = idPregunta;
+	}
+	
+	
 
 }

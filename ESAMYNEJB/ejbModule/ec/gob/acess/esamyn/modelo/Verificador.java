@@ -53,7 +53,7 @@ public class Verificador implements Serializable {
 	private Parametro parametro;
 	@JoinColumn(name = "ver_cumple_condicion_no_aplica", referencedColumnName = "ccn_id")
 	@ManyToOne
-	private CumpleCondicionNoAplica verCumpleCondicionNoAplica;
+	private CumpleCondicionNoAplica cumpleCondicionNoAplica;
 
 	public Verificador() {
 	}
@@ -106,12 +106,20 @@ public class Verificador implements Serializable {
 		this.parametro = parametro;
 	}
 
-	public CumpleCondicionNoAplica getVerCumpleCondicionNoAplica() {
-		return verCumpleCondicionNoAplica;
+	/**
+	 * @return the cumpleCondicionNoAplica
+	 */
+	public CumpleCondicionNoAplica getCumpleCondicionNoAplica() {
+	    return cumpleCondicionNoAplica;
 	}
 
-	public void setVerCumpleCondicionNoAplica(CumpleCondicionNoAplica verCumpleCondicionNoAplica) {
-		this.verCumpleCondicionNoAplica = verCumpleCondicionNoAplica;
+	/**
+	 * @param cumpleCondicionNoAplica the cumpleCondicionNoAplica to set
+	 */
+	public void setCumpleCondicionNoAplica(CumpleCondicionNoAplica cumpleCondicionNoAplica) {
+	    this.cumpleCondicionNoAplica = cumpleCondicionNoAplica;
 	}
+
+
 
 }

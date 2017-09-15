@@ -85,7 +85,7 @@ public class PreguntaWebService {
 	    if (valida) {
 
 		EncuestaDto encuesta = preguntaBean.obtenerPreguntasFormulario(pregunta.getIdFormulario(),
-			pregunta.getIdEncuesta());
+			pregunta.getIdEncuesta(), pregunta.getIdPregunta());
 
 		if (encuesta != null) {
 		    mensajeDto = new MensajeDto(false, "", encuesta);

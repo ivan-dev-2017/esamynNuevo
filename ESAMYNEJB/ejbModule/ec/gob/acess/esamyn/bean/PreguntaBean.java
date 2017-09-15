@@ -180,9 +180,10 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
      * 
      * @param idFormulario
      * @param IdEncuesta
+     * @param idPregunta
      * @return
      */
-    public EncuestaDto obtenerPreguntasFormulario(Long idFormulario, Long IdEncuesta) {
+    public EncuestaDto obtenerPreguntasFormulario(Long idFormulario, Long IdEncuesta, Long idPregunta) {
 
 	Encuesta encuesta = null;
 
@@ -202,9 +203,19 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 	    encuestaDto.setExtra(encuesta.getResponsable());
 	}
 
-	String[] ands = { "formulario.codigo" };
-	CriteriaTypeEnum[] operator = { CriteriaTypeEnum.LONG_EQUALS };
-	Object[] valores = { idFormulario };
+	List<String> andsLista = new ArrayList<>();
+	List<CriteriaTypeEnum> operadorLista = new ArrayList<>();
+	List<Object> valoresLista = new ArrayList<>();
+
+	if (idFormulario != null) {
+	    andsLista.add("formulario.codigo");
+	    operadorLista.add(CriteriaTypeEnum.LONG_EQUALS);
+	    valoresLista.add(idFormulario);
+	}
+
+	String[] ands = andsLista.toArray(new String[andsLista.size()]);
+	CriteriaTypeEnum[] operator = operadorLista.toArray(new CriteriaTypeEnum[operadorLista.size()]);
+	Object[] valores = valoresLista.toArray(new Object[valoresLista.size()]);
 	String[] orderby = { "orden" };
 	boolean[] asc = { true };
 
@@ -213,6 +224,7 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 	List<Pregunta> lista = findByCriterias(criteria);
 
 	if (lista != null && !lista.isEmpty()) {
+
 	    List<PreguntaDto> padres = buscarRaiz(lista, idFormulario, respuestas);
 
 	    for (PreguntaDto pregunta : padres) {
@@ -222,12 +234,50 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 	    encuestaDto.setIdEncuesta(IdEncuesta);
 	    encuestaDto.setIdFormulario(idFormulario);
 
-	    encuestaDto.setPregunta(padres);
+	    // Validamos filtro respuesta
+	    if (idPregunta != null) {
+		encuestaDto.setPregunta(buscarPorId(padres, idPregunta));
+	    } else {
+		encuestaDto.setPregunta(padres);
+	    }
 
 	    return encuestaDto;
 	}
 
 	return null;
+
+    }
+
+    /**
+     * Busca Pregunta
+     * 
+     * @param padres
+     * @param idPregunta
+     * @return
+     */
+    private List<PreguntaDto> buscarPorId(List<PreguntaDto> padres, Long idPregunta) {
+
+	List<PreguntaDto> listaRespuesta = new ArrayList<>();
+
+	for (PreguntaDto preguntaDto : padres) {
+
+	    if (preguntaDto.getCodigo().equals(idPregunta)) {
+		listaRespuesta.add(preguntaDto);
+		return listaRespuesta;
+	    } else {
+
+		if (preguntaDto.getPreguntaLista() != null && !preguntaDto.getPreguntaLista().isEmpty()) {
+		    listaRespuesta = buscarPorId(preguntaDto.getPreguntaLista(), idPregunta);
+		    if (listaRespuesta != null && !listaRespuesta.isEmpty()) {
+			return listaRespuesta;
+		    }
+		}
+
+	    }
+
+	}
+
+	return listaRespuesta;
 
     }
 
@@ -360,6 +410,7 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 
     /**
      * Metodo que valida que todos las hojas del arbol estan contestados
+     * 
      * @param preguntas
      * @return
      */
@@ -374,15 +425,15 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 		validador = verificarParaFinalizarEncuesta(preguntaDto.getPreguntaLista());
 	    } else {
 
-		//Verificamos que la hoja del arbol tenga respuesta
+		// Verificamos que la hoja del arbol tenga respuesta
 		validador = validaGuardar(preguntaDto);
-		if(!validador) {
-		    
+		if (!validador) {
+
 		    return validador;
 		}
 	    }
 	}
-	
+
 	return validador;
 
     }

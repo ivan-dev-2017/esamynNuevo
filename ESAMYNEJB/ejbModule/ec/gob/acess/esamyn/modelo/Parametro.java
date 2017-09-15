@@ -41,47 +41,49 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "catalogo")
 public class Parametro implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "par_id")
+    private Long codigo;
+    @Column(name = "par_puntaje")
+    private Integer puntaje;
+    @Column(name = "par_texto")
+    private String texto;
+    @Basic(optional = false)
+    @Column(name = "par_obligatorio")
+    private int obligatorio;
+    @Basic(optional = false)
+    @Column(name = "par_umbral")
+    private int umbral;
+    @Basic(optional = false)
+    @Column(name = "par_cantidad_minima")
+    private BigDecimal cantidadMinima;
 
-	private static final long serialVersionUID = 1L;
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Basic(optional = false)
-	@Column(name = "par_id")
-	private Long codigo;
-	@Column(name = "par_puntaje")
-	private Integer puntaje;
-	@Column(name = "par_texto")
-	private String texto;
-	@Basic(optional = false)
-	@Column(name = "par_obligatorio")
-	private int obligatorio;
-	@Basic(optional = false)
-	@Column(name = "par_umbral")
-	private int umbral;
-	@Basic(optional = false)
-	@Column(name = "par_cantidad_minima")
-	private BigDecimal cantidadMinima;
-	@JoinColumn(name = "par_condicion_no_aplica", referencedColumnName = "cna_id")
-	@ManyToOne
-	private CondicionNoAplica condicionNoAplica;
-	@JoinColumn(name = "par_grupo_parametro", referencedColumnName = "gpa_id")
-	@ManyToOne
-	private GrupoParametro grupoParametro;
-	@XmlTransient
-	@Transient
-	private List<Verificador> verificadorList;
-	@XmlTransient
-	@OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY, mappedBy = "parametro")
-	private List<ParametroPregunta> parametroPreguntaList;
+    @Column(name = "par_codigo")
+    private String codigoParametro;
 
-	@XmlTransient
-	@Transient
-	private List<Long> codigoPreguntaList;
+    @JoinColumn(name = "par_condicion_no_aplica", referencedColumnName = "cna_id")
+    @ManyToOne
+    private CondicionNoAplica condicionNoAplica;
+    @JoinColumn(name = "par_grupo_parametro", referencedColumnName = "gpa_id")
+    @ManyToOne
+    private GrupoParametro grupoParametro;
+    @XmlTransient
+    @Transient
+    private List<Verificador> verificadorList;
+    @XmlTransient
+    @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY, mappedBy = "parametro")
+    private List<ParametroPregunta> parametroPreguntaList;
 
-	public Long getCodigo() {
-		return codigo;
-	}
+    @XmlTransient
+    @Transient
+    private List<Long> codigoPreguntaList;
 
+    public Long getCodigo() {
+	return codigo;
+    }
 
     public void setCodigo(Long codigo) {
 	this.codigo = codigo;
@@ -155,35 +157,51 @@ public class Parametro implements Serializable {
      * @return the cantidadMinima
      */
     public BigDecimal getCantidadMinima() {
-        return cantidadMinima;
+	return cantidadMinima;
     }
 
     /**
-     * @param cantidadMinima the cantidadMinima to set
+     * @param cantidadMinima
+     *            the cantidadMinima to set
      */
     public void setCantidadMinima(BigDecimal cantidadMinima) {
-        this.cantidadMinima = cantidadMinima;
+	this.cantidadMinima = cantidadMinima;
     }
 
+    public List<Long> getCodigoPreguntaList() {
+	if (codigoPreguntaList == null) {
+	    codigoPreguntaList = new ArrayList<Long>();
 
-	public List<Long> getCodigoPreguntaList() {
-		if (codigoPreguntaList == null) {
-			codigoPreguntaList = new ArrayList<Long>();
-
-			if (this.parametroPreguntaList != null && !this.parametroPreguntaList.isEmpty()) {
-				Set<Long> idPreguntaSet = new HashSet<Long>();
-				for (ParametroPregunta parametroPregunta : this.parametroPreguntaList) {
-					idPreguntaSet.add(parametroPregunta.getPregunta().getCodigo());
-				}
-
-				codigoPreguntaList = new ArrayList<Long>(idPreguntaSet);
-			}
+	    if (this.parametroPreguntaList != null && !this.parametroPreguntaList.isEmpty()) {
+		Set<Long> idPreguntaSet = new HashSet<Long>();
+		for (ParametroPregunta parametroPregunta : this.parametroPreguntaList) {
+		    idPreguntaSet.add(parametroPregunta.getPregunta().getCodigo());
 		}
-		return codigoPreguntaList;
-	}
 
-	public void setCodigoPreguntaList(List<Long> codigoPreguntaList) {
-		this.codigoPreguntaList = codigoPreguntaList;
+		codigoPreguntaList = new ArrayList<Long>(idPreguntaSet);
+	    }
 	}
+	return codigoPreguntaList;
+    }
+
+    public void setCodigoPreguntaList(List<Long> codigoPreguntaList) {
+	this.codigoPreguntaList = codigoPreguntaList;
+    }
+
+    /**
+     * @return the codigoParametro
+     */
+    public String getCodigoParametro() {
+        return codigoParametro;
+    }
+
+    /**
+     * @param codigoParametro the codigoParametro to set
+     */
+    public void setCodigoParametro(String codigoParametro) {
+        this.codigoParametro = codigoParametro;
+    }
+    
+    
 
 }
