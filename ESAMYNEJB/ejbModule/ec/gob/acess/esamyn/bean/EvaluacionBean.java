@@ -6,6 +6,7 @@ package ec.gob.acess.esamyn.bean;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -19,6 +20,7 @@ import javax.ejb.Stateless;
 import com.saviasoft.persistence.util.dao.GenericDao;
 import com.saviasoft.persistence.util.service.impl.GenericServiceImpl;
 
+import ec.gob.acess.esamyn.constante.TipoPreguntaEnum;
 import ec.gob.acess.esamyn.dao.EncuestaDAO;
 import ec.gob.acess.esamyn.dao.EvaluacionDAO;
 import ec.gob.acess.esamyn.dao.ParametroDAO;
@@ -216,17 +218,24 @@ public class EvaluacionBean extends GenericServiceImpl<Evaluacion, Long> {
 	/**
 	 * TODO: Aqui me quedo Realiza el proceso de evaluacion de un parametro.
 	 * 
+	 * En la Respuesta se considera con valor si al menos uno de los campos lo tiene
+	 * caso contrario se considera como no respondida.
+	 * 
 	 * @param param
 	 * @param respuestaLista
 	 */
 	private void evaluarUnParametro(Evaluacion evaluacion, Parametro param, List<Respuesta> respuestaLista,
 			boolean cumpleConUmbral, Parametro parametro, Map<Long, Integer> respuestasPorPreguntaMap,
 			List<Verificador> verificadorLista) {
-		// 1. Se obtiene la mayor cantidad de evaluaciones
-		int cantidadMedidas = 0;
-		for (Map.Entry<Long, Integer> par : respuestasPorPreguntaMap.entrySet()) {
-			if (cantidadMedidas < par.getValue().intValue()) {
-				cantidadMedidas = par.getValue().intValue();
+		// 1. Se obtiene la menor cantidad de evaluaciones
+		int cantidadMedidas = Collections.min(respuestasPorPreguntaMap.values());
+
+		// 2. Se obtiene cuantas preguntas se han resppondido
+		int preguntasRespondidas = 0;
+
+		for (Respuesta respuesta : respuestaLista) {
+			if (existeValorEnRespuesta(respuesta)) {
+				preguntasRespondidas++;
 			}
 		}
 
@@ -243,6 +252,45 @@ public class EvaluacionBean extends GenericServiceImpl<Evaluacion, Long> {
 
 		// Se pone verificador en listado
 		verificadorLista.add(verificador);
+	}
+
+	/**
+	 * Consulta si una respuesta tiene valor, en este caso, significa que si se
+	 * respondio la pregunta, caso contrario significa que no se respponde la
+	 * pregunta y por ende no se debe contailizar.
+	 * 
+	 * @param respuesta
+	 * @return
+	 */
+	private boolean existeValorEnRespuesta(Respuesta respuesta) {
+		boolean hayValor = false;
+
+		TipoPreguntaEnum tipopregunta = respuesta.getPregunta().getTipoPregunta().getClave();
+
+		switch (tipopregunta) {
+		case NUMERO:
+			if (respuesta.getValorNumero() != null) {
+				hayValor = true;
+			}
+			break;
+		case TEXTO:
+			if (respuesta.getValorTexto() != null && respuesta.getValorTexto().trim().length() > 0) {
+				hayValor = true;
+			}
+			break;
+		case FECHA:
+			if (respuesta.getValorFecha() != null) {
+				hayValor = true;
+			}
+			break;
+		case BOOLEANO:
+			if (respuesta.getValorBooleano() != null) {
+				hayValor = true;
+			}
+			break;
+		}
+
+		return hayValor;
 	}
 
 	/**
