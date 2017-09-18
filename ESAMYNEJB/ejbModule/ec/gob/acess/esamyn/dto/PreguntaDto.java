@@ -5,6 +5,11 @@ import java.math.BigInteger;
 import java.util.Date;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlType;
+
 /**
  * 
  * Clase: PreguntaDto.java
@@ -13,6 +18,8 @@ import java.util.List;
  * @version 1.0
  *
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "preguntaDto")
 public class PreguntaDto implements Serializable {
 
     private static final long serialVersionUID = 2677317877352056089L;
@@ -48,6 +55,9 @@ public class PreguntaDto implements Serializable {
     private Boolean valorBooleano;
 
     private List<PreguntaDto> preguntaLista;
+    
+    @XmlTransient
+    private PreguntaDto padre;
 
     public Long getCodigo() {
 	return codigo;
@@ -176,5 +186,22 @@ public class PreguntaDto implements Serializable {
     public void setValorBooleano(Boolean valorBooleano) {
 	this.valorBooleano = valorBooleano;
     }
+
+    /**
+     * @return the padre
+     */
+    public PreguntaDto getPadre() {
+        return padre;
+    }
+
+    /**
+     * @param padre the padre to set
+     */
+    public void setPadre(PreguntaDto padre) {
+        this.padre = padre;
+    }
+
+    
+    
 
 }

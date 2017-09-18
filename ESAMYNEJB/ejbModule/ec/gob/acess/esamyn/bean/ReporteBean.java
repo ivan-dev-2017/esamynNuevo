@@ -1,14 +1,16 @@
 
 package ec.gob.acess.esamyn.bean;
 
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.List;
+import java.util.Map;
 
 import javax.ejb.EJB;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
-import org.apache.poi.hssf.util.CellRangeAddress;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.IndexedColors;
@@ -21,7 +23,7 @@ import com.saviasoft.persistence.util.service.impl.GenericServiceImpl;
 
 import ec.gob.acess.esamyn.dao.RespuestaDAO;
 import ec.gob.acess.esamyn.dto.MensajeDto;
-import ec.gob.acess.esamyn.modelo.Respuesta;
+import ec.gob.acess.esamyn.modelo.Formulario;
 import ec.gob.acess.esamyn.modelo.Respuesta;
 
 /**
@@ -40,15 +42,23 @@ public class ReporteBean extends GenericServiceImpl<Respuesta, Long> {
     @EJB
     private RespuestaDAO respuestaDAO;
 
+    @EJB
+    private PreguntaBean preguntaBean;
+
+    @EJB
+    private FormularioBean formularioBean;
+
     @Override
     public GenericDao<Respuesta, Long> getDao() {
 	return respuestaDAO;
     }
 
-    public MensajeDto generarDocumento(Long idFormulario, Long idEstablecimiento) {
-	
+    public MensajeDto generarDocumento(Long idFormulario, Long idEstablecimiento, OutputStream output) throws IOException {
+
+	Formulario formulario = formularioBean.findByPk(idFormulario);
+
 	XSSFWorkbook workbook = new XSSFWorkbook();
-	XSSFSheet sheet = workbook.createSheet("Lista");
+	XSSFSheet sheet = workbook.createSheet(formulario.getTitulo());
 
 	CellStyle headerStyle = workbook.createCellStyle();
 	headerStyle.setFillBackgroundColor(IndexedColors.BLACK.getIndex());
@@ -77,56 +87,45 @@ public class ReporteBean extends GenericServiceImpl<Respuesta, Long> {
 	cell.setCellValue((String) "FECHA DE INICIO ENCUESTA");
 	cell = row.createCell(7);
 	cell.setCellValue((String) "FINALIZADA?");
-	
-	for (int i = 0; i < lista.size(); i++) {
-	    
-	    cell = row.createCell(i+7);
-	    
-	    //METODO obtiene texto pregunta
-		cell.setCellValue((String) lista.get(i).getPregunta().getTexto());
-	    
-	    
+
+	Map<Long, String> mapaPreguntas = preguntaBean.buscarPreguntas(idFormulario);
+
+	int cont = 8;
+	for (Map.Entry<Long, String> pregunta : mapaPreguntas.entrySet()) {
+
+	    cell = row.createCell(cont);
+	    cell.setCellValue((String) pregunta.getValue());
+
+	    cont++;
 	}
 	
+	
+
 	/*
-
-	// DATOS
-	int rowCount = 2;
-	for (Registro r : lista) {
-
-		row = sheet.createRow(rowCount);
-
-		cell = row.createCell(0);
-		cell.setCellValue((String) r.getUsuario().getGerenciaTransient().getNombre());
-		cell = row.createCell(1);
-		cell.setCellValue((String) r.getUsuario().getNombreCompleto());
-		cell = row.createCell(2);
-		cell.setCellValue((String) r.getSemanaTexto());
-		cell = row.createCell(3);
-		cell.setCellValue((String) r.getMesTexto() + "/" + r.getAnio());
-		cell = row.createCell(4);
-		cell.setCellValue((String) "" + r.getHoras());
-		cell = row.createCell(5);
-		cell.setCellValue((String) r.getDescripcion());
-		cell = row.createCell(6);
-		cell.setCellValue((String) r.getEstadoTransient().getEstado().getEtiqueta());
-
-		rowCount++;
-	}
-
-	sheet.autoSizeColumn(0);
-	sheet.autoSizeColumn(1);
-	sheet.autoSizeColumn(2);
-	sheet.autoSizeColumn(3);
-	sheet.autoSizeColumn(4);
-	sheet.autoSizeColumn(5);
-	sheet.autoSizeColumn(6);
-
+	 * 
+	 * // DATOS int rowCount = 2; for (Registro r : lista) {
+	 * 
+	 * row = sheet.createRow(rowCount);
+	 * 
+	 * cell = row.createCell(0); cell.setCellValue((String)
+	 * r.getUsuario().getGerenciaTransient().getNombre()); cell = row.createCell(1);
+	 * cell.setCellValue((String) r.getUsuario().getNombreCompleto()); cell =
+	 * row.createCell(2); cell.setCellValue((String) r.getSemanaTexto()); cell =
+	 * row.createCell(3); cell.setCellValue((String) r.getMesTexto() + "/" +
+	 * r.getAnio()); cell = row.createCell(4); cell.setCellValue((String) "" +
+	 * r.getHoras()); cell = row.createCell(5); cell.setCellValue((String)
+	 * r.getDescripcion()); cell = row.createCell(6); cell.setCellValue((String)
+	 * r.getEstadoTransient().getEstado().getEtiqueta());
+	 * 
+	 * rowCount++; }
+	 * 
+	 * sheet.autoSizeColumn(0); sheet.autoSizeColumn(1); sheet.autoSizeColumn(2);
+	 * sheet.autoSizeColumn(3); sheet.autoSizeColumn(4); sheet.autoSizeColumn(5);
+	 * sheet.autoSizeColumn(6);
+	 */
 	workbook.write(output);
 	workbook.close();
-	*/
-	
-	
+
 	return null;
     }
 

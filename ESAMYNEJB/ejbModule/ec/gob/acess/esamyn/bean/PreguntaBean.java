@@ -308,6 +308,7 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 		    preguntaDto.setSubfijo(p.getSubfijo());
 		    preguntaDto.setTexto(p.getTexto());
 		    preguntaDto.setValidacion(p.getValidacion());
+		    preguntaDto.setPadre(padre);
 		    preguntaDto = llenarRespuestas(respuestas, preguntaDto);
 
 		    preguntaDto = llenarHijos(lista, preguntaDto, idFormulario, respuestas);
@@ -435,6 +436,71 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 	}
 
 	return validador;
+
+    }
+
+    public Map<Long, String> buscarPreguntas(Long idFormulario) {
+
+	Map<Long, String> preguntasMap = new HashMap<>();
+
+	String[] ands = { "formulario.codigo" };
+	CriteriaTypeEnum[] operator = { CriteriaTypeEnum.LONG_EQUALS };
+	Object[] valores = { idFormulario };
+	String[] orderby = { "orden" };
+	boolean[] asc = { true };
+
+	Criteria criteria = new Criteria(ands, operator, valores, orderby, asc);
+
+	List<Pregunta> lista = findByCriterias(criteria);
+
+	if (lista != null && !lista.isEmpty()) {
+
+	    List<PreguntaDto> padres = buscarRaiz(lista, idFormulario, null);
+
+	    for (PreguntaDto pregunta : padres) {
+		pregunta = llenarHijos(lista, pregunta, idFormulario, null);
+	    }
+
+	    return buscarhijo(padres, preguntasMap);
+	}
+
+	return null;
+
+    }
+
+    private Map<Long, String> buscarhijo(List<PreguntaDto> lista, Map<Long, String> preguntasMap) {
+
+	for (PreguntaDto preguntaDto : lista) {
+
+	    if (preguntaDto.getPreguntaLista() != null && preguntaDto.getPreguntaLista().isEmpty()) {
+
+		preguntasMap = buscarhijo(preguntaDto.getPreguntaLista(), preguntasMap);
+
+	    } else {
+
+		String textoPregunta = buscarTextoPadre(preguntaDto, "");
+
+		preguntasMap.put(preguntaDto.getCodigo(), textoPregunta);
+
+	    }
+
+	}
+
+	return preguntasMap;
+
+    }
+
+    private String buscarTextoPadre(PreguntaDto preguntaDto, String texto) {
+
+	texto = texto + preguntaDto.getTexto();
+
+	if (preguntaDto.getPadre() != null) {
+
+	    texto = texto + ">>" + buscarTextoPadre(preguntaDto.getPadre(), texto);
+
+	}
+
+	return texto;
 
     }
 

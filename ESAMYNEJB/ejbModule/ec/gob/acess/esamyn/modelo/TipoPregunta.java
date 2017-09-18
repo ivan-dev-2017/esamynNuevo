@@ -5,14 +5,10 @@ import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import ec.gob.acess.esamyn.constante.TipoPreguntaEnum;
 
 /**
  * 
@@ -34,8 +30,7 @@ public class TipoPregunta implements Serializable {
 	@Column(name = "tpp_id")
 	private Long codigo;
 	@Column(name = "tpp_clave")
-	@Enumerated(EnumType.STRING)
-	private TipoPreguntaEnum clave;
+	private String clave;
 	@Column(name = "tpp_etiqueta")
 	private String etiqueta;
 
@@ -47,12 +42,19 @@ public class TipoPregunta implements Serializable {
 		this.codigo = codigo;
 	}
 
-	public TipoPreguntaEnum getClave() {
-		return clave;
+
+	/**
+	 * @return the clave
+	 */
+	public String getClave() {
+	    return clave;
 	}
 
-	public void setClave(TipoPreguntaEnum clave) {
-		this.clave = clave;
+	/**
+	 * @param clave the clave to set
+	 */
+	public void setClave(String clave) {
+	    this.clave = clave;
 	}
 
 	public String getEtiqueta() {
