@@ -312,7 +312,11 @@ public class EvaluacionBean extends GenericServiceImpl<Evaluacion, Long> {
 	
 	
 
-
+	/**
+	 * Evaluacion por codigo
+	 * @param idEvaluacion
+	 * @return
+	 */
 	 public List<EvaluacionDto> verEvaluacionResumen(Long idEvaluacion) {
 
 		List<Verificador> lista = verificadorBean.listaPorEvaluacion(idEvaluacion);
@@ -325,6 +329,11 @@ public class EvaluacionBean extends GenericServiceImpl<Evaluacion, Long> {
 
 	    }
 
+	 /**
+	  * Llena lista de grupos con lista de pasos
+	  * @param pasos
+	  * @return
+	  */
 	    private List<EvaluacionDto> llenarGrupo(List<PasoDto> pasos) {
 
 		List<EvaluacionDto> grupos = new ArrayList<>();

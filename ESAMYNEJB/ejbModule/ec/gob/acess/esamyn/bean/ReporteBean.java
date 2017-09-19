@@ -2,7 +2,6 @@
 package ec.gob.acess.esamyn.bean;
 
 import java.io.IOException;
-import java.io.OutputStream;
 import java.util.List;
 import java.util.Map;
 
@@ -22,7 +21,7 @@ import com.saviasoft.persistence.util.dao.GenericDao;
 import com.saviasoft.persistence.util.service.impl.GenericServiceImpl;
 
 import ec.gob.acess.esamyn.dao.RespuestaDAO;
-import ec.gob.acess.esamyn.dto.MensajeDto;
+import ec.gob.acess.esamyn.dto.RespuestaDto;
 import ec.gob.acess.esamyn.modelo.Formulario;
 import ec.gob.acess.esamyn.modelo.Respuesta;
 
@@ -53,7 +52,7 @@ public class ReporteBean extends GenericServiceImpl<Respuesta, Long> {
 	return respuestaDAO;
     }
 
-    public MensajeDto generarDocumento(Long idFormulario, Long idEstablecimiento, OutputStream output) throws IOException {
+    public XSSFWorkbook generarDocumento(Long idFormulario, Long idEstablecimiento) throws IOException {
 
 	Formulario formulario = formularioBean.findByPk(idFormulario);
 
@@ -65,12 +64,11 @@ public class ReporteBean extends GenericServiceImpl<Respuesta, Long> {
 	headerStyle.setAlignment(headerStyle.ALIGN_CENTER);
 	headerStyle.setBorderBottom(HSSFCellStyle.BORDER_MEDIUM);
 
-	List<Respuesta> lista = buscarParaReporte(idFormulario, idEstablecimiento);
-
 	// ENCABEZADO TABLAS
 	Row row = sheet.createRow(0);
 
 	Cell cell = row.createCell(0);
+	cell.setCellStyle(headerStyle);
 	cell = row.createCell(0);
 	cell.setCellValue((String) "UNICODIGO");
 	cell = row.createCell(1);
@@ -98,40 +96,47 @@ public class ReporteBean extends GenericServiceImpl<Respuesta, Long> {
 
 	    cont++;
 	}
-	
-	
 
-	/*
-	 * 
-	 * // DATOS int rowCount = 2; for (Registro r : lista) {
-	 * 
-	 * row = sheet.createRow(rowCount);
-	 * 
-	 * cell = row.createCell(0); cell.setCellValue((String)
-	 * r.getUsuario().getGerenciaTransient().getNombre()); cell = row.createCell(1);
-	 * cell.setCellValue((String) r.getUsuario().getNombreCompleto()); cell =
-	 * row.createCell(2); cell.setCellValue((String) r.getSemanaTexto()); cell =
-	 * row.createCell(3); cell.setCellValue((String) r.getMesTexto() + "/" +
-	 * r.getAnio()); cell = row.createCell(4); cell.setCellValue((String) "" +
-	 * r.getHoras()); cell = row.createCell(5); cell.setCellValue((String)
-	 * r.getDescripcion()); cell = row.createCell(6); cell.setCellValue((String)
-	 * r.getEstadoTransient().getEstado().getEtiqueta());
-	 * 
-	 * rowCount++; }
-	 * 
-	 * sheet.autoSizeColumn(0); sheet.autoSizeColumn(1); sheet.autoSizeColumn(2);
-	 * sheet.autoSizeColumn(3); sheet.autoSizeColumn(4); sheet.autoSizeColumn(5);
-	 * sheet.autoSizeColumn(6);
-	 */
-	workbook.write(output);
-	workbook.close();
+	List<RespuestaDto> listaRespuesta = respuestaDAO.respuestasParaReporte(idFormulario, idEstablecimiento);
 
-	return null;
-    }
+	// LLENA DATOS RESPUESTA
 
-    private List<Respuesta> buscarParaReporte(Long idFormulario, Long idEstablecimiento) {
+	int rowCount = 1;
+	for (RespuestaDto respuestaDto : listaRespuesta) {
 
-	return null;
+	    row = sheet.createRow(rowCount);
+	    cell = row.createCell(0);
+	    cell.setCellValue((String) respuestaDto.getUnicodigo());
+	    cell = row.createCell(1);
+	    cell.setCellValue((Long) respuestaDto.getSecuencial());
+	    cell = row.createCell(2);
+	    cell.setCellValue((String) respuestaDto.getResponsable());
+	    cell = row.createCell(3);
+	    cell.setCellValue((String) respuestaDto.getCargo());
+	    cell = row.createCell(4);
+	    cell.setCellValue((String) respuestaDto.getCreadoPor());
+	    cell = row.createCell(5);
+	    cell.setCellValue((String) respuestaDto.getFechaEvaluacion());
+	    cell = row.createCell(6);
+	    cell.setCellValue((String) respuestaDto.getFechaEncuesta());
+	    cell = row.createCell(7);
+	    cell.setCellValue((String) respuestaDto.getFinalizada());
+
+	    cont = 8;
+	    for (Map.Entry<Long, String> pregunta : mapaPreguntas.entrySet()) {
+
+		cell = row.createCell(cont);
+		if (respuestaDto.getIdPregunta().equals(pregunta.getKey())) {
+		    cell.setCellValue((String) respuestaDto.getRespuesta());
+		}
+
+		cont++;
+	    }
+
+	    rowCount++;
+	}
+
+	return workbook;
 
     }
 

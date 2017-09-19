@@ -42,21 +42,6 @@ public class TipoPregunta implements Serializable {
 		this.codigo = codigo;
 	}
 
-
-	/**
-	 * @return the clave
-	 */
-	public String getClave() {
-	    return clave;
-	}
-
-	/**
-	 * @param clave the clave to set
-	 */
-	public void setClave(String clave) {
-	    this.clave = clave;
-	}
-
 	public String getEtiqueta() {
 		return etiqueta;
 	}
@@ -64,5 +49,6 @@ public class TipoPregunta implements Serializable {
 	public void setEtiqueta(String etiqueta) {
 		this.etiqueta = etiqueta;
 	}
+
 
 }

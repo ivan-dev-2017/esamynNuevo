@@ -472,15 +472,17 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 
 	for (PreguntaDto preguntaDto : lista) {
 
-	    if (preguntaDto.getPreguntaLista() != null && preguntaDto.getPreguntaLista().isEmpty()) {
+	    if (preguntaDto.getPreguntaLista() != null && !preguntaDto.getPreguntaLista().isEmpty()) {
 
 		preguntasMap = buscarhijo(preguntaDto.getPreguntaLista(), preguntasMap);
 
 	    } else {
 
-		String textoPregunta = buscarTextoPadre(preguntaDto, "");
+		StringBuilder textoPregunta = new StringBuilder(preguntaDto.getTexto());
 
-		preguntasMap.put(preguntaDto.getCodigo(), textoPregunta);
+		buscarTextoPadre(preguntaDto, textoPregunta);
+
+		preguntasMap.put(preguntaDto.getCodigo(), textoPregunta.toString());
 
 	    }
 
@@ -490,17 +492,14 @@ public class PreguntaBean extends GenericServiceImpl<Pregunta, Long> {
 
     }
 
-    private String buscarTextoPadre(PreguntaDto preguntaDto, String texto) {
-
-	texto = texto + preguntaDto.getTexto();
+    private void buscarTextoPadre(PreguntaDto preguntaDto, StringBuilder textoFinal) {
 
 	if (preguntaDto.getPadre() != null) {
 
-	    texto = texto + ">>" + buscarTextoPadre(preguntaDto.getPadre(), texto);
-
+	    textoFinal.append(">>");
+	    textoFinal.append(preguntaDto.getPadre().getTexto());
+	    buscarTextoPadre(preguntaDto.getPadre(), textoFinal);
 	}
-
-	return texto;
 
     }
 

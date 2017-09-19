@@ -6,6 +6,7 @@ import javax.ejb.Local;
 
 import com.saviasoft.persistence.util.dao.GenericDao;
 
+import ec.gob.acess.esamyn.dto.RespuestaDto;
 import ec.gob.acess.esamyn.modelo.Respuesta;
 
 /**
@@ -30,4 +31,13 @@ public interface RespuestaDAO extends GenericDao<Respuesta, Long> {
 	 */
 	List<Respuesta> getRespuestasParaEvaluar(Long codigoEstablecimientoSalud, List<Long> codigoPreguntaList,
 			Integer anio);
+	
+	
+	/**
+	 * 
+	 * @param idFormulario
+	 * @param idEstableciom
+	 * @return
+	 */
+	List<RespuestaDto> respuestasParaReporte(Long idFormulario, Long idEstablecimiento);
 }
