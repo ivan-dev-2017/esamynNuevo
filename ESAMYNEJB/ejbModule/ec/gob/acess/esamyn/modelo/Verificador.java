@@ -110,16 +110,15 @@ public class Verificador implements Serializable {
 	 * @return the cumpleCondicionNoAplica
 	 */
 	public CumpleCondicionNoAplica getCumpleCondicionNoAplica() {
-	    return cumpleCondicionNoAplica;
+		return cumpleCondicionNoAplica;
 	}
 
 	/**
-	 * @param cumpleCondicionNoAplica the cumpleCondicionNoAplica to set
+	 * @param cumpleCondicionNoAplica
+	 *            the cumpleCondicionNoAplica to set
 	 */
 	public void setCumpleCondicionNoAplica(CumpleCondicionNoAplica cumpleCondicionNoAplica) {
-	    this.cumpleCondicionNoAplica = cumpleCondicionNoAplica;
+		this.cumpleCondicionNoAplica = cumpleCondicionNoAplica;
 	}
-
-
 
 }
