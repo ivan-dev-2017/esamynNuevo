@@ -3,6 +3,8 @@ package ec.gob.acess.esamyn.bean;
 
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.ejb.EJB;
 import javax.ejb.LocalBean;
@@ -16,6 +18,7 @@ import com.saviasoft.util.Criteria;
 import ec.gob.acess.esamyn.dao.EncuestaDAO;
 import ec.gob.acess.esamyn.dto.EncuestaDto;
 import ec.gob.acess.esamyn.dto.MensajeDto;
+import ec.gob.acess.esamyn.exception.EvaluacionException;
 import ec.gob.acess.esamyn.modelo.Encuesta;
 import ec.gob.acess.esamyn.modelo.Usuario;
 
@@ -31,112 +34,142 @@ import ec.gob.acess.esamyn.modelo.Usuario;
 @Stateless
 @LocalBean
 public class EncuestaBean extends GenericServiceImpl<Encuesta, Long> {
+	private static final Logger LOG = Logger.getLogger(EncuestaBean.class.getName());
 
-    @EJB
-    private EncuestaDAO encuestaDAO;
+	@EJB
+	private EncuestaDAO encuestaDAO;
 
-    @EJB
-    private PreguntaBean preguntaBean;
+	@EJB
+	private PreguntaBean preguntaBean;
 
-    @Override
-    public GenericDao<Encuesta, Long> getDao() {
-	return encuestaDAO;
-    }
+	@EJB
+	private EvaluacionBean evaluacionBean;
 
-    /**
-     * Guardar encuesta
-     * 
-     * @param encuesta
-     * @param usuario
-     * @return
-     */
-    public MensajeDto guardar(Encuesta encuesta, Usuario usuario) {
+	@EJB
+	private UsuarioBean usuarioBean;
 
-	MensajeDto mensajeDto = new MensajeDto();
-
-	try {
-
-	    if (encuesta.getCodigo() == null) {
-
-		mensajeDto.setError(false);
-		mensajeDto.setMensaje("Encuesta Guardado");
-		encuesta.setCreadoPor(usuario.getUsername());
-		encuesta.setModificadoPor(usuario.getUsername());
-		encuesta.setUsuario(usuario);
-		encuesta.setFechaInicial(new Date());
-
-		create(encuesta);
-		mensajeDto.setObjeto(encuesta);
-	    } else {
-		mensajeDto.setError(false);
-		mensajeDto.setMensaje("Actualiza Objeto");
-
-		encuesta.setModificadoPor(usuario.getUsername());
-		encuesta.setFechaInicial(new Date());
-
-		update(encuesta);
-		mensajeDto.setObjeto(encuesta);
-	    }
-
-	} catch (Exception e) {
-	    mensajeDto.setError(true);
-	    mensajeDto.setMensaje("Error al guardar: " + e.getMessage());
-	    mensajeDto.setObjeto(null);
+	@Override
+	public GenericDao<Encuesta, Long> getDao() {
+		return encuestaDAO;
 	}
 
-	return mensajeDto;
+	/**
+	 * Guardar encuesta
+	 * 
+	 * @param encuesta
+	 * @param usuario
+	 * @return
+	 */
+	public MensajeDto guardar(Encuesta encuesta, Usuario usuario) {
 
-    }
+		MensajeDto mensajeDto = new MensajeDto();
 
-    /**
-     * Finaliza encuiesta (valida)
-     * 
-     * @param encuestaDto
-     * @return
-     */
-    public MensajeDto finalizarEncuesta(EncuestaDto encuestaDto) {
+		try {
 
-	MensajeDto mensajeDto;
+			if (encuesta.getCodigo() == null) {
 
-	if (preguntaBean.verificarParaFinalizarEncuesta(encuestaDto.getPregunta())) {
+				mensajeDto.setError(false);
+				mensajeDto.setMensaje("Encuesta Guardado");
+				encuesta.setCreadoPor(usuario.getUsername());
+				encuesta.setModificadoPor(usuario.getUsername());
+				encuesta.setUsuario(usuario);
+				encuesta.setFechaInicial(new Date());
 
-	    Encuesta encuesta = findByPk(encuestaDto.getIdEncuesta());
+				create(encuesta);
+				mensajeDto.setObjeto(encuesta);
+			} else {
+				mensajeDto.setError(false);
+				mensajeDto.setMensaje("Actualiza Objeto");
 
-	    encuesta.setFechaFinal(new Date());
-	    encuesta.setFinalizada(1);
+				encuesta.setModificadoPor(usuario.getUsername());
+				encuesta.setFechaInicial(new Date());
 
-	    update(encuesta);
+				update(encuesta);
+				mensajeDto.setObjeto(encuesta);
+			}
 
-	    mensajeDto = new MensajeDto(false, "Encuesta finalizada", encuesta);
-	} else {
-	    mensajeDto = new MensajeDto(true, "No se puede finalizar, existen preguntas sin contestar", null);
+		} catch (Exception e) {
+			mensajeDto.setError(true);
+			mensajeDto.setMensaje("Error al guardar: " + e.getMessage());
+			mensajeDto.setObjeto(null);
+		}
+
+		return mensajeDto;
+
 	}
 
-	return mensajeDto;
-    }
+	/**
+	 * Finaliza encuiesta (valida)
+	 * 
+	 * @param encuestaDto
+	 * @param username
+	 * @return
+	 */
+	public MensajeDto finalizarEncuesta(EncuestaDto encuestaDto, String token) {
 
-    public MensajeDto buscarPorEstablecimientoFormulario(Long codigoEstablecimiento, Long codigoFormulario) {
+		MensajeDto mensajeDto;
+		try {
+			if (preguntaBean.verificarParaFinalizarEncuesta(encuestaDto.getPregunta())) {
 
-	MensajeDto mensajeDto;
+				Encuesta encuesta = findByPk(encuestaDto.getIdEncuesta());
 
-	String[] ands = { "formulario.codigo", "establecimientoSalud.codigo" };
-	CriteriaTypeEnum[] operator = { CriteriaTypeEnum.LONG_EQUALS, CriteriaTypeEnum.LONG_EQUALS };
-	Object[] valores = { codigoFormulario, codigoEstablecimiento };
-	String[] orderby = { "fechaInicial" };
-	boolean[] asc = { true };
+				encuesta.setFechaFinal(new Date());
+				encuesta.setFinalizada(1);
 
-	Criteria criteria = new Criteria(ands, operator, valores, orderby, asc);
+				update(encuesta);
 
-	List<Encuesta> lista = findByCriterias(criteria);
+				// Se llama a la ejecucion de la evaluacion
+				Usuario usuario = usuarioBean.buscarPorToken(token);
+				ejecutarEvaluacion(encuesta.getEstablecimientoSalud().getCodigo(), usuario);
 
-	if (lista != null && !lista.isEmpty()) {
+				// Se crea el mensaje de res[uesta
+				mensajeDto = new MensajeDto(false, "Encuesta finalizada", encuesta);
+			} else {
+				mensajeDto = new MensajeDto(true, "No se puede finalizar, existen preguntas sin contestar", null);
+			}
+		} catch (Exception e) {
+			LOG.log(Level.SEVERE, e.getMessage(), e.getCause());
+			mensajeDto = new MensajeDto(true, "No se encuentra usuario de token", null);
+		}
 
-	    mensajeDto = new MensajeDto(false, "", lista);
-	} else {
-	    mensajeDto = new MensajeDto(true, "No existe información", null);
+		return mensajeDto;
 	}
 
-	return mensajeDto;
-    }
+	public MensajeDto buscarPorEstablecimientoFormulario(Long codigoEstablecimiento, Long codigoFormulario) {
 
+		MensajeDto mensajeDto;
+
+		String[] ands = { "formulario.codigo", "establecimientoSalud.codigo" };
+		CriteriaTypeEnum[] operator = { CriteriaTypeEnum.LONG_EQUALS, CriteriaTypeEnum.LONG_EQUALS };
+		Object[] valores = { codigoFormulario, codigoEstablecimiento };
+		String[] orderby = { "fechaInicial" };
+		boolean[] asc = { true };
+
+		Criteria criteria = new Criteria(ands, operator, valores, orderby, asc);
+
+		List<Encuesta> lista = findByCriterias(criteria);
+
+		if (lista != null && !lista.isEmpty()) {
+
+			mensajeDto = new MensajeDto(false, "", lista);
+		} else {
+			mensajeDto = new MensajeDto(true, "No existe información", null);
+		}
+
+		return mensajeDto;
+	}
+
+	/**
+	 * Se llama a la ejecucion de la evaluacion de un establecimiento de salud.
+	 * 
+	 * @param codigoEstablecimientoSalud
+	 * @param username
+	 */
+	private void ejecutarEvaluacion(Long codigoEstablecimientoSalud, Usuario usuario) {
+		try {
+			evaluacionBean.crearEvaluacion(codigoEstablecimientoSalud, usuario);
+		} catch (EvaluacionException e) {
+			LOG.log(Level.SEVERE, e.getMessage(), e.getCause());
+		}
+	}
 }

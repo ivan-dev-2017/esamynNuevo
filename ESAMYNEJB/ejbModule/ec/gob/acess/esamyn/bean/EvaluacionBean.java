@@ -80,11 +80,12 @@ public class EvaluacionBean extends GenericServiceImpl<Evaluacion, Long> {
 	 * Crea la evaluación de un establecimiento de salud.
 	 * 
 	 * @param codigoEstablecimientoSalud
+	 * @param usuario
+	 * 
 	 * @return
 	 */
-	public void crearEvaluacion(Long codigoEstablecimientoSalud, String username) throws EvaluacionException {
+	public void crearEvaluacion(Long codigoEstablecimientoSalud, Usuario usuario) throws EvaluacionException {
 		EstablecimientoSalud establecimiento = new EstablecimientoSalud(codigoEstablecimientoSalud);
-		Usuario usuario = usuarioDAO.getPorUsername(username);
 
 		Calendar ahora = Calendar.getInstance();
 		int anioActual = ahora.get(Calendar.YEAR);
@@ -160,7 +161,9 @@ public class EvaluacionBean extends GenericServiceImpl<Evaluacion, Long> {
 		persistirInformacion(evaluacion, verificadorLista);
 
 		// 15. Actualizar las encuestas con el ID de la evaluacion que se crea
-		actualizarEncuesta(codigoEncuestaSet, evaluacion);
+		if (codigoEncuestaSet != null && !codigoEncuestaSet.isEmpty()) {
+			actualizarEncuesta(codigoEncuestaSet, evaluacion);
+		}
 	}
 
 	/**
