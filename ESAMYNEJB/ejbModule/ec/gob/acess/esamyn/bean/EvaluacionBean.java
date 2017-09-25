@@ -113,36 +113,43 @@ public class EvaluacionBean extends GenericServiceImpl<Evaluacion, Long> {
 		// 6. Se recorre cada uno de los parametros y se arma la evaluacion
 		// corespondiente
 		for (Parametro parametro : parametroList) {
-			// 7. ParametroPregunta, son las preguntas con las cuales se debe evaluar un
+
+			// 6.1 Se evalua si tiene una condición de no aplicar la evaluación del
 			// parametro
-			List<Long> codigoPreguntaList = parametro.getCodigoPreguntaList();
+			if (parametro.getCondicionNoAplica() == null) {
+				// 7. ParametroPregunta, son las preguntas con las cuales se debe evaluar un
+				// parametro
+				List<Long> codigoPreguntaList = parametro.getCodigoPreguntaList();
 
-			if (codigoPreguntaList != null && !codigoPreguntaList.isEmpty()) {
-				// 8. Se obtiene todas las respuestas de una pregunta dada una institucion.
-				List<Respuesta> respuestaLista = respuestaDAO.getRespuestasParaEvaluar(codigoEstablecimientoSalud,
-						codigoPreguntaList, anioActual);
+				if (codigoPreguntaList != null && !codigoPreguntaList.isEmpty()) {
+					// 8. Se obtiene todas las respuestas de una pregunta dada una institucion.
+					List<Respuesta> respuestaLista = respuestaDAO.getRespuestasParaEvaluar(codigoEstablecimientoSalud,
+							codigoPreguntaList, anioActual);
 
-				if (respuestaLista != null && !respuestaLista.isEmpty()) {
+					if (respuestaLista != null && !respuestaLista.isEmpty()) {
 
-					// 9. Se cargan los codigos de las encuestas que luego van a ser alterados con
-					// el id de la evaluacion
-					cargarCodigosEncuesta(codigoEncuestaSet, respuestaLista);
+						// 9. Se cargan los codigos de las encuestas que luego van a ser alterados con
+						// el id de la evaluacion
+						cargarCodigosEncuesta(codigoEncuestaSet, respuestaLista);
 
-					// 10. Se cuentan respuestas por preguntas
-					Map<Long, Integer> respuestasPorPreguntaMap = contarRespuestasDePreguntas(codigoPreguntaList,
-							respuestaLista);
+						// 10. Se cuentan respuestas por preguntas
+						Map<Long, Integer> respuestasPorPreguntaMap = contarRespuestasDePreguntas(codigoPreguntaList,
+								respuestaLista);
 
-					// 11. Se verifica que exista el numero de respuestas requeridas
-					boolean isUmbralCompleto = verificarRespuestasDisponibles(parametro.getUmbral(), codigoPreguntaList,
-							respuestasPorPreguntaMap);
+						// 11. Se verifica que exista el numero de respuestas requeridas
+						boolean isUmbralCompleto = verificarRespuestasDisponibles(parametro.getUmbral(),
+								codigoPreguntaList, respuestasPorPreguntaMap);
 
-					// 12. Se evalua el parametro
-					evaluarUnParametro(evaluacion, parametro, respuestaLista, isUmbralCompleto,
-							respuestasPorPreguntaMap, verificadorLista);
-				} else {
-					// No hay respuestas para evaluar, por lo tanto no cumple
-					crearVerificador(evaluacion, parametro, 0, false, verificadorLista);
+						// 12. Se evalua el parametro
+						evaluarUnParametro(evaluacion, parametro, respuestaLista, isUmbralCompleto,
+								respuestasPorPreguntaMap, verificadorLista);
+					} else {
+						// No hay respuestas para evaluar, por lo tanto no cumple
+						crearVerificador(evaluacion, parametro, 0, false, verificadorLista);
+					}
 				}
+			} else {
+
 			}
 		}
 
@@ -227,8 +234,6 @@ public class EvaluacionBean extends GenericServiceImpl<Evaluacion, Long> {
 	}
 
 	/**
-	 * TODO: que pasa coon el cumplimiento del umbral.
-	 * 
 	 * Aqui me quedo Realiza el proceso de evaluacion de un parametro.
 	 * 
 	 * En la Respuesta se considera con valor si al menos uno de los campos lo tiene
