@@ -46,7 +46,7 @@ public class EncuestaDAOImpl extends GenericEmDaoEjb<Encuesta, Long> implements 
 	@Override
 	public void actualizarEncuestaEvaluacion(Set<Long> encuestaCodigoSet, Long codigoEvaluacion) {
 		StringBuffer hql = new StringBuffer(50);
-		hql.append("update esa_encuesta set enc_evaluacion = :codigoEvaluacion where enc_id in (:encuestaCodigos)");
+		hql.append("update esamyn.esa_encuesta set enc_evaluacion = :codigoEvaluacion where enc_id in (:encuestaCodigos)");
 
 		Query update = em.createNativeQuery(hql.toString());
 		update.setParameter("codigoEvaluacion", codigoEvaluacion);

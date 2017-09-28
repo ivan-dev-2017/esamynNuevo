@@ -372,8 +372,13 @@ public class EvaluacionBean extends GenericServiceImpl<Evaluacion, Long> {
 	 * @return
 	 */
 	public Integer getPorcentaje(Integer totalRespondidas, Integer totalValidas) {
-		BigDecimal porcentaje = new BigDecimal(totalValidas)
-				.divide(new BigDecimal(totalRespondidas), 2, BigDecimal.ROUND_HALF_UP).multiply(new BigDecimal("100"));
+		BigDecimal porcentaje = BigDecimal.ZERO;
+
+		if (totalValidas != null && totalRespondidas != null && totalRespondidas.intValue() > 0) {
+			porcentaje = new BigDecimal(totalValidas)
+					.divide(new BigDecimal(totalRespondidas), 2, BigDecimal.ROUND_HALF_UP)
+					.multiply(new BigDecimal("100"));
+		}
 
 		return porcentaje.intValue();
 	}
@@ -383,37 +388,31 @@ public class EvaluacionBean extends GenericServiceImpl<Evaluacion, Long> {
 	 * respondio la pregunta, caso contrario significa que no se respponde la
 	 * pregunta y por ende no se debe contailizar.
 	 * 
+	 * Solo se consideran las preguntas del tipo Numero o Texto
+	 * 
 	 * @param respuesta
 	 * @return
 	 */
 	private boolean existeValorEnRespuesta(Respuesta respuesta) {
 		boolean hayValor = false;
 
-		TipoPreguntaEnum tipoPregunta = TipoPreguntaEnum
-				.getTipoPreguntaEnumPorClave(respuesta.getPregunta().getTipoPregunta().getClave());
+		if (respuesta.getPregunta().getTipoPregunta() != null) {
+			TipoPreguntaEnum tipoPregunta = TipoPreguntaEnum
+					.getTipoPreguntaEnumPorClave(respuesta.getPregunta().getTipoPregunta().getClave());
 
-		if (tipoPregunta != null) {
-			switch (tipoPregunta) {
-			case NUMERO:
-				if (respuesta.getValorNumero() != null) {
-					hayValor = true;
+			if (tipoPregunta != null) {
+				switch (tipoPregunta) {
+				case NUMERO:
+					if (respuesta.getValorNumero() != null) {
+						hayValor = true;
+					}
+					break;
+				case TEXTO:
+					if (respuesta.getValorTexto() != null && respuesta.getValorTexto().trim().length() > 0) {
+						hayValor = true;
+					}
+					break;
 				}
-				break;
-			case TEXTO:
-				if (respuesta.getValorTexto() != null && respuesta.getValorTexto().trim().length() > 0) {
-					hayValor = true;
-				}
-				break;
-			case FECHA:
-				if (respuesta.getValorFecha() != null) {
-					hayValor = true;
-				}
-				break;
-			case BOOLEANO:
-				if (respuesta.getValorBooleano() != null) {
-					hayValor = true;
-				}
-				break;
 			}
 		}
 

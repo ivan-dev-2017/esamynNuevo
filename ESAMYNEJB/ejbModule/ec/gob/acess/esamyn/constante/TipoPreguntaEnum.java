@@ -17,7 +17,20 @@ package ec.gob.acess.esamyn.constante;
  *
  */
 public enum TipoPreguntaEnum {
-	NUMERO, TEXTO, FECHA, BOOLEANO;
+	NUMERO("numero"), TEXTO("texto"), FECHA("fecha"), HORA("hora"), EMAIL("email");
+
+	private String claveBdd;
+
+	TipoPreguntaEnum(String claveBdd) {
+		this.claveBdd = claveBdd;
+	}
+
+	/**
+	 * @return the claveBdd
+	 */
+	public String getClaveBdd() {
+		return claveBdd;
+	}
 
 	/**
 	 * Obtiene el tipo de pregunta dada una clave.
@@ -29,7 +42,7 @@ public enum TipoPreguntaEnum {
 		TipoPreguntaEnum respuesta = null;
 
 		for (TipoPreguntaEnum tipoPregunta : TipoPreguntaEnum.values()) {
-			if (tipoPregunta.toString().equals(clave)) {
+			if (tipoPregunta.getClaveBdd().equals(clave)) {
 				respuesta = tipoPregunta;
 				break;
 			}
